@@ -7,7 +7,7 @@ export default function Header() {
     <div className="w-full flex justify-center  top-0 font-dm z-50">
 
       {/* Floating Header */}
-      <header className="w-[90%] max-w-[90%] bg-[#FEFEFF] backdrop-blur-md  shadow-[0px_0px_30px_0px_rgba(226, 221, 213, 0.4)] rounded-b-[16px] px-6 py-2 flex items-center justify-between">
+      <header className="w-[90%] max-w-[80%] bg-[#FEFEFF] backdrop-blur-md  shadow-[0px_0px_30px_0px_rgba(226, 221, 213, 0.4)] rounded-b-[16px]  py-2 flex items-center justify-between">
 
         {/* Logo */}
         <div className="flex items-center gap-2 ">
@@ -38,7 +38,7 @@ export default function Header() {
           </Link>
 
           <Link to="/quick-contact">
-            <button className="px-[25px] py-[16px] rounded-lg bg-[#094ca0] text-white font-medium hover:bg-[#f37721]">
+            <button className="px-[25px] py-[16px] rounded-lg bg-[#f37721] text-white font-medium hover:bg-[#094ca0]">
               Quick contact
             </button>
           </Link>

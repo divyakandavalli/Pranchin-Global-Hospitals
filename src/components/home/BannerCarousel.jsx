@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
-
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
@@ -13,7 +13,7 @@ export default function BannerCarousel() {
   ];
 
   return (
-    <div className="relative max-w-[80%] mx-auto h-[900px] overflow-hidden rounded-2xl mt-5">
+    <div className="relative max-w-[80%] mx-auto h-[880px] overflow-hidden rounded-2xl mt-5">
 
       {/* Slider */}
       <Swiper
@@ -51,36 +51,46 @@ export default function BannerCarousel() {
 
           {/* Badge */}
           <div className="mb-4">
-            <span className="bg-white/20 font-dm text-sm px-4 py-1 rounded-full backdrop-blur-md">
+            <span className="bg-white/20 tracking-wider font-manrope uppercase text-[16px] px-4 py-1 rounded-full backdrop-blur-md">
               TRUSTED HEALTHCARE
             </span>
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-8xl font-dm font-semibold mb-6 leading-[106px] tracking-[3px] ">
+          <h1 className="text-4xl md:text-8xl font-manrope font-semibold mb-6 leading-[106px] tracking-[3px] ">
             Your Trusted <br />
             Partner <span className="italic font-light font-instrumental text-[#f5d1b9]">Health</span> <br />
             and <span className="italic font-light font-instrumental text-[#f5d1b9]">Wellness</span>
           </h1>
 
           {/* Description */}
-          <p className="text-lg text-white/80 mb-6 w-[60%]">
+          <p className="text-lg text-white/80 mb-6 w-[60%] font-manrope">
             Get expert medical care with trusted professionals, advanced
             technology, and to ensure your well-being and a future.
           </p>
 
           {/* Buttons */}
           <div className="flex items-center gap-4">
-            <button className="bg-[#dcefe2] text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:scale-105 transition">
+            {/* <button className="bg-[#f37721] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 hover:scale-105 transition">
               Book Appointment →
-            </button>
+            </button> */}
+            <button className=" flex items-center justify-between bg-[#f37721] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#3f5955] transition">
 
+              <span className="font-medium font-manrope text-[16px] capitalize">More About Us</span>
+
+              {/* Arrow Circle */}
+              <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg">
+                <ArrowForwardIcon fontSize="small" />
+              </span>
+
+            </button>
             <button className="flex items-center gap-2 text-white/90 hover:text-white">
               ▶ Watch Now
             </button>
           </div>
 
         </div>
+
       </div>
 
     </div>
