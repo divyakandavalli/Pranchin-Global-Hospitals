@@ -13,7 +13,7 @@ export default function BannerCarousel() {
   ];
 
   return (
-    <div className="relative max-w-[80%] mx-auto h-[880px] overflow-hidden rounded-2xl mt-5">
+    <div className="relative max-w-full mx-auto xl:h-[780px] 3xl:h-[880px] overflow-hidden  mt-5">
 
       {/* Slider */}
       <Swiper

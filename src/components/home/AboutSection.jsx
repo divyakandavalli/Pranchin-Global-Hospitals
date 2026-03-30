@@ -5,7 +5,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import StatsSection  from './StatsSection'
 export default function AboutSection() {
   return (
-    <section className="max-w-[72%] mx-auto py-36">
+    <section className="xl:max-w-[90%] 3xl:max-w-[72%] mx-auto pt-36 pb-16">
       <div className=" grid md:grid-cols-2 gap-20 items-center">
 
         {/* LEFT IMAGE */}
