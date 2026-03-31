@@ -25,13 +25,13 @@ export default function HomeProcess() {
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] mx-auto py-24 px-6 md:px-10 xl:px-20">
       {/* Heading */}
       <div className="text-center max-w-4xl mx-auto">
-        <span className="border border-[#094ca0] text-[#094ca0] font-medium px-4 py-1 rounded-full tracking-[3px] text-sm uppercase">
+        <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px]">
           Our Process
         </span>
 
-        <h2 className="text-3xl md:text-5xl xl:text-[64px] font-semibold mt-4 leading-tight">
+        <h2 className="text-[44px] font-manrope md:text-[64px] xl:block hidden font-semibold mt-4 leading-tight">
           Seamless Care in{" "}
-          <span className="italic font-light text-[#5187af]">Three Steps</span>
+          <span className="italic font-light font-instrumental text-[#5187af]">Three Steps</span>
         </h2>
       </div>
 
@@ -83,12 +83,17 @@ export default function HomeProcess() {
         <div className="w-[250px] flex flex-row h-full justify-center  items-center self-center z-10 relative">
           <div className="max-w-full bg-[#FEFEFF] pt-3 px-3 rounded-t-[32px]">
             <div className="text-center">
-              <Link className="bg-[#4D6E76] pl-4 pr-2 py-2 font-manrope text-[16px] font-medium leading-[26px] text-white rounded-full capitalize shadow-[0px_0px_10px_0px_rgba(0,0,0,0)] inline-flex items-center gap-3 whitespace-nowrap">
-                Contact Us
-                <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center">
-                  <EastIcon fontSize="small" />
-                </span>
-              </Link>
+              <Link className="group bg-[#094ca0] pl-4 pr-2 py-2 font-manrope text-[16px] font-medium leading-[26px] text-white rounded-full inline-flex items-center gap-3 whitespace-nowrap transition-colors duration-300 hover:bg-[#f37721]">
+  
+  Contact Us
+
+  <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center transition-all duration-300
+    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
+    
+    <EastIcon fontSize="small" />
+  </span>
+
+</Link>
             </div>
           </div>
           <div className="absolute bottom-0 left-[4px] w-[32px] h-[32px] flex flex-col rounded-br-[16px] shadow-[8px_4px_0px_0px_#FEFEFF] p-0 max-w-full">
