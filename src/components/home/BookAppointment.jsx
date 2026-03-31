@@ -21,9 +21,9 @@ export default function BookAppointment() {
         <div className="absolute inset-0 bg-[linear-gradient(270deg,#61ce7000_0%,#010813_100%)] opacity-80" />
 
         {/* CONTENT */}
-        <div className="relative flex flex-row gap-x-[150px] gap-y-[150px] py-[150px] px-[56px] pr-0 rounded-[24px]">
+        <div className="relative flex flex-col xl:flex-row gap-x-[150px] gap-y-[150px] py-[150px] px-[56px] pr-0 rounded-[24px]">
           {/* LEFT CONTENT */}
-          <div className="text-white w-[45%] flex flex-col justify-between items-start">
+          <div className="text-white w-full xl:w-[45%] flex flex-col justify-between items-start">
             <span className="bg-white/20 tracking-wider font-manrope uppercase text-[16px] px-4 py-1 rounded-full backdrop-blur-md">
               EASY ACCESS
             </span>
@@ -59,7 +59,7 @@ export default function BookAppointment() {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="w-[55%] bg-white border-white border-t-[12px] border-l-[12px] flex flex-col rounded-tl-[24px] -mb-[150px] relative">
+          <div className="w-full xl:w-[55%] bg-white border-white border-t-[12px] border-l-[12px] flex flex-col rounded-tl-[24px] -mb-[150px] relative">
             <div className=" ">
               <div className="flex flex-col bg-[#094ca0] p-[48px] rounded-[16px]  ">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px] max-w-full">
