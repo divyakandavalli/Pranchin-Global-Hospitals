@@ -1,126 +1,194 @@
-import React, { useEffect, useRef } from "react";
-
+import React from "react";
+import EastIcon from "@mui/icons-material/East";
+import Rating from "react-rating";
+import { FaStar } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 const testimonials = [
   {
     name: "David Smith",
     role: "Patient",
+    rating: 5,
     text: "I was impressed with the modern facilities and friendly staff. They made me feel safe and confident throughout my treatment process.",
   },
   {
     name: "Laura Chen",
     role: "Patient",
+    rating: 5,
     text: "The consultation was very detailed, and the doctor patiently answered all my questions. I felt truly cared for and respected as a patient.",
   },
   {
     name: "Robert Williams",
     role: "Patient",
+    rating: 5,
+    text: "From booking to treatment, everything was smooth and professional. The team genuinely prioritizes patient comfort and quality healthcare services.",
+  },
+  {
+    name: "Laura Chen",
+    role: "Patient",
+    rating: 5,
+    text: "The consultation was very detailed, and the doctor patiently answered all my questions. I felt truly cared for and respected as a patient.",
+  },
+  {
+    name: "Robert Williams",
+    role: "Patient",
+    rating: 5,
+    text: "From booking to treatment, everything was smooth and professional. The team genuinely prioritizes patient comfort and quality healthcare services.",
+  },
+  {
+    name: "Laura Chen",
+    role: "Patient",
+    rating: 5,
+    text: "The consultation was very detailed, and the doctor patiently answered all my questions. I felt truly cared for and respected as a patient.",
+  },
+  {
+    name: "Robert Williams",
+    role: "Patient",
+    rating: 5,
     text: "From booking to treatment, everything was smooth and professional. The team genuinely prioritizes patient comfort and quality healthcare services.",
   },
 ];
 
 export default function Testimonials() {
-  const scrollRef = useRef(null);
-
-  // Auto scroll
-  useEffect(() => {
-    const container = scrollRef.current;
-    let scrollAmount = 0;
-
-    const scroll = () => {
-      if (!container) return;
-
-      scrollAmount += 1;
-      container.scrollLeft += 1;
-
-      // Infinite loop
-      if (scrollAmount >= container.scrollWidth / 2) {
-        container.scrollLeft = 0;
-        scrollAmount = 0;
-      }
-    };
-
-    const interval = setInterval(scroll, 20);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="bg-[#E6EFE7] rounded-[24px] p-10 overflow-hidden">
-      {/* TOP SECTION */}
-      <div className="flex gap-10">
-        {/* LEFT */}
-        <div className="w-[45%]">
-          <span className="border px-4 py-1 rounded-full text-sm">
-            HAPPY PATIENTS
-          </span>
+    <div className="max-w-[97%] 3xl:max-w-[80%] mx-auto my-20">
+      <div className="bg-[#c8dded] rounded-[24px] py-20 px-8 md:px-20">
+        
+        {/* Top Section */}
+        <div className="flex flex-col lg:flex-row gap-16 items-start">
+          
+          {/* Left Side */}
+          <div className="w-full lg:w-[45%]">
+            <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px] text-[16px] uppercase">
+              Happy Patients
+            </span>
 
-          <h2 className="text-5xl font-semibold mt-4">
-            What Our Patients
-          </h2>
+            <h2 className="text-[44px] font-manrope md:text-[64px] font-semibold mt-4 leading-tight">
+              What Our Patients{" "}
+              <span className="italic font-light font-instrumental text-[#5187af]">
+                Say About Us
+              </span>
+            </h2>
 
-          <h3 className="text-5xl italic text-gray-500">
-            Say About Us
-          </h3>
+            <p className="text-[#2f373e] text-[18px] xl:text-left text-center xl:w-auto max-w-2xl font-manrope mt-4">
+              Dedicated to providing expert healthcare advanced technology,
+              experienced professionals, and personalized treatments to ensure
+              your well-being and a healthier future.
+            </p>
+<button className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#f37721] transition-colors duration-300">
 
-          <p className="text-gray-600 mt-4">
-            Dedicated to providing expert healthcare advanced technology,
-            experienced professionals, and personalized treatments to ensure
-            your well-being and a healthier future.
+  <span className="font-medium font-manrope text-[16px] capitalize">
+    View All Testimonials
+  </span>
+
+  {/* Arrow Circle */}
+  <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300
+    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
+    
+    <EastIcon fontSize="small" />
+  </span>
+
+</button>
+          </div>
+
+          {/* Featured Card */}
+        <div className="w-full lg:w-[55%] bg-white rounded-[20px] overflow-hidden flex flex-col sm:flex-row font-manrope">
+  
+  {/* Left Content */}
+  <div className="flex-1 p-8 flex flex-col justify-between">
+    
+    {/* Rating */}
+    <div className="mb-4">
+      <Rating
+        initialRating={5}
+        readonly
+        emptySymbol={<FaStar className="text-gray-300 text-xl" />}
+        fullSymbol={<FaStar className="text-[#094ca0] text-xl" />}
+      />
+    </div>
+
+    <p className="text-gray-600 leading-relaxed text-[16px]">
+      The doctors were caring and professional. The staff made me feel comfortable, and the doctors explained everything in detail treatment plan was clear, and I felt supported every step of highly recommended!
+    </p>
+
+    <div className="mt-8">
+      <h4 className="font-semibold text-[21px] text-[#0f172a]">
+        Heller Keano
+      </h4>
+      <span className="text-[15px] text-[#64748b]">
+        Patient Parent
+      </span>
+    </div>
+  </div>
+
+  {/* Right Image FULL */}
+  <div className="sm:w-[45%] h-[320px] sm:h-auto">
+    <img
+      src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Image-QS3UESD.jpg"
+      alt="Heller Keano"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+</div>
+        </div>
+
+        {/* Testimonial Cards */}
+       <div className="mt-16 font-manrope">
+  <Swiper
+    modules={[Autoplay]}
+    spaceBetween={20}
+    slidesPerView={1.2}
+    loop={true}
+    autoplay={{
+      delay: 0,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    }}
+    speed={4000}
+    breakpoints={{
+      640: { slidesPerView: 1.5 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    }}
+  >
+    {testimonials.map((item, index) => (
+      <SwiperSlide key={index}>
+        <div className="bg-white rounded-[16px] p-6 shadow-sm h-full">
+          
+          {/* Rating */}
+          <div className="mb-4">
+            <Rating
+              initialRating={item.rating}
+              readonly
+              emptySymbol={<FaStar className="text-gray-300 text-xl" />}
+              fullSymbol={<FaStar className="text-[#094ca0] text-xl" />}
+            />
+          </div>
+
+          <p className="text-gray-600 text-[16px] leading-relaxed min-h-[100px]">
+            "{item.text}"
           </p>
 
-          <button className="mt-6 bg-[#2F4F4F] text-white px-6 py-3 rounded-full flex items-center gap-2">
-            View All Testimonials →
-          </button>
-        </div>
-
-        {/* RIGHT FEATURE CARD */}
-        <div className="w-[55%] bg-white rounded-[20px] p-6 flex justify-between items-center">
-          <div className="w-[65%]">
-            ⭐⭐⭐⭐⭐
-            <p className="text-gray-600 mt-3">
-              The doctors were caring and professional. The staff made me feel
-              comfortable, and the doctors explained everything in detail.
-            </p>
-
-            <h4 className="mt-6 font-semibold">Heller Keano</h4>
-            <span className="text-sm text-gray-500">Patient Parent</span>
-          </div>
-
-          <img
-            src="https://randomuser.me/api/portraits/men/32.jpg"
-            alt=""
-            className="w-[140px] h-[140px] rounded-[16px] object-cover"
-          />
-        </div>
-      </div>
-
-      {/* AUTO SCROLL CAROUSEL */}
-      <div
-        ref={scrollRef}
-        className="flex gap-6 mt-10 overflow-x-hidden"
-      >
-        {[...testimonials, ...testimonials].map((item, index) => (
-          <div
-            key={index}
-            className="min-w-[350px] bg-white rounded-[16px] p-5"
-          >
-            ⭐⭐⭐⭐⭐
-            <p className="text-gray-600 mt-3 text-sm">{item.text}</p>
-
-            <div className="flex items-center gap-3 mt-5">
-              <img
-                src={`https://i.pravatar.cc/40?img=${index}`}
-                className="w-10 h-10 rounded-full"
-                alt=""
-              />
-              <div>
-                <h4 className="font-medium">{item.name}</h4>
-                <span className="text-sm text-gray-500">
-                  {item.role}
-                </span>
-              </div>
+          <div className="flex items-center gap-4 mt-8">
+            <img
+              src={`https://i.pravatar.cc/150?img=${index + 32}`}
+              alt={item.name}
+              className="w-12 h-12 rounded-full object-cover"
+            />
+            <div>
+              <h4 className="font-semibold text-[21px]">{item.name}</h4>
+              <p className="text-[16px] text-gray-500">{item.role}</p>
             </div>
           </div>
-        ))}
+
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
       </div>
     </div>
   );

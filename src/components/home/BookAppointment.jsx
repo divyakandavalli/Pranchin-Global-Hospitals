@@ -5,7 +5,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 export default function BookAppointment() {
   return (
-    <div className="max-w-[97%] 3xl:max-w-[80%] mx-auto py-10">
+    <div className="">
       {/* MAIN CONTAINER */}
       <div className="relative rounded-[24px] overflow-hidden">
         {/* BACKGROUND IMAGE */}
@@ -42,21 +42,29 @@ export default function BookAppointment() {
             </p>
 
             {/* BUTTON */}
-            <button className="flex items-center gap-4 bg-[#094ca0] text-white px-6 py-3 rounded-full hover:bg-[#3f5955] transition">
-              <span className="text-[16px]">View all services</span>
-              <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center">
-                <EastIcon fontSize="small" />
-              </span>
-            </button>
+         <button className="group flex items-center justify-between bg-[#f37721] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#094ca0] transition-colors duration-300">
+
+  <span className="font-medium font-manrope text-[16px] capitalize">
+    Get Free Consultation
+  </span>
+
+  {/* Arrow Circle */}
+  <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300
+    group-hover:bg-[#E5F4FF] group-hover:text-[#094ca0]">
+    
+    <EastIcon fontSize="small" />
+  </span>
+
+</button>
           </div>
 
           {/* RIGHT FORM */}
           <div className="w-[55%] bg-white border-white border-t-[12px] border-l-[12px] flex flex-col rounded-tl-[24px] -mb-[150px] relative">
             <div className=" ">
-              <div className="flex flex-col bg-[#b7c4b2] p-[48px] rounded-[16px]  ">
+              <div className="flex flex-col bg-[#094ca0] p-[48px] rounded-[16px]  ">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px] max-w-full">
                   <div>
-                    <label className="text-[16px] font-manrope mb-[12px]  block">
+                    <label className="text-[16px] font-manrope mb-[12px] text-white block">
                       Full Name
                     </label>
                     <input
@@ -66,7 +74,7 @@ export default function BookAppointment() {
                     />
                   </div>
                   <div>
-                    <label className="text-[16px] font-manrope mb-[12px]  block">
+                    <label className="text-[16px] font-manrope mb-[12px] text-white block">
                       Your Email
                     </label>
                     <input
@@ -77,7 +85,7 @@ export default function BookAppointment() {
                   </div>
 
                   <div>
-                    <label className="text-[16px] font-manrope mb-[12px]  block">
+                    <label className="text-[16px] font-manrope mb-[12px] text-white block">
                       Phone
                     </label>
                     <input
@@ -88,7 +96,7 @@ export default function BookAppointment() {
                   </div>
 
                   <div>
-                    <label className="text-[16px] font-manrope mb-[12px]  block">
+                    <label className="text-[16px] font-manrope mb-[12px] text-white block">
                       Select
                     </label>
                     <select className="w-full p-3 rounded-lg bg-white outline-none">
@@ -99,7 +107,7 @@ export default function BookAppointment() {
                   </div>
 
                   <div>
-                    <label className="text-[16px] font-manrope mb-[12px]  block">
+                    <label className="text-[16px] font-manrope mb-[12px] text-white  block">
                       Date
                     </label>
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -148,7 +156,7 @@ export default function BookAppointment() {
                   </div>
 
                   <div>
-                    <label className="text-[16px] font-manrope mb-[12px]  block">
+                    <label className="text-[16px] font-manrope mb-[12px] text-white block">
                       Time
                     </label>
                     <input
@@ -159,8 +167,8 @@ export default function BookAppointment() {
                 </div>
 
                 {/* MESSAGE */}
-                <div className="mt-[32px]">
-                  <label className="text-[16px] font-manrope mb-[12px]  block">
+                <div className="mt-[32px] font-manrope">
+                  <label className="text-[16px] font-manrope mb-[12px] text-white block">
                     Message
                   </label>
                   <textarea
@@ -171,16 +179,16 @@ export default function BookAppointment() {
                 </div>
 
                 {/* BUTTON */}
-                <button className="mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#3f5955] transition">
-                  <span className="font-medium font-manrope text-[16px] capitalize">
-                    View all services
-                  </span>
+                    <button className=" flex items-center justify-between bg-[#f37721] text-white px-6 py-3 rounded-full w-fit gap-4  transition mt-8">
 
-                  {/* Arrow Circle */}
-                  <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg">
-                    <EastIcon fontSize="small" />
-                  </span>
-                </button>
+              <span className="font-medium font-manrope text-[16px] capitalize">Submit Details</span>
+
+              {/* Arrow Circle */}
+              <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg">
+                <EastIcon fontSize="small" />
+              </span>
+
+            </button>
               </div>
             </div>
             <div className="absolute right-0 -top-[45px] w-[32px] h-[32px] flex flex-col rounded-br-[16px] shadow-[8px_4px_0px_0px_#FEFEFF] p-0 max-w-full">
