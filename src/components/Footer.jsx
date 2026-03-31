@@ -94,7 +94,7 @@ const Footer = () => {
               <a
                 key={item.id}
                 href={item.link}
-                className="p-2 rounded-full bg-[#DDEADB] hover:bg-[#4D6E76] flex justify-center items-center hover:text-white transition"
+                className="p-2 rounded-full bg-[#DDEADB] hover:bg-[#f37721] flex justify-center items-center hover:text-white transition"
               >
                 <item.icon fontSize="small" />
               </a>

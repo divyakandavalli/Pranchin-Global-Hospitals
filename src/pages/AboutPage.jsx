@@ -13,6 +13,7 @@ const AboutPage = () => {
       <AboutVision />
       <AboutCoreValues />
       <AboutDoctors />
+      <div className="pb-10"></div>
     </>
   );
 };
