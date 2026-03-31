@@ -30,7 +30,7 @@ export default function AboutSection() {
                 />
                 <div className="">
                   <h6 className="text-black text-lg">Dr. Michael Reynolds</h6>
-                  <p className="text-[#4D6E76] text-base ">Founder Healix</p>
+                  <p className="text-[#4D6E76] text-base ">Prachin Global Hospitals</p>
                 </div>
               </div>
               <p className="text-sm mt-4 text-[#66686C]">
@@ -65,7 +65,7 @@ export default function AboutSection() {
                 />
                 <div className="">
                   <h6 className="text-black text-lg">Dr. Michael Reynolds</h6>
-                  <p className="text-[#4D6E76] text-base ">Founder Healix</p>
+                  <p className="text-[#4D6E76] text-base ">Prachin Global Hospitals</p>
                 </div>
               </div>
               <p className="text-sm mt-4 text-[#66686C]">

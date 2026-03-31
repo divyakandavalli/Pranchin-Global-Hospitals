@@ -7,7 +7,7 @@ import homeBanner from "../../assets/images/image-22-768x768.jpg";
 import feedback_Card from "../../assets/images/feedback_Card.jpg";
 export default function AboutUsSection() {
   return (
-    <section className=" 3xl:max-w-[82%] w-[95%] mx-auto xl:py-36 md:py-24 py-14">
+    <section className=" 3xl:max-w-[82%] w-[95%] mx-auto  md:py-24 py-14">
       <div className=" grid xl:grid-cols-2 grid-cols-1 lg:gap-20 md:gap-16 gap-10 items-center">
         {/* LEFT IMAGE */}
         <div className="relative xl:order-1 order-2">
@@ -30,14 +30,11 @@ export default function AboutUsSection() {
                 />
                 <div className="">
                   <h6 className="text-black text-lg">Dr. Michael Reynolds</h6>
-                  <p className="text-[#4D6E76] text-base ">Founder Healix</p>
+                  <p className="text-[#4D6E76] text-base ">Prachin Hospital</p>
                 </div>
               </div>
               <p className="text-sm mt-4 text-[#66686C]">
-                “At Healix, our mission is to provide in you accessible,
-                high-quality goods healthcare leti advanced letingo ma
-                technology, personalized go your treatment for a healthier
-                future.”
+                “Our strength lies in our team of highly qualified and experienced doctors, paramedics, nursing staff and operations team. who are dedicated to providing ethical, patient-centric care round the clock..”
               </p>
             </div>
             <div className="absolute -left-[33px] bottom-0 w-[33px] flex rounded-[0px_0px_16px_0] shadow-[8px_4px_0px_0px_#FEFEFF]">

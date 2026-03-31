@@ -3,17 +3,17 @@ import EastIcon from "@mui/icons-material/East";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-export default function BookAppointment() {
+import BackgroundDoctor from "../../assets/images/portrait-happy-successful-hindu-doctor-young-medical-practitioner-smiling-looking.jpg";
+export default function BookAppointment({ className = "" }) {
   return (
-    <div className="">
+    <div className={`max-w-[95%] mx-auto ${className}`}>
       {/* MAIN CONTAINER */}
       <div className="relative rounded-[24px] overflow-hidden">
         {/* BACKGROUND IMAGE */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Book-Form-GZA68DM.jpg)",
+            backgroundImage: `url(${BackgroundDoctor})`,
           }}
         />
 
@@ -42,20 +42,19 @@ export default function BookAppointment() {
             </p>
 
             {/* BUTTON */}
-         <button className="group flex items-center justify-between bg-[#f37721] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#094ca0] transition-colors duration-300">
+            <button className="group flex items-center justify-between bg-[#f37721] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#094ca0] transition-colors duration-300">
+              <span className="font-medium font-manrope text-[16px] capitalize">
+                Get Free Consultation
+              </span>
 
-  <span className="font-medium font-manrope text-[16px] capitalize">
-    Get Free Consultation
-  </span>
-
-  {/* Arrow Circle */}
-  <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300
-    group-hover:bg-[#E5F4FF] group-hover:text-[#094ca0]">
-    
-    <EastIcon fontSize="small" />
-  </span>
-
-</button>
+              {/* Arrow Circle */}
+              <span
+                className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300
+    group-hover:bg-[#E5F4FF] group-hover:text-[#094ca0]"
+              >
+                <EastIcon fontSize="small" />
+              </span>
+            </button>
           </div>
 
           {/* RIGHT FORM */}
@@ -179,16 +178,16 @@ export default function BookAppointment() {
                 </div>
 
                 {/* BUTTON */}
-                    <button className=" flex items-center justify-between bg-[#f37721] text-white px-6 py-3 rounded-full w-fit gap-4  transition mt-8">
+                <button className=" flex items-center justify-between bg-[#f37721] text-white px-6 py-3 rounded-full w-fit gap-4  transition mt-8">
+                  <span className="font-medium font-manrope text-[16px] capitalize">
+                    Submit Details
+                  </span>
 
-              <span className="font-medium font-manrope text-[16px] capitalize">Submit Details</span>
-
-              {/* Arrow Circle */}
-              <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg">
-                <EastIcon fontSize="small" />
-              </span>
-
-            </button>
+                  {/* Arrow Circle */}
+                  <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg">
+                    <EastIcon fontSize="small" />
+                  </span>
+                </button>
               </div>
             </div>
             <div className="absolute right-0 -top-[45px] w-[32px] h-[32px] flex flex-col rounded-br-[16px] shadow-[8px_4px_0px_0px_#FEFEFF] p-0 max-w-full">

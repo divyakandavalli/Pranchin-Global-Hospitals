@@ -1,5 +1,5 @@
 import React from "react";
-import about_dr_1 from "../../assets/images/about_dr_1.jpg";
+import about_dr_1 from "../../assets/images/portrait-handsome-young-indian-doctor-standing-with-arms-crossed-medical-clinic-smiling-camera.jpg";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -66,7 +66,7 @@ const AboutDoctors = () => {
   ];
   return (
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
-      <div className=" xl:py-36 lg:py-28 md:py-24 py-16 md:px-10 px-5 relative  overflow-hidden">
+      <div className="  lg:py-28 md:py-24 py-16 md:px-10 px-5 relative  overflow-hidden">
         <div className="flex justify-center flex-col items-center">
           <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
             Expert Doctor

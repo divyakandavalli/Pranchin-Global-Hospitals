@@ -15,34 +15,18 @@ export default function Header() {
           {/* LOGO */}
           <div className="flex items-center">
             <Link to="/">
-              <img
-                src={logo}
-                alt="logo"
-                className="h-[40px] sm:h-[50px] md:h-auto w-auto"
-              />
+              <img src={logo} alt="logo" className="h-[60px] md:h-auto w-auto" />
             </Link>
           </div>
 
           {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-gray-700 font-medium">
-            <Link to="/" className="hover:text-[#094ca0]">
-              Home
-            </Link>
-            <Link to="/about" className="hover:text-[#094ca0]">
-              About
-            </Link>
-            <Link to="/team" className="hover:text-[#094ca0]">
-              Team
-            </Link>
-            <div className="flex items-center gap-1 cursor-pointer hover:text-[#094ca0]">
-              Specialities
-            </div>{" "}
-            <Link to="/gallery" className="hover:text-[#094ca0]">
-              Gallery
-            </Link>
-            <Link to="/contact" className="hover:text-[#094ca0]">
-              Contact
-            </Link>
+            <Link to="/" className="hover:text-[#094ca0]">Home</Link>
+            <Link to="/about" className="hover:text-[#094ca0]">About</Link>
+            <Link to="/doctors" className="hover:text-[#094ca0]">Doctors</Link>
+            <Link to="/all-specialities" className="hover:text-[#094ca0]">Specialities</Link>
+            <Link to="/gallery" className="hover:text-[#094ca0]">Gallery</Link>
+            <Link to="/contact" className="hover:text-[#094ca0]">Contact</Link>
           </nav>
 
           {/* RIGHT SIDE */}
@@ -55,7 +39,7 @@ export default function Header() {
             </Link>
 
             <Link to="/quick-contact">
-              <button className="px-4 sm:px-[25px] py-2 sm:py-[16px] rounded-lg bg-[#f37721] text-white font-medium hover:bg-[#094ca0] text-sm sm:text-base">
+              <button className="hidden sm:block px-4 sm:px-[25px] py-2 sm:py-[16px] rounded-lg bg-[#f37721] text-white font-medium hover:bg-[#094ca0] text-sm sm:text-base">
                 Quick contact
               </button>
             </Link>
@@ -95,15 +79,11 @@ export default function Header() {
 
           {/* MENU */}
           <nav className="flex flex-col gap-6 text-gray-700 font-medium text-lg">
-            <Link to="/" onClick={() => setOpen(false)}>
-              Home
-            </Link>
-            <Link to="/about" onClick={() => setOpen(false)}>
-              About
-            </Link>
-            <Link to="/team" onClick={() => setOpen(false)}>
-              Team
-            </Link>
+
+            <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+            <Link to="/about" onClick={() => setOpen(false)}>About</Link>
+            <Link to="/team" onClick={() => setOpen(false)}>Team</Link>
+            <Link to="/gallery" onClick={() => setOpen(false)}>Gallery</Link>
             <div className="cursor-pointer">Specialities</div>
             <Link to="/gallery" onClick={() => setOpen(false)}>
               Gallery

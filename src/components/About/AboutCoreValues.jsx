@@ -37,12 +37,7 @@ const AboutCoreValues = () => {
   return (
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
       <div className=" rounded-[24px] xl:pt-36 lg:pt-28 md:pt-24 pt-16 md:px-10 px-5 relative  overflow-hidden">
-        {/* <div className="absolute -right-[310px] -top-[653px] max-w-full">
-          <img
-            src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Decorations.png"
-            alt=""
-          />
-        </div> */}
+        
         <div className="flex justify-center flex-col items-center">
           <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
             Core Values

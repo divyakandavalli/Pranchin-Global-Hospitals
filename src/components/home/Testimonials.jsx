@@ -52,7 +52,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="max-w-[97%] 3xl:max-w-[80%] mx-auto my-20">
+    <div className="max-w-[97%] 3xl:max-w-[95%] mx-auto my-20">
       <div className="bg-[#c8dded] rounded-[24px] py-20 px-8 md:px-20">
         
         {/* Top Section */}

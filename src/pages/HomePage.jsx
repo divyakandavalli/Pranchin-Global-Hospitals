@@ -6,17 +6,22 @@ import HomeProcess from '../components/home/HomeProcess'
 import BookAppointment from '../components/home/BookAppointment'
 import Testimonials from '../components/home/Testimonials'
 import FAQSection from '../components/home/FAQSection'
+import AboutDoctors from '../components/About/AboutDoctors'
+import Reveal from '../components/common/Reveal'
 
 export default function HomePage() {
   return (
     <div>
-      <BannerCarousel/>
-      <AboutSection/>
-      <HomeServices/>
-      <HomeProcess/>
-      <BookAppointment/>
-      <Testimonials/>
-      <FAQSection/>
+
+      <Reveal><BannerCarousel/></Reveal>
+      <Reveal><AboutSection/></Reveal>
+      <Reveal><HomeServices/></Reveal>
+      <Reveal><HomeProcess/></Reveal>
+      <Reveal><BookAppointment/></Reveal>
+      <Reveal><AboutDoctors/></Reveal>
+      <Reveal><Testimonials/></Reveal>
+      <Reveal><FAQSection/></Reveal>
+
     </div>
   )
 }

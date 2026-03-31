@@ -1,17 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import EastIcon from "@mui/icons-material/East";
 import "swiper/css";
 import "swiper/css/effect-fade";
-
+import CloseIcon from "@mui/icons-material/Close";
 import Carousel1 from '../../assets/images/team-surgeons-doing-operation-sterile-operating-room.jpg'
 import Carousel2 from '../../assets/images/three-surgeons-hospital-room-one-which-is-being-prepared-perform-surgery.jpg'
 import Carousel3 from '../../assets/images/medical-team-operation-room.jpg'
 
 export default function BannerCarousel() {
   const slides = [Carousel1, Carousel2, Carousel3];
-
+const [openVideo, setOpenVideo] = useState(false);
   return (
     <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] xl:h-[780px] 3xl:h-[880px] overflow-hidden mt-5">
 
@@ -90,7 +90,7 @@ export default function BannerCarousel() {
 
             </button>
 
-            <button className="flex items-center gap-2 text-sm sm:text-base text-white/90 hover:text-white">
+            <button className="flex items-center gap-2 text-sm sm:text-base text-white/90 hover:text-white"   onClick={() => setOpenVideo(true)}>
               ▶ Watch Now
             </button>
 
@@ -98,6 +98,40 @@ export default function BannerCarousel() {
 
         </div>
       </div>
+       {/* VIDEO MODAL */}
+      {openVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+
+          {/* BACKDROP */}
+          <div
+            className="absolute inset-0 bg-black/70"
+            onClick={() => setOpenVideo(false)}
+          />
+
+          {/* MODAL CONTENT */}
+          <div className="relative z-10 w-[90%] max-w-3xl">
+
+            {/* CLOSE */}
+            <button
+              onClick={() => setOpenVideo(false)}
+              className="absolute -top-10 right-0 text-white"
+            >
+              <CloseIcon />
+            </button>
+
+            {/* VIDEO */}
+            <div className="w-full aspect-video bg-black rounded-lg overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://youtu.be/XHOmBV4js_E?si=TGi-0SlB09OwB9YF"
+                title="Video"
+                allowFullScreen
+              />
+            </div>
+
+          </div>
+        </div>
+      )}
     </div>
   );
 }

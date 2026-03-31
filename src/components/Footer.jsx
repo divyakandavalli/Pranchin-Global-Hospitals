@@ -68,7 +68,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex xl:w-[32%] justify-end items-end z-10">
-            <button className=" flex items-center justify-between bg-[#f37721] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2 hover:bg-[#3f5955] transition">
+            <button className=" flex items-center justify-between bg-[#f37721] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2  transition">
               <span className="font-medium font-manrope text-[16px] capitalize">
                 Book Appointment Now
               </span>
@@ -216,16 +216,18 @@ const Footer = () => {
                 placeholder="Your Name"
                 className="bg-white text-base w-full outline-none text-black py-3 rounded-full px-6"
               />
-              <button className=" flex items-center justify-between bg-[#094ca0] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2 hover:bg-[#3f5955] transition">
-                <span className="font-medium font-manrope text-[16px] capitalize">
-                  Subscribe
-                </span>
+         <button className="group flex items-center justify-between bg-[#094ca0] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2 hover:bg-[#f37721] transition">
+  
+  <span className="font-medium font-manrope text-[16px] capitalize">
+    Subscribe
+  </span>
 
-                {/* Arrow Circle */}
-                <span className="bg-[#DDEADB] text-[#000000] rounded-full w-9 h-9 flex items-center justify-center text-lg">
-                  <ArrowForwardIcon fontSize="small" />
-                </span>
-              </button>
+  <span className="bg-[#DDEADB] text-black rounded-full w-9 h-9 flex items-center justify-center transition
+    group-hover:bg-white group-hover:text-[#f37721]">
+    <ArrowForwardIcon fontSize="small" />
+  </span>
+
+</button>
             </div>
           </div>
         </div>
@@ -239,16 +241,20 @@ const Footer = () => {
           <a href="/">Sitemap</a>
           <a href="/">Cookies</a>
         </div>
-        <button className=" flex items-center justify-between bg-[#094ca0] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2 hover:bg-[#3f5955] transition">
-          <span className="font-medium font-manrope text-[16px] capitalize">
-            Back to Top
-          </span>
+ <button
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  className="group flex items-center justify-between bg-[#094ca0] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2 hover:bg-[#f37721] transition"
+>
+  <span className="font-medium font-manrope text-[16px] capitalize">
+    Back to Top
+  </span>
 
-          {/* Arrow Circle */}
-          <span className="bg-[#DDEADB] text-[#000000] rounded-full w-9 h-9 flex items-center justify-center text-lg">
-            <ArrowUpwardIcon fontSize="small" />
-          </span>
-        </button>
+  {/* Arrow Circle */}
+  <span className="bg-[#DDEADB] text-black rounded-full w-9 h-9 flex items-center justify-center transition
+    group-hover:bg-white group-hover:text-[#f37721]">
+    <ArrowUpwardIcon fontSize="small" />
+  </span>
+</button>
       </div>
     </div>
   );
