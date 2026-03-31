@@ -140,7 +140,7 @@ const ContactUsFrom = () => {
           </div>
 
           {/* BUTTON */}
-          <button className=" flex items-center justify-between bg-[#f37721] text-white px-6 py-2 rounded-full w-fit gap-4  transition mt-8">
+          <button className=" flex items-center justify-between bg-[#f37721] border border-[#f37721] hover:bg-transparent hover:border-[#f37721] duration-300 transition-all text-white px-6 py-2 rounded-full w-fit gap-4   mt-8 ">
             <span className="font-medium font-manrope text-[16px] capitalize">
               Submit Details
             </span>
