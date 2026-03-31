@@ -34,7 +34,10 @@ export default function AboutSection() {
                 </div>
               </div>
               <p className="text-sm mt-4 text-[#66686C]">
-                “Our strength lies in our team of highly qualified and experienced doctors, paramedics, nursing staff and operations team. who are dedicated to providing ethical, patient-centric care round the clock. ”
+                “Our strength lies in our team of highly qualified and
+                experienced doctors, paramedics, nursing staff and operations
+                team. who are dedicated to providing ethical, patient-centric
+                care round the clock. ”
               </p>
             </div>
             <div className="absolute -left-[33px] bottom-0 w-[33px] flex rounded-[0px_0px_16px_0] shadow-[8px_4px_0px_0px_#FEFEFF]">
@@ -66,7 +69,10 @@ export default function AboutSection() {
                 </div>
               </div>
               <p className="text-sm mt-4 text-[#66686C]">
-                “Our strength lies in our team of highly qualified and experienced doctors, paramedics, nursing staff and operations team. who are dedicated to providing ethical, patient-centric care round the clock. ”
+                “Our strength lies in our team of highly qualified and
+                experienced doctors, paramedics, nursing staff and operations
+                team. who are dedicated to providing ethical, patient-centric
+                care round the clock. ”
               </p>
             </div>
           </div>
@@ -86,15 +92,17 @@ export default function AboutSection() {
             </span>
           </h2>
           <h2 className="text-4xl font-manrope md:text-[64px] xl:hidden text-center block font-semibold mt-4 leading-tight">
-            Compassionate Care 
-            for{" "}<br />
+            Compassionate Care for <br />
             <span className="italic font-light font-instrumental text-[#5187af]">
               Your Health
             </span>
           </h2>
 
           <p className="text-[#788793] text-[18px] xl:text-left text-center xl:w-auto max-w-2xl font-manrope mt-4">
-            Prachin Global Hospitals, we believe that world-class healthcare should be seamless, sophisticated and deeply personal. Spanning a state-of-art 250-bed facility, we have integrated cutting-edge medical technology with a human-first approach to healing.
+            Prachin Global Hospitals, we believe that world-class healthcare
+            should be seamless, sophisticated and deeply personal. Spanning a
+            state-of-art 250-bed facility, we have integrated cutting-edge
+            medical technology with a human-first approach to healing.
           </p>
 
           {/* FEATURES */}
@@ -115,11 +123,11 @@ export default function AboutSection() {
               </div>
             </div>
             <hr className="border-[#d1e1ed] border-t-[1px]" />
-           <div className="flex md:flex-row flex-col  gap-6">
+            <div className="flex md:flex-row flex-col  gap-6">
               <div className=" flex items-center justify-center rounded-lg">
                 <img src={AdvancedTech} alt="" />
               </div>
-             <div className="md:text-left text-center">
+              <div className="md:text-left text-center">
                 <h4 className="font-semibold font-manrope text-[21px]">
                   Advanced Technology
                 </h4>
@@ -131,20 +139,19 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-    <button className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#f37721] transition">
+          <button className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#f37721] transition">
+            <span className="font-medium font-manrope text-[16px] capitalize">
+              More About Us
+            </span>
 
-  <span className="font-medium font-manrope text-[16px] capitalize">
-    More About Us
-  </span>
-
-  {/* Arrow Circle */}
-  <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition
-    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
-    
-    <EastIcon fontSize="small" />
-  </span>
-
-</button>
+            {/* Arrow Circle */}
+            <span
+              className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition
+    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]"
+            >
+              <EastIcon fontSize="small" />
+            </span>
+          </button>
         </div>
       </div>
 

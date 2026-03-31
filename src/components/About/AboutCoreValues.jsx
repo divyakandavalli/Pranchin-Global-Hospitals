@@ -4,7 +4,7 @@ import about_icon_2 from "../../assets/icons/about_icon_2.png";
 import about_icon_3 from "../../assets/icons/about_icon_3.png";
 import about_icon_4 from "../../assets/icons/about_icon_4.png";
 import about_icon_5 from "../../assets/icons/about_icon_5.png";
-import about_icon_6 from "../../assets/icons/about_icon_6.png";
+
 const AboutCoreValues = () => {
   const services = [
     {
@@ -36,13 +36,13 @@ const AboutCoreValues = () => {
   ];
   return (
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
-      <div className="bg-[#F4F5F9] rounded-[24px] py-36 md:px-10 px-5 relative  overflow-hidden">
-        <div className="absolute -right-[310px] -top-[653px] max-w-full">
+      <div className=" rounded-[24px] xl:py-36 lg:py-28 md:py-24 py-16 md:px-10 px-5 relative  overflow-hidden">
+        {/* <div className="absolute -right-[310px] -top-[653px] max-w-full">
           <img
             src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Decorations.png"
             alt=""
           />
-        </div>
+        </div> */}
         <div className="flex justify-center flex-col items-center">
           <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
             Core Values
@@ -56,23 +56,23 @@ const AboutCoreValues = () => {
         </div>
         <div className="grid xl:grid-cols-3  grid-cols-1 lg:gap-12 gap-6 mx-auto mt-12 lg:mx-8">
           {services.map((item, index) => (
-            <div key={index} className="p-8 bg-white flex items-start justify-center flex-col rounded-3xl relative">
+            <div key={index} className="p-8 bg-[#C8DDED] flex items-start justify-center flex-col rounded-3xl relative">
               <h2 className="text-[21px] font-manrope font-semibold mb-1">
                 {item.title}
               </h2>
               <p className="md:w-3/4 w-10/12 text-[#66686C] font-normal text-base font-manrope">
                 {item.desc}
               </p>
-              <div className="w-20 absolute flex  rounded-tl-3xl pt-[10px] font-manrope bg-[#F4F5F9] bottom-0 right-0   justify-end items-end">
+              <div className="w-20 absolute flex  rounded-tl-3xl pt-[10px] font-manrope bg-[#ffffff] bottom-0 right-0   justify-end items-end">
                 <img src={item.img} className="w-16 h-16" alt="" />
-                <div className="absolute -left-8 bottom-0 w-8 flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#F4F5F9]">
+                <div className="absolute -left-8 bottom-0 w-8 flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#FFFFFF]">
                   <div className="w-8">
                     <div className="w-8">
                       <div className="h-8"></div>
                     </div>
                   </div>
                 </div>
-                <div className="absolute -top-[33px] right-0 w-[33px] flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#F4F5F9]">
+                <div className="absolute -top-[33px] right-0 w-[33px] flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#FFFFFF]">
                   <div className="w-8">
                     <div className="w-8">
                       <div className="h-8"></div>

@@ -10,10 +10,8 @@ export default function Header() {
   return (
     <>
       <div className="w-full flex justify-center top-0 font-dm z-50">
-
         {/* HEADER */}
         <header className="w-[95%] md:w-[90%] max-w-[1400px] bg-[#FEFEFF] backdrop-blur-md shadow-[0px_0px_30px_0px_rgba(226,221,213,0.4)] rounded-b-[16px] py-2 px-4 sm:px-6 flex items-center justify-between">
-
           {/* LOGO */}
           <div className="flex items-center">
             <Link to="/">
@@ -33,7 +31,6 @@ export default function Header() {
 
           {/* RIGHT SIDE */}
           <div className="flex items-center gap-2 sm:gap-3">
-
             {/* Button hidden on small */}
             <Link to="/book-visit">
               <button className="hidden sm:block px-4 sm:px-[25px] py-2 sm:py-[16px] rounded-lg bg-[#E5F4FF] text-[#094ca0] font-medium hover:bg-[#094ca0] hover:text-white text-sm sm:text-base">
@@ -54,14 +51,14 @@ export default function Header() {
             >
               <MenuIcon />
             </button>
-
           </div>
         </header>
       </div>
 
       {/* OFFCANVAS */}
-      <div className={`fixed inset-0 z-50 transition ${open ? "visible" : "invisible"}`}>
-
+      <div
+        className={`fixed inset-0 z-50 transition ${open ? "visible" : "invisible"}`}
+      >
         {/* BACKDROP */}
         <div
           className={`absolute inset-0 bg-black/50 transition-opacity ${open ? "opacity-100" : "opacity-0"}`}
@@ -69,9 +66,10 @@ export default function Header() {
         />
 
         {/* DRAWER */}
-        <div className={`absolute right-0 top-0 h-full w-[80%] max-w-[320px] bg-white shadow-lg p-6 transition-transform duration-300 
-          ${open ? "translate-x-0" : "translate-x-full"}`}>
-
+        <div
+          className={`absolute right-0 top-0 h-full w-[80%] max-w-[320px] bg-white shadow-lg p-6 transition-transform duration-300 
+          ${open ? "translate-x-0" : "translate-x-full"}`}
+        >
           {/* CLOSE */}
           <div className="flex justify-end mb-6">
             <button onClick={() => setOpen(false)}>
@@ -87,11 +85,15 @@ export default function Header() {
             <Link to="/team" onClick={() => setOpen(false)}>Team</Link>
             <Link to="/gallery" onClick={() => setOpen(false)}>Gallery</Link>
             <div className="cursor-pointer">Specialities</div>
-            <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
+            <Link to="/gallery" onClick={() => setOpen(false)}>
+              Gallery
+            </Link>
+            <Link to="/contact" onClick={() => setOpen(false)}>
+              Contact
+            </Link>
 
             {/* MOBILE BUTTONS */}
             <div className="mt-6 flex flex-col gap-3">
-
               <Link to="/book-visit">
                 <button className="w-full px-5 py-3 rounded-lg bg-[#E5F4FF] text-[#094ca0] font-medium">
                   Book a visit
@@ -103,9 +105,7 @@ export default function Header() {
                   Quick contact
                 </button>
               </Link>
-
             </div>
-
           </nav>
         </div>
       </div>
