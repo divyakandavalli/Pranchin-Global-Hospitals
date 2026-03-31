@@ -231,7 +231,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="2xl:max-w-[72%] lg:mt-20 py-10 text-white font-manrope border-t lg:flex-nowrap lg:gap-0 gap-5 flex-wrap border-[#2E2E2E] mx-auto w-[95%]  flex md:flex-row flex-col justify-between md:items-center">
+      <div className="3xl:max-w-[72%] lg:mt-10 py-10 text-white font-manrope border-t lg:flex-nowrap lg:gap-0 gap-5 flex-wrap border-[#2E2E2E] mx-auto w-[95%]  flex md:flex-row flex-col justify-between md:items-center">
         <p>© 2025 Prachin Hospital. All rights reserved.</p>
         <div className="flex flex-row flex-wrap  gap-4">
           <a href="/">Terms & Conditions</a>

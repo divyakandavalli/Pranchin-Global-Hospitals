@@ -5,10 +5,8 @@ import logo from "../../assets/images/PrachinLogo-3.png";
 export default function Header() {
   return (
     <div className="w-full flex justify-center  top-0 font-dm z-50">
-
       {/* Floating Header */}
       <header className="w-[90%] max-w-[80%] bg-[#FEFEFF] backdrop-blur-md  shadow-[0px_0px_30px_0px_rgba(226, 221, 213, 0.4)] rounded-b-[16px]  py-2 flex items-center justify-between">
-
         {/* Logo */}
         <div className="flex items-center gap-2 ">
           <Link to="/">
@@ -18,15 +16,25 @@ export default function Header() {
 
         {/* Nav */}
         <nav className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-          <Link to="/" className="hover:text-[#094ca0]">Home</Link>
-          <Link to="/about" className="hover:text-[#094ca0]">About</Link>
-          <Link to="/team" className="hover:text-[#094ca0]">Team</Link>
+          <Link to="/" className="hover:text-[#094ca0]">
+            Home
+          </Link>
+          <Link to="/about" className="hover:text-[#094ca0]">
+            About
+          </Link>
+          <Link to="/team" className="hover:text-[#094ca0]">
+            Team
+          </Link>
 
           <div className="flex items-center gap-1 cursor-pointer hover:text-[#094ca0]">
             Specialities
           </div>
-
-          <Link to="/contact" className="hover:text-[#094ca0]">Contact</Link>
+          <Link to="/gallery" className="hover:text-[#094ca0]">
+            Gallery
+          </Link>
+          <Link to="/contact" className="hover:text-[#094ca0]">
+            Contact
+          </Link>
         </nav>
 
         {/* Right Side */}
