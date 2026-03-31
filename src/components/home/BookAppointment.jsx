@@ -4,9 +4,9 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import BackgroundDoctor from '../../assets/images/portrait-happy-successful-hindu-doctor-young-medical-practitioner-smiling-looking.jpg'
-export default function BookAppointment() {
+export default function BookAppointment({ className = "" }) {
   return (
-    <div className="max-w-[95%] mx-auto">
+    <div className={`max-w-[95%] mx-auto ${className}`}>
       {/* MAIN CONTAINER */}
       <div className="relative rounded-[24px] overflow-hidden">
         {/* BACKGROUND IMAGE */}

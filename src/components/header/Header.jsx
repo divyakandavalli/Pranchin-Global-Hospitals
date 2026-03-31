@@ -25,10 +25,8 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-gray-700 font-medium">
             <Link to="/" className="hover:text-[#094ca0]">Home</Link>
             <Link to="/about" className="hover:text-[#094ca0]">About</Link>
-            <Link to="/team" className="hover:text-[#094ca0]">Team</Link>
-            <div className="flex items-center gap-1 cursor-pointer hover:text-[#094ca0]">
-              Specialities
-            </div>
+            <Link to="/doctors" className="hover:text-[#094ca0]">Doctors</Link>
+            <Link to="/all-specialities" className="hover:text-[#094ca0]">Specialities</Link>
             <Link to="/gallery" className="hover:text-[#094ca0]">Gallery</Link>
             <Link to="/contact" className="hover:text-[#094ca0]">Contact</Link>
           </nav>
