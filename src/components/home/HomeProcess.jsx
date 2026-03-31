@@ -22,7 +22,7 @@ export default function HomeProcess() {
   ];
 
   return (
-    <div className="py-24 px-6 md:px-10 xl:px-20">
+    <div className="xl:max-w-[95%] 3xl:max-w-[85%] mx-auto py-24 px-6 md:px-10 xl:px-20">
       {/* Heading */}
       <div className="text-center max-w-4xl mx-auto">
         <span className="border border-[#094ca0] text-[#094ca0] font-medium px-4 py-1 rounded-full tracking-[3px] text-sm uppercase">

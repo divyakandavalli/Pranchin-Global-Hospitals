@@ -4,12 +4,14 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "swiper/css";
 import "swiper/css/effect-fade";
-
+import Carousel1 from '../../assets/images/team-surgeons-doing-operation-sterile-operating-room.jpg'
+import Carousel2 from '../../assets/images/three-surgeons-hospital-room-one-which-is-being-prepared-perform-surgery.jpg'
+import Carousel3 from '../../assets/images/medical-team-operation-room.jpg'
 export default function BannerCarousel() {
   const slides = [
-    "https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Hero-L6ZFCLF.jpg",
-    "https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Hero-EXLJEDQ.jpg",
-    "https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Hero-JBBBGEL.jpg",
+    Carousel1,
+    Carousel2,
+    Carousel3,
   ];
 
   return (
@@ -46,7 +48,7 @@ export default function BannerCarousel() {
       <div className="absolute inset-0 z-20 "></div>
 
       {/* Content */}
-      <div className="absolute inset-0 z-30 flex items-center px-10 md:px-12 text-white">
+      <div className="absolute inset-0 z-30 flex items-center px-10 md:px-32 text-white">
         <div className="">
 
           {/* Badge */}

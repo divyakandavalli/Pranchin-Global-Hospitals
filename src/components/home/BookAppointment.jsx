@@ -5,7 +5,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 export default function BookAppointment() {
   return (
-    <div className="max-w-[97%] mx-auto py-10">
+    <div className="max-w-[97%] 3xl:max-w-[80%] mx-auto py-10">
       {/* MAIN CONTAINER */}
       <div className="relative rounded-[24px] overflow-hidden">
         {/* BACKGROUND IMAGE */}

@@ -25,7 +25,7 @@ const services = [
 
 export default function HomeServices() {
   return (
-    <div className="xl:max-w-[95%] 3xl:max-w-[80%] mx-auto">
+    <div className="xl:max-w-[95%] 3xl:max-w-[85%] mx-auto">
       <div className="bg-[#F4F5F9] rounded-[24px] py-36 px-10 relative  overflow-hidden">
         <div className="absolute -right-[310px] -top-[653px] max-w-full">
           <img src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Decorations.png" alt="" />
@@ -60,10 +60,10 @@ export default function HomeServices() {
         <div className="grid md:grid-cols-2 gap-8 mt-10">
           {services.map((item, index) => (
             <div
-              key={index}
-              className="flex flex-col min-h-[450px] justify-between rounded-[16px] w-full"
-              style={{ backgroundImage: `url(${item.img})` }}
-            >
+  key={index}
+  className="flex flex-col min-h-[450px] justify-between rounded-[16px] w-full bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: `url(${item.img})` }}
+>
               <div className="bg-[#F4F5F9] w-[94px] min-h-[84px] rounded-bl-[48px] flex flex-row justify-end items-start self-end p-0 relative">
                 {/* Arrow Button */}
                 <div className="max-w-full -rotate-[45deg]">
