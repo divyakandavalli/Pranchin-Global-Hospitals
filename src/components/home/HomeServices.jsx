@@ -31,7 +31,7 @@ const services = [
 
 export default function HomeServices() {
   return (
-    <div>
+    <div className="max-w-[95%] mx-auto">
       <div className="bg-[#c8dded] rounded-[24px] py-16 sm:py-20 md:py-28 xl:py-36 px-4 sm:px-6 md:px-10 relative overflow-hidden">
 
         {/* Decoration */}

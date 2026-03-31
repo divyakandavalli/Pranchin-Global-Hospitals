@@ -17,7 +17,7 @@ export default function Header() {
           {/* LOGO */}
           <div className="flex items-center">
             <Link to="/">
-              <img src={logo} alt="logo" className="h-[40px] sm:h-[50px] md:h-auto w-auto" />
+              <img src={logo} alt="logo" className="h-[60px] md:h-auto w-auto" />
             </Link>
           </div>
 
@@ -29,6 +29,7 @@ export default function Header() {
             <div className="flex items-center gap-1 cursor-pointer hover:text-[#094ca0]">
               Specialities
             </div>
+            <Link to="/gallery" className="hover:text-[#094ca0]">Gallery</Link>
             <Link to="/contact" className="hover:text-[#094ca0]">Contact</Link>
           </nav>
 
@@ -43,7 +44,7 @@ export default function Header() {
             </Link>
 
             <Link to="/quick-contact">
-              <button className="px-4 sm:px-[25px] py-2 sm:py-[16px] rounded-lg bg-[#f37721] text-white font-medium hover:bg-[#094ca0] text-sm sm:text-base">
+              <button className="hidden sm:block px-4 sm:px-[25px] py-2 sm:py-[16px] rounded-lg bg-[#f37721] text-white font-medium hover:bg-[#094ca0] text-sm sm:text-base">
                 Quick contact
               </button>
             </Link>
@@ -86,6 +87,7 @@ export default function Header() {
             <Link to="/" onClick={() => setOpen(false)}>Home</Link>
             <Link to="/about" onClick={() => setOpen(false)}>About</Link>
             <Link to="/team" onClick={() => setOpen(false)}>Team</Link>
+            <Link to="/gallery" onClick={() => setOpen(false)}>Gallery</Link>
             <div className="cursor-pointer">Specialities</div>
             <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
 

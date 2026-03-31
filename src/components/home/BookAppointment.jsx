@@ -3,18 +3,18 @@ import EastIcon from "@mui/icons-material/East";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import BackgroundDoctor from '../../assets/images/portrait-happy-successful-hindu-doctor-young-medical-practitioner-smiling-looking.jpg'
 export default function BookAppointment() {
   return (
-    <div className="">
+    <div className="max-w-[95%] mx-auto">
       {/* MAIN CONTAINER */}
       <div className="relative rounded-[24px] overflow-hidden">
         {/* BACKGROUND IMAGE */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Book-Form-GZA68DM.jpg)",
-          }}
+  backgroundImage: `url(${BackgroundDoctor})`,
+}}
         />
 
         {/* DARK OVERLAY */}
