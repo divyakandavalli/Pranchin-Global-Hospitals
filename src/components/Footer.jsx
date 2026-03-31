@@ -44,7 +44,7 @@ const Footer = () => {
           "  linear-gradient(to bottom,white 0%, white 20%,#010813 20%, #010813 100%)",
       }}
     >
-      <div className="2xl:max-w-[72%] md:p-16 px-6 py-[72px] font-manrope md:w-[95%] text-white mx-auto md:rounded-3xl bg-[#4D6E76] relative overflow-hidden">
+      <div className="3xl:max-w-[72%] md:p-16 px-6 py-[72px] font-manrope md:w-[95%] text-white mx-auto md:rounded-3xl bg-[#094ca0] relative overflow-hidden">
         <div className="-right-28 -top-36 absolute">
           <img src={footer_banner} className="rotate-[24deg]" alt="" />
         </div>
@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
             <h2 className="md:text-[64px] text-5xl xl:text-left text-center md:leading-[74px] leading-[54px]  font-semibold 2xl:pe-10">
               Book Your Appointment <span className="xl:hidden block"></span>
-              <span className="text-[#DDEADB] font-normal italic font-instrumental">
+              <span className="text-[#f37721] font-normal italic font-instrumental">
                 With Medical Experts
               </span>
             </h2>
@@ -68,7 +68,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex xl:w-[32%] justify-end items-end z-10">
-            <button className=" flex items-center justify-between bg-[#094ca0] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2 hover:bg-[#3f5955] transition">
+            <button className=" flex items-center justify-between bg-[#f37721] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2 hover:bg-[#3f5955] transition">
               <span className="font-medium font-manrope text-[16px] capitalize">
                 Book Appointment Now
               </span>
@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="2xl:max-w-[72%] font-manrope lg:mt-20 md:mt-10 mx-auto px-4 py-[72px] flex xl:flex-row flex-col lg:gap-40 md:gap-20 gap-10  md:w-[95%]">
+      <div className="3xl:max-w-[72%] font-manrope lg:mt-20 md:mt-10 mx-auto px-4 py-[72px] flex xl:flex-row flex-col lg:gap-40 md:gap-20 gap-10  md:w-[95%]">
         <div className="xl:w-[26%] flex flex-col xl:items-start items-center gap-4">
           <img src={logo} className="xl:w-52 w-60 brightness-100" alt="" />
           <p className="text-lg text-white xl:w-auto w-2/3 text-center xl:text-left">
@@ -231,7 +231,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="2xl:max-w-[72%] lg:mt-20 py-10 text-white font-manrope border-t lg:flex-nowrap lg:gap-0 gap-5 flex-wrap border-[#2E2E2E] mx-auto w-[95%]  flex md:flex-row flex-col justify-between md:items-center">
+      <div className="3xl:max-w-[72%] lg:mt-10 py-10 text-white font-manrope border-t lg:flex-nowrap lg:gap-0 gap-5 flex-wrap border-[#2E2E2E] mx-auto w-[95%]  flex md:flex-row flex-col justify-between md:items-center">
         <p>© 2025 Prachin Hospital. All rights reserved.</p>
         <div className="flex flex-row flex-wrap  gap-4">
           <a href="/">Terms & Conditions</a>
