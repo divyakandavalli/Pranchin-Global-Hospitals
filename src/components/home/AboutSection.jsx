@@ -3,11 +3,11 @@ import doctoricon from "../../assets/icons/surgeon.png";
 import AdvancedTech from "../../assets/icons/ecg-machine.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import StatsSection from "./StatsSection";
-import homeBanner from "../../assets/images/home_banner.jpg";
+import homeBanner from "../../assets/images/image-22-768x768.jpg";
 import feedback_Card from "../../assets/images/feedback_Card.jpg";
 export default function AboutSection() {
   return (
-    <section className=" 2xl:max-w-[72%] w-[95%] mx-auto xl:py-36 md:py-24 py-14">
+    <section className=" 3xl:max-w-[82%] w-[95%] mx-auto xl:py-36 md:py-24 py-14">
       <div className=" grid xl:grid-cols-2 grid-cols-1 lg:gap-20 md:gap-16 gap-10 items-center">
         {/* LEFT IMAGE */}
         <div className="relative xl:order-1 order-2">
@@ -20,8 +20,8 @@ export default function AboutSection() {
               backgroundRepeat: "no-repeat",
             }}
           />
-          <div class="w-[306px] absolute md:flex hidden rounded-tl-3xl pt-[10px] font-manrope bg-white bottom-0 right-0   justify-end items-end">
-            <div class="w-[296px] bg-[#DDEADB] rounded-2xl p-6">
+          <div className="w-[306px] absolute md:flex hidden rounded-tl-3xl pt-[10px] font-manrope bg-white bottom-0 right-0   justify-end items-end">
+            <div className="w-[296px] bg-[#DDEADB] rounded-2xl p-6">
               <div className="flex flex-row gap-4">
                 <img
                   src={feedback_Card}
@@ -56,7 +56,7 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="block md:hidden w-full sm:mt-8 mt-4">
-            <div class=" bg-[#DDEADB] rounded-2xl md:p-6 p-4">
+            <div className=" bg-[#DDEADB] rounded-2xl md:p-6 p-4">
               <div className="flex flex-row gap-4">
                 <img
                   src={feedback_Card}
