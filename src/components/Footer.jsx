@@ -106,7 +106,7 @@ const Footer = () => {
             </h2>
 
             <div className="mt-8">
-              <Marquee pauseOnHover={true} >
+              <Marquee pauseOnHover={true}>
                 <img
                   src={img}
                   alt=""
@@ -216,18 +216,18 @@ const Footer = () => {
                 placeholder="Your Name"
                 className="bg-white text-base w-full outline-none text-black py-3 rounded-full px-6"
               />
-         <button className="group flex items-center justify-between bg-[#094ca0] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2 hover:bg-[#f37721] transition">
-  
-  <span className="font-medium font-manrope text-[16px] capitalize">
-    Subscribe
-  </span>
+              <button className="group  flex items-center justify-between bg-[#094CA0]  text-white px-6 py-2 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300">
+                <span className="font-medium font-manrope text-[16px] capitalize">
+                  Subscribe
+                </span>
 
-  <span className="bg-[#DDEADB] text-black rounded-full w-9 h-9 flex items-center justify-center transition
-    group-hover:bg-white group-hover:text-[#f37721]">
-    <ArrowForwardIcon fontSize="small" />
-  </span>
-
-</button>
+                <span
+                  className="bg-[#E5F4FF] text-[#094CA0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300
+    group-hover:bg-[#F5D1B9] group-hover:text-[#F37721]"
+                >
+                  <ArrowForwardIcon fontSize="small" />
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -240,21 +240,21 @@ const Footer = () => {
           <a href="/">Privacy Policy</a>
           <a href="/">Sitemap</a>
           <a href="/">Cookies</a>
+        
         </div>
- <button
-  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  className="group flex items-center justify-between bg-[#094ca0] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2 hover:bg-[#f37721] transition"
->
-  <span className="font-medium font-manrope text-[16px] capitalize">
-    Back to Top
-  </span>
+        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="group  flex items-center justify-between bg-[#094CA0]  text-white px-3 py-2 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300">
+          <span className="font-medium font-manrope text-[16px] capitalize">
+            Back to Top
+          </span>
 
-  {/* Arrow Circle */}
-  <span className="bg-[#DDEADB] text-black rounded-full w-9 h-9 flex items-center justify-center transition
-    group-hover:bg-white group-hover:text-[#f37721]">
-    <ArrowUpwardIcon fontSize="small" />
-  </span>
-</button>
+          {/* Arrow Circle */}
+          <span
+            className="bg-[#E5F4FF] text-[#094CA0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300
+    group-hover:bg-[#F5D1B9] group-hover:text-[#F37721]"
+          >
+            <ArrowUpwardIcon fontSize="small" />
+          </span>
+        </button>
       </div>
     </div>
   );

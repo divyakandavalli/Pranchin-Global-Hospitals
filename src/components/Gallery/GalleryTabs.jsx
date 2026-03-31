@@ -91,7 +91,7 @@ const GalleryTabs = () => {
           <div className="flex justify-center items-center w-full my-16">
             <button
               onClick={loadMore}
-              className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#f37721] transition"
+              className="group mt-8 flex items-center justify-between bg-[#094CA0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"
             >
               <span className="font-medium font-manrope text-[16px] capitalize">
                 View More
@@ -111,8 +111,7 @@ const GalleryTabs = () => {
           <div className="flex justify-center items-center w-full my-16">
             <button
               onClick={() => setVisibleCount(12)}
-              className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#f37721] transition"
-            >
+ className="group mt-8 flex items-center justify-between bg-[#094CA0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"            >
               <span className="font-medium font-manrope text-[16px] capitalize">
                 View Less
               </span>

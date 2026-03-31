@@ -8,6 +8,7 @@ import Gallery from './pages/Gallery';
 import DoctorsPage from './pages/DoctorsPage';
 import Servicespage from './pages/Servicespage';
 import SingleService from './pages/SingleService';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/doctors' element={<DoctorsPage/>} />
         <Route path='/all-specialities' element={<Servicespage/>} />
         <Route path='/sample-service' element={<SingleService/>} />
+        <Route path='/contact' element={<ContactUs />} />
       </Routes>
       <Footer />
     </>
