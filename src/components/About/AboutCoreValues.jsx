@@ -36,7 +36,7 @@ const AboutCoreValues = () => {
   ];
   return (
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
-      <div className=" rounded-[24px] xl:py-36 lg:py-28 md:py-24 py-16 md:px-10 px-5 relative  overflow-hidden">
+      <div className=" rounded-[24px] xl:pt-36 lg:pt-28 md:pt-24 pt-16 md:px-10 px-5 relative  overflow-hidden">
         {/* <div className="absolute -right-[310px] -top-[653px] max-w-full">
           <img
             src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Decorations.png"
