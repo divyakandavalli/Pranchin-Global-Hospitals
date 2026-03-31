@@ -36,7 +36,7 @@ const AboutCoreValues = () => {
   ];
   return (
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
-      <div className="bg-[#F4F5F9] rounded-[24px] py-36 md:px-10 px-5 relative  overflow-hidden">
+      <div className="bg-[#C8DDED] rounded-[24px] xl:py-36 lg:py-28 md:py-24 py-16 md:px-10 px-5 relative  overflow-hidden">
         <div className="absolute -right-[310px] -top-[653px] max-w-full">
           <img
             src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Decorations.png"
@@ -63,16 +63,16 @@ const AboutCoreValues = () => {
               <p className="md:w-3/4 w-10/12 text-[#66686C] font-normal text-base font-manrope">
                 {item.desc}
               </p>
-              <div className="w-20 absolute flex  rounded-tl-3xl pt-[10px] font-manrope bg-[#F4F5F9] bottom-0 right-0   justify-end items-end">
+              <div className="w-20 absolute flex  rounded-tl-3xl pt-[10px] font-manrope bg-[#C8DDED] bottom-0 right-0   justify-end items-end">
                 <img src={item.img} className="w-16 h-16" alt="" />
-                <div className="absolute -left-8 bottom-0 w-8 flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#F4F5F9]">
+                <div className="absolute -left-8 bottom-0 w-8 flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#C8DDED]">
                   <div className="w-8">
                     <div className="w-8">
                       <div className="h-8"></div>
                     </div>
                   </div>
                 </div>
-                <div className="absolute -top-[33px] right-0 w-[33px] flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#F4F5F9]">
+                <div className="absolute -top-[33px] right-0 w-[33px] flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#C8DDED]">
                   <div className="w-8">
                     <div className="w-8">
                       <div className="h-8"></div>
