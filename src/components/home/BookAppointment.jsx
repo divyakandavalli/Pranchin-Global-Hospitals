@@ -3,7 +3,7 @@ import EastIcon from "@mui/icons-material/East";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import BackgroundDoctor from '../../assets/images/portrait-happy-successful-hindu-doctor-young-medical-practitioner-smiling-looking.jpg'
+import BackgroundDoctor from '../../assets/images/cheerful-eastern-doctor-working-clinic-taking-anamnesis.jpg'
 export default function BookAppointment({ className = "" }) {
   return (
     <div className={`max-w-[95%] mx-auto ${className}`}>
@@ -11,19 +11,20 @@ export default function BookAppointment({ className = "" }) {
       <div className="relative rounded-[24px] overflow-hidden">
         {/* BACKGROUND IMAGE */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-  backgroundImage: `url(${BackgroundDoctor})`,
-}}
-        />
-
+  className="absolute inset-0 bg-no-repeat bg-center"
+  style={{
+    backgroundImage: `url(${BackgroundDoctor})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center 20%", // tweak: 10%–30%
+  }}
+/>
         {/* DARK OVERLAY */}
         <div className="absolute inset-0 bg-[linear-gradient(270deg,#61ce7000_0%,#010813_100%)] opacity-80" />
 
         {/* CONTENT */}
         <div className="relative flex flex-col xl:flex-row gap-x-[150px] gap-y-[150px] py-[150px] px-[56px] pr-0 rounded-[24px]">
           {/* LEFT CONTENT */}
-          <div className="text-white w-full xl:w-[45%] flex flex-col justify-between items-start">
+          <div className="text-white w-full xl:w-[45%] flex flex-col justify-between items-start ">
             <span className="bg-white/20 tracking-wider font-manrope uppercase text-[16px] px-4 py-1 rounded-full backdrop-blur-md">
               EASY ACCESS
             </span>
@@ -42,15 +43,15 @@ export default function BookAppointment({ className = "" }) {
             </p>
 
             {/* BUTTON */}
-         <button className="group flex items-center justify-between bg-[#f37721] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#094ca0] transition-colors duration-300">
+<button className="group flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition-all duration-300 absolute bottom-14 ">
 
   <span className="font-medium font-manrope text-[16px] capitalize">
     Get Free Consultation
   </span>
 
   {/* Arrow Circle */}
-  <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300
-    group-hover:bg-[#E5F4FF] group-hover:text-[#094ca0]">
+  <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300
+    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
     
     <EastIcon fontSize="small" />
   </span>
@@ -172,23 +173,25 @@ export default function BookAppointment({ className = "" }) {
                     Message
                   </label>
                   <textarea
-                    rows="5"
+                    rows="3"
                     placeholder="write your message here..."
                     className="w-full p-3 rounded-lg bg-white outline-none"
                   />
                 </div>
 
                 {/* BUTTON */}
-                    <button className=" flex items-center justify-between bg-[#f37721] text-white px-6 py-3 rounded-full w-fit gap-4  transition mt-8">
+         <button className="flex items-center justify-between border border-[#f37721] text-[#f37721] px-6 py-3 rounded-full w-fit gap-4 mt-8">
 
-              <span className="font-medium font-manrope text-[16px] capitalize">Submit Details</span>
+  <span className="font-medium font-manrope text-[16px] capitalize">
+    Submit Details
+  </span>
 
-              {/* Arrow Circle */}
-              <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg">
-                <EastIcon fontSize="small" />
-              </span>
+  {/* Arrow Circle */}
+  <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg">
+    <EastIcon fontSize="small" />
+  </span>
 
-            </button>
+</button>
               </div>
             </div>
             <div className="absolute right-0 -top-[45px] w-[32px] h-[32px] flex flex-col rounded-br-[16px] shadow-[8px_4px_0px_0px_#FEFEFF] p-0 max-w-full">
