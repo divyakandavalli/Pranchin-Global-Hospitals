@@ -157,9 +157,9 @@ const ContactUsFrom = () => {
           <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start gap-3">
             <h4 className="md:text-3xl text-2xl  font-semibold">Let's talk</h4>
             <p className="text-lg text-[#66686C]">
-              <span>Phone : (+62) 812 3456 7890 </span>
+              <span>Phone : +91 7337332943 </span>
               <br />
-              <span>FAX : (+12) 834 567 8900</span>
+              <span>24/7 Emergency : +91 7337332943</span>
             </p>
             <div className="w-[72px]  absolute flex  rounded-tl-xl  font-manrope bg-[#ffffff] pl-2 pb-2 top-0 right-0 rounded-bl-xl  justify-center items-center">
               <div className=" flex-col gap-2 z-10 pb-2 w-16 h-16 bg-[#C8DDED] rounded-xl flex justify-center items-center">
@@ -215,9 +215,9 @@ const ContactUsFrom = () => {
             </div>
           </div>
           <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start gap-3">
-            <h4 className="md:text-3xl text-2xl  font-semibold">Office address</h4>
+            <h4 className="md:text-3xl text-2xl  font-semibold">Hospital address</h4>
             <p className="text-lg text-[#66686C]">
-             Jl. Merpati No.86L, Ngringin, Kec. Depok, Kabupaten Sleman
+             Indresham Rd, Patancheruvu, Hyderabad, Telangana 502319
             </p>
             <div className="w-[72px]  absolute flex  rounded-tl-xl  font-manrope bg-[#ffffff] pl-2 pb-2 top-0 right-0 rounded-bl-xl  justify-center items-center">
               <div className=" flex-col gap-2 z-10 pb-2 w-16 h-16 bg-[#C8DDED] rounded-xl flex justify-center items-center">

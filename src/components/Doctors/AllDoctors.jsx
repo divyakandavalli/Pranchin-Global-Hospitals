@@ -147,7 +147,7 @@ const AllDoctors = () => {
                 </div>
               </div>
 
-              <div className="w-14  absolute flex  rounded-tl-3xl pt-[10px] font-manrope bg-[#ffffff] top-0 left-0 rounded-br-xl  justify-center items-center">
+              <div className="w-14  absolute flex pt-[10px] font-manrope bg-[#ffffff] top-0 left-0 rounded-br-xl  justify-center items-center">
                 <div className="flex flex-col gap-2 z-10 pb-2">
                   {social.map((item, index) => (
                     <a

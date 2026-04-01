@@ -6,7 +6,7 @@ const GalleryTabs = () => {
   const [visibleCount, setVisibleCount] = useState(12);
   const images = [];
 
-  for (let i = 1; i <= 64; i++) {
+  for (let i = 1; i <= 62; i++) {
     images.push(
       new URL(
         `../../assets/images/gallery_photos/image (${i}).jpg`,

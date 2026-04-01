@@ -4,7 +4,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import logo from "../assets/images/PrachinLogo.png";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Marquee from "react-fast-marquee";
 import img from "../assets/images/footer_mrquee_img.jpg";
@@ -15,25 +15,25 @@ const Footer = () => {
       id: 1,
       name: "Twitter",
       icon: TwitterIcon,
-      link: "",
+      link: "https://x.com/Prachinhospital",
     },
     {
       id: 2,
       name: "facebook",
       icon: FacebookOutlinedIcon,
-      link: "",
+      link: "https://www.facebook.com/people/Prachin-Global-Hospitals/61572763597942/",
     },
     {
       id: 3,
-      name: "Linkedin",
-      icon: LinkedInIcon,
-      link: "",
+      name: "Instagram",
+      icon: InstagramIcon,
+      link: "https://www.instagram.com/prachinglobalhospitals/",
     },
     {
       id: 4,
       name: "Youtube",
       icon: YouTubeIcon,
-      link: "",
+      link: "https://www.youtube.com/@PrachinglobalHospitals",
     },
   ];
   return (
@@ -92,8 +92,9 @@ const Footer = () => {
           <div className="flex flex-row gap-4">
             {social.map((item, index) => (
               <a
-                key={item.id}
-                href={item.link}
+                key={item.id + index}
+                href={item.link} target="_blank" 
+                rel="noreferrer noopener"
                 className="p-2 rounded-full bg-[#DDEADB] hover:bg-[#f37721] flex justify-center items-center hover:text-white transition"
               >
                 <item.icon fontSize="small" />
@@ -234,7 +235,7 @@ const Footer = () => {
       </div>
 
       <div className="3xl:max-w-[72%] lg:mt-10 py-10 text-white font-manrope border-t lg:flex-nowrap lg:gap-0 gap-5 flex-wrap border-[#2E2E2E] mx-auto w-[95%]  flex md:flex-row flex-col justify-between md:items-center">
-        <p>© 2025 Prachin Hospital. All rights reserved.</p>
+        <p>© 2026 Prachin Hospital. All rights reserved.</p>
         <div className="flex flex-row flex-wrap  gap-4">
           <a href="/">Terms & Conditions</a>
           <a href="/">Privacy Policy</a>

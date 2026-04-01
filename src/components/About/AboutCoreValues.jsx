@@ -55,7 +55,7 @@ const AboutCoreValues = () => {
               <h2 className="text-[21px] font-manrope font-semibold mb-1">
                 {item.title}
               </h2>
-              <p className="md:w-3/4 w-10/12 text-[#66686C] font-normal text-base font-manrope">
+              <p className=" w-10/12 text-[#66686C] font-normal text-base font-manrope">
                 {item.desc}
               </p>
               <div className="w-20 absolute flex  rounded-tl-3xl pt-[10px] font-manrope bg-[#ffffff] bottom-0 right-0   justify-end items-end">
