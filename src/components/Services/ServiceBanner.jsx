@@ -1,5 +1,5 @@
 import React from "react";
-import bannerimg from "../../assets/images/portrait-smiling-doctors-with-arms-crossed-standing-hospital.jpg";
+import bannerimg from "../../assets/images/Services/organ-constructor-is-collected-from-cubes-by-doctor.jpg";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 const ServiceBanner = () => {
   return (

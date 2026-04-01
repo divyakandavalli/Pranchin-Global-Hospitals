@@ -1,20 +1,19 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import EastIcon from "@mui/icons-material/East";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import CloseIcon from "@mui/icons-material/Close";
-import Carousel1 from '../../assets/images/team-surgeons-doing-operation-sterile-operating-room.jpg'
-import Carousel2 from '../../assets/images/three-surgeons-hospital-room-one-which-is-being-prepared-perform-surgery.png'
-import Carousel3 from '../../assets/images/medical-team-operation-room.jpg'
+import Carousel1 from "../../assets/images/team-surgeons-doing-operation-sterile-operating-room.jpg";
+import Carousel2 from "../../assets/images/three-surgeons-hospital-room-one-which-is-being-prepared-perform-surgery.png";
+import Carousel3 from "../../assets/images/medical-team-operation-room.jpg";
 
 export default function BannerCarousel() {
   const slides = [Carousel1, Carousel2, Carousel3];
-const [openVideo, setOpenVideo] = useState(false);
+  const [openVideo, setOpenVideo] = useState(false);
   return (
     <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] xl:h-[780px] 3xl:h-[880px] overflow-hidden mt-5">
-
       {/* Slider */}
       <Swiper
         modules={[Autoplay, EffectFade]}
@@ -42,7 +41,6 @@ const [openVideo, setOpenVideo] = useState(false);
       {/* Content */}
       <div className="absolute inset-0 z-30 flex items-center px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 text-white">
         <div className="max-w-[100%] md:max-w-[70%] lg:max-w-[60%]">
-
           {/* Badge */}
           <div className="mb-3 sm:mb-4">
             <span className="bg-white/20 tracking-wider font-manrope uppercase text-[12px] sm:text-[14px] md:text-[16px] px-3 sm:px-4 py-1 rounded-full backdrop-blur-md">
@@ -51,10 +49,11 @@ const [openVideo, setOpenVideo] = useState(false);
           </div>
 
           {/* Heading */}
-          <h1 className="font-manrope font-semibold mb-4 sm:mb-6 
+          <h1
+            className="font-manrope font-semibold mb-4 sm:mb-6 
             text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl
-            leading-tight md:leading-[1.1] tracking-[1px] sm:tracking-[2px] md:tracking-[3px]">
-
+            leading-tight md:leading-[1.1] tracking-[1px] sm:tracking-[2px] md:tracking-[3px]"
+          >
             Your Trusted <br />
             Partner{" "}
             <span className="italic font-light font-instrumental text-[#f5d1b9]">
@@ -75,33 +74,31 @@ const [openVideo, setOpenVideo] = useState(false);
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+            <button className="group flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
+              <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
+                Book Appointment
+              </span>
 
-<button className="group flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
-
-  <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
-    Book Appointment
-  </span>
-
-  <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-lg transition 
-    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
-
-    <EastIcon fontSize="small" />
-  </span>
-
-</button>
-
-            <button className="flex items-center gap-2 text-sm sm:text-base text-white/90 hover:text-white"   onClick={() => setOpenVideo(true)}>
-              ▶ Watch Now
+              <span
+                className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-lg transition 
+    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]"
+              >
+                <EastIcon fontSize="small" />
+              </span>
             </button>
 
+            <button
+              className="flex items-center gap-2 text-sm sm:text-base text-white/90 hover:text-white"
+              onClick={() => setOpenVideo(true)}
+            >
+              ▶ Watch Now
+            </button>
           </div>
-
         </div>
       </div>
-       {/* VIDEO MODAL */}
+      {/* VIDEO MODAL */}
       {openVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-
           {/* BACKDROP */}
           <div
             className="absolute inset-0 bg-black/70"
@@ -110,7 +107,6 @@ const [openVideo, setOpenVideo] = useState(false);
 
           {/* MODAL CONTENT */}
           <div className="relative z-10 w-[90%] max-w-3xl">
-
             {/* CLOSE */}
             <button
               onClick={() => setOpenVideo(false)}
@@ -128,7 +124,6 @@ const [openVideo, setOpenVideo] = useState(false);
                 allowFullScreen
               />
             </div>
-
           </div>
         </div>
       )}
