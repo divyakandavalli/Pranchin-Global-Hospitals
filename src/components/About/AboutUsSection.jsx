@@ -1,7 +1,4 @@
 import React from "react";
-import doctoricon from "../../assets/icons/surgeon.png";
-import AdvancedTech from "../../assets/icons/ecg-machine.png";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import StatsSection from "../home/StatsSection";
 import homeBanner from "../../assets/images/image-22-768x768.jpg";
 import feedback_Card from "../../assets/images/feedback_Card.jpg";

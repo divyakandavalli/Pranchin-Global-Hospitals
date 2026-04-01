@@ -3,7 +3,6 @@ import about_dr_1 from "../../assets/images/portrait-handsome-young-indian-docto
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 const AboutDoctors = () => {
   const social = [
     {

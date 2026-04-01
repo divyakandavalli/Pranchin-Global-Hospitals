@@ -4,7 +4,6 @@ import about_icon_2 from "../../assets/icons/about_icon_2.png";
 import about_icon_3 from "../../assets/icons/about_icon_3.png";
 import about_icon_4 from "../../assets/icons/about_icon_4.png";
 import about_icon_5 from "../../assets/icons/about_icon_5.png";
-import about_icon_6 from "../../assets/icons/about_icon_6.png";
 const DoctorsCoreValues = () => {
   const services = [
     {
