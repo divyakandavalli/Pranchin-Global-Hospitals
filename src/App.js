@@ -9,6 +9,7 @@ import DoctorsPage from './pages/DoctorsPage';
 import Servicespage from './pages/Servicespage';
 import SingleService from './pages/SingleService';
 import ContactUs from './pages/ContactUs';
+import CareersPage from './pages/CareersPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/all-specialities' element={<Servicespage/>} />
         <Route path='/sample-service' element={<SingleService/>} />
         <Route path='/contact' element={<ContactUs />} />
+        <Route path='/careers' element={<CareersPage  />} />
       </Routes>
       <Footer />
     </>

@@ -55,7 +55,7 @@ const Footer = () => {
                 GET STARTED
               </span>
             </div>
-            <h2 className="md:text-[64px] text-5xl xl:text-left text-center md:leading-[74px] leading-[54px]  font-semibold 2xl:pe-10">
+            <h2 className="lg:text-[64px] md:text-5xl text-4xl xl:text-left leading-[45px] text-center md:leading-[74px] font-semibold 2xl:pe-10">
               Book Your Appointment <span className="xl:hidden block"></span>
               <span className="text-[#f37721] font-normal italic font-instrumental">
                 With Medical Experts

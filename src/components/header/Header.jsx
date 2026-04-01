@@ -96,6 +96,7 @@ export default function Header() {
             </div>
 
             <Link to="/gallery" className="hover:text-[#094ca0]">Gallery</Link>
+            <Link to="/careers" className="hover:text-[#094ca0]">Careers</Link>
             <Link to="/contact" className="hover:text-[#094ca0]">Contact</Link>
           </nav>
 
