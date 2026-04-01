@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import CloseIcon from "@mui/icons-material/Close";
 import Carousel1 from '../../assets/images/team-surgeons-doing-operation-sterile-operating-room.jpg'
-import Carousel2 from '../../assets/images/three-surgeons-hospital-room-one-which-is-being-prepared-perform-surgery.jpg'
+import Carousel2 from '../../assets/images/three-surgeons-hospital-room-one-which-is-being-prepared-perform-surgery.png'
 import Carousel3 from '../../assets/images/medical-team-operation-room.jpg'
 
 export default function BannerCarousel() {
@@ -76,19 +76,19 @@ const [openVideo, setOpenVideo] = useState(false);
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
 
-            <button className="group flex items-center justify-between bg-[#f37721] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 hover:bg-[#094ca0] transition">
+<button className="group flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
 
-              <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
-                Book Appointment
-              </span>
+  <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
+    Book Appointment
+  </span>
 
-              <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-lg transition 
-                group-hover:bg-[#E5F4FF] group-hover:text-[#094ca0]">
+  <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-lg transition 
+    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
 
-                <EastIcon fontSize="small" />
-              </span>
+    <EastIcon fontSize="small" />
+  </span>
 
-            </button>
+</button>
 
             <button className="flex items-center gap-2 text-sm sm:text-base text-white/90 hover:text-white"   onClick={() => setOpenVideo(true)}>
               ▶ Watch Now

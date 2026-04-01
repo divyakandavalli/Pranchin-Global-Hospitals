@@ -83,7 +83,7 @@ export default function HomeProcess() {
         <div className="w-[250px] flex flex-row h-full justify-center  items-center self-center z-10 relative">
           <div className="max-w-full bg-[#FEFEFF] pt-3 px-3 rounded-t-[32px]">
             <div className="text-center">
-              <Link className="group bg-[#094ca0] pl-4 pr-2 py-2 font-manrope text-[16px] font-medium leading-[26px] text-white rounded-full inline-flex items-center gap-3 whitespace-nowrap transition-colors duration-300 hover:bg-[#f37721]">
+<Link className="group bg-[#094ca0] pl-4 pr-2 py-2 font-manrope text-[16px] font-medium leading-[26px] text-white rounded-full inline-flex items-center gap-3 whitespace-nowrap border border-[#094ca0] transition-all duration-300 hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721]">
   
   Contact Us
 

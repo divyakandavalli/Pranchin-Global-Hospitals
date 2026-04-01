@@ -3,15 +3,16 @@ import doctoricon from "../../assets/icons/surgeon.png";
 import AdvancedTech from "../../assets/icons/ecg-machine.png";
 import EastIcon from "@mui/icons-material/East";
 import StatsSection from "./StatsSection";
-import homeBanner from "../../assets/images/image-22-768x768.jpg";
+import homeBanner from "../../assets/images/empty-ward-hospital.jpg";
 import feedback_Card from "../../assets/images/feedback_Card.jpg";
 export default function AboutSection() {
   return (
-    <section className=" 3xl:max-w-[82%] w-[95%] mx-auto xl:py-20 md:py-16 py-14">
+  <div className="bg-[#010813]">
+      <section className=" 3xl:max-w-[82%] w-[95%] mx-auto xl:py-20 md:py-16 py-14">
       <div className=" grid xl:grid-cols-2 grid-cols-1 lg:gap-20 md:gap-16 gap-10 items-center">
         {/* LEFT IMAGE */}
         <div className="relative xl:order-1 order-2">
-          <div
+          {/* <div
             className="xl:h-[675px] md:min-h-[500px] h-[350px] rounded-3xl object-cover"
             style={{
               backgroundImage: `url(${homeBanner})`,
@@ -75,7 +76,8 @@ export default function AboutSection() {
                 care round the clock. ”
               </p>
             </div>
-          </div>
+          </div> */}
+          <img src={homeBanner} alt="" className="rounded-2xl"/>
         </div>
 
         {/* RIGHT CONTENT */}
@@ -84,21 +86,21 @@ export default function AboutSection() {
             ABOUT US
           </span>
 
-          <h2 className="text-[44px] font-manrope md:text-[64px] xl:block hidden font-semibold mt-4 leading-tight">
+          <h2 className="text-[44px] font-manrope md:text-[64px] xl:block hidden font-semibold mt-4 leading-tight text-white">
             Compassionate Care <br />
             for{" "}
             <span className="italic font-light font-instrumental text-[#5187af]">
               Your Health
             </span>
           </h2>
-          <h2 className="text-4xl font-manrope md:text-[64px] xl:hidden text-center block font-semibold mt-4 leading-tight">
+          <h2 className="text-4xl font-manrope md:text-[64px] xl:hidden text-center block font-semibold text-white mt-4 leading-tight">
             Compassionate Care for <br />
             <span className="italic font-light font-instrumental text-[#5187af]">
               Your Health
             </span>
           </h2>
 
-          <p className="text-[#788793] text-[18px] xl:text-left text-center xl:w-auto max-w-2xl font-manrope mt-4">
+          <p className="text-[#b4c6d5] text-[18px] xl:text-left text-center xl:w-auto max-w-2xl font-manrope mt-4">
             Prachin Global Hospitals, we believe that world-class healthcare
             should be seamless, sophisticated and deeply personal. Spanning a
             state-of-art 250-bed facility, we have integrated cutting-edge
@@ -112,10 +114,10 @@ export default function AboutSection() {
                 <img src={doctoricon} alt="" />
               </div>
               <div className="md:text-left text-center">
-                <h4 className="font-semibold font-manrope text-[21px]">
+                <h4 className="font-semibold font-manrope text-[21px] text-[#5187af]">
                   Expert Doctor
                 </h4>
-                <p className="text-[16px] font-manrope text-[#788793] xl:w-auto lg:w-2/3 w-full">
+                <p className="text-[16px] font-manrope text-[#b4c6d5] xl:w-auto lg:w-2/3 w-full">
                   Our team of highly skilled and experienced medical professiona
                   to providing top-quality healthcare with compassion and
                   precision.
@@ -128,10 +130,10 @@ export default function AboutSection() {
                 <img src={AdvancedTech} alt="" />
               </div>
               <div className="md:text-left text-center">
-                <h4 className="font-semibold font-manrope text-[21px]">
+                <h4 className="font-semibold font-manrope text-[21px] text-[#5187af]">
                   Advanced Technology
                 </h4>
-                <p className="text-[16px] font-manrope text-[#788793] xl:w-auto lg:w-2/3 w-full">
+                <p className="text-[16px] font-manrope text-[#b4c6d5] xl:w-auto lg:w-2/3 w-full">
                   We utilize cutting-edge medical technology and modern treatmen
                   to ensure accurate diagnoses and effective care for all
                   patients.
@@ -139,19 +141,21 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <button className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#f37721] transition">
-            <span className="font-medium font-manrope text-[16px] capitalize">
-              More About Us
-            </span>
+        <button className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
 
-            {/* Arrow Circle */}
-            <span
-              className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition
+  <span className="font-medium font-manrope text-[16px] capitalize">
+    More About Us
+  </span>
+
+  {/* Arrow Circle */}
+  <span
+    className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition
     group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]"
-            >
-              <EastIcon fontSize="small" />
-            </span>
-          </button>
+  >
+    <EastIcon fontSize="small" />
+  </span>
+
+</button>
         </div>
       </div>
 
@@ -159,5 +163,6 @@ export default function AboutSection() {
         <StatsSection />
       </div>
     </section>
+  </div>
   );
 }

@@ -4,6 +4,7 @@ import Rating from "react-rating";
 import { FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import HappyFace from '../../assets/images/happy.jpg'
 import "swiper/css";
 const testimonials = [
   {
@@ -76,7 +77,7 @@ export default function Testimonials() {
               experienced professionals, and personalized treatments to ensure
               your well-being and a healthier future.
             </p>
-<button className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 hover:bg-[#f37721] transition-colors duration-300">
+<button className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition-all duration-300">
 
   <span className="font-medium font-manrope text-[16px] capitalize">
     View All Testimonials
@@ -125,7 +126,7 @@ export default function Testimonials() {
   {/* Right Image FULL */}
   <div className="sm:w-[45%] h-[320px] sm:h-auto">
     <img
-      src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Image-QS3UESD.jpg"
+      src={HappyFace}
       alt="Heller Keano"
       className="w-full h-full object-cover"
     />

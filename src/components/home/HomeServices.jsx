@@ -1,10 +1,10 @@
 import React from "react";
 import EastIcon from "@mui/icons-material/East";
 
-import Cardiology from '../../assets/images/middle-age-hispanic-man-wearing-doctor-uniform-auscultating-heart-clinic.jpg'
+import Cardiology from '../../assets/images/cardiac_img.png'
 import Neurology from '../../assets/images/empty-examination-office-room-having-brain-tomography-computer-screen-ready-oncology-consultation-hospital-room-with-nobody-it-equipped-with-professional-medical-tools-mri-brain-diagram.jpg'
-import Oncology from '../../assets/images/young-woman-suffering-breast-cancer-talking-with-her-doctor.jpg'
-import Pulmonology from '../../assets/images/medical-doctor-give-consultation-patient-with-xray-film.jpg'
+import Oncology from '../../assets/images/freepik_0001.jpeg'
+import Pulmonology from '../../assets/images/lungs_image.png'
 
 const services = [
   {
@@ -31,8 +31,8 @@ const services = [
 
 export default function HomeServices() {
   return (
-    <div className="max-w-[95%] mx-auto">
-      <div className="bg-[#c8dded] rounded-[24px] py-16 sm:py-20 md:py-28 xl:py-36 px-4 sm:px-6 md:px-10 relative overflow-hidden">
+    <div className="max-w-[95%] mx-auto xl:mt-10">
+      <div className="bg-[#c8dded] rounded-[24px] py-16 sm:py-20 md:py-28 xl:pt-36 xl:pb-10 px-4 sm:px-6 md:px-10 relative overflow-hidden">
 
         {/* Decoration */}
         <div className="hidden md:block absolute -right-[310px] -top-[653px] pointer-events-none">
@@ -60,18 +60,18 @@ export default function HomeServices() {
           </div>
 
           <div>
-            <button className="group mt-2 lg:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 hover:bg-[#f37721] transition">
+           <button className="group mt-2 lg:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
 
-              <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
-                View all services
-              </span>
+  <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
+    View all services
+  </span>
 
-              <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-lg transition
-                group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
-                <EastIcon fontSize="small" />
-              </span>
+  <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-lg transition
+    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
+    <EastIcon fontSize="small" />
+  </span>
 
-            </button>
+</button>
           </div>
         </div>
 
@@ -121,6 +121,20 @@ export default function HomeServices() {
 
             </div>
           ))}
+        </div>
+        <div className="flex justify-center items-center text-center my-10">
+                     <button className="group mt-2 lg:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
+
+  <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
+    View all services
+  </span>
+
+  <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-lg transition
+    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
+    <EastIcon fontSize="small" />
+  </span>
+
+</button>
         </div>
       </div>
     </div>
