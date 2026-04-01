@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContactPerson from '../../assets/images/smiling-young-female-doctor-wearing-medical-robe-stethoscope-sitting-desk-with-medical-tools-looking-doing-call-gesture-pistol-gesture-isolated.jpg'
+import ContactPerson from "../../assets/images/smiling-young-female-doctor-wearing-medical-robe-stethoscope-sitting-desk-with-medical-tools-looking-doing-call-gesture-pistol-gesture-isolated.jpg";
 import EastIcon from "@mui/icons-material/East";
 
 const faqs = [
@@ -33,15 +33,17 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="py-12 sm:py-16 md:py-20">
+    <div className="pb-10 md:pt-20 md:pb-20">
       <div className="max-w-[95%] md:max-w-[90%] 3xl:max-w-[80%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10">
-
         {/* LEFT */}
         <div className="w-full lg:w-[35%]">
           <div className="lg:sticky lg:top-20 space-y-4 sm:space-y-6">
-
             <div className="bg-white rounded-[20px] p-3 sm:p-4 shadow">
-              <img src={ContactPerson} alt="" className="rounded-[16px] w-full object-cover" />
+              <img
+                src={ContactPerson}
+                alt=""
+                className="rounded-[16px] w-full object-cover"
+              />
             </div>
 
             <div className="bg-[#c8dded] rounded-[20px] p-4 sm:p-6 font-manrope">
@@ -50,20 +52,21 @@ export default function FAQSection() {
               </h3>
 
               <p className="text-[14px] sm:text-[15px] md:text-[16px] text-[#2f373e] mt-2">
-                One morning, when Gregor Samsa woke will from grow yo troubled dreams...
+                One morning, when Gregor Samsa woke will from grow yo troubled
+                dreams...
               </p>
 
               <button className="group mt-5 sm:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 hover:bg-[#f37721] transition">
-
                 <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
                   Get Free Consultation
                 </span>
 
-                <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center transition
-                  group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
+                <span
+                  className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center transition
+                  group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]"
+                >
                   <EastIcon fontSize="small" />
                 </span>
-
               </button>
             </div>
           </div>
@@ -71,7 +74,6 @@ export default function FAQSection() {
 
         {/* RIGHT */}
         <div className="w-full lg:w-[65%]">
-
           <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-3 sm:px-4 py-1 rounded-full tracking-[2px] sm:tracking-[3px] text-[12px] sm:text-[14px] md:text-[16px] uppercase inline-block">
             Common Questions
           </span>
@@ -81,14 +83,14 @@ export default function FAQSection() {
           </h2>
 
           <div className="mt-6 sm:mt-8 md:mt-10 space-y-3 sm:space-y-4 font-manrope">
-
             {faqs.map((item, index) => (
               <div key={index} className="cursor-pointer">
-
                 {/* Question */}
                 <div
                   className="bg-[#c8dded] rounded-[10px] sm:rounded-[12px] p-3 sm:p-4 md:p-5 flex justify-between items-center"
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
                 >
                   <h4 className="font-semibold text-[14px] sm:text-[16px] md:text-[21px] text-[#094ca0]">
                     {item.q}
@@ -105,10 +107,8 @@ export default function FAQSection() {
                     {item.a}
                   </p>
                 )}
-
               </div>
             ))}
-
           </div>
         </div>
       </div>

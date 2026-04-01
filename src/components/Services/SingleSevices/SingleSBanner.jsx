@@ -1,5 +1,5 @@
 import React from "react";
-import bannerimg from "../../../assets/images/portrait-smiling-doctors-with-arms-crossed-standing-hospital.jpg";
+import bannerimg from "../../../assets/images/Services/doctor-who-advise-treating-patient-with-heart-disease-2.jpg";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 const SingleSBanner = () => {
   return (

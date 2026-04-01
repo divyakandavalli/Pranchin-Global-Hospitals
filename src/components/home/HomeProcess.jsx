@@ -22,7 +22,7 @@ export default function HomeProcess() {
   ];
 
   return (
-    <div className="xl:max-w-[95%] 3xl:max-w-[85%] mx-auto py-24 px-6 md:px-10 xl:px-20">
+    <div className="xl:max-w-[95%] 3xl:max-w-[85%] mx-auto py-10 xl:py-24 px-6 md:px-10 xl:px-20">
       {/* Heading */}
       <div className="text-center max-w-4xl mx-auto">
         <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px]">
@@ -31,7 +31,9 @@ export default function HomeProcess() {
 
         <h2 className="text-[44px] font-manrope md:text-[64px] xl:block hidden font-semibold mt-4 leading-tight">
           Seamless Care in{" "}
-          <span className="italic font-light font-instrumental text-[#5187af]">Three Steps</span>
+          <span className="italic font-light font-instrumental text-[#5187af]">
+            Three Steps
+          </span>
         </h2>
       </div>
 
@@ -68,7 +70,7 @@ export default function HomeProcess() {
           </div>
         ))}
       </div>
-      <div className="flex min-h-[700px] justify-end rounded-[24px] my-10 flex-col relative overflow-hidden">
+      <div className="flex min-h-[300px] md:min-h-[400px] xl:min-h-[700px] justify-end rounded-[24px] my-10 flex-col relative overflow-hidden">
         <video
           key={DocVideo}
           autoPlay
@@ -83,17 +85,15 @@ export default function HomeProcess() {
         <div className="w-[250px] flex flex-row h-full justify-center  items-center self-center z-10 relative">
           <div className="max-w-full bg-[#FEFEFF] pt-3 px-3 rounded-t-[32px]">
             <div className="text-center">
-<Link className="group bg-[#094ca0] pl-4 pr-2 py-2 font-manrope text-[16px] font-medium leading-[26px] text-white rounded-full inline-flex items-center gap-3 whitespace-nowrap border border-[#094ca0] transition-all duration-300 hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721]">
-  
-  Contact Us
-
-  <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center transition-all duration-300
-    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
-    
-    <EastIcon fontSize="small" />
-  </span>
-
-</Link>
+              <Link className="group bg-[#094ca0] pl-4 pr-2 py-2 font-manrope text-[16px] font-medium leading-[26px] text-white rounded-full inline-flex items-center gap-3 whitespace-nowrap border border-[#094ca0] transition-all duration-300 hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721]">
+                Contact Us
+                <span
+                  className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center transition-all duration-300
+    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]"
+                >
+                  <EastIcon fontSize="small" />
+                </span>
+              </Link>
             </div>
           </div>
           <div className="absolute bottom-0 left-[4px] w-[32px] h-[32px] flex flex-col rounded-br-[16px] shadow-[8px_4px_0px_0px_#FEFEFF] p-0 max-w-full">
