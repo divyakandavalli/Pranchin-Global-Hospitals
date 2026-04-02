@@ -164,6 +164,7 @@ export default function Header() {
             <Link to="/gallery" className="hover:text-[#094ca0]">
               Gallery
             </Link>
+            <Link to="/health-packages" className="hover:text-[#094ca0] capitalize">health packages</Link>
             <Link to="/careers" className="hover:text-[#094ca0]">Careers</Link>
             <Link to="/contact" className="hover:text-[#094ca0]">
               Contact
