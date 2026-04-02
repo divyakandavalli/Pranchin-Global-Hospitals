@@ -5,27 +5,32 @@ import Cardiology from "../../assets/images/cardiac_img.png";
 import Neurology from "../../assets/images/empty-examination-office-room-having-brain-tomography-computer-screen-ready-oncology-consultation-hospital-room-with-nobody-it-equipped-with-professional-medical-tools-mri-brain-diagram.jpg";
 import Oncology from "../../assets/images/freepik_0001.jpeg";
 import Pulmonology from "../../assets/images/lungs_image.png";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     title: "Cardiology",
     desc: "The Department of Cardiology at Prachin Global Hospital is equipped with cutting-edge technology",
     img: Cardiology,
+    slug:'specialities/cardiology'
   },
   {
     title: "Neurology",
     desc: "Department of Neurophysiology provides advanced diagnostic testing essential for evaluating nervous system disorders.",
     img: Neurology,
+     slug:'specialities/neurology'
   },
   {
     title: "Oncology",
     desc: "The Department of Medical Oncology at Prachin Global Hospital is fully equipped with modern daycare chemotherapy wards",
     img: Oncology,
+     slug:'specialities/oncology'
   },
   {
     title: "Pulmonology",
     desc: "Department of Pulmonary and Lung Sciences is home to a highly skilled team of experienced pulmonologists",
     img: Pulmonology,
+     slug:'specialities/pulmonology'
   },
 ];
 
@@ -58,7 +63,7 @@ export default function HomeServices() {
           </div>
 
           <div>
-            <button className="group mt-2 lg:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
+            <Link to='/specialities' className="group mt-2 lg:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
               <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
                 View all services
               </span>
@@ -69,7 +74,7 @@ export default function HomeServices() {
               >
                 <EastIcon fontSize="small" />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -82,7 +87,7 @@ export default function HomeServices() {
               style={{ backgroundImage: `url(${item.img})` }}
             >
               {/* Arrow Corner */}
-              <div className="bg-[#c8dded] w-[80px] sm:w-[94px] min-h-[70px] sm:min-h-[84px] rounded-bl-[48px] flex justify-end items-start self-end relative">
+              <Link to={item.slug} className="bg-[#c8dded] w-[80px] sm:w-[94px] min-h-[70px] sm:min-h-[84px] rounded-bl-[48px] flex justify-end items-start self-end relative">
                 <div className="-rotate-[45deg]">
                   <div className="bg-[#E5F4FF] text-[#094ca0] rounded-full text-[24px] sm:text-[30px] md:text-[36px] ml-[10px] sm:ml-[20px] w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center">
                     <EastIcon />
@@ -92,7 +97,7 @@ export default function HomeServices() {
                 {/* corners */}
                 <div className="absolute top-0 -left-[32px] w-[32px] h-[32px] rounded-tr-[16px] shadow-[8px_-4px_0_0_#c8dded]" />
                 <div className="absolute -bottom-[32px] right-0 w-[32px] h-[32px] rounded-tr-[16px] shadow-[8px_-4px_0_0_#c8dded]" />
-              </div>
+              </Link>
 
               {/* Bottom Content */}
               <div className="bg-[#c8dded] w-[85%] sm:w-[300px] md:w-[350px] flex justify-end gap-4 border-t-[12px] border-r-[12px] border-[#c8dded] rounded-tr-[16px] relative">
@@ -114,7 +119,7 @@ export default function HomeServices() {
           ))}
         </div>
         <div className="flex justify-center items-center text-center my-10">
-          <button className="group mt-2 lg:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
+          <Link to='/specialities' className="group mt-2 lg:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
             <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
               View all services
             </span>
@@ -125,7 +130,7 @@ export default function HomeServices() {
             >
               <EastIcon fontSize="small" />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

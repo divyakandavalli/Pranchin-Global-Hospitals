@@ -3,7 +3,7 @@ import EastIcon from "@mui/icons-material/East";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-
+import { Link } from "react-router-dom";
 export default function BookAppointmentMobile() {
   return (
     <div className="w-[92%] mx-auto py-10">
@@ -25,14 +25,14 @@ export default function BookAppointmentMobile() {
           Fill the form and our team will confirm your appointment.
         </p>
 
-        <button className="mt-5 flex items-center gap-3 bg-[#094ca0] text-white px-5 py-2.5 rounded-full">
+        <Link to='/contact' className="mt-5 flex items-center gap-3 bg-[#094ca0] text-white px-5 py-2.5 rounded-full">
           <span className="text-[14px] font-manrope">
             Get Free Consultation
           </span>
           <span className="bg-white text-[#094ca0] rounded-full w-8 h-8 flex items-center justify-center">
             <EastIcon fontSize="small" />
           </span>
-        </button>
+        </Link>
       </div>
 
       {/* FORM */}

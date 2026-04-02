@@ -34,7 +34,6 @@ const SPECIALITIES = [
         "Left Main, Bifurcation CTO procedures",
         "Post-bypass interventional angioplasty",
       ],
-
       proceduresNote:
         "Advanced cardiac support using Impella and ECMO-assisted devices",
       image1: image1,
@@ -67,15 +66,15 @@ const SPECIALITIES = [
     },
   },
   {
-    slug: "neurology",
     title: "Neurology",
+    slug: "neurology",
     category: "core",
-
+    banner: bannerCardio,
     sections: {
       overview: `Prachin Global Hospital is equipped to treat conditions affecting the Brain, Spinal Cord, Nerves, and muscles with precision and care. Our team of highly experienced Neuro Physicians and Neurosurgeons brings together international standards, vast clinical experience and patient-first ethics to deliver world-class neurological care.`,
 
       diagnosticsTitle: "Advanced Neurology & Neurosurgery Care",
-      diagnosticsDescription: `We offer a comprehensive range of non-invasive, minimally invasive, and surgical treatments tailored to each patient’s condition. Our advanced infrastructure includes:`,
+      diagnosticsDescription: `At Prachin Global Hospital, we offer a comprehensive range of non-invasive, minimally invasive, and surgical treatments tailored to each patient’s condition. Our state-of-the-art infrastructure includes:`,
 
       diagnostics: [
         "HEPA-filtered modular operation theatres",
@@ -85,29 +84,34 @@ const SPECIALITIES = [
       ],
       diagnosticsDescription2:
         "Both outpatient and inpatient services are designed to ensure accurate diagnosis, effective treatment, and smooth recovery.",
+
       proceduresTitle: "Comprehensive Neurological Diagnostics",
       proceduresDescription: `Our Department of Neurophysiology provides advanced diagnostic testing essential for evaluating nervous system disorders. These tests help in early detection, accurate diagnosis, and effective treatment planning.`,
 
       proceduresSubTitle: "Diagnostic Tests Include:",
       procedures: [
-        "Electromyography (EMG)",
-        "Nerve Conduction Studies (NCS)",
+        "Electromyography (EMG): Detects muscle weakness, nerve damage, and muscular disorders by recording electrical activity in muscles.",
+        "Nerve Conduction Studies (NCS):Measures the speed and strength of nerve signals, helping diagnose conditions such as peripheral neuropathy, carpal tunnel syndrome, and radiculopathy.",
         "Electroencephalogram (EEG)",
         "CT Scan",
         "MRI Scan",
         "Neuro Lab",
       ],
-
-      proceduresNote:
-        "These diagnostic tools help in early detection and effective treatment planning.",
-
-      extraSectionTitle: "Key Neurological Conditions Treated",
-      extraSectionContent: `At Prachin Global Hospital, our expert neurological team manages a wide spectrum of neurological disorders including stroke, dementia, epilepsy, Parkinsonism, ALS, multiple sclerosis, Alzheimer’s disease, Tourette’s syndrome, neuromuscular disorders, and congenital spine disorders.`,
-
-      screeningTitle: "Detailed Overview of Major Conditions",
-      screeningContent: `We provide specialized care for major neurological conditions with advanced treatment protocols and patient-focused management.`,
-
-      packages: [
+      conditionstreatedtitle: "Key Neurological Conditions Treated",
+      conditionstreateddesc:
+        "At Prachin Global Hospital, our expert neurological team manages a wide spectrum of neurological disorders, including:",
+      conditionstreatedpoints: [
+        "Stroke (Ischemic & Hemorrhagic)",
+        "Dementia",
+        "Parkinsonism",
+        "Amyotrophic Lateral Sclerosis (ALS)",
+        "Multiple Sclerosis",
+        "Alzheimer’s Disease",
+        "Tourette’s Syndrome",
+        "Neuromuscular Disorders",
+        "Congenital Spine Disorders",
+      ],
+      Majorconditions: [
         {
           title: "Stroke",
           description:
@@ -150,45 +154,78 @@ const SPECIALITIES = [
         },
       ],
 
-      technologiesTitle: "Why Choose Prachin Global Hospital",
-      technologies: [
-        "Advanced Neuro ICUs",
-        "Experienced Neurology Specialists",
-        "Comprehensive Diagnostic Facilities",
-        "Personalized Treatment Plans",
-      ],
-
+      technologiesTitle:
+        "Your Trusted Destination for Neurological Care in Hyderabad",
       technologiesNote:
-        "We combine medical excellence with compassion to ensure the best neurological outcomes for every patient.",
+        "At Prachin Global Hospital, we combine medical excellence with human compassion to deliver trusted neurological care. Early diagnosis, advanced treatment, and personalized care plans ensure the best possible outcomes for every patient.",
     },
   },
   {
     slug: "neuro-surgery",
     title: "Neuro Surgery",
     category: "core",
+    banner: bannerCardio,
     sections: {
-      overview:
-        "Neuro surgery focuses on surgical treatment of brain and spine.",
-      diagnostics: ["Brain Scan", "Spine MRI"],
-      treatments: ["Brain Surgery", "Spine Surgery"],
-      technologies: ["Advanced Neuro Navigation"],
+      overview: `   At Prachin Global Hospital, the Department of Neurosurgery stands as a center of excellence, offering advanced and comprehensive care for patients with complex neurological conditions. Our department is led by highly experienced and dedicated Neurosurgeons who provide round-the-clock services, ensuring timely and expert treatment for patients from across the region. 
+
+Equipped with state-of-the-art infrastructure and modern operation theatres, Prachin Global Hospital delivers world-class neurosurgical care. The department performs a wide range of neurosurgical procedures every year, maintaining high standards of precision, safety, and patient outcomes.`,
+      proceduresTitle: "Our Neurosurgery Services Include",
+      procedures: [
+        "Brain Tumor surgery",
+        "Spinal Cord and Spine Surgery",
+        "Traumatic brain and spine injury management",
+        "Minimally invasive neurosurgery",
+        "Neuro-critical care",
+        "Treatment planning and advanced diagnostics",
+        "Post-surgical rehabilitation and supportive therapies",
+      ],
+      proceduresNote:
+        "Our multidisciplinary approach ensures that every patient receives personalized treatment—from diagnosis and surgical planning to recovery and rehabilitation.",
     },
   },
   {
     slug: "oncology",
     title: "Oncology",
     category: "core",
+    banner: bannerCardio,
     sections: {
-      overview: "Oncology focuses on cancer diagnosis and treatment.",
-      diagnostics: ["Biopsy", "PET Scan"],
-      treatments: ["Chemotherapy", "Radiation Therapy"],
-      technologies: ["Targeted Therapy"],
+      overview:
+        "Over the years, Prachin Global Hospital has grown into a trusted destination for advanced cancer care, expanding its services across key locations in Hyderabad. With dedicated and well-equipped cancer centers, the hospital is committed to delivering world-class oncology services that focus not only on treatment but also on prevention, early diagnosis, rehabilitation, and long-term survivorship.",
+      moreoverview:
+        "Our team of highly experienced cancer specialists—including Medical Oncologists, Surgical Oncologists—provides comprehensive and personalised cancer care. We firmly believe that treating cancer goes beyond medical intervention alone. Understanding the emotional, psychological, and social challenges faced by cancer patients and their families is central to our approach. Hence, we adopt a holistic care model that supports patients emotionally and mentally throughout their treatment journey. This integrated, multidisciplinary philosophy strengthens our commitment to excellence and positions Prachin Global Hospital among the leading cancer hospitals in Hyderabad.",
+      proceduresTitle: "Specialised Oncology Services",
+      proceduresDescription: `Prachin Global Hospital is home to a distinguished panel of oncologists specialising in a wide range of cancer disciplines:`,
+      procedures: [
+        "Head and Neck Oncology – Expert diagnosis and precision treatment for cancers affecting the oral cavity, throat, larynx, and surrounding regions",
+        "Thoracic Oncology – Advanced care for lung and chest-related cancers using cutting-edge therapeutic technologies",
+        "Orthopaedic Oncology – Comprehensive management of bone and soft tissue tumours with both surgical and advanced non-surgical techniques",
+        "Gynaecological Oncology – Personalised and compassionate treatment for cancers of the female reproductive system",
+        "Nephrological & Urological Oncology – Specialised care for kidney, bladder, prostate, and other urological cancers to ensure complete patient-centered treatment",
+      ],
+      proceduresNote:
+        "Each specialty works in close collaboration to ensure accurate diagnosis, timely intervention, and optimal clinical outcomes.",
+      image1: image1,
+      image1: image2,
+      diagnosticsTitle: "Prachin Global Institute of Medical Oncology",
+      diagnosticsDescription: `The Department of Medical Oncology at Prachin Global Hospital is fully equipped with modern daycare chemotherapy wards, oncology-trained nursing staff, and an experienced medical team. Cancer treatment planning is carried out through a multidisciplinary tumor board, involving medical oncologists, surgical oncologists, radiation oncologists, pathologists, and radiologists. This collaborative decision-making process ensures evidence-based, consensus-driven treatment plans that enhance treatment success.`,
+      diagnosticssubtitle:
+        "With rapid advancements in oncology, including targeted therapy and immunotherapy, Prachin Global Hospital stays at the forefront of innovation. Our facilities include:",
+      diagnostics: [
+        "Outpatient oncology services",
+        "Daycare and inpatient chemotherapy units",
+        "A specialised paediatric oncology ward",
+        "One of the largest in-house bone marrow transplantation units",
+        "Advanced chemotherapy delivery using chemoports",
+        "AI-assisted diagnosis, analysis, and personalised treatment planning",
+        "Access to some of the most advanced PET-CT imaging systems for early and accurate cancer detection",
+      ],
     },
   },
   {
     slug: "general-medicine",
     title: "General Medicine",
     category: "core",
+    banner: bannerCardio,
     sections: {
       overview: "General medicine handles overall health and common illnesses.",
       diagnostics: ["Blood Tests", "Routine Checkups"],
@@ -200,6 +237,7 @@ const SPECIALITIES = [
     slug: "pulmonology",
     title: "Pulmonology",
     category: "core",
+    banner: bannerCardio,
     sections: {
       overview: "Pulmonology deals with lung and respiratory diseases.",
       diagnostics: ["Pulmonary Function Test", "Chest X-ray"],
@@ -211,6 +249,7 @@ const SPECIALITIES = [
     slug: "nephrology",
     title: "Nephrology",
     category: "core",
+    banner: bannerCardio,
     sections: {
       overview: "Nephrology focuses on kidney-related diseases.",
       diagnostics: ["Kidney Function Test", "Urine Analysis"],
@@ -224,6 +263,7 @@ const SPECIALITIES = [
     slug: "spine-surgery",
     title: "Spine Surgery",
     category: "Surgical",
+    banner: bannerCardio,
     sections: {
       overview: "Spine surgery treats spinal disorders and injuries.",
       diagnostics: ["Spine MRI", "X-ray"],
@@ -235,6 +275,7 @@ const SPECIALITIES = [
     slug: "gastroenterology",
     title: "Gastroenterology",
     category: "Surgical",
+    banner: bannerCardio,
     sections: {
       overview: "Gastroenterology deals with digestive system disorders.",
       diagnostics: ["Endoscopy", "Colonoscopy"],
@@ -246,6 +287,7 @@ const SPECIALITIES = [
     slug: "surgical-gastroenterology",
     title: "Surgical Gastroenterology",
     category: "Surgical",
+    banner: bannerCardio,
     sections: {
       overview: "Surgical gastroenterology focuses on GI surgeries.",
       diagnostics: ["GI Scan", "Endoscopy"],
@@ -257,6 +299,7 @@ const SPECIALITIES = [
     slug: "orthopedics",
     title: "Orthopedics",
     category: "Surgical",
+    banner: bannerCardio,
     sections: {
       overview: "Orthopedics deals with bones and joints.",
       diagnostics: ["Bone Scan", "X-ray"],
@@ -268,6 +311,7 @@ const SPECIALITIES = [
     slug: "arthroscopy-arthroplasty",
     title: "Arthroscopy – Arthroplasty",
     category: "Surgical",
+    banner: bannerCardio,
     sections: {
       overview: "Focuses on joint surgeries and replacements.",
       diagnostics: ["Joint Imaging"],
@@ -279,6 +323,7 @@ const SPECIALITIES = [
     slug: "urology",
     title: "Urology",
     category: "Surgical",
+    banner: bannerCardio,
     sections: {
       overview: "Urology deals with urinary system and male health.",
       diagnostics: ["Urine Test", "Ultrasound"],
@@ -290,6 +335,7 @@ const SPECIALITIES = [
     slug: "vascular-surgery",
     title: "Vascular Surgery",
     category: "Surgical",
+    banner: bannerCardio,
     sections: {
       overview: "Vascular surgery treats blood vessel conditions.",
       diagnostics: ["Doppler Scan"],
@@ -303,6 +349,7 @@ const SPECIALITIES = [
     slug: "rheumatology",
     title: "Rheumatology",
     category: "Support",
+    banner: bannerCardio,
     sections: {
       overview: "Rheumatology deals with joints and autoimmune diseases.",
       diagnostics: ["Blood Tests"],
@@ -314,6 +361,7 @@ const SPECIALITIES = [
     slug: "obstetrics-gynecology",
     title: "Obstetrics & Gynecology",
     category: "Support",
+    banner: bannerCardio,
     sections: {
       overview: "Women’s health, pregnancy, and reproductive care.",
       diagnostics: ["Ultrasound"],
@@ -325,6 +373,7 @@ const SPECIALITIES = [
     slug: "pediatrics-neonatology",
     title: "Pediatrics & Neonatology",
     category: "Support",
+    banner: bannerCardio,
     sections: {
       overview: "Child and newborn healthcare services.",
       diagnostics: ["Child Health Screening"],
@@ -336,6 +385,7 @@ const SPECIALITIES = [
     slug: "dental-maxillofacial",
     title: "Dental & Maxillo Facial",
     category: "Support",
+    banner: bannerCardio,
     sections: {
       overview: "Dental and facial surgical treatments.",
       diagnostics: ["Dental X-ray"],
@@ -347,6 +397,7 @@ const SPECIALITIES = [
     slug: "anaesthesiology-pain",
     title: "Anaesthesiology & Pain Management",
     category: "Support",
+    banner: bannerCardio,
     sections: {
       overview: "Pain relief and anesthesia services.",
       diagnostics: ["Pain Assessment"],
@@ -358,6 +409,7 @@ const SPECIALITIES = [
     slug: "critical-care",
     title: "Critical Care",
     category: "Support",
+    banner: bannerCardio,
     sections: {
       overview: "Intensive care for critical patients.",
       diagnostics: ["ICU Monitoring"],
@@ -369,6 +421,7 @@ const SPECIALITIES = [
     slug: "emergency-medicine",
     title: "Emergency Medicine",
     category: "Support",
+    banner: bannerCardio,
     sections: {
       overview: "Immediate care for emergencies and trauma.",
       diagnostics: ["Emergency Tests"],

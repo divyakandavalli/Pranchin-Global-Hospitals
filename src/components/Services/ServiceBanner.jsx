@@ -23,7 +23,7 @@ const ServiceBanner = () => {
           <span>
             <KeyboardArrowRightIcon />
           </span>
-          <a className="text-[#f37721]" href="/all-specialities">
+          <a className="text-[#f37721]" href="/specialities">
             All Specialities
           </a>
         </div>

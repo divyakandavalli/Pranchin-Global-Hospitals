@@ -36,7 +36,7 @@ const SingleSBanner = () => {
 
         {/* BREADCRUMB */}
         <div className="flex items-center justify-center text-base font-manrope">
-          <Link to="/all-specialities">All Specialities</Link>
+          <Link to="/specialities">All Specialities</Link>
 
           <span>
             <KeyboardArrowRightIcon />

@@ -4,6 +4,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import BackgroundDoctor from "../../assets/images/cheerful-eastern-doctor-working-clinic-taking-anamnesis.jpg";
+import { Link } from "react-router-dom";
 export default function BookAppointment({ className = "" }) {
   return (
     <div className={`max-w-[95%] mx-auto ${className}`}>
@@ -43,7 +44,7 @@ export default function BookAppointment({ className = "" }) {
             </p>
 
             {/* BUTTON */}
-            <button className="group flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition-all duration-300 absolute bottom-14 ">
+            <Link to='/contact' className="group flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition-all duration-300 absolute bottom-14 ">
               <span className="font-medium font-manrope text-[16px] capitalize">
                 Get Free Consultation
               </span>
@@ -55,7 +56,7 @@ export default function BookAppointment({ className = "" }) {
               >
                 <EastIcon fontSize="small" />
               </span>
-            </button>
+            </Link>
           </div>
 
           {/* RIGHT FORM */}

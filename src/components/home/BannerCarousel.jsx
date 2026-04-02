@@ -8,6 +8,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Carousel1 from "../../assets/images/team-surgeons-doing-operation-sterile-operating-room.jpg";
 import Carousel2 from "../../assets/images/three-surgeons-hospital-room-one-which-is-being-prepared-perform-surgery.png";
 import Carousel3 from "../../assets/images/medical-team-operation-room.jpg";
+import { Link } from "react-router-dom";
 
 export default function BannerCarousel() {
   const slides = [Carousel1, Carousel2, Carousel3];
@@ -74,7 +75,7 @@ export default function BannerCarousel() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-            <button className="group flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
+            <Link to='/contact' className="group flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
               <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
                 Book Appointment
               </span>
@@ -85,7 +86,7 @@ export default function BannerCarousel() {
               >
                 <EastIcon fontSize="small" />
               </span>
-            </button>
+            </Link>
 
             <button
               className="flex items-center gap-2 text-sm sm:text-base text-white/90 hover:text-white"

@@ -7,7 +7,7 @@ import fallback1 from "../../../assets/images/Services/shot-operating-room-assis
 import fallback2 from "../../../assets/images/Services/doctor-checking-patient.jpg";
 import image3 from "../../../assets/images/Services/425763422_bcc81853-275a-4dee-92a3-683a4bfaa685.jpg";
 export default function ServiceContent() {
-const { slug } = useParams();
+  const { slug } = useParams();
 
   const data = SPECIALITIES.find((item) => item.slug === slug);
 
@@ -16,7 +16,7 @@ const { slug } = useParams();
   const s = data.sections;
 
   // use dynamic images or fallback
-const images = s.images || [fallback1, fallback2];
+  const images = s.images || [fallback1, fallback2];
   return (
     <section className="w-full py-10 xl:py-36 px-5 xl:px-0">
       {/* CONTAINER */}
@@ -34,59 +34,57 @@ const images = s.images || [fallback1, fallback2];
           </div>
 
           {/* SECTION 2 */}
-           {s.diagnostics && (
+          {s.diagnostics && (
             <div>
               <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
                 {s.diagnosticsTitle}
               </h3>
 
-              <p className="text-[#2f373e] mb-2">
-                {s.diagnosticsDescription}
-              </p>
+              <p className="text-[#2f373e] font-manrope mb-2">{s.diagnosticsDescription}</p>
 
-            <div className="grid grid-col-1 xl:grid-cols-2 gap-x-10  gap-y-3 font-manrope text-[#2f373e] text-[16px]">
+              <div className="grid grid-col-1 xl:grid-cols-2 gap-x-10  gap-y-3 font-manrope text-[#2f373e] text-[16px]">
                 {s.diagnostics.map((item, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <span className="  text-[#094ca0] rounded-full flex items-center justify-center">
-                    <DoneIcon fontSize="small" />
-                  </span>
-                  <span>{item}</span>
-                </div>
-              ))}
+                  <div key={i} className="flex items-center gap-2">
+                    <span className="  text-[#094ca0] rounded-full flex items-center justify-center">
+                      <DoneIcon fontSize="small" />
+                    </span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
- )}
+          )}
 
           {/* SECTION 3 */}
- {s.procedures && (
-          <div>
-            <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
-             {s.proceduresTitle}
-            </h3>
-            <p className="font-manrope text-[#2f373e] text-[16px] mb-[12px]">
-              {s.proceduresDescription}
-            </p>
-            <h3 className="font-manrope text-[#2f373e] text-[16px] mb-2">
-              {s.proceduresSubTitle}
-            </h3>
-             {s.procedures.map((item, i) => (
-	                   <div key={i} className="flex items-start gap-2">
-                {/* NUMBER */}
-                <span className="text-[#0c0c0c] font-medium text-[16px] min-w-[28px]">
-                  {String(i + 1).padStart(2, "0")}.
-                </span>
+          {s.procedures && (
+            <div>
+              <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
+                {s.proceduresTitle}
+              </h3>
+              <p className="font-manrope text-[#2f373e] text-[16px] mb-[12px]">
+                {s.proceduresDescription}
+              </p>
+              <h3 className="font-manrope text-[#2f373e] text-[16px] mb-[12px]">
+                {s.proceduresSubTitle}
+              </h3>
+              <div className="space-y-3">
+                {s.procedures.map((item, i) => (
+                  <div key={i} className="flex items-start gap-x-3">
+                    <span className="text-[#0c0c0c] font-medium text-[16px] min-w-[28px]">
+                      {String(i + 1).padStart(2, "0")}.
+                    </span>
 
-                {/* TEXT */}
-                <span className="text-[16px] text-[#0c0c0c] font-manrope leading-[26px]">
-                  {item}
-                </span>
+                    <span className="text-[16px] text-[#0c0c0c] font-manrope leading-[26px]">
+                      {item}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
-            <p className="font-manrope text-[#2f373e] text-[16px] mt-[12px]">
-              {s.proceduresNote}
-            </p>
-          </div>
-)}
+              <p className="font-manrope text-[#2f373e] text-[16px] mt-[12px]">
+                {s.proceduresNote}
+              </p>
+            </div>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {images.map((img, i) => (
               <div
@@ -102,66 +100,67 @@ const images = s.images || [fallback1, fallback2];
             ))}
           </div>
           {/* EXTRA CONTENT */}
-{s.extraSectionTitle && (
-          <div>
-            <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
-             {s.extraSectionTitle}
-            </h3>
-            <p className="font-manrope text-[#2f373e] text-[16px] mb-[12px]">
-              {s.extraSectionContent}
-            </p>
-          </div>
-  )}
-
- {s.screeningTitle && (
-          <div>
-            <h3 className="text-[32px] font-manrope font-semibold mb-[12px]">
-              {s.screeningTitle}
-            </h3>
-            <p className="font-manrope text-[#2f373e] text-[16px] mb-[12px]">
-             {s.screeningContent}
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
-              {/* CARD 1 */}
-	        {s.packages?.map((pkg, i) => (
-              <div key={i} className="flex justify-between items-center bg-[#c8dded] p-5 rounded-[14px]">
-                <div>
-                  <h3 className="text-[18px] font-semibold text-[#0c0c0c] font-manrope">
-                   {pkg.title}
-                  </h3>
-                  <p className="text-[14px] text-gray-600 mt-1 font-manrope">
-                    {pkg.description}
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-[10px] w-10 h-10 flex items-center justify-center">
-                  <EastIcon className="text-[#094ca0]" />
-                </div>
-              </div>
-
-
-))}
+          {s.extraSectionTitle && (
+            <div>
+              <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
+                {s.extraSectionTitle}
+              </h3>
+              <p className="font-manrope text-[#2f373e] text-[16px] mb-[12px]">
+                {s.extraSectionContent}
+              </p>
             </div>
-          </div>
-)}
- {s.technologies && (
-          <div>
-            <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
-               {s.technologiesTitle}
-            </h3>
-             {s.technologies.map((item, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <span className="  text-[#094ca0] rounded-full flex items-center justify-center">
-                  <DoneIcon fontSize="small" />
-                </span>
-                <span>{item}</span>
+          )}
+
+          {s.screeningTitle && (
+            <div>
+              <h3 className="text-[32px] font-manrope font-semibold mb-[12px]">
+                {s.screeningTitle}
+              </h3>
+              <p className="font-manrope text-[#2f373e] text-[16px] mb-[12px]">
+                {s.screeningContent}
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+                {/* CARD 1 */}
+                {s.packages?.map((pkg, i) => (
+                  <div
+                    key={i}
+                    className="flex justify-between items-center bg-[#c8dded] p-5 rounded-[14px]"
+                  >
+                    <div>
+                      <h3 className="text-[18px] font-semibold text-[#0c0c0c] font-manrope">
+                        {pkg.title}
+                      </h3>
+                      <p className="text-[14px] text-gray-600 mt-1 font-manrope">
+                        {pkg.description}
+                      </p>
+                    </div>
+
+                    <div className="bg-white rounded-[10px] w-10 h-10 flex items-center justify-center">
+                      <EastIcon className="text-[#094ca0]" />
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-            <p className="font-manrope text-[#2f373e] text-[16px] mt-[12px]">
-             {s.technologiesNote}
-            </p>
-          </div>
-)}
+            </div>
+          )}
+          {s.technologies && (
+            <div>
+              <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
+                {s.technologiesTitle}
+              </h3>
+              {s.technologies.map((item, i) => (
+                <div key={i} className="flex items-center gap-2 font-manrope text-[#2f373e] text-[16px]">
+                  <span className="  text-[#094ca0] rounded-full flex items-center justify-center">
+                    <DoneIcon fontSize="small" />
+                  </span>
+                  <span>{item}</span>
+                </div>
+              ))}
+              <p className="font-manrope text-[#2f373e] text-[16px] mt-[12px]">
+                {s.technologiesNote}
+              </p>
+            </div>
+          )}
         </div>
 
         {/* RIGHT SIDE (40%) */}

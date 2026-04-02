@@ -5,14 +5,15 @@ import EastIcon from "@mui/icons-material/East";
 import StatsSection from "./StatsSection";
 import homeBanner from "../../assets/images/empty-ward-hospital.jpg";
 import feedback_Card from "../../assets/images/feedback_Card.jpg";
+import { Link } from "react-router-dom";
 export default function AboutSection() {
   return (
-  <div className="bg-[#010813]">
+    <div className="bg-[#010813]">
       <section className=" 3xl:max-w-[82%] w-[95%] mx-auto xl:py-20 md:py-16 py-14">
-      <div className=" grid xl:grid-cols-2 grid-cols-1 lg:gap-20 md:gap-16 gap-10 items-center">
-        {/* LEFT IMAGE */}
-        <div className="relative xl:order-1 order-2">
-          {/* <div
+        <div className=" grid xl:grid-cols-2 grid-cols-1 lg:gap-20 md:gap-16 gap-10 items-center">
+          {/* LEFT IMAGE */}
+          <div className="relative xl:order-1 order-2">
+            {/* <div
             className="xl:h-[675px] md:min-h-[500px] h-[350px] rounded-3xl object-cover"
             style={{
               backgroundImage: `url(${homeBanner})`,
@@ -77,92 +78,93 @@ export default function AboutSection() {
               </p>
             </div>
           </div> */}
-          <img src={homeBanner} alt="" className="rounded-2xl"/>
-        </div>
-
-        {/* RIGHT CONTENT */}
-        <div className="flex flex-col gap-2 xl:items-start items-center xl:order-2 order-1">
-          <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
-            ABOUT US
-          </span>
-
-          <h2 className="text-[44px] font-manrope md:text-[64px] xl:block hidden font-semibold mt-4 leading-tight text-white">
-            Compassionate Care <br />
-            for{" "}
-            <span className="italic font-light font-instrumental text-[#5187af]">
-              Your Health
-            </span>
-          </h2>
-          <h2 className="text-4xl font-manrope md:text-[64px] xl:hidden text-center block font-semibold text-white mt-4 leading-tight">
-            Compassionate Care for <br />
-            <span className="italic font-light font-instrumental text-[#5187af]">
-              Your Health
-            </span>
-          </h2>
-
-          <p className="text-[#b4c6d5] text-[18px] xl:text-left text-center xl:w-auto max-w-2xl font-manrope mt-4">
-            Prachin Global Hospitals, we believe that world-class healthcare
-            should be seamless, sophisticated and deeply personal. Spanning a
-            state-of-art 250-bed facility, we have integrated cutting-edge
-            medical technology with a human-first approach to healing.
-          </p>
-
-          {/* FEATURES */}
-          <div className="mt-6 space-y-7">
-            <div className="flex md:flex-row flex-col  gap-6">
-              <div className=" flex items-center justify-center rounded-lg">
-                <img src={doctoricon} alt="" />
-              </div>
-              <div className="md:text-left text-center">
-                <h4 className="font-semibold font-manrope text-[21px] text-[#5187af]">
-                  Expert Doctor
-                </h4>
-                <p className="text-[16px] font-manrope text-[#b4c6d5] xl:w-auto lg:w-2/3 w-full">
-                  Our team of highly skilled and experienced medical professiona
-                  to providing top-quality healthcare with compassion and
-                  precision.
-                </p>
-              </div>
-            </div>
-            <hr className="border-[#d1e1ed] border-t-[1px]" />
-            <div className="flex md:flex-row flex-col  gap-6">
-              <div className=" flex items-center justify-center rounded-lg">
-                <img src={AdvancedTech} alt="" />
-              </div>
-              <div className="md:text-left text-center">
-                <h4 className="font-semibold font-manrope text-[21px] text-[#5187af]">
-                  Advanced Technology
-                </h4>
-                <p className="text-[16px] font-manrope text-[#b4c6d5] xl:w-auto lg:w-2/3 w-full">
-                  We utilize cutting-edge medical technology and modern treatmen
-                  to ensure accurate diagnoses and effective care for all
-                  patients.
-                </p>
-              </div>
-            </div>
+            <img src={homeBanner} alt="" className="rounded-2xl" />
           </div>
-        <button className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
 
-  <span className="font-medium font-manrope text-[16px] capitalize">
-    More About Us
-  </span>
+          {/* RIGHT CONTENT */}
+          <div className="flex flex-col gap-2 xl:items-start items-center xl:order-2 order-1">
+            <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
+              ABOUT US
+            </span>
 
-  {/* Arrow Circle */}
-  <span
-    className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition
+            <h2 className="text-[44px] font-manrope md:text-[64px] xl:block hidden font-semibold mt-4 leading-tight text-white">
+              Compassionate Care <br />
+              for{" "}
+              <span className="italic font-light font-instrumental text-[#5187af]">
+                Your Health
+              </span>
+            </h2>
+            <h2 className="text-4xl font-manrope md:text-[64px] xl:hidden text-center block font-semibold text-white mt-4 leading-tight">
+              Compassionate Care for <br />
+              <span className="italic font-light font-instrumental text-[#5187af]">
+                Your Health
+              </span>
+            </h2>
+
+            <p className="text-[#b4c6d5] text-[18px] xl:text-left text-center xl:w-auto max-w-2xl font-manrope mt-4">
+              Prachin Global Hospitals, we believe that world-class healthcare
+              should be seamless, sophisticated and deeply personal. Spanning a
+              state-of-art 250-bed facility, we have integrated cutting-edge
+              medical technology with a human-first approach to healing.
+            </p>
+
+            {/* FEATURES */}
+            <div className="mt-6 space-y-7">
+              <div className="flex md:flex-row flex-col  gap-6">
+                <div className=" flex items-center justify-center rounded-lg">
+                  <img src={doctoricon} alt="" />
+                </div>
+                <div className="md:text-left text-center">
+                  <h4 className="font-semibold font-manrope text-[21px] text-[#5187af]">
+                    Expert Doctor
+                  </h4>
+                  <p className="text-[16px] font-manrope text-[#b4c6d5] xl:w-auto lg:w-2/3 w-full">
+                    Our team of highly skilled and experienced medical
+                    professiona to providing top-quality healthcare with
+                    compassion and precision.
+                  </p>
+                </div>
+              </div>
+              <hr className="border-[#d1e1ed] border-t-[1px]" />
+              <div className="flex md:flex-row flex-col  gap-6">
+                <div className=" flex items-center justify-center rounded-lg">
+                  <img src={AdvancedTech} alt="" />
+                </div>
+                <div className="md:text-left text-center">
+                  <h4 className="font-semibold font-manrope text-[21px] text-[#5187af]">
+                    Advanced Technology
+                  </h4>
+                  <p className="text-[16px] font-manrope text-[#b4c6d5] xl:w-auto lg:w-2/3 w-full">
+                    We utilize cutting-edge medical technology and modern
+                    treatmen to ensure accurate diagnoses and effective care for
+                    all patients.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <Link
+              to="/about"
+              className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition"
+            >
+              <span className="font-medium font-manrope text-[16px] capitalize">
+                More About Us
+              </span>
+
+              {/* Arrow Circle */}
+              <span
+                className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition
     group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]"
-  >
-    <EastIcon fontSize="small" />
-  </span>
-
-</button>
+              >
+                <EastIcon fontSize="small" />
+              </span>
+            </Link>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <StatsSection />
-      </div>
-    </section>
-  </div>
+        <div>
+          <StatsSection />
+        </div>
+      </section>
+    </div>
   );
 }

@@ -12,18 +12,20 @@ import ContactUs from './pages/ContactUs';
 import CareersPage from './pages/CareersPage';
 import HealthPackagesPage from './pages/HealthPackagesPage';
 import DoctorDetails from './components/Doctors/DoctorDetails';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   return (
     <>
       <Header />
+      <ScrollToTop/>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/doctors' element={<DoctorsPage />} />
         <Route path='/doctors-profile' element={<DoctorDetails/>} />
-        <Route path='/all-specialities' element={<Servicespage />} />
+        <Route path='/specialities' element={<Servicespage />} />
         <Route path='/specialities/:slug' element={<SingleService />} />
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/careers' element={<CareersPage />} />

@@ -3,6 +3,7 @@ import about_dr_1 from "../../assets/images/portrait-handsome-young-indian-docto
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Link } from "react-router-dom";
 const AboutDoctors = () => {
   const social = [
     {
@@ -88,7 +89,7 @@ const AboutDoctors = () => {
                 backgroundSize: "cover",
               }}
             >
-              <div className="w-[260px] flex flex-row h-full justify-center  items-end self-center z-10 relative">
+              <Link to='/doctors-profile' className="w-[260px] flex flex-row h-full justify-center  items-end self-center z-10 relative">
                 <div className="max-w-full bg-[#FEFEFF] pt-3 px-3 rounded-t-3xl">
                   <div className="text-center">
                     <h3 className="text-[21px] font-manrope font-semibold mb-0.5">
@@ -109,7 +110,7 @@ const AboutDoctors = () => {
                     <div className="h-[32px]"></div>
                   </div>
                 </div>
-              </div>
+              </Link>
 
               <div className="w-14  absolute flex   pt-[10px] font-manrope bg-[#ffffff] top-0 left-0 rounded-br-xl  justify-center items-center">
                 <div className="flex flex-col gap-2 z-10 pb-2">

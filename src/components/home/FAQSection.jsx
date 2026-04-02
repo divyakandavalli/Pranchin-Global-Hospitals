@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ContactPerson from "../../assets/images/smiling-young-female-doctor-wearing-medical-robe-stethoscope-sitting-desk-with-medical-tools-looking-doing-call-gesture-pistol-gesture-isolated.jpg";
 import EastIcon from "@mui/icons-material/East";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -56,7 +57,7 @@ export default function FAQSection() {
                 dreams...
               </p>
 
-              <button className="group mt-5 sm:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 hover:bg-[#f37721] transition">
+              <Link to='/contact' className="group mt-5 sm:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 hover:bg-[#f37721] transition">
                 <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
                   Get Free Consultation
                 </span>
@@ -67,7 +68,7 @@ export default function FAQSection() {
                 >
                   <EastIcon fontSize="small" />
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function Header() {
     <>
       <div className="w-full flex justify-center top-0 font-dm z-50">
         {/* HEADER */}
-        <header className="w-full xl:w-[95%] 2xl:w-[85%]  bg-[#FEFEFF] backdrop-blur-md shadow-[0px_0px_30px_0px_rgba(226,221,213,0.4)] rounded-b-[16px] py-2 px-4 sm:px-6 flex items-center justify-between relative z-50 overflow-visible">
+        <header className="w-full xl:w-full 2xl:w-[85%]  bg-[#FEFEFF] backdrop-blur-md shadow-[0px_0px_30px_0px_rgba(226,221,213,0.4)] rounded-b-[16px] py-2 px-4 sm:px-6 flex items-center justify-between relative z-50 overflow-visible">
           {/* LOGO */}
           <div className="flex items-center">
             <Link to="/">
@@ -27,7 +27,7 @@ export default function Header() {
           </div>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden xl:flex items-center gap-6 lg:gap-8 text-gray-700 font-medium relative">
+          <nav className="hidden xl:flex items-center gap-6 lg:gap-1 xl:gap-4 3xl:gap-8 text-gray-700 font-medium relative">
             <Link to="/" className="hover:text-[#094ca0]">
               Home
             </Link>
@@ -45,7 +45,7 @@ export default function Header() {
               onMouseLeave={() => setMegaOpen(false)}
             >
               <Link
-                to="/all-specialities"
+                to="/specialities"
                 className="flex items-center gap-1 hover:text-[#094ca0]"
               >
                 Specialities
@@ -129,7 +129,7 @@ export default function Header() {
 
           {/* RIGHT SIDE */}
           <div className="flex items-center gap-2 sm:gap-3">
-            <Link to="/book-visit">
+            <Link to="/contact">
               <button className="hidden sm:block px-4 sm:px-[25px] py-2 sm:py-[16px] rounded-lg bg-[#E5F4FF] text-[#094ca0] font-medium hover:bg-[#094ca0] hover:text-white">
                 Book a visit
               </button>
@@ -446,7 +446,7 @@ export default function Header() {
 
                   {/* VIEW ALL */}
                   <Link
-                    to="/all-specialities"
+                    to="/specialities"
                     className="text-[#094ca0] font-medium block mt-2"
                     onClick={() => {
                       setOpen(false);
@@ -487,9 +487,9 @@ export default function Header() {
                 setMegaOpen(false);
               }}
             >
-              <button className="mt-4 w-full px-4 py-2 rounded-lg bg-[#E5F4FF] text-[#094ca0] hover:bg-[#094ca0] hover:text-white transition">
+              <Link to='/contact' className="mt-4 w-full px-4 py-2 rounded-lg bg-[#E5F4FF] text-[#094ca0] hover:bg-[#094ca0] hover:text-white transition">
                 Book a visit
-              </button>
+              </Link>
             </Link>
 
             <Link
