@@ -1,11 +1,22 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import SPECIALITIES from "../../../specialities/specialities";
 import DoneIcon from "@mui/icons-material/Done";
 import EastIcon from "@mui/icons-material/East";
-import image1 from "../../../assets/images/Services/shot-operating-room-assistant-hands-out-instruments-surgeons-operation-surgeons-perform-operation-professional-medical-doctors-performing-surgery.jpg";
-import image2 from "../../../assets/images/Services/doctor-checking-patient.jpg";
+import fallback1 from "../../../assets/images/Services/shot-operating-room-assistant-hands-out-instruments-surgeons-operation-surgeons-perform-operation-professional-medical-doctors-performing-surgery.jpg";
+import fallback2 from "../../../assets/images/Services/doctor-checking-patient.jpg";
 import image3 from "../../../assets/images/Services/425763422_bcc81853-275a-4dee-92a3-683a4bfaa685.jpg";
 export default function ServiceContent() {
-  const images = [image1, image2];
+const { slug } = useParams();
+
+  const data = SPECIALITIES.find((item) => item.slug === slug);
+
+  if (!data) return <div>Service Not Found</div>;
+
+  const s = data.sections;
+
+  // use dynamic images or fallback
+const images = s.images || [fallback1, fallback2];
   return (
     <section className="w-full py-10 xl:py-36 px-5 xl:px-0">
       {/* CONTAINER */}
@@ -15,37 +26,26 @@ export default function ServiceContent() {
           {/* SECTION 1 */}
           <div>
             <h2 className="text-[32px] xl:text-[40px] font-manrope font-semibold  mb-[12px]">
-              Overview Services
+              {data.title} Services
             </h2>
             <p className="text-[#2f373e] text-[16px] xl:text-[18px] font-manrope">
-              Our state-of-the-art heart clinics, combined with a highly
-              experienced team of Cardiologists and well trained Nursing and
-              Technicians, place us at the forefront of Cardiac Care. Every
-              treatment plan is tailored to ensure the best clinical outcomes,
-              guiding each patient toward a healthier heart and a better quality
-              of life. The Department of Cardiology at Prachin Global Hospital
-              is equipped with cutting-edge technology and advanced
-              infrastructure to deliver world-class cardiac care.
+              {s.overview}
             </p>
           </div>
 
           {/* SECTION 2 */}
-          <div>
-            <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold  mb-[12px]">
-              Advanced Diagnostic Tools
-            </h3>
-            <p className="font-manrope text-[#2f373e] text-[16px]  mb-2">
-              We offer comprehensive cardiac diagnostics including:
-            </p>
+           {s.diagnostics && (
+            <div>
+              <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
+                {s.diagnosticsTitle}
+              </h3>
+
+              <p className="text-[#2f373e] mb-2">
+                {s.diagnosticsDescription}
+              </p>
 
             <div className="grid grid-col-1 xl:grid-cols-2 gap-x-10  gap-y-3 font-manrope text-[#2f373e] text-[16px]">
-              {[
-                "CT Coronary Angiogram",
-                "Cardiac MRI",
-                "Radionuclide Studies",
-                "2D ECHO, TEE, DSE",
-                "Head-Up Tilt Test, Holter Monitoring, and ABPM",
-              ].map((item, i) => (
+                {s.diagnostics.map((item, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <span className="  text-[#094ca0] rounded-full flex items-center justify-center">
                     <DoneIcon fontSize="small" />
@@ -55,29 +55,22 @@ export default function ServiceContent() {
               ))}
             </div>
           </div>
+ )}
 
           {/* SECTION 3 */}
+ {s.procedures && (
           <div>
             <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
-              Specialized Cath Labs
+             {s.proceduresTitle}
             </h3>
             <p className="font-manrope text-[#2f373e] text-[16px] mb-[12px]">
-              Our Hybrid Cath Lab and Neuro Intervention Cath Lab are equipped
-              with advanced flat-panel imaging technology, IVUS, OCT, NIRS IVUS,
-              and 3D mapping systems for accurate diagnosis and precision-driven
-              treatment.
+              {s.proceduresDescription}
             </p>
             <h3 className="font-manrope text-[#2f373e] text-[16px] mb-2">
-              We specialize in:
+              {s.proceduresSubTitle}
             </h3>
-            {[
-              "Coronary, structural, and peripheral interventions",
-              "Advanced electrophysiology diagnosis and treatments",
-              "Image-guided complex coronary interventions",
-              "Left Main, Bifurcation CTO procedures",
-              "Post-bypass interventional angioplasty",
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-2">
+             {s.procedures.map((item, i) => (
+	                   <div key={i} className="flex items-start gap-2">
                 {/* NUMBER */}
                 <span className="text-[#0c0c0c] font-medium text-[16px] min-w-[28px]">
                   {String(i + 1).padStart(2, "0")}.
@@ -90,9 +83,10 @@ export default function ServiceContent() {
               </div>
             ))}
             <p className="font-manrope text-[#2f373e] text-[16px] mt-[12px]">
-              Advanced cardiac support using Impella and ECMO-assisted devices
+              {s.proceduresNote}
             </p>
           </div>
+)}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {images.map((img, i) => (
               <div
@@ -108,38 +102,35 @@ export default function ServiceContent() {
             ))}
           </div>
           {/* EXTRA CONTENT */}
+{s.extraSectionTitle && (
           <div>
             <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
-              Advanced Diagnostic & Preventive Cardiac Care
+             {s.extraSectionTitle}
             </h3>
             <p className="font-manrope text-[#2f373e] text-[16px] mb-[12px]">
-              At Prachin Global Hospital, our expert cardiologists diagnose and
-              treat heart and vascular diseases using the latest technologies
-              and evidence-based practices. Our interventional cardiology team
-              focuses on both treatment and prevention, ensuring comprehensive
-              care for every cardiovascular concern.
+              {s.extraSectionContent}
             </p>
           </div>
+  )}
 
+ {s.screeningTitle && (
           <div>
             <h3 className="text-[32px] font-manrope font-semibold mb-[12px]">
-              Regular Screening & Heart Health Check-ups
+              {s.screeningTitle}
             </h3>
             <p className="font-manrope text-[#2f373e] text-[16px] mb-[12px]">
-              We offer regular heart screening programs and preventive health
-              check-ups to promote early detection and timely intervention. Our
-              preventive and curative cardiology services are designed to
-              protect and enhance long-term heart health.
+             {s.screeningContent}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
               {/* CARD 1 */}
-              <div className="flex justify-between items-center bg-[#c8dded] p-5 rounded-[14px]">
+	        {s.packages?.map((pkg, i) => (
+              <div key={i} className="flex justify-between items-center bg-[#c8dded] p-5 rounded-[14px]">
                 <div>
                   <h3 className="text-[18px] font-semibold text-[#0c0c0c] font-manrope">
-                    Heart Health Package
+                   {pkg.title}
                   </h3>
                   <p className="text-[14px] text-gray-600 mt-1 font-manrope">
-                    Comprehensive cardiac screening.
+                    {pkg.description}
                   </p>
                 </div>
 
@@ -148,31 +139,17 @@ export default function ServiceContent() {
                 </div>
               </div>
 
-              {/* CARD 2 */}
-              <div className="flex justify-between items-center bg-[#c8dded] p-5 rounded-[14px]">
-                <div>
-                  <h3 className="text-[18px] font-semibold text-[#0c0c0c] font-manrope">
-                    Angiogram Package
-                  </h3>
-                  <p className="text-[14px] text-gray-600 mt-1 font-manrope">
-                    Imaging to detect blocked arteries.
-                  </p>
-                </div>
 
-                <div className="bg-white rounded-[10px] w-10 h-10 flex items-center justify-center">
-                  <EastIcon className="text-[#094ca0]" />
-                </div>
-              </div>
+))}
             </div>
           </div>
+)}
+ {s.technologies && (
           <div>
             <h3 className="text-[24px] xl:text-[32px] font-manrope font-semibold mb-[12px]">
-              Technologies & Equipment used
+               {s.technologiesTitle}
             </h3>
-            {[
-              "Minimally invasive cardiac surgeries",
-              "Robotic-assisted procedures",
-            ].map((item, i) => (
+             {s.technologies.map((item, i) => (
               <div key={i} className="flex items-center gap-2">
                 <span className="  text-[#094ca0] rounded-full flex items-center justify-center">
                   <DoneIcon fontSize="small" />
@@ -181,9 +158,10 @@ export default function ServiceContent() {
               </div>
             ))}
             <p className="font-manrope text-[#2f373e] text-[16px] mt-[12px]">
-              Complex cardiothoracic interventions with minimal complications
+             {s.technologiesNote}
             </p>
           </div>
+)}
         </div>
 
         {/* RIGHT SIDE (40%) */}

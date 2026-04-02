@@ -11,6 +11,7 @@ import SingleService from './pages/SingleService';
 import ContactUs from './pages/ContactUs';
 import CareersPage from './pages/CareersPage';
 import HealthPackagesPage from './pages/HealthPackagesPage';
+import DoctorDetails from './components/Doctors/DoctorDetails';
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
         <Route path='/about' element={<AboutPage />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/doctors' element={<DoctorsPage />} />
+        <Route path='/doctors-profile' element={<DoctorDetails/>} />
         <Route path='/all-specialities' element={<Servicespage />} />
-        <Route path='/sample-service' element={<SingleService />} />
+        <Route path='/specialities/:slug' element={<SingleService />} />
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/careers' element={<CareersPage />} />
         <Route path='/health-packages' element={<HealthPackagesPage />} />
