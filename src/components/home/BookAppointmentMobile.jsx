@@ -16,7 +16,7 @@ export default function BookAppointmentMobile() {
 
         <h2 className="text-[28px] font-semibold font-manrope leading-tight mt-4">
           Book Your Medical Appointment
-          <span className="block italic font-light text-[#f37721]">
+          <span className="block italic font-light text-[#f37721] font-instrumental">
             Quickly & Easily
           </span>
         </h2>
