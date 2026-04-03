@@ -25,7 +25,7 @@ export default function BookAppointmentMobile() {
           Fill the form and our team will confirm your appointment.
         </p>
 
-        <Link to='/contact' className="mt-5 flex items-center gap-3 bg-[#094ca0] text-white px-5 py-2.5 rounded-full">
+        <Link to='/contact' className="mt-5 flex items-center justify-center gap-3 bg-[#094ca0] text-white px-5 py-2.5 rounded-full text-center">
           <span className="text-[14px] font-manrope">
             Get Free Consultation
           </span>

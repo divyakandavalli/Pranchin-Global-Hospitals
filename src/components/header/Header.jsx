@@ -14,7 +14,7 @@ export default function Header() {
     <>
       <div className="w-full flex justify-center top-0 font-dm z-50">
         {/* HEADER */}
-        <header className="w-full xl:w-full 2xl:w-[85%]  bg-[#FEFEFF] backdrop-blur-md shadow-[0px_0px_30px_0px_rgba(226,221,213,0.4)] rounded-b-[16px] py-2 px-4 sm:px-6 flex items-center justify-between relative z-50 overflow-visible">
+        <header className="w-full xl:w-full 3xl:w-[85%]  bg-[#FEFEFF] backdrop-blur-md shadow-[0px_0px_30px_0px_rgba(226,221,213,0.4)] rounded-b-[16px] py-2 px-4 sm:px-6 flex items-center justify-between relative z-50 overflow-visible">
           {/* LOGO */}
           <div className="flex items-center">
             <Link to="/">

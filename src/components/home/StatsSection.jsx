@@ -12,7 +12,7 @@ export default function StatsSection() {
 
   return (
     <div className="bg-[#094ca0] px-10 mt-16 rounded-2xl">
-      <section className=" xl:py-20 md:pt-10 pt-5 ">
+      <section className=" xl:py-20 md:pt-10 pt-5 md:pb-0 pb-10">
       <div className=" grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 text-center">
         {stats.map((item, index) => (
           <div
@@ -28,7 +28,7 @@ export default function StatsSection() {
             </h2>
 
             {/* Label */}
-            <p className="mt-3 text-white text-[18px] font-manrope">
+            <p className="mt-3 text-[#f5d1b9] text-[18px] font-manrope">
               {item.label}
             </p>
           </div>
