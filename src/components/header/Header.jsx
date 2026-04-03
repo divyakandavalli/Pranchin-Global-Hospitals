@@ -120,8 +120,15 @@ export default function Header() {
             <Link to="/gallery" className="hover:text-[#094ca0]">
               Gallery
             </Link>
-            <Link to="/health-packages" className="hover:text-[#094ca0] capitalize">health packages</Link>
-            <Link to="/careers" className="hover:text-[#094ca0]">Careers</Link>
+            <Link
+              to="/health-packages"
+              className="hover:text-[#094ca0] capitalize"
+            >
+              Health packages
+            </Link>
+            <Link to="/careers" className="hover:text-[#094ca0]">
+              Careers
+            </Link>
             <Link to="/contact" className="hover:text-[#094ca0]">
               Contact
             </Link>
@@ -468,7 +475,15 @@ export default function Header() {
             >
               Gallery
             </Link>
-
+            <Link
+              to="/health-packages"
+              onClick={() => {
+                setOpen(false);
+                setMegaOpen(false);
+              }}
+            >
+              Health Packages
+            </Link>
             <Link
               to="/contact"
               onClick={() => {
@@ -487,7 +502,10 @@ export default function Header() {
                 setMegaOpen(false);
               }}
             >
-              <Link to='/contact' className="mt-4 w-full px-4 py-2 rounded-lg bg-[#E5F4FF] text-[#094ca0] hover:bg-[#094ca0] hover:text-white transition">
+              <Link
+                to="/contact"
+                className="mt-4 w-full px-4 py-2 rounded-lg bg-[#E5F4FF] text-[#094ca0] hover:bg-[#094ca0] hover:text-white transition"
+              >
                 Book a visit
               </Link>
             </Link>

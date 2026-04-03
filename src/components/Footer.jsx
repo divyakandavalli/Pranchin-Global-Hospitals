@@ -7,7 +7,12 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Marquee from "react-fast-marquee";
-import img from "../assets/images/footer_mrquee_img.jpg";
+import img1 from "../assets/images/gallery_photos/image (1).jpg";
+import img2 from "../assets/images/gallery_photos/image (2).jpg";
+import img3 from "../assets/images/gallery_photos/image (3).jpg";
+import img4 from "../assets/images/gallery_photos/image (4).jpg";
+import img5 from "../assets/images/gallery_photos/image (5).jpg";
+import img6 from "../assets/images/gallery_photos/image (6).jpg";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { Link } from "react-router-dom";
 const Footer = () => {
@@ -110,52 +115,52 @@ const Footer = () => {
             <div className="mt-8">
               <Marquee pauseOnHover={true}>
                 <img
-                  src={img}
+                  src={img1}
                   alt=""
                   className="xl:w-[160px] xl:h-[105px] lg:w-[440px] lg:h-[300px] w-[300px] h-[220px] rounded-lg me-3 "
                 />
                 <img
-                  src={img}
+                  src={img2}
                   alt=""
                   className="xl:w-[160px] xl:h-[105px] lg:w-[440px] lg:h-[300px] w-[300px] h-[220px] rounded-lg me-3 "
                 />
                 <img
-                  src={img}
+                  src={img3}
                   alt=""
                   className="xl:w-[160px] xl:h-[105px] lg:w-[440px] lg:h-[300px] w-[300px] h-[220px] rounded-lg me-3 "
                 />
                 <img
-                  src={img}
+                  src={img4}
                   alt=""
                   className="xl:w-[160px] xl:h-[105px] lg:w-[440px] lg:h-[300px] w-[300px] h-[220px] rounded-lg me-3 "
                 />
                 <img
-                  src={img}
+                  src={img5}
                   alt=""
                   className="xl:w-[160px] xl:h-[105px] lg:w-[440px] lg:h-[300px] w-[300px] h-[220px] rounded-lg me-3 "
                 />
                 <img
-                  src={img}
+                  src={img6}
                   alt=""
                   className="xl:w-[160px] xl:h-[105px] lg:w-[440px] lg:h-[300px] w-[300px] h-[220px] rounded-lg me-3 "
                 />
                 <img
-                  src={img}
+                  src={img1}
                   alt=""
                   className="xl:w-[160px] xl:h-[105px] lg:w-[440px] lg:h-[300px] w-[300px] h-[220px] rounded-lg me-3 "
                 />
                 <img
-                  src={img}
+                  src={img2}
                   alt=""
                   className="xl:w-[160px] xl:h-[105px] lg:w-[440px] lg:h-[300px] w-[300px] h-[220px] rounded-lg me-3 "
                 />
                 <img
-                  src={img}
+                  src={img3}
                   alt=""
                   className="xl:w-[160px] xl:h-[105px] lg:w-[440px] lg:h-[300px] w-[300px] h-[220px] rounded-lg me-3 "
                 />
                 <img
-                  src={img}
+                  src={img4}
                   alt=""
                   className="xl:w-[160px] xl:h-[105px] lg:w-[440px] lg:h-[300px] w-[300px] h-[220px] rounded-lg me-3 "
                 />

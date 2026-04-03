@@ -9,6 +9,7 @@ import FAQSection from "../components/home/FAQSection";
 import AboutDoctors from "../components/About/AboutDoctors";
 import Reveal from "../components/common/Reveal";
 import BookAppointmentMobile from "../components/home/BookAppointmentMobile";
+import HomeServicesTwo from "../components/home/HomeServicesTwo";
 
 export default function HomePage() {
   return (
@@ -20,7 +21,8 @@ export default function HomePage() {
         <AboutSection />
       </Reveal>
       <Reveal>
-        <HomeServices />
+        {/* <HomeServices /> */}
+        <HomeServicesTwo />
       </Reveal>
       <Reveal>
         <HomeProcess />
@@ -28,7 +30,7 @@ export default function HomePage() {
       <Reveal>
         {" "}
         <div className="block xl:hidden">
-          <BookAppointmentMobile/>
+          <BookAppointmentMobile />
         </div>
         {/* Desktop */}
         <div className="hidden xl:block">
