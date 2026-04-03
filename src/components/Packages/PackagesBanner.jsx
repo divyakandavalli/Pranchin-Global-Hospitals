@@ -24,7 +24,7 @@ const PackagesBanner = () => {
           <span>
             <KeyboardArrowRightIcon />
           </span>
-          <Link className="text-[#f37721]" to="/about">
+          <Link className="text-[#f37721]" to="/health-packages">
             Health Packages
           </Link>
         </div>

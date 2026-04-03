@@ -1,29 +1,7 @@
 import React from "react";
 import about_dr_1 from "../../assets/images/portrait-handsome-young-indian-doctor-standing-with-arms-crossed-medical-clinic-smiling-camera.jpg";
-import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const AboutDoctors = () => {
-  const social = [
-    {
-      id: 1,
-      name: "Twitter",
-      icon: TwitterIcon,
-      link: "",
-    },
-    {
-      id: 2,
-      name: "facebook",
-      icon: FacebookOutlinedIcon,
-      link: "",
-    },
-    {
-      id: 3,
-      name: "Linkedin",
-      icon: LinkedInIcon,
-      link: "",
-    },
-  ];
+ 
 
   const doctors = [
     {
@@ -111,33 +89,7 @@ const AboutDoctors = () => {
                 </div>
               </div>
 
-              <div className="w-14  absolute flex   pt-[10px] font-manrope bg-[#ffffff] top-0 left-0 rounded-br-xl  justify-center items-center">
-                <div className="flex flex-col gap-2 z-10 pb-2">
-                  {social.map((item, index) => (
-                    <a
-                      key={item.id + index}
-                      href={item.link}
-                      className="p-2 rounded-full bg-[#C8DDED] hover:bg-[#094ca0] flex justify-center items-center hover:text-white transition"
-                    >
-                      <item.icon fontSize="small" />
-                    </a>
-                  ))}
-                </div>{" "}
-                <div className="absolute left-0 -bottom-8 w-8 flex rounded-[12px_0px_0px_0px] shadow-[-8px_-4px_0px_0px_#FEFEFF]">
-                  <div className="w-8">
-                    <div className="w-8">
-                      <div className="h-8"></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute top-0 -right-8 w-8 flex rounded-[12px_0px_0px_0px] shadow-[-8px_-4px_0px_0px_#fff]">
-                  <div className="w-8">
-                    <div className="w-8">
-                      <div className="h-8"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+             
             </div>
           ))}
         </div>

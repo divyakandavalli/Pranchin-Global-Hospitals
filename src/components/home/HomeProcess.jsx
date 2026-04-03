@@ -25,9 +25,7 @@ export default function HomeProcess() {
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] mx-auto py-10 xl:py-24 px-6 md:px-10 xl:px-20">
       {/* Heading */}
       <div className="text-center max-w-4xl mx-auto">
-        <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px]">
-          Our Process
-        </span>
+        
 
         <h2 className="text-[44px] font-manrope md:text-[64px] xl:block hidden font-semibold mt-4 leading-tight">
           Seamless Care in{" "}

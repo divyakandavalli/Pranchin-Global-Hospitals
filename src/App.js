@@ -12,6 +12,7 @@ import ContactUs from './pages/ContactUs';
 import CareersPage from './pages/CareersPage';
 import HealthPackagesPage from './pages/HealthPackagesPage';
 import DoctorDetails from './components/Doctors/DoctorDetails';
+import BlogPages from './pages/BlogPages';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/specialities/:slug' element={<SingleService />} />
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/careers' element={<CareersPage />} />
+        <Route path='/blogs' element={<BlogPages />} />
         <Route path='/health-packages' element={<HealthPackagesPage />} />
       </Routes>
       <Footer />

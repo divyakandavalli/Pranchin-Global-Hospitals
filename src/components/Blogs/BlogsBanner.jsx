@@ -1,8 +1,7 @@
 import React from "react";
-import bannerimg from "../../assets/images/career_page.jpg";
+import bannerimg from "../../assets/images/blogs_banner.jpg";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { Link } from "react-router-dom";
-const CarrersBanner = () => {
+const BlogsBanner = () => {
   return (
     <div
       className="2xl:max-w-[80%] md:w-[95%] w-full xl:bg-fixed relative mx-auto xl:min-h-[500px] md:min-h-[400px] h-[350px] mt-5 overflow-hidden flex items-center justify-center md:rounded-3xl bg-center lg:bg-[top_center] bg-cover bg-no-repeat"
@@ -16,7 +15,7 @@ const CarrersBanner = () => {
       {/* Content */}
       <div className="text-center text-white z-10 flex flex-col md:gap-6 gap-0">
         <h1 className="md:text-8xl text-[52px] font-manrope font-semibold">
-          Career
+          Our Blogs
         </h1>
 
         <div className="flex items-center justify-center text-base font-manrope">
@@ -24,14 +23,14 @@ const CarrersBanner = () => {
           <span>
             <KeyboardArrowRightIcon />
           </span>
-          <Link className="text-[#f37721]" to="/careers">
-            Careers
-          </Link>
+          <a className="text-[#f37721]" href="/about">
+               Our Blogs
+          </a>
         </div>
       </div>
     </div>
   );
 };
-export default CarrersBanner;
+export default BlogsBanner;
 
 
