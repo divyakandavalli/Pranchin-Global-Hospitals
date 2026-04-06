@@ -13,6 +13,8 @@ import CareersPage from './pages/CareersPage';
 import HealthPackagesPage from './pages/HealthPackagesPage';
 import DoctorDetails from './components/Doctors/DoctorDetails';
 import BlogPages from './pages/BlogPages';
+import BlogsSingle from './components/Blogs/BlogsSingle';
+import HappyPatients from './components/common/HappyPatients';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path='/careers' element={<CareersPage />} />
         <Route path='/blogs' element={<BlogPages />} />
         <Route path='/health-packages' element={<HealthPackagesPage />} />
+        <Route path='/blog-details' element={<BlogsSingle />} />
+        <Route path='/happy-patients' element={<HappyPatients />} />
       </Routes>
       <Footer />
     </>

@@ -7,7 +7,7 @@ const BlogsCombine = () => {
   const blogs = [
     {
       id: 131,
-      url: "/blogs",
+      url: "/blog-details",
       title: "Independence day event of Launching My health challenge at Sravani Hospital",
       date: "December 22, 2025",
       image: blogimg,
@@ -16,7 +16,7 @@ const BlogsCombine = () => {
     },
     {
       id: 132,
-      url: "/blogs",
+      url: "/blog-details",
       title: "Tips for Managing Stress to Improve Health",
       date: "September 11, 2025",
       image: blogimg,
@@ -25,7 +25,7 @@ const BlogsCombine = () => {
     },
     {
       id: 133,
-      url: "/blogs",
+      url: "/blog-details",
       title: "Tips for Managing Stress to Improve Health",
       date: "September 11, 2025",
       image: blogimg,
@@ -34,7 +34,7 @@ const BlogsCombine = () => {
     },
     {
       id: 134,
-      url: "/blogs",
+      url: "/blog-details",
       title: "Tips for Managing Stress to Improve Health",
       date: "September 11, 2025",
       image: blogimg,
@@ -43,7 +43,7 @@ const BlogsCombine = () => {
     },
     {
       id: 135,
-      url: "/blogs",
+      url: "/blog-details",
       title: "Tips for Managing Stress to Improve Health",
       date: "September 11, 2025",
       image: blogimg,

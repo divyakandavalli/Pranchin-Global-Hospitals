@@ -38,7 +38,7 @@ const SPECIALITIES = [
       proceduresNote:
         "Advanced cardiac support using Impella and ECMO-assisted devices",
       image1: image1,
-      image1: image2,
+      image2: image2,
       extraSectionTitle: "Advanced Diagnostic & Preventive Cardiac Care",
       extraSectionContent: `At Prachin Global Hospital, our expert cardiologists diagnose and treat heart and vascular diseases using the latest technologies and evidence-based practices. Our interventional cardiology team focuses on both treatment and prevention, ensuring comprehensive care for every cardiovascular concern.`,
 
