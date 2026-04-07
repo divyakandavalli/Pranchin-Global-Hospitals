@@ -4,7 +4,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import logo from "../assets/images/PrachinLogo.png";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from '@mui/icons-material/Instagram';
+import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Marquee from "react-fast-marquee";
 import img1 from "../assets/images/gallery_photos/image (1).jpg";
@@ -99,7 +99,8 @@ const Footer = () => {
             {social.map((item, index) => (
               <a
                 key={item.id + index}
-                href={item.link} target="_blank" 
+                href={item.link}
+                target="_blank"
                 rel="noreferrer noopener"
                 className="p-2 rounded-full bg-[#DDEADB] hover:bg-[#f37721] flex justify-center items-center hover:text-white transition"
               >
@@ -179,6 +180,7 @@ const Footer = () => {
                 <li>Careers US</li>
                 <li>Our Doctors</li>
                 <li>Our Patients</li>
+                <Link to="/happy-patients">Happy Patients</Link>
               </ul>
             </div>
             <div className="flex flex-col gap-4 text-base">
@@ -247,9 +249,11 @@ const Footer = () => {
           <a href="/">Privacy Policy</a>
           <a href="/">Sitemap</a>
           <a href="/">Cookies</a>
-        
         </div>
-        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="group  flex items-center justify-between bg-[#094CA0]  text-white px-3 py-2 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="group  flex items-center justify-between bg-[#094CA0]  text-white px-3 py-2 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"
+        >
           <span className="font-medium font-manrope text-[16px] capitalize">
             Back to Top
           </span>

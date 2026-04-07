@@ -38,7 +38,7 @@ const HealthPackages = () => {
           >
             <span className="font-bold">{item.name}</span>{" "}
             <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg">
-              {active === item.id ? (
+              {active === item.id ? ( 
                 <EastIcon fontSize="small" />
               ) : (
                 <NorthIcon fontSize="small" />

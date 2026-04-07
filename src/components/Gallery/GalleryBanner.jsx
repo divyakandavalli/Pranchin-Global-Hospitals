@@ -23,7 +23,7 @@ const GalleryBanner = () => {
           <span>
             <KeyboardArrowRightIcon />
           </span>
-          <a className="text-[#f37721]" href="/about">
+          <a className="text-[#f37721]" href="/gallery">
             Gallery
           </a>
         </div>
