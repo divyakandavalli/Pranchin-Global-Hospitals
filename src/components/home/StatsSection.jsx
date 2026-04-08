@@ -11,30 +11,36 @@ export default function StatsSection() {
   ];
 
   return (
-    <div className="bg-[#094ca0] px-10 mt-16 rounded-2xl">
-      <section className=" xl:py-20 md:pt-10 pt-5 md:pb-0 pb-10">
-      <div className=" grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 text-center">
-        {stats.map((item, index) => (
-          <div
-            key={index}
-            className={`px-6 relative xl:border-l border-white 
-      ${index === stats.length - 1 ? "xl:border-r border-white" : ""}
-    `}
-          >
-            {/* Number */}
-            <h2 className="text-[64px] font-semibold font-manrope text-white flex justify-center items-center gap-1">
-              <CountUp to={item.value} duration={2} />
-              <span className="text-white">+</span>
-            </h2>
+    <div className="bg-[#094ca0] mx-4 md:mx-8 lg:mx-10 mt-10 md:mt-16 rounded-2xl">
+      <section className="py-8 md:py-12 xl:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center">
+          {stats.map((item, index) => (
+            <div
+              key={index}
+              className={`
+                px-4 py-6
+                relative
+                border-b border-white/30
+                sm:border-b-0
+                sm:border-r border-white/30
+                lg:border-r
+                ${index === stats.length - 1 ? "sm:border-r-0" : ""}
+              `}
+            >
+              {/* Number */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-[64px] font-semibold font-manrope text-white flex justify-center items-center gap-1">
+                <CountUp to={item.value} duration={2} />
+                <span>+</span>
+              </h2>
 
-            {/* Label */}
-            <p className="mt-3 text-[#f5d1b9] text-[18px] font-manrope">
-              {item.label}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
+              {/* Label */}
+              <p className="mt-2 md:mt-3 text-[#f5d1b9] text-sm sm:text-base md:text-lg font-manrope">
+                {item.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

@@ -34,7 +34,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="pb-10 md:pt-20 md:pb-20">
+    <div className="py-10 md:pt-20 md:pb-20">
       <div className="max-w-[95%] md:max-w-[90%] 3xl:max-w-[80%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10">
         {/* LEFT */}
         <div className="w-full lg:w-[35%]">
@@ -75,11 +75,11 @@ export default function FAQSection() {
 
         {/* RIGHT */}
         <div className="w-full lg:w-[65%]">
-          <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-3 sm:px-4 py-1 rounded-full tracking-[2px] sm:tracking-[3px] text-[12px] sm:text-[14px] md:text-[16px] uppercase inline-block">
+          <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[12px] sm:text-[14px] md:text-[16px] text-center uppercase">
             Common Questions
           </span>
 
-          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-[64px] font-manrope font-semibold mt-4 leading-tight">
+          <h2 className="text-4xl md:text-[44px] font-manrope 3xl:text-[64px]  font-semibold mt-4 leading-tight text-black">
             Frequently Asked Questions
           </h2>
 
@@ -93,7 +93,7 @@ export default function FAQSection() {
                     setOpenIndex(openIndex === index ? null : index)
                   }
                 >
-                  <h4 className="font-semibold text-[14px] sm:text-[16px] md:text-[21px] text-[#094ca0]">
+                  <h4 className="font-semibold text-[16px] md:text-[21px] text-[#094ca0]">
                     {item.q}
                   </h4>
 
@@ -104,7 +104,7 @@ export default function FAQSection() {
 
                 {/* Answer */}
                 {openIndex === index && (
-                  <p className="text-[#2f373e] mt-2 sm:mt-3 p-3 sm:p-4 md:p-5 text-[13px] sm:text-[14px] md:text-[16px] leading-relaxed">
+                  <p className="text-[#2f373e] mt-2 sm:mt-3 p-3 sm:p-4 md:p-5 text-[14px] md:text-[16px] leading-relaxed rounded-xl bg-[#e1f1fd]">
                     {item.a}
                   </p>
                 )}

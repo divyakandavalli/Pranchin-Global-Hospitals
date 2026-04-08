@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/Header';
 import HomePage from './pages/HomePage';
@@ -18,10 +18,17 @@ import BlogsSingle from './components/Blogs/BlogsSingle';
 import HappyPatients from './components/common/HappyPatients';
 
 function App() {
+  const location = useLocation();
+
+  const isHomePage = location.pathname === "/";
+
   return (
     <>
-      <Header />
-      <ScrollToTop/>
+      <ScrollToTop />
+
+      {/* ✅ Show only if NOT home */}
+      {!isHomePage && <Header />}
+
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<AboutPage />} />
@@ -37,7 +44,9 @@ function App() {
         <Route path='/blog-details' element={<BlogsSingle />} />
         <Route path='/happy-patients' element={<HappyPatients />} />
       </Routes>
-      <Footer />
+
+      {/* ✅ Show only if NOT home */}
+      {!isHomePage && <Footer />}
     </>
   );
 }

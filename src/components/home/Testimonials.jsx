@@ -54,29 +54,29 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="max-w-[97%] 3xl:max-w-[95%] mx-auto my-20">
+    <div className="max-w-[97%] 3xl:max-w-[95%] mx-auto ">
       <div className="bg-[#c8dded] rounded-[24px] py-20 px-8 md:px-20">
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           {/* Left Side */}
           <div className="w-full lg:w-[45%]">
-            <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px] text-[16px] uppercase">
+            <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[12px] sm:text-[14px] md:text-[16px] text-center uppercase">
               Happy Patients
             </span>
 
-            <h2 className="text-[44px] font-manrope md:text-[64px] font-semibold mt-4 leading-tight">
+            <h2 className="text-4xl md:text-[44px] font-manrope 3xl:text-[64px]  font-semibold mt-4 leading-tight text-black">
               What Our Patients{" "}
               <span className="italic font-light font-instrumental text-[#5187af]">
                 Say About Us
               </span>
             </h2>
 
-            <p className="text-[#2f373e] text-[18px] xl:text-left text-center xl:w-auto max-w-2xl font-manrope mt-4">
+            <p className="text-[#2f373e] text-[14px] md:text-[16px] 3xl:text-[18px] text-left  xl:w-auto max-w-2xl font-manrope mt-4">
               Dedicated to providing expert healthcare advanced technology,
               experienced professionals, and personalized treatments to ensure
               your well-being and a healthier future.
             </p>
-            <Link to='/contact' className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition-all duration-300">
+            <Link to='/contact' className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
               <span className="font-medium font-manrope text-[16px] capitalize">
                 Book Appointment
               </span>
@@ -105,7 +105,7 @@ export default function Testimonials() {
                 />
               </div>
 
-              <p className="text-gray-600 leading-relaxed text-[16px]">
+              <p className="text-gray-600 leading-relaxed text-[14px] md:text-[16px]">
                 The doctors were caring and professional. The staff made me feel
                 comfortable, and the doctors explained everything in detail
                 treatment plan was clear, and I felt supported every step of
@@ -113,10 +113,10 @@ export default function Testimonials() {
               </p>
 
               <div className="mt-8">
-                <h4 className="font-semibold text-[21px] text-[#0f172a]">
+                <h4 className="font-semibold text-[16px] md:text-[21px] text-[#5187af]">
                   Heller Keano
                 </h4>
-                <span className="text-[15px] text-[#64748b]">
+                <span className="text-[14px] md:text-[16px] text-[#64748b]">
                   Patient Parent
                 </span>
               </div>
@@ -151,10 +151,11 @@ export default function Testimonials() {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
+             className="[&_.swiper-wrapper]:items-stretch"
           >
             {testimonials.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-white rounded-[16px] p-6 shadow-sm h-full">
+              <SwiperSlide key={index} className="!h-auto flex">
+                <div className="bg-white rounded-[16px] p-6 shadow-sm flex flex-col justify-between w-full h-full min-h-[280px] sm:min-h-0">
                   {/* Rating */}
                   <div className="mb-4">
                     <Rating
@@ -165,19 +166,19 @@ export default function Testimonials() {
                     />
                   </div>
 
-                  <p className="text-gray-600 text-[16px] leading-relaxed min-h-[100px]">
+                  <p className="text-gray-600 text-[14px] md:text-[16px] leading-relaxed min-h-[100px] font-manrope">
                     "{item.text}"
                   </p>
 
-                  <div className="flex items-center gap-4 mt-8">
+                  <div className="flex items-center gap-4 mt-8 font-manrope">
                     <img
                       src={`https://i.pravatar.cc/150?img=${index + 32}`}
                       alt={item.name}
                       className="w-12 h-12 rounded-full object-cover"
                     />
                     <div>
-                      <h4 className="font-semibold text-[21px]">{item.name}</h4>
-                      <p className="text-[16px] text-gray-500">{item.role}</p>
+                      <h4 className="font-semibold text-[16px] md:text-[21px]">{item.name}</h4>
+                      <p className="text-[14px] md:text-[16px] text-gray-500">{item.role}</p>
                     </div>
                   </div>
                 </div>

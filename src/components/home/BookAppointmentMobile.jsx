@@ -10,26 +10,27 @@ export default function BookAppointmentMobile() {
 
       {/* CONTENT */}
       <div className="mb-8">
-        <span className="bg-black/10 font-manrope text-[13px] px-3 py-1 rounded-full uppercase">
+        <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-3 sm:px-4 py-1 rounded-full tracking-[2px] sm:tracking-[3px] text-[12px] sm:text-[14px] md:text-[16px] uppercase">
           Easy Access
         </span>
 
-        <h2 className="text-[28px] font-semibold font-manrope leading-tight mt-4">
+        <h2 className="text-4xl md:text-[44px] font-manrope 3xl:text-[64px]  font-semibold mt-4 leading-tight text-black">
           Book Your Medical Appointment
-          <span className="block italic font-light text-[#f37721] font-instrumental">
+          <span className="italic font-light font-instrumental text-[#f37721] block">
             Quickly & Easily
           </span>
         </h2>
 
-        <p className="text-[14px] mt-3 leading-6 text-gray-600 font-manrope">
+        <p className="text-[14px] md:text-[16px] 3xl:text-[18px] mt-3 leading-6 text-gray-600 font-manrope">
           Fill the form and our team will confirm your appointment.
         </p>
 
-        <Link to='/contact' className="mt-5 flex items-center justify-center gap-3 bg-[#094ca0] text-white px-5 py-2.5 rounded-full text-center">
-          <span className="text-[14px] font-manrope">
+        <Link to='/contact' className="group mt-8 flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
+          <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
             Get Free Consultation
           </span>
-          <span className="bg-white text-[#094ca0] rounded-full w-8 h-8 flex items-center justify-center">
+          <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-lg transition 
+    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
             <EastIcon fontSize="small" />
           </span>
         </Link>
@@ -75,7 +76,7 @@ export default function BookAppointmentMobile() {
           />
         </div>
 
-        <button className="mt-6 flex items-center justify-between border border-[#f37721] text-[#f37721] px-5 py-2.5 rounded-full w-full">
+        <button className="group mt-8 flex items-center justify-between px-6 py-3 rounded-full w-fit gap-4 border text-[#f37721] border-[#f37721] transition">
           <span className="text-[14px] font-manrope">
             Submit Details
           </span>

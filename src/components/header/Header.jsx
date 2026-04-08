@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/PrachinLogo-3.png";
+import logo from "../../assets/images/Prachin Final Logo Website Size-01.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import SPECIALITIES from "../../specialities/specialities";

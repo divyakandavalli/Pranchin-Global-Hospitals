@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import BannerCarousel from "../components/home/BannerCarousel";
 import AboutSection from "../components/home/AboutSection";
 import HomeServices from "../components/home/HomeServices";
@@ -10,42 +10,150 @@ import AboutDoctors from "../components/About/AboutDoctors";
 import Reveal from "../components/common/Reveal";
 import BookAppointmentMobile from "../components/home/BookAppointmentMobile";
 import HomeServicesTwo from "../components/home/HomeServicesTwo";
+import Header from "../components/header/Header";
+import CountingValues from "../components/home/CountingValues";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
+  const containerRef = useRef(null);
+  const [is2xl, setIs2xl] = useState(false);
+
+  // ✅ Detect 2xl screen
+  useEffect(() => {
+    const checkScreen = () => {
+      setIs2xl(window.innerWidth >= 1536);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  // ✅ Keyboard scroll ONLY for 2xl
+  useEffect(() => {
+    if (!is2xl) return;
+
+    const handleKey = (e) => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const height = window.innerHeight;
+
+      if (e.key === "ArrowDown" || e.key === "PageDown" || e.key === " ") {
+        e.preventDefault();
+        container.scrollBy({ top: height, behavior: "smooth" });
+      }
+
+      if (e.key === "ArrowUp" || e.key === "PageUp") {
+        e.preventDefault();
+        container.scrollBy({ top: -height, behavior: "smooth" });
+      }
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [is2xl]);
+
   return (
-    <div>
+    <div
+      ref={containerRef}
+      tabIndex={is2xl ? 0 : -1}
+      className={`h-screen overflow-y-auto ${
+        is2xl ? "snap-y snap-mandatory scroll-smooth" : ""
+      }`}
+    >
+      {/* Header */}
+      <div className={is2xl ? "snap-start" : ""}>
+        <Header />
+      </div>
+
       <Reveal>
-        <BannerCarousel />
+        <section className={`h-full 2xl:h-screen ${is2xl ? "snap-start  pt-5" : ""}`}>
+          <BannerCarousel />
+        </section>
       </Reveal>
+
       <Reveal>
-        <AboutSection />
+        <div className={`2xl:h-screen ${is2xl ? "snap-start" : ""}`}>
+          <AboutSection />
+        </div>
       </Reveal>
+
       <Reveal>
-        {/* <HomeServices /> */}
-        <HomeServicesTwo />
+        <div className={`2xl:h-screen flex justify-center items-center ${is2xl ? "snap-start" : ""}`}>
+          <CountingValues />
+        </div>
       </Reveal>
+
       <Reveal>
-        <HomeProcess />
+        <div
+          className={`2xl:h-screen flex justify-center items-center ${
+            is2xl ? "snap-start" : ""
+          }`}
+        >
+          <HomeProcess />
+        </div>
       </Reveal>
+
       <Reveal>
-        {" "}
+        <div
+          className={`2xl:h-screen flex flex-col justify-center items-center ${
+            is2xl ? "snap-start" : ""
+          }`}
+        >
+          <HomeServicesTwo />
+        </div>
+      </Reveal>
+
+      <Reveal>
+        {/* Mobile */}
         <div className="block xl:hidden">
           <BookAppointmentMobile />
         </div>
+
         {/* Desktop */}
-        <div className="hidden xl:block">
+        <div
+          className={`hidden xl:flex flex-col 2xl:h-screen justify-center items-center ${
+            is2xl ? "snap-start" : ""
+          }`}
+        >
           <BookAppointment />
         </div>
       </Reveal>
+
       <Reveal>
-        <AboutDoctors />
+        <div
+          className={`2xl:h-screen flex justify-center items-center ${
+            is2xl ? "snap-start" : ""
+          }`}
+        >
+          <AboutDoctors />
+        </div>
       </Reveal>
+
       <Reveal>
-        <Testimonials />
+        <div
+          className={`2xl:h-screen flex justify-center items-center ${
+            is2xl ? "snap-start" : ""
+          }`}
+        >
+          <Testimonials />
+        </div>
       </Reveal>
+
       <Reveal>
-        <FAQSection />
+        <div
+          className={`2xl:h-screen flex justify-center items-center ${
+            is2xl ? "snap-start" : ""
+          }`}
+        >
+          <FAQSection />
+        </div>
       </Reveal>
+
+      <div className={is2xl ? "snap-start" : ""}>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -44,12 +44,12 @@ const AboutDoctors = () => {
   ];
   return (
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
-      <div className=" xl:pt-24 pt-16 pb-10 md:px-10 px-5 relative  overflow-hidden">
+      <div className=" 2xl:pt-0  2xl:pb-0 py-10 md:px-10 px-5 relative  overflow-hidden">
         <div className="flex justify-center flex-col items-center">
-          <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
+          <span className="border  border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[12px] sm:text-[14px] md:text-[16px] text-center uppercase">
             Expert Doctor
           </span>
-          <h2 className="text-4xl font-manrope md:text-[64px] text-center font-semibold mt-4 leading-tight">
+          <h2 className="text-4xl md:text-[44px] font-manrope 3xl:text-[64px]  font-semibold mt-4 leading-tight text-black">
             Meet Professional{" "}
             <span className="italic font-light font-instrumental text-[#5187af]">
               Doctors & Specialists
@@ -70,7 +70,7 @@ const AboutDoctors = () => {
               <Link to='/doctors-profile' className="w-[260px] flex flex-row h-full justify-center  items-end self-center z-10 relative">
                 <div className="max-w-full bg-[#FEFEFF] pt-3 px-3 rounded-t-3xl">
                   <div className="text-center">
-                    <h3 className="text-[21px] font-manrope font-semibold mb-0.5">
+                    <h3 className="font-semibold font-manrope  text-[16px] md:text-[21px] text-[#5187af]">
                       {value.name}
                     </h3>
                     <p className=" text-[#4D6E76] font-normal text-base font-manrope">

@@ -57,17 +57,17 @@ const Footer = () => {
         <div className="flex xl:flex-row flex-col justify-center xl:items-end items-center md:gap-10 gap-6">
           <div className="xl:w-[68%] flex flex-col xl:items-start items-center gap-6">
             <div>
-              <span className="bg-[#ffffff40]  px-4 py-1.5 font-medium tracking-wider  text-base rounded-full">
+              <span className="bg-white/20 tracking-wider font-manrope uppercase text-[12px] sm:text-[14px] md:text-[16px] px-3 sm:px-4 py-1 rounded-full backdrop-blur-md">
                 GET STARTED
               </span>
             </div>
-            <h2 className="lg:text-[64px] md:text-5xl text-4xl xl:text-left leading-[45px] text-center md:leading-[74px] font-semibold 2xl:pe-10">
+            <h2 className="text-4xl md:text-[44px] font-manrope 3xl:text-[64px] xl:text-left text-center  font-semibold mt-4 leading-tight text-white">
               Book Your Appointment <span className="xl:hidden block"></span>
               <span className="text-[#f37721] font-normal italic font-instrumental">
                 With Medical Experts
               </span>
             </h2>
-            <p className="text-lg md:w-[80%] 2xl:pe-10 xl:text-left text-center">
+            <p className="text-[14px] md:text-[16px] 3xl:text-[18px] md:w-[80%] 2xl:pe-10 xl:text-left text-center">
               Take the first step toward better health today. Schedule your
               appointment with our trusted doctors and experience compassionate,
               professional.
@@ -75,12 +75,12 @@ const Footer = () => {
           </div>
           <div className="flex xl:w-[32%] justify-end items-end z-10">
             <Link to='/contact' className=" flex items-center justify-between bg-[#f37721] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2  transition">
-              <span className="font-medium font-manrope text-[16px] capitalize">
+              <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
                 Book Appointment Now
               </span>
 
               {/* Arrow Circle */}
-              <span className="bg-[#DDEADB] text-[#000000] rounded-full w-9 h-9 flex items-center justify-center text-lg">
+              <span className="bg-[#f5d1b9] text-[#f37721]  rounded-full w-9 h-9 flex items-center justify-center text-lg">
                 <ArrowForwardIcon fontSize="small" />
               </span>
             </Link>
@@ -91,7 +91,7 @@ const Footer = () => {
       <div className="3xl:max-w-[72%] font-manrope lg:mt-20 md:mt-10 mx-auto px-4 py-[72px] flex xl:flex-row flex-col lg:gap-40 md:gap-20 gap-10  md:w-[95%]">
         <div className="xl:w-[26%] flex flex-col xl:items-start items-center gap-4">
           <img src={logo} className="xl:w-52 w-60 brightness-100" alt="" />
-          <p className="text-lg text-white xl:w-auto w-2/3 text-center xl:text-left">
+          <p className="text-[14px] md:text-[16px] 3xl:text-[18px] text-white xl:w-auto w-2/3 text-center xl:text-left">
             Dedicated to providing expert healthcare with advanced tech
             treatments to ensure your well-being and a healthier future.
           </p>
