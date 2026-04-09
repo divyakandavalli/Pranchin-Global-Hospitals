@@ -10,6 +10,7 @@ import Marquee from "react-fast-marquee";
 import img from "../assets/images/footer_mrquee_img.jpg";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { Link } from "react-router-dom";
+
 const Footer = () => {
   const social = [
     {
@@ -83,8 +84,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="3xl:max-w-[72%] font-manrope lg:mt-20 md:mt-10 mx-auto px-4 py-[72px] flex xl:flex-row flex-col lg:gap-40 md:gap-20 gap-10  md:w-[95%]">
-        <div className="xl:w-[26%] flex flex-col xl:items-start items-center gap-4">
+      <div className="3xl:max-w-[72%] font-manrope lg:mt-20 md:mt-10 mx-auto px-4 py-[72px] flex xl:flex-row flex-col lg:gap-38 md:gap-20 gap-10  md:w-[95%]">
+        <div className="xl:w-[28%] flex flex-col xl:items-start items-center gap-4">
           <img src={logo} className="xl:w-52 w-60 brightness-100" alt="" />
           <p className="text-lg text-white xl:w-auto w-2/3 text-center xl:text-left">
             Dedicated to providing expert healthcare with advanced tech
@@ -164,8 +165,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="xl:w-[64%] ">
-          <div className=" flex md:flex-row flex-col justify-between lg:gap-32 gap-8 font-manrope">
+        <div className="xl:w-[70%] ">
+          <div className=" flex lg:flex-row flex-col justify-between xl:gap-8 lg:gap-4 gap-8 font-manrope">
             <div className="flex flex-col gap-4 text-base">
               <h3 className="text-[#C3C6CE]  tracking-widest font-medium">
                 COMPANY
@@ -189,19 +190,29 @@ const Footer = () => {
                 <li>Medical Checkup</li>
               </ul>
             </div>
+            <div className="flex flex-col gap-4 text-base">
+              <h3 className="text-[#C3C6CE]  tracking-widest font-medium">
+                For Patients
+              </h3>
+              <ul className="flex flex-col gap-4 text-white">
+                <Link to="/patient-resources">Patients Resources</Link>
+                <Link to="/patient-services">Patients Services</Link>
+                <Link to="/contact">Book an Appointment </Link>
+              </ul>
+            </div>
             <div className="flex flex-col  gap-4 text-base">
               <h3 className="text-[#C3C6CE]   tracking-widest font-medium">
                 Opening Hours
               </h3>
-              <div className="text-white text-base flex pb-2 border-b border-[#2E2E2E] justify-between items-center">
+              <div className="text-white text-base flex pb-1 border-b border-[#2E2E2E] justify-between items-center">
                 <span>Monday - Wednesday :</span>
                 <span>6AM - 13PM</span>
               </div>
-              <div className="text-white text-base flex py-2 border-b border-[#2E2E2E] justify-between items-center">
+              <div className="text-white text-base flex py-1 border-b border-[#2E2E2E] justify-between items-center">
                 <span>Monday - Wednesday :</span>
                 <span>6AM - 13PM</span>
               </div>
-              <div className="text-white text-base flex py-2 border-b border-[#2E2E2E] justify-between items-center">
+              <div className="text-white text-base flex py-1 border-b border-[#2E2E2E] justify-between items-center">
                 <span>Monday - Wednesday :</span>
                 <span>6AM - 13PM</span>
               </div>

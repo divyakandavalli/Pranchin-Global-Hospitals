@@ -7,6 +7,7 @@ import SPECIALITIES from "../../specialities/specialities";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
+  const [showPackages, setShowPackages] = useState(false);
   const core = SPECIALITIES.filter((item) => item.category === "core");
   const Surgical = SPECIALITIES.filter((item) => item.category === "Surgical");
   const Support = SPECIALITIES.filter((item) => item.category === "Support");
@@ -120,8 +121,40 @@ export default function Header() {
             <Link to="/gallery" className="hover:text-[#094ca0]">
               Gallery
             </Link>
-            <Link to="/health-packages" className="hover:text-[#094ca0] capitalize">health packages</Link>
-            <Link to="/careers" className="hover:text-[#094ca0]">Careers</Link>
+
+            <div
+              className="relative"
+              onMouseEnter={() => setShowPackages(true)}
+              onMouseLeave={() => setShowPackages(false)}
+            >
+              <p className="hover:text-[#094ca0] cursor-pointer text-black flex items-center justify-center gap-1 capitalize">
+                packages
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="m19 9-7 7-7-7"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </p>
+
+              {/* DROPDOWN */}
+              <div
+                className={`absolute left-1/2 -translate-x-1/2 top-full mt-4 bg-white shadow-xl rounded-xl p-3  w-48 flex flex-col gap-2 justify-center items-center transition-all duration-300 z-[9999] ${
+                  showPackages
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible -translate-y-2"
+                }`}
+              >
+                <Link to="/health-packages">Health Packages</Link>
+                <Link to="/special-offers">Special Offers</Link>
+              </div>
+            </div>
+
+            <Link to="/careers" className="hover:text-[#094ca0]">
+              Careers
+            </Link>
             <Link to="/contact" className="hover:text-[#094ca0]">
               Contact
             </Link>

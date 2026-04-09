@@ -16,6 +16,9 @@ import BlogPages from './pages/BlogPages';
 import BlogsSingle from './components/Blogs/BlogsSingle';
 import HappyPatients from './components/common/HappyPatients';
 
+import SpecialOfferPage from './pages/SpecialOfferPage';
+import PatientServices from './components/For_Patients/PatientServices';
+import PatientResources from './components/For_Patients/PatientResources';
 function App() {
   return (
     <>
@@ -25,7 +28,7 @@ function App() {
         <Route path='/about' element={<AboutPage />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/doctors' element={<DoctorsPage />} />
-        <Route path='/doctors-profile' element={<DoctorDetails/>} />
+        <Route path='/doctors-profile' element={<DoctorDetails />} />
         <Route path='/all-specialities' element={<Servicespage />} />
         <Route path='/specialities/:slug' element={<SingleService />} />
         <Route path='/contact' element={<ContactUs />} />
@@ -34,6 +37,9 @@ function App() {
         <Route path='/health-packages' element={<HealthPackagesPage />} />
         <Route path='/blog-details' element={<BlogsSingle />} />
         <Route path='/happy-patients' element={<HappyPatients />} />
+        <Route path='/special-offers' element={<SpecialOfferPage />} />
+        <Route path='/patient-services' element={<PatientServices />} />
+        <Route path='/patient-resources' element={<PatientResources />} />
       </Routes>
       <Footer />
     </>
