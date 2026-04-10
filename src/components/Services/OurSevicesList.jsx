@@ -1,7 +1,6 @@
 import React from "react";
 import SPECIALITIES from "../../specialities/specialities";
-import { Link, useNavigate } from "react-router-dom";
-import EastIcon from "@mui/icons-material/East";
+import { useNavigate } from "react-router-dom";
 
 export default function OurSevicesList() {
   const navigate = useNavigate();
@@ -10,9 +9,10 @@ export default function OurSevicesList() {
   const services = SPECIALITIES;
 
   return (
-    <section className="py-10 px-4 md:px-10  ">
-      <div className="max-w-[95%] mx-auto ">
-        <div className=" py-10 px-4 sm:px-6 md:px-10 relative overflow-hidden">
+    <section className="py-10 px-4 md:px-10">
+      <div className="max-w-[95%] mx-auto">
+        <div className="py-10 px-4 sm:px-6 md:px-10 relative overflow-hidden">
+          
           {/* Decoration */}
           <div className="hidden md:block absolute -right-[310px] -top-[653px] pointer-events-none">
             <img
@@ -22,7 +22,7 @@ export default function OurSevicesList() {
           </div>
 
           {/* Header */}
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 ">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
             <div>
               <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-3 sm:px-4 py-1 rounded-full tracking-[2px] sm:tracking-[3px] text-[12px] sm:text-[14px] md:text-[16px] uppercase">
                 our services
@@ -36,73 +36,49 @@ export default function OurSevicesList() {
                 </span>
               </h2>
             </div>
-
-            {/* <div>
-              <Link
-                to="/specialities"
-                className="group mt-2 lg:mt-8 flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition"
-              >
-                <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
-                  View all services
-                </span>
-
-                <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-lg transition group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
-                  <EastIcon fontSize="small" />
-                </span>
-              </Link>
-            </div> */}
           </div>
 
-          {/* SERVICES GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 ">
-            {services.map((service) => (
+          {/* NEW SERVICES GRID - Updated Card Design */}
+          <div className="grid xl:grid-cols-3 grid-cols-1 lg:gap-12 gap-6 mx-auto mt-12 lg:mx-8">
+            {services.map((item, index) => (
               <div
-                key={service.slug}
-                onClick={() => navigate(`/specialities/${service.slug}`)}
-                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 border border-gray-100 group cursor-pointer hover:-translate-y-1 w-full h-full"
+                key={index}
+                onClick={() => navigate(`/specialities/${item.slug}`)}
+                className="p-8 bg-[#C8DDED] flex items-start justify-center flex-col rounded-3xl relative cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
               >
-                {/* Icon */}
-                <div className="w-12 h-12 flex items-center justify-center rounded-xl text-[#094ca0] mb-4">
-                  {typeof service.icon === "string" ? (
-                    <img
-                      src={service.icon}
-                      alt={service.title}
-                      className="object-contain w-full h-full"
-                    />
-                  ) : (
-                    service.icon
-                  )}
-                </div>
-
-                {/* Title */}
-                <h3 className="text-[16px] md:text-[21px] font-semibold mb-2 font-manrope text-[#094ca0]">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-[14px] md:text-[16px] text-gray-600 font-manrope leading-relaxed">
-                  {service.description ||
+                <h2 className="text-[21px] font-manrope font-semibold mb-1 text-[#094ca0]">
+                  {item.title}
+                </h2>
+                
+                <p className="w-10/12 text-[#66686C] font-normal text-base font-manrope leading-relaxed">
+                  {item.desc || item.shortdesc || 
                     "Expert care with advanced medical facilities and experienced doctors."}
                 </p>
+
+                {/* Decorative Image Container */}
+                <div className="w-20 absolute flex rounded-tl-3xl pt-[10px] font-manrope bg-[#ffffff] bottom-0 right-0 justify-end items-end">
+                  <img 
+                    src={item.img || item.icon} 
+                    className="w-16 h-16 object-contain" 
+                    alt={item.title} 
+                  />
+                  
+                  {/* Decorative shadow elements */}
+                  <div className="absolute -left-8 bottom-0 w-8 flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#FFFFFF]">
+                    <div className="w-8">
+                      <div className="h-8"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute -top-[33px] right-0 w-[33px] flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#FFFFFF]">
+                    <div className="w-8">
+                      <div className="h-8"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
-
-          {/* Bottom Button */}
-          {/* <div className="flex justify-center items-center text-center mt-10">
-            <Link
-              to="/specialities"
-              className="group flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition"
-            >
-              <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
-                View all services
-              </span>
-
-              <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-lg transition group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
-                <EastIcon fontSize="small" />
-              </span>
-            </Link>
-          </div> */}
         </div>
       </div>
     </section>

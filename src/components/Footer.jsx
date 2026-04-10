@@ -250,22 +250,38 @@ const Footer = () => {
           <a href="/">Sitemap</a>
           <a href="/">Cookies</a>
         </div>
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="group  flex items-center justify-between bg-[#094CA0]  text-white px-3 py-2 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"
-        >
-          <span className="font-medium font-manrope text-[16px] capitalize">
-            Back to Top
-          </span>
+      <button
+  onClick={() => {
+    const homeContainer = document.querySelector('[data-scroll-container="home"]');
+    
+    if (homeContainer) {
+      // For Homepage (custom scroll container)
+      homeContainer.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    } else {
+      // For all other pages (normal window scroll)
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  }}
+  className="group flex items-center justify-between bg-[#094CA0] text-white px-3 py-2 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"
+>
+  <span className="font-medium font-manrope text-[16px] capitalize">
+    Back to Top
+  </span>
 
-          {/* Arrow Circle */}
-          <span
-            className="bg-[#E5F4FF] text-[#094CA0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300
-    group-hover:bg-[#F5D1B9] group-hover:text-[#F37721]"
-          >
-            <ArrowUpwardIcon fontSize="small" />
-          </span>
-        </button>
+  {/* Arrow Circle */}
+  <span
+    className="bg-[#E5F4FF] text-[#094CA0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300
+    group-hover:bg-[#F5D1B9] group-hover:text-[#F37721]"
+  >
+    <ArrowUpwardIcon fontSize="small" />
+  </span>
+</button>
       </div>
     </div>
   );

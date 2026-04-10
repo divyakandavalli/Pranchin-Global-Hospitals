@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContactPerson from "../../assets/images/smiling-young-female-doctor-wearing-medical-robe-stethoscope-sitting-desk-with-medical-tools-looking-doing-call-gesture-pistol-gesture-isolated.jpg";
+import ContactPerson from "../../assets/images/3.png";
 import EastIcon from "@mui/icons-material/East";
 import { Link } from "react-router-dom";
 
@@ -35,15 +35,15 @@ export default function FAQSection() {
 
   return (
     <div className="py-10 md:pt-20 md:pb-20">
-      <div className="max-w-[95%] md:max-w-[90%] 3xl:max-w-[80%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10">
+      <div className="max-w-[95%] md:max-w-[90%] 3xl:max-w-[80%] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-20">
         {/* LEFT */}
         <div className="w-full lg:w-[35%]">
           <div className="lg:sticky lg:top-20 space-y-4 sm:space-y-6">
-            <div className="bg-white rounded-[20px] p-3 sm:p-4 shadow">
+            <div className="">
               <img
                 src={ContactPerson}
                 alt=""
-                className="rounded-[16px] w-full object-cover"
+                className=" w-full object-cover"
               />
             </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import StatsSection from "../home/StatsSection";
-import homeBanner from "../../assets/images/image-22-768x768.jpg";
+import homeBanner from "../../assets/images/HospitalImage.jpg";
 import feedback_Card from "../../assets/images/feedback_Card.jpg";
 export default function AboutUsSection() {
   return (

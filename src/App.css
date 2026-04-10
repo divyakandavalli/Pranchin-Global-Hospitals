@@ -18,3 +18,10 @@
   animation: zoomIn 10s ease-in-out forwards;
 }
 
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  outline: none;
+  color: black;
+}
