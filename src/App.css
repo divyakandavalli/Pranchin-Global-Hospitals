@@ -25,3 +25,68 @@
   outline: none;
   color: black;
 }
+
+
+/* FULLSCREEN WRAPPER */
+.vertical-carousel {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* SWIPER FULL HEIGHT */
+.myVerticalSwiper {
+  height: 100%;
+}
+
+/* EACH SLIDE FULLSCREEN */
+.swiper-slide {
+  height: 100% !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE WRAPPER */
+.slide-content {
+  height: 100%;
+  width: 100%;
+}
+
+/* IMAGE COVER */
+.slide-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔥 KEY */
+}
+/* Pagination container */
+.myVerticalSwiper .swiper-pagination {
+  position: absolute;
+  bottom: 20px !important;
+  right: 20px !important;
+  top: auto !important;
+  left: auto !important;
+
+  display: flex;
+  flex-direction: column !important; /* 🔥 keep vertical */
+  align-items: center;
+  gap: 10px;
+}
+
+/* Default dot */
+.myVerticalSwiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #094e9d; /* 🔥 your color */
+  opacity: 0.5;
+  margin: 0 !important;
+  transition: all 0.3s ease;
+}
+
+/* Active dot */
+.myVerticalSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.3);
+}
+

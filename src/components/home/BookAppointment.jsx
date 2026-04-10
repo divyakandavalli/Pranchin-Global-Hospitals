@@ -4,7 +4,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Autocomplete, TextField } from "@mui/material"; // ← Added
-import BackgroundDoctor from "../../assets/images/aboutpage-01.jpg";
+import BackgroundDoctor from "../../assets/images/aboutpage-02.jpg";
 import { Link } from "react-router-dom";
 
 import SPECIALITIES from "../../specialities/specialities";

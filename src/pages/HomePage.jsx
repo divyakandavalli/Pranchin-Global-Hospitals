@@ -12,8 +12,17 @@ import HomeServicesTwo from "../components/home/HomeServicesTwo";
 import CountingValues from "../components/home/CountingValues";
 import Footer from "../components/Footer";
 import Header from "../components/header/Header";
-
+import VerticalCarousel from "../components/home/VerticalCarousel";
+import slide3 from '../assets/images/17588.jpg'
+import slide2 from '../assets/images/3374.jpg'
+import slide1 from '../assets/images/midsection-surgeons-operating-patient-hospital.jpg'
 export default function HomePage() {
+  const slidesData = [
+    slide1,
+    slide2,
+    slide3,
+  ];
+
   const containerRef = useRef(null);
   const [is2xl, setIs2xl] = useState(false);
 
@@ -84,8 +93,9 @@ export default function HomePage() {
       </div>
 
       <Reveal>
-        <section className={`h-full 2xl:h-screen ${is2xl ? "snap-start pt-5" : ""}`}>
-          <BannerCarousel />
+        <section className={`h-auto 2xl:h-screen ${is2xl ? "snap-start " : ""}`}>
+          {/* <BannerCarousel /> */}
+          <VerticalCarousel slides={slidesData}/>
         </section>
       </Reveal>
 

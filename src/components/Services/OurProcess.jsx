@@ -1,5 +1,5 @@
 import React from "react";
-import DocVideo from "../../assets/videos/5194927_Young_Cute_3840x2160.mp4";
+import DocVideo from "../../assets/videos/Prachin global Hospital video 0.2.mp4";
 import { Link } from "react-router-dom";
 import EastIcon from "@mui/icons-material/East";
 export default function OurProcess() {
