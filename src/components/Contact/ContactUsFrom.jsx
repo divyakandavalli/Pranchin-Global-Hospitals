@@ -1,7 +1,12 @@
 import React from "react";
 import EastIcon from "@mui/icons-material/East";
 import Marquee from "react-fast-marquee";
-import img from "../../assets/images/footer_mrquee_img.jpg";
+import img1 from "../../assets/images/gallery_photos/image (1).jpg";
+import img2 from "../../assets/images/gallery_photos/image (2).jpg";
+import img3 from "../../assets/images/gallery_photos/image (3).jpg";
+import img4 from "../../assets/images/gallery_photos/image (4).jpg";
+import img5 from "../../assets/images/gallery_photos/image (5).jpg";
+import img6 from "../../assets/images/gallery_photos/image (6).jpg";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from '@mui/icons-material/Email';
 import LocationPinIcon from '@mui/icons-material/LocationPin';
@@ -32,52 +37,52 @@ const ContactUsFrom = () => {
           <div className="rounded-xl overflow-hidden">
             <Marquee pauseOnHover={true}>
               <img
-                src={img}
+                src={img1}
                 alt=""
                 className=" xl:w-[295px] xl:h-[195px] lg:w-[220px] lg:h-[160px] md:w-[300px] md:h-[220px] w-40 h-28 me-6 rounded-xl "
               />
               <img
-                src={img}
+                src={img2}
                 alt=""
                 className=" xl:w-[295px] xl:h-[195px] lg:w-[220px] lg:h-[160px] md:w-[300px] md:h-[220px] w-40 h-28 me-6 rounded-xl "
               />
               <img
-                src={img}
+                src={img3}
                 alt=""
                 className=" xl:w-[295px] xl:h-[195px] lg:w-[220px] lg:h-[160px] md:w-[300px] md:h-[220px] w-40 h-28 me-6 rounded-xl "
               />
               <img
-                src={img}
+                src={img4}
                 alt=""
                 className=" xl:w-[295px] xl:h-[195px] lg:w-[220px] lg:h-[160px] md:w-[300px] md:h-[220px] w-40 h-28 me-6 rounded-xl "
               />
               <img
-                src={img}
+                src={img5}
                 alt=""
                 className=" xl:w-[295px] xl:h-[195px] lg:w-[220px] lg:h-[160px] md:w-[300px] md:h-[220px] w-40 h-28 me-6 rounded-xl "
               />
               <img
-                src={img}
+                src={img6}
                 alt=""
                 className=" xl:w-[295px] xl:h-[195px] lg:w-[220px] lg:h-[160px] md:w-[300px] md:h-[220px] w-40 h-28 me-6 rounded-xl "
               />
               <img
-                src={img}
+                src={img1}
                 alt=""
                 className=" xl:w-[295px] xl:h-[195px] lg:w-[220px] lg:h-[160px] md:w-[300px] md:h-[220px] w-40 h-28 me-6 rounded-xl "
               />
               <img
-                src={img}
+                src={img2}
                 alt=""
                 className=" xl:w-[295px] xl:h-[195px] lg:w-[220px] lg:h-[160px] md:w-[300px] md:h-[220px] w-40 h-28 me-6 rounded-xl "
               />
               <img
-                src={img}
+                src={img3}
                 alt=""
                 className=" xl:w-[295px] xl:h-[195px] lg:w-[220px] lg:h-[160px] md:w-[300px] md:h-[220px] w-40 h-28 me-6 rounded-xl "
               />
               <img
-                src={img}
+                src={img4}
                 alt=""
                 className=" xl:w-[295px] xl:h-[195px] lg:w-[220px] lg:h-[160px] md:w-[300px] md:h-[220px] w-40 h-28 me-6 rounded-xl "
               />
