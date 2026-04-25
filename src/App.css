@@ -42,7 +42,7 @@
 /* EACH SLIDE FULLSCREEN */
 .swiper-slide {
   height: 100% !important;
-  width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,12 +51,12 @@
 /* IMAGE WRAPPER */
 .slide-content {
   height: 100%;
-  width: 100%;
+
 }
 
 /* IMAGE COVER */
 .slide-content img {
-  width: 100%;
+
   height: 100%;
   object-fit: cover; /* 🔥 KEY */
 }

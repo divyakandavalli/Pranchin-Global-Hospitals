@@ -177,10 +177,10 @@ const Footer = () => {
                 COMPANY
               </h3>
               <ul className="flex flex-col gap-4 text-white">
-                <li>About US</li>
-                <li>Careers US</li>
-                <li>Our Doctors</li>
-                <li>Our Patients</li>
+                <Link to='/about'>About US</Link>
+                <Link to='/careers'>Careers</Link>
+                <Link to='/doctors'>Our Doctors</Link>
+                <Link to='/health-packages'>Packages</Link>
                 <Link to="/happy-patients">Happy Patients</Link>
               </ul>
             </div>
@@ -189,9 +189,9 @@ const Footer = () => {
                 SERVICES
               </h3>
               <ul className="flex flex-col gap-4 text-white">
-                <li>General Consultation</li>
+                <Link to='/specialities/general-medicine'>General Medicine</Link>
                 <li>Specialized Treatment</li>
-                <li>Emergency Care</li>
+                <Link to='/specialities/emergency-medicine'>Emergency Care</Link>
                 <li>Medical Checkup</li>
               </ul>
             </div>
@@ -211,15 +211,15 @@ const Footer = () => {
               </h3>
               <div className="text-white text-base flex pb-1 border-b border-[#2E2E2E] justify-between items-center">
                 <span>Monday - Wednesday :</span>
-                <span>6AM - 13PM</span>
+                <span>6AM - 12am</span>
               </div>
               <div className="text-white text-base flex py-1 border-b border-[#2E2E2E] justify-between items-center">
                 <span>Monday - Wednesday :</span>
-                <span>6AM - 13PM</span>
+                <span>6AM - 12am</span>
               </div>
               <div className="text-white text-base flex py-1 border-b border-[#2E2E2E] justify-between items-center">
                 <span>Monday - Wednesday :</span>
-                <span>6AM - 13PM</span>
+                <span>6AM - 12am</span>
               </div>
             </div>
           </div>

@@ -21,9 +21,9 @@ export default function CountingValues() {
   return (
     <div className="3xl:max-w-[82%] w-[95%] mx-auto  xl:py-0">
       <StatsSection />
-      <div className="my-10 xl:my-20">
-        <div className="text-center max-w-4xl mx-auto ">
-          <h2 className="text-4xl md:text-[44px] font-manrope 3xl:text-[64px] font-semibold  leading-tight">
+      <div className="my-0 2xl:my-20">
+        <div className="text-center max-w-4xl mx-auto mt-14 2xl:mt-0">
+          <h2 className="text-4xl md:text-[44px] font-manrope 3xl:text-[64px] font-semibold  leading-tight mb-5 2xl:mb-0">
             Seamless Care in{" "}
             <span className="italic font-light font-instrumental text-[#5187af]">
               Three Steps

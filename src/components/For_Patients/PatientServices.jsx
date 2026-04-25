@@ -5,6 +5,17 @@ import { Link } from "react-router-dom";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import FacilitiesSwiper from "./FacilitiesSwiper";
 import emergency_24_7 from "../../assets/images/facilities/emergencey_27_7-01.png";
+import HealthCheckup from '../../assets/icons/2-08.png'
+import Emergency from '../../assets/icons/2-07.png'
+import Endoscopy from '../../assets/icons/2-05.png'
+import Laminar from '../../assets/icons/2-04.png'
+import Cathlab from '../../assets/icons/2-09.png'
+import Gyneac from '../../assets/icons/1-11.png'
+import bedded from '../../assets/icons/2-02.png'
+import Dialysis from '../../assets/icons/2-06.png'
+import Pharmacy from '../../assets/icons/2-10.png'
+import Central from '../../assets/icons/2-10.png'
+import Radiology from '../../assets/icons/2-03.png'
 import Marquee from "react-fast-marquee";
 const PatientServices = () => {
   const vip = [
@@ -31,29 +42,29 @@ const PatientServices = () => {
   const facilities = [
     {
       title: "Corporate Health Check up - Preventive Health Check Up Unit",
-      icon: emergency_24_7,
+      icon: HealthCheckup,
     }, // [1]
     {
       title: "24/7 Emergency Ambulance with Ventilator Support",
-      icon: emergency_24_7,
+      icon: Emergency,
     }, // [2]
     {
       title: "Endoscopy, ERCP, Advanced Scopes and Dedicated Sleep Unit",
-      icon: emergency_24_7,
+      icon: Endoscopy,
     }, // [3]
     {
       title:
         "World Class OTs featuring Laminar Airflow, HEPA Filters, High end Microscopes",
-      icon: emergency_24_7,
+      icon: Laminar,
     }, // [4]
     {
       title: "Advanced Cathlab-DSA Unit - CCU",
-     icon: emergency_24_7,
+     icon: Cathlab,
     }, // [5]
     {
       title:
         "24/7 OBG and Gyneac Care with Level III Child Care Units (PICU and NICU)",
-      icon: emergency_24_7,
+      icon: Gyneac,
     }, // [6]
     {
       title:
@@ -62,20 +73,24 @@ const PatientServices = () => {
     }, // [7]
     {
       title: "24/7 Dedicated 70 bedded Intensive Care and Critical Care",
-      icon: emergency_24_7,
+      icon: bedded,
     }, // [8]
     {
       title: "Dialysis Unit with Advanced Equipment and Nephrology Monitoring",
-      icon: emergency_24_7,
+      icon: Dialysis,
     }, // [9]
     {
       title: "24/7 Pharmacy",
-      icon: emergency_24_7,
+      icon: Pharmacy,
     }, // [10]
     {
       title: "24/7 Advanced Central Lab",
-      icon: emergency_24_7,
+      icon: Central,
     }, // [11]
+    {
+      title: "24/7 Radiology Diagnostics services MRI, CT, X RAY, USG ",
+      icon: Radiology,
+    }, // [12]
   ];
   return (
     <>

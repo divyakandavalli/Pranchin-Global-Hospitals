@@ -8,12 +8,11 @@ import { Link } from "react-router-dom";
 import dayjs from "dayjs";
 import SPECIALITIES from "../../specialities/specialities";
 export default function BookAppointmentMobile() {
-
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-   department: null,
+    department: null,
     date: null,
     time: "",
     message: "",
@@ -26,28 +25,23 @@ export default function BookAppointmentMobile() {
   const validate = () => {
     let newErrors = {};
 
-    if (!formData.fullName.trim())
-      newErrors.fullName = "Full name is required";
+    if (!formData.fullName.trim()) newErrors.fullName = "Full name is required";
 
-   if (!formData.email.trim()) {
-  newErrors.email = "Email is required";
-} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-  newErrors.email = "Enter a valid email address";
-}
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Enter a valid email address";
+    }
 
-    if (!formData.phone)
-      newErrors.phone = "Phone number is required";
+    if (!formData.phone) newErrors.phone = "Phone number is required";
     else if (!/^\d{10}$/.test(formData.phone))
       newErrors.phone = "Phone must be 10 digits";
 
-    if (!formData.department)
-      newErrors.department = "Please select department";
+    if (!formData.department) newErrors.department = "Please select department";
 
-    if (!formData.date)
-      newErrors.date = "Please select date";
+    if (!formData.date) newErrors.date = "Please select date";
 
-    if (!formData.time)
-      newErrors.time = "Please select time";
+    if (!formData.time) newErrors.time = "Please select time";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -61,9 +55,7 @@ export default function BookAppointmentMobile() {
 
     const payload = {
       ...formData,
-      date: formData.date
-        ? dayjs(formData.date).format("YYYY-MM-DD")
-        : "",
+      date: formData.date ? dayjs(formData.date).format("YYYY-MM-DD") : "",
     };
 
     console.log("Form Submitted Data:", payload);
@@ -75,7 +67,7 @@ export default function BookAppointmentMobile() {
       fullName: "",
       email: "",
       phone: "",
-     department: null,
+      department: null,
       date: null,
       time: "",
       message: "",
@@ -87,34 +79,36 @@ export default function BookAppointmentMobile() {
 
   return (
     <div className="w-[92%] mx-auto py-10">
-
       {/* CONTENT (UNCHANGED) */}
       <div className="mb-8">
         <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-3 py-1 rounded-full uppercase">
           Easy Access
         </span>
 
-        <h2 className="text-4xl font-manrope font-semibold mt-4 leading-tight text-black">
-          Book Your Medical Appointment
-          <span className="italic font-light text-[#f37721] block">
-            Quickly & Easily
+        <h2 className="text-4xl md:text-[44px] font-manrope 3xl:text-[64px]  mt-4 font-semibold leading-tight">
+          Book Your Medical <br />
+          Appointment <br />
+          <span className="italic font-light font-instrumental text-[#f5d1b9]">
+            Quickly and Easily
           </span>
         </h2>
 
-        <p className="text-[14px] mt-3 leading-6 text-gray-600">
-          Fill the form and our team will confirm your appointment.
+        <p className="text-[#2f373e] text-[14px] md:text-[16px] 3xl:text-[18px] text-left  xl:w-auto max-w-2xl font-manrope mt-4">
+          Schedule your healthcare visit in just a few steps. Fill out the form
+          below and our team will confirm your appointment immediately.
         </p>
 
-        <Link to='/contact' className="group mt-8 flex items-center bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border">
+        <Link
+          to="/contact"
+          className="group mt-8 flex items-center bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border"
+        >
           Get Free Consultation <EastIcon />
         </Link>
       </div>
 
       {/* FORM */}
       <div className="bg-[#094ca0] p-5 rounded-[16px]">
-
         <div className="grid grid-cols-1 gap-4">
-
           {/* FULL NAME */}
           <div>
             <input
@@ -173,62 +167,61 @@ export default function BookAppointmentMobile() {
           </div>
 
           {/* DEPARTMENT */}
-             <div>
-                           <label className="text-[16px] font-manrope mb-[12px] text-white block">
-                             Department
-                           </label>
-                           <Autocomplete
-                             options={SPECIALITIES}
-                             getOptionLabel={(option) => option.title}
-                             value={formData.department}
-                             onChange={(event, newValue) => {
-                               setFormData((prev) => ({
-                                 ...prev,
-                                 department: newValue,
-                               }));
-         
-                               setErrors((prev) => ({
-                                 ...prev,
-                                 department: "",
-                               }));
-                             }}
-                             renderInput={(params) => (
-                               <TextField
-                                 {...params}
-                                 placeholder="Select Department"
-                                 // ✅ ERROR STATE
-                                 error={submitted && !!errors.department}
-                           
-                                 sx={{
-                                   backgroundColor: "#fff",
-                                   borderRadius: "8px",
-         
-                                   "& .MuiOutlinedInput-root": {
-                                     height: "48px",
-                                     borderRadius: "8px",
-                                     backgroundColor: "#fff",
-         
-                                     // ✅ RED BORDER WHEN ERROR
-                                     "& fieldset": {
-                                       border:
-                                         submitted && errors.department
-                                           ? "1px solid red"
-                                           : "none",
-                                     },
-                                   },
-                                 }}
-                               />
-                             )}
-                             isOptionEqualToValue={(option, value) =>
-                               option.slug === value?.slug
-                             }
-                           />
-                           {errors.department && (
-                             <p className="text-red-400 text-[15px] font-manrope mt-1">
-                               {errors.department}
-                             </p>
-                           )}
-                         </div>
+          <div>
+            <label className="text-[16px] font-manrope mb-[12px] text-white block">
+              Department
+            </label>
+            <Autocomplete
+              options={SPECIALITIES}
+              getOptionLabel={(option) => option.title}
+              value={formData.department}
+              onChange={(event, newValue) => {
+                setFormData((prev) => ({
+                  ...prev,
+                  department: newValue,
+                }));
+
+                setErrors((prev) => ({
+                  ...prev,
+                  department: "",
+                }));
+              }}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  placeholder="Select Department"
+                  // ✅ ERROR STATE
+                  error={submitted && !!errors.department}
+                  sx={{
+                    backgroundColor: "#fff",
+                    borderRadius: "8px",
+
+                    "& .MuiOutlinedInput-root": {
+                      height: "48px",
+                      borderRadius: "8px",
+                      backgroundColor: "#fff",
+
+                      // ✅ RED BORDER WHEN ERROR
+                      "& fieldset": {
+                        border:
+                          submitted && errors.department
+                            ? "1px solid red"
+                            : "none",
+                      },
+                    },
+                  }}
+                />
+              )}
+              isOptionEqualToValue={(option, value) =>
+                option.slug === value?.slug
+              }
+            />
+            {errors.department && (
+              <p className="text-red-400 text-[15px] font-manrope mt-1">
+                {errors.department}
+              </p>
+            )}
+          </div>
 
           {/* DATE */}
           <LocalizationProvider dateAdapter={AdapterDayjs}>

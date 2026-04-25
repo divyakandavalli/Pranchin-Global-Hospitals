@@ -42,8 +42,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 function App() {
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
+
+
 
   const [open, setOpen] = React.useState(false);
 
@@ -144,7 +144,7 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      {!isHomePage && <Header />}
+      <Header />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -395,7 +395,7 @@ function App() {
         </DialogContent>
       </Dialog>
 
-      {!isHomePage && <Footer />}
+     <Footer />
     </>
   );
 }

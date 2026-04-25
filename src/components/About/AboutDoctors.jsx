@@ -43,7 +43,7 @@ const AboutDoctors = () => {
     },
   ];
   return (
-    <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
+    <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto my-10 3xl:my-0">
       <div className=" 2xl:pt-0  2xl:pb-0 py-10 md:px-10 px-5 relative  overflow-hidden">
         <div className="flex justify-center flex-col items-center">
           <span className="border  border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[12px] sm:text-[14px] md:text-[16px] text-center uppercase">

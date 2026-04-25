@@ -501,15 +501,43 @@ export default function Header() {
             >
               Gallery
             </Link>
-            <Link
-              to="/health-packages"
-              onClick={() => {
-                setOpen(false);
-                setMegaOpen(false);
-              }}
-            >
-              Health Packages
-            </Link>
+            <div>
+              {/* Dropdown Toggle */}
+              <button
+                onClick={() => setShowPackages(!showPackages)}
+                className="w-full flex justify-between items-center"
+              >
+                <span>Packages</span>
+                <span className="text-lg">{showPackages ? "−" : "+"}</span>
+              </button>
+
+              {/* Dropdown Content */}
+              {showPackages && (
+                <div className="ml-2 mt-3 flex flex-col gap-2 text-[14px] text-gray-600">
+                  <Link
+                    to="/health-packages"
+                    onClick={() => {
+                      setOpen(false);
+                      setMegaOpen(false);
+                      setShowPackages(false);
+                    }}
+                  >
+                    Health Packages
+                  </Link>
+
+                  <Link
+                    to="/special-offers"
+                    onClick={() => {
+                      setOpen(false);
+                      setMegaOpen(false);
+                      setShowPackages(false);
+                    }}
+                  >
+                    Special Offers
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link
               to="/contact"
               onClick={() => {
@@ -520,33 +548,38 @@ export default function Header() {
               Contact
             </Link>
 
-            {/* BUTTONS */}
-            <Link
-              to="/book-visit"
-              onClick={() => {
-                setOpen(false);
-                setMegaOpen(false);
-              }}
-            >
-              <Link
-                to="/contact"
-                className="mt-4 w-full px-4 py-2 rounded-lg bg-[#E5F4FF] text-[#094ca0] hover:bg-[#094ca0] hover:text-white transition"
-              >
-                Book a visit
-              </Link>
-            </Link>
+           {/* BUTTONS */}
+<div className="flex flex-col gap-3 mt-4">
 
-            <Link
-              to="/quick-contact"
-              onClick={() => {
-                setOpen(false);
-                setMegaOpen(false);
-              }}
-            >
-              <button className="w-full px-4 py-2 rounded-lg border border-[#f37721] text-[#f37721] hover:bg-[#094ca0] hover:text-white transition">
-                Quick contact
-              </button>
-            </Link>
+  {/* Book Visit */}
+  <Link
+    to="/contact"
+    onClick={() => {
+      setOpen(false);
+      setMegaOpen(false);
+    }}
+    className="w-full text-center px-4 py-3 rounded-lg 
+    bg-[#E5F4FF] text-[#094ca0] font-medium 
+    hover:bg-[#094ca0] hover:text-white transition"
+  >
+    Book a visit
+  </Link>
+
+  {/* Quick Contact */}
+  <Link
+    to="/quick-contact"
+    onClick={() => {
+      setOpen(false);
+      setMegaOpen(false);
+    }}
+    className="w-full text-center px-4 py-3 rounded-lg 
+    border border-[#f37721] text-[#f37721] font-medium
+    hover:bg-[#094ca0] hover:text-white hover:border-transparent transition"
+  >
+    Quick contact
+  </Link>
+
+</div>
           </nav>
         </div>
       </div>

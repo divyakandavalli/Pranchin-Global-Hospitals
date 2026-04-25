@@ -6,7 +6,7 @@ import EastIcon from "@mui/icons-material/East";
 
 import fallback1 from "../../../assets/images/Services/shot-operating-room-assistant-hands-out-instruments-surgeons-operation-surgeons-perform-operation-professional-medical-doctors-performing-surgery.jpg";
 import fallback2 from "../../../assets/images/Services/doctor-checking-patient.jpg";
-import image3 from "../../../assets/images/Services/425763422_bcc81853-275a-4dee-92a3-683a4bfaa685.jpg";
+import image3 from "../../../assets/images/Services/4811589_49643 0-01.jpg";
 
 export default function ServiceContent() {
   const { slug } = useParams();

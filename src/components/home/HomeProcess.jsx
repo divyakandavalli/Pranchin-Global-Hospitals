@@ -1,12 +1,12 @@
 import React from "react";
-import DocVideo from "../../assets/videos/Prachin global Hospital video 0.1.mp4";
+import DocVideo from "../../assets/videos/Prachin global Hospital video 0.2.mp4";
 import { Link } from "react-router-dom";
 import EastIcon from "@mui/icons-material/East";
 export default function HomeProcess() {
 
 
   return (
-   <div className="w-full xl:max-w-[95%] 3xl:max-w-[85%] mx-auto px-6 md:px-10 xl:px-20">
+   <div className="w-full xl:max-w-[95%] 3xl:max-w-[85%] mx-auto px-6 md:px-10 xl:px-20 py-8 3xl:py-0">
       {/* Heading */}
    
   <div className="w-full flex min-h-[300px] md:min-h-[400px] xl:min-h-[80vh] justify-end rounded-[24px] flex-col relative overflow-hidden">

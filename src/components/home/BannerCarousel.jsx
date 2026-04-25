@@ -8,13 +8,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import Carousel1 from "../../assets/images/team-surgeons-doing-operation-sterile-operating-room.jpg";
 import Carousel2 from "../../assets/images/three-surgeons-hospital-room-one-which-is-being-prepared-perform-surgery.png";
 import Carousel3 from "../../assets/images/medical-team-operation-room.jpg";
-import { Link } from "react-router-dom";
 
 export default function BannerCarousel() {
   const slides = [Carousel1, Carousel2, Carousel3];
   const [openVideo, setOpenVideo] = useState(false);
   return (
-  <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] xl:h-[780px] 3xl:h-full overflow-y-hidden">
+    <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] xl:h-[780px] 3xl:h-[880px] overflow-hidden mt-5">
       {/* Slider */}
       <Swiper
         modules={[Autoplay, EffectFade]}
@@ -52,7 +51,7 @@ export default function BannerCarousel() {
           {/* Heading */}
           <h1
             className="font-manrope font-semibold mb-4 sm:mb-6 
-           text-4xl md:text-6xl lg:text-7xl 3xl:text-8xl
+            text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl
             leading-tight md:leading-[1.1] tracking-[1px] sm:tracking-[2px] md:tracking-[3px]"
           >
             Your Trusted <br />
@@ -74,8 +73,8 @@ export default function BannerCarousel() {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-row  items-center gap-3 sm:gap-4">
-            <Link to='/contact' className="group flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+            <button className="group flex items-center justify-between bg-[#094ca0] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition">
               <span className="font-medium font-manrope text-[14px] sm:text-[16px] capitalize">
                 Book Appointment
               </span>
@@ -86,7 +85,7 @@ export default function BannerCarousel() {
               >
                 <EastIcon fontSize="small" />
               </span>
-            </Link>
+            </button>
 
             <button
               className="flex items-center gap-2 text-sm sm:text-base text-white/90 hover:text-white"
