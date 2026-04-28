@@ -81,7 +81,7 @@ export default function HomeServicesTwo() {
 
                 {/* Description */}
                 <p className="text-[14px] 3xl:text-[15px] text-gray-600 font-manrope leading-relaxed">
-                  {service.description ||
+                  {service.shortdesc ||
                     "Expert care with advanced medical facilities and experienced doctors."}
                 </p>
               </div>

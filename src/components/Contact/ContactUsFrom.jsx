@@ -75,7 +75,6 @@ const ContactUsFrom = () => {
   // const handleDepartmentChange = (event, newValue) => {
   //   setFormData((prev) => ({ ...prev, department: newValue }));
 
-    
   //   setErrors((prev) => ({
   //     ...prev,
   //     department: "",
@@ -131,7 +130,7 @@ const ContactUsFrom = () => {
   return (
     <div className="xl:max-w-[90%] 3xl:max-w-[72%] w-[95%]  mx-auto  pt-12  pb-0">
       <div className="grid lg:grid-cols-2 grid-cols-1 xl:gap-16 gap-8">
-       <div className="flex flex-col justify-between lg:gap-0 gap-8">
+        <div className="flex flex-col justify-between lg:gap-0 gap-8">
           <div className=" flex flex-col items-start  gap-6">
             <div>
               <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-sm  3xl:text-[16px] uppercase">
@@ -321,12 +320,13 @@ const ContactUsFrom = () => {
                     sx={{
                       backgroundColor: "#fff",
                       borderRadius: "8px",
-                      fontSize:"14px",
+                      fontSize: "14px",
 
                       "& .MuiOutlinedInput-root": {
                         height: "46px",
                         borderRadius: "8px",
-                        backgroundColor: "#fff",fontSize:"14px",
+                        backgroundColor: "#fff",
+                        fontSize: "14px",
 
                         // ✅ RED BORDER WHEN ERROR
                         "& fieldset": {
@@ -377,12 +377,14 @@ const ContactUsFrom = () => {
 
                       sx: {
                         backgroundColor: "#fff",
-                        borderRadius: "8px",fontSize:"14px",
+                        borderRadius: "8px",
+                        fontSize: "14px",
 
                         "& .MuiOutlinedInput-root": {
                           height: "40px",
                           borderRadius: "8px",
-                          backgroundColor: "#fff",fontSize:"14px",
+                          backgroundColor: "#fff",
+                          fontSize: "14px",
 
                           // ✅ RED BORDER WHEN ERROR
                           "& fieldset": {
@@ -456,14 +458,21 @@ const ContactUsFrom = () => {
           </button>
         </div>
       </div>
-     <div className="flex lg:flex-row flex-col gap-6 mt-10 pb-5 font-manrope">
+      <div className="flex lg:flex-row flex-col gap-6 mt-10 pb-5 font-manrope">
         <div className=" xl:w-[415px] lg:w-1/3  flex flex-col gap-6 ">
           <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start gap-3">
-            <h4 className="text-[16px] md:text-[18px]  font-semibold">Let's talk</h4>
+            <h4 className="text-[16px] md:text-[18px]  font-semibold">
+              Let's talk
+            </h4>
             <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C]">
-              <span>Phone : <a href="tel:+917337332943">+91 7337332943</a>  </span>
+              <span>
+                Phone : <a href="tel:+917036999111">+91 70369 99111</a>{" "}
+              </span>
               <br />
-              <span>24/7 Emergency : <a href="tel:+917337332943">+91 7337332943</a> </span>
+              <span>
+                24/7 Emergency :{" "}
+                <a href="tel:+919247575108">+919247575108</a>{" "}
+              </span>
             </p>
             <div className="w-[72px]  absolute flex  rounded-tl-xl  font-manrope bg-[#ffffff] pl-2 pb-2 top-0 right-0 rounded-bl-xl  justify-center items-center">
               <div className=" flex-col gap-2 z-10 pb-2 w-16 h-16 bg-[#C8DDED] rounded-xl flex justify-center items-center">
@@ -489,7 +498,9 @@ const ContactUsFrom = () => {
             </div>
           </div>
           <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start gap-3">
-            <h4 className="text-[16px] md:text-[18px]  font-semibold">Email support</h4>
+            <h4 className="text-[16px] md:text-[18px]  font-semibold">
+              Email support
+            </h4>
             <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C]">
               <span>support@prachinhospital.com</span>
               <br />
@@ -519,11 +530,12 @@ const ContactUsFrom = () => {
             </div>
           </div>
           <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start gap-3">
-            <h4 className="text-[16px] md:text-[18px]  font-semibold">Hospital address</h4>
+            <h4 className="text-[16px] md:text-[18px]  font-semibold">
+              Hospital address
+            </h4>
             <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C]">
-             Survey No 52/AA, Indresham Road,
-Patancheru, Hyderabad,
-Telangana - 502319
+              Survey No 52/AA, Indresham Road, Patancheru, Hyderabad, Telangana
+              - 502319
             </p>
             <div className="w-[72px]  absolute flex  rounded-tl-xl  font-manrope bg-[#ffffff] pl-2 pb-2 top-0 right-0 rounded-bl-xl  justify-center items-center">
               <div className=" flex-col gap-2 z-10 pb-2 w-16 h-16 bg-[#C8DDED] rounded-xl flex justify-center items-center">
@@ -550,7 +562,16 @@ Telangana - 502319
           </div>
         </div>
         <div className="  rounded-xl xl:w-[950px] lg:w-2/3 w-full lg:h-auto md:h-[400px] h-[300px]">
-            <iframe className="rounded-xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4512.664880662235!2d78.25844797516845!3d17.540409983373156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbf37bb130cd95%3A0x6ba76988c49cf127!2sPrachin%20Global%20Hospitals!5e1!3m2!1sen!2sin!4v1774965355262!5m2!1sen!2sin" width="100%" height="100%" title="map-prachin-hospital" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            className="rounded-xl"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4512.664880662235!2d78.25844797516845!3d17.540409983373156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbf37bb130cd95%3A0x6ba76988c49cf127!2sPrachin%20Global%20Hospitals!5e1!3m2!1sen!2sin!4v1774965355262!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            title="map-prachin-hospital"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </div>

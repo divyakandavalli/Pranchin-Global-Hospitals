@@ -6,6 +6,7 @@ import OurProcess from "../components/Services/OurProcess";
 
 
 
+
 const Servicespage = () => {
   useEffect(() => {
       window.scrollTo({
@@ -17,8 +18,8 @@ const Servicespage = () => {
     <>
 <ServiceBanner/>
 <OurSevicesList/>
-<Testimonials/>
-<OurProcess/>
+{/* <Testimonials/>
+<OurProcess/> */}
     </>
   );
 };

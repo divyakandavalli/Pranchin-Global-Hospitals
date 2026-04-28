@@ -78,7 +78,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex xl:w-[32%] justify-end items-end z-10">
-            <button className=" flex items-center justify-between bg-[#f37721] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2  transition">
+            <Link to="/contact" className=" flex items-center justify-between bg-[#f37721] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2  transition">
               <span className="font-medium font-manrope text-[16px] capitalize">
                 Book Appointment Now
               </span>
@@ -87,7 +87,7 @@ const Footer = () => {
               <span className="bg-[#DDEADB] text-[#000000] rounded-full w-9 h-9 flex items-center justify-center text-lg">
                 <ArrowForwardIcon fontSize="small" />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

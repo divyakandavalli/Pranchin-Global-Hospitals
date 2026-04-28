@@ -49,12 +49,12 @@ export default function Header() {
             <div className="flex items-center justify-between gap-3 text-[15px] text-gray-700 font-medium py-2">
               <div className="flex justify-center items-center gap-3 text-gray-700 hover:text-[#ed721d]">
                 <img src={AmbulanceIcon} alt="" />
-                <Link to="">+91 92475 75108</Link>
+                <a href="tel:+919247575108">+91 92475 75108</a>
               </div>
               <span className="h-5 w-px bg-[#365e8f]"></span>
               <div className="flex justify-center items-center gap-3 text-gray-700 hover:text-[#ed721d]">
                 <img src={CallIcon} alt="" />
-                <Link to="">+91 70369 99111</Link>
+                <a href="tel:+917036999111">+91 70369 99111</a>
               </div>
               <span className="h-5 w-px bg-[#365e8f]"></span>
               <div className="flex justify-center items-center gap-3 text-gray-700 hover:text-[#ed721d]">

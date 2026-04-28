@@ -2,7 +2,9 @@ import React from "react";
 import doctoricon from "../../assets/icons/surgeon.png";
 import AdvancedTech from "../../assets/icons/ecg-machine.png";
 import EastIcon from "@mui/icons-material/East";
-import homeBanner from "../../assets/images/Image Collage-01.jpg";
+import StatsSection from "./StatsSection";
+import homeBanner from "../../assets/images/Image Collage-02.jpg";
+import feedback_Card from "../../assets/images/feedback_Card.jpg";
 import { Link } from "react-router-dom";
 export default function AboutSection() {
   return (

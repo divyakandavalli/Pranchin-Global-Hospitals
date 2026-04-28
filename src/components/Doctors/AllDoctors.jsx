@@ -106,8 +106,8 @@ const AllDoctors = () => {
     },
   ];
   return (
-    <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto mt-10 ">
-      <div className=" md:px-10 px-5 pb-10 relative  overflow-hidden">
+    <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto my-10">
+      <div className=" md:px-10 px-5 relative  overflow-hidden">
         <div className="flex xl:justify-center flex-col xl:items-center justify-start items-start">
           <span className="border  border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px] text-[14px] text-left xl:text-center uppercase">
             Our Clinical Experts
@@ -115,7 +115,7 @@ const AllDoctors = () => {
           <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px] font-manrope mt-5  font-semibold  leading-tight text-black">
             Consult Professional{" "}
             <span className="italic font-light font-instrumental text-[#5187af]">
-              Doctors & Specialists 
+              Doctors & Specialists
             </span>
           </h2>
         </div>

@@ -40,19 +40,19 @@ export default function MobileHeader({ open, setOpen }) {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 pr-3">
                 <img src={AmbulanceIcon} alt="" />
-                <Link to="">+91 92475 75108</Link>
+                <a href="tel:+919247575108">+91 92475 75108</a>
               </div>
               <div className="h-5 w-px bg-[#365e8f]" />
               <div className="flex items-center gap-2 pl-3">
                 <img src={CallIcon} alt="" />
-                <Link to="">+91 70369 99111</Link>
+                <a href="+917036999111">+91 70369 99111</a>
               </div>
             </div>
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 pr-3">
                 <img src={LandlineIcon} alt="" />
-                <Link to="">08455 - 671111/99</Link>
+                <Link to="">08455-671111/99</Link>
               </div>
               <div className="h-5 w-px bg-[#365e8f]" />
               <div className="flex items-center gap-2 pl-3">

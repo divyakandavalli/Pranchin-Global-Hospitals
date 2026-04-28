@@ -3,13 +3,15 @@ import { useParams } from "react-router-dom";
 import SPECIALITIES from "../../../specialities/specialities";
 import DoneIcon from "@mui/icons-material/Done";
 import EastIcon from "@mui/icons-material/East";
-
+import { Link } from "react-router-dom";
 import fallback1 from "../../../assets/images/Services/shot-operating-room-assistant-hands-out-instruments-surgeons-operation-surgeons-perform-operation-professional-medical-doctors-performing-surgery.jpg";
 import fallback2 from "../../../assets/images/Services/doctor-checking-patient.jpg";
 import image3 from "../../../assets/images/Services/4811589_49643 0-01.jpg";
 
+
 export default function ServiceContent() {
   const { slug } = useParams();
+;
 
   const data = SPECIALITIES.find((item) => item.slug === slug);
 
@@ -17,25 +19,25 @@ export default function ServiceContent() {
 
   const s = data.sections || {};
   const images = s.images || [fallback1, fallback2];
-
+  const doctors = data.doctors || [];
   return (
-    <section className="w-full py-10 xl:py-36 px-5 xl:px-0 font-manrope">
-      <div className="w-[95%] md:w-[90%] max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between gap-[10%]">
+    <section className="w-full py-10  px-5 xl:px-0 font-manrope">
+      <div className="w-[95%] md:w-[90%] max-w-[1400px] mx-auto flex flex-col xl:flex-row justify-between gap-10">
         {/* LEFT SIDE */}
-        <div className="md:w-[55%] space-y-10">
+        <div className="w-full xl:w-[60%] space-y-3">
           {/* OVERVIEW */}
           {(s.overview || s.moreoverview) && (
             <div>
-              <h2 className="text-[32px] xl:text-[40px] font-semibold mb-4">
-                {data.title} Services
+              <h2 className="text-[16px] md:text-[20px] mb-4 font-manrope font-semibold leading-tight text-black">
+                {data.title}
               </h2>
               {s.overview && (
-                <p className="text-[#2f373e] text-[16px] xl:text-[18px] leading-relaxed">
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] text-left xl:text-justify leading-relaxed">
                   {s.overview}
                 </p>
               )}
               {s.moreoverview && (
-                <p className="text-[#2f373e] text-[16px] xl:text-[18px] mt-4 leading-relaxed">
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] text-left xl:text-justify mt-4 leading-relaxed">
                   {s.moreoverview}
                 </p>
               )}
@@ -44,28 +46,30 @@ export default function ServiceContent() {
 
           {/* DIAGNOSTICS SECTION */}
           {(s.diagnostics || s.diagnosticsDescription) && (
-            <div>
+            <div className="font-manrope">
               {s.diagnosticsTitle && (
-                <h3 className="text-[24px] xl:text-[32px] font-semibold mb-4">
+                <h3 className="text-[16px] md:text-[18px] font-bold ">
                   {s.diagnosticsTitle}
                 </h3>
               )}
               {s.diagnosticsDescription && (
-                <p className="text-[#2f373e] text-[16px] leading-relaxed mb-4">
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] leading-relaxed mb-2">
                   {s.diagnosticsDescription}
                 </p>
               )}
               {s.diagnosticsDescription2 && (
-                <p className="text-[#2f373e] mb-4">
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] mb-2">
                   {s.diagnosticsDescription2}
                 </p>
               )}
               {s.diagnosticssubtitle && (
-                <p className="text-[#2f373e] mb-4">{s.diagnosticssubtitle}</p>
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] mb-2">
+                  {s.diagnosticssubtitle}
+                </p>
               )}
 
               {s.diagnostics && (
-                <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-10 gap-y-3 text-[#2f373e] text-[16px]">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-10  text-[#2f373e] text-[14px] 3xl:text-[15px]">
                   {s.diagnostics.map((item, i) => (
                     <div key={i} className="flex items-start gap-2">
                       <DoneIcon
@@ -82,36 +86,38 @@ export default function ServiceContent() {
 
           {/* PROCEDURES SECTION */}
           {s.procedures && (
-            <div>
+            <div className="font-manrope">
               {s.proceduresTitle && (
-                <h3 className="text-[24px] xl:text-[32px] font-semibold mb-4">
+                <h3 className="text-[16px] md:text-[18px] font-bold">
                   {s.proceduresTitle}
                 </h3>
               )}
               {s.proceduresDescription && (
-                <p className="text-[#2f373e] text-[16px] mb-4">
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px]">
                   {s.proceduresDescription}
                 </p>
               )}
               {s.proceduresSubTitle && (
-                <p className="font-medium text-[#2f373e] mb-4">
+                <p className=" text-[#2f373e] text-[16px] md:text-[18px] font-bold mb-2">
                   {s.proceduresSubTitle}
                 </p>
               )}
 
-              <div className="space-y-4">
+              <div className="">
                 {s.procedures.map((item, i) => (
                   <div key={i} className="flex items-start gap-x-4">
-                    <span className="font-semibold text-[#094ca0] text-lg min-w-[28px]">
+                    <span className="font-semibold text-[#094ca0] text-[14px] 3xl:text-[15px] min-w-[28px]">
                       {String(i + 1).padStart(2, "0")}.
                     </span>
-                    <span className="text-[16px] leading-relaxed">{item}</span>
+                    <span className="text-[14px] 3xl:text-[15px] leading-relaxed">
+                      {item}
+                    </span>
                   </div>
                 ))}
               </div>
 
               {s.proceduresNote && (
-                <p className="text-[#2f373e] text-[16px] mt-5 italic">
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] font-manrope font-semibold my-2 italic">
                   {s.proceduresNote}
                 </p>
               )}
@@ -121,16 +127,21 @@ export default function ServiceContent() {
           {/* NEUROLOGY CONDITIONS */}
           {s.conditionstreatedtitle && (
             <div>
-              <h3 className="text-[24px] xl:text-[32px] font-semibold mb-4">
+              <h3 className="text-[16px] md:text-[18px] font-bold font-manrope mb-2">
                 {s.conditionstreatedtitle}
               </h3>
               {s.conditionstreateddesc && (
-                <p className="text-[#2f373e] mb-4">{s.conditionstreateddesc}</p>
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] font-manrope">
+                  {s.conditionstreateddesc}
+                </p>
               )}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 font-manrope">
                 {s.conditionstreatedpoints?.map((item, i) => (
-                  <div key={i} className="flex items-center gap-2">
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 text-[14px] 3xl:text-[15px]"
+                  >
                     <DoneIcon fontSize="small" className="text-[#094ca0]" />
                     <span>{item}</span>
                   </div>
@@ -138,16 +149,20 @@ export default function ServiceContent() {
               </div>
             </div>
           )}
-
+          <h3 className="text-[16px] md:text-[18px] font-bold font-manrope my-2">
+            {s.Majorconditionstitle}
+          </h3>
           {/* MAJOR CONDITIONS */}
           {s.Majorconditions && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 font-manrope">
               {s.Majorconditions.map((item, i) => (
                 <div key={i} className="bg-[#f5f7fa] p-6 rounded-2xl">
-                  <h4 className="font-semibold text-[18px] mb-2">
+                  <h4 className=" text-[16px] md:text-[18px] font-bold mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-[#555] text-[15px]">{item.description}</p>
+                  <p className="text-[#555] text-[14px] 3xl:text-[15px]">
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -157,17 +172,22 @@ export default function ServiceContent() {
           {s.conditionsTreated && (
             <div>
               {s.extraSectionTitle && (
-                <h3 className="text-[24px] xl:text-[32px] font-semibold mb-4">
+                <h3 className="text-[16px] md:text-[18px] font-bold mb-2 font-manrope ">
                   {s.extraSectionTitle}
                 </h3>
               )}
               {s.extraSectionContent && (
-                <p className="text-[#2f373e] mb-4">{s.extraSectionContent}</p>
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] font-manrope">
+                  {s.extraSectionContent}
+                </p>
               )}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 font-manrope">
                 {s.conditionsTreated.map((condition, i) => (
-                  <div key={i} className="flex items-center gap-2">
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 text-[14px] 3xl:text-[15px]"
+                  >
                     <DoneIcon fontSize="small" className="text-[#094ca0]" />
                     <span>{condition}</span>
                   </div>
@@ -175,7 +195,9 @@ export default function ServiceContent() {
               </div>
 
               {s.extraSectionNote && (
-                <p className="text-[#2f373e] mt-4">{s.extraSectionNote}</p>
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] mt-2">
+                  {s.extraSectionNote}
+                </p>
               )}
             </div>
           )}
@@ -184,15 +206,17 @@ export default function ServiceContent() {
           {s.arthroplastyList && (
             <div>
               {s.extraSectionTitle && (
-                <h3 className="text-[24px] xl:text-[32px] font-semibold mb-4">
+                <h3 className="text-[16px] md:text-[18px] font-bold mb-2">
                   {s.extraSectionTitle}
                 </h3>
               )}
               {s.extraSectionContent && (
-                <p className="text-[#2f373e] mb-4">{s.extraSectionContent}</p>
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px]">
+                  {s.extraSectionContent}
+                </p>
               )}
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 text-[14px] 3xl:text-[15px]">
                 {s.arthroplastyList.map((item, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <DoneIcon fontSize="small" className="text-[#094ca0]" />
@@ -202,7 +226,9 @@ export default function ServiceContent() {
               </div>
 
               {s.extraSectionNote && (
-                <p className="text-[#2f373e] mt-4">{s.extraSectionNote}</p>
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] mt-2">
+                  {s.extraSectionNote}
+                </p>
               )}
             </div>
           )}
@@ -212,11 +238,11 @@ export default function ServiceContent() {
             !s.conditionsTreated &&
             !s.arthroplastyList && (
               <div>
-                <h3 className="text-[24px] xl:text-[32px] font-semibold mb-4">
+                <h3 className="text-[16px] md:text-[18px] font-bold mb-2">
                   {s.extraSectionTitle}
                 </h3>
                 {s.extraSectionContent && (
-                  <p className="text-[#2f373e] text-[16px] leading-relaxed">
+                  <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] leading-relaxed">
                     {s.extraSectionContent}
                   </p>
                 )}
@@ -226,13 +252,13 @@ export default function ServiceContent() {
           {/* SCREENING / SPORTS MEDICINE & REHABILITATION */}
           {s.screeningTitle && (
             <div>
-              <h3 className="text-[24px] xl:text-[32px] font-semibold mb-4">
+              <h3 className="text-[16px] md:text-[18px] font-bold mb-2">
                 {s.screeningTitle}
               </h3>
 
               {/* Sports Medicine List */}
               {s.screeningContentList && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 text-[14px] 3xl:text-[15px]">
                   {s.screeningContentList.map((item, i) => (
                     <div key={i} className="flex items-center gap-2">
                       <DoneIcon fontSize="small" className="text-[#094ca0]" />
@@ -243,22 +269,24 @@ export default function ServiceContent() {
               )}
 
               {s.screeningContent && (
-                <p className="text-[#2f373e] text-[16px] leading-relaxed">
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] leading-relaxed">
                   {s.screeningContent}
                 </p>
               )}
 
               {/* Packages */}
               {s.packages && s.packages.length > 0 && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
                   {s.packages.map((pkg, i) => (
                     <div
                       key={i}
                       className="flex justify-between items-center bg-[#c8dded] p-6 rounded-2xl"
                     >
                       <div>
-                        <h4 className="font-semibold text-lg">{pkg.title}</h4>
-                        <p className="text-sm text-gray-600 mt-1">
+                        <h4 className="text-[16px] md:text-[18px] font-bold">
+                          {pkg.title}
+                        </h4>
+                        <p className="text-[14px] 3xl:text-[15px] text-gray-600 mt-1">
                           {pkg.description}
                         </p>
                       </div>
@@ -276,15 +304,18 @@ export default function ServiceContent() {
           {(s.technologies || s.technologiesNote) && (
             <div>
               {s.technologiesTitle && (
-                <h3 className="text-[24px] xl:text-[32px] font-semibold mb-4">
+                <h3 className="text-[16px] md:text-[18px] font-bold my-2">
                   {s.technologiesTitle}
                 </h3>
               )}
 
               {s.technologies && s.technologies.length > 0 && (
-                <div className="space-y-3">
+                <div className="">
                   {s.technologies.map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
+                    <div
+                      key={i}
+                      className="flex items-center text-[14px] 3xl:text-[15px] gap-3"
+                    >
                       <DoneIcon fontSize="small" className="text-[#094ca0]" />
                       <span className="text-[#2f373e]">{item}</span>
                     </div>
@@ -293,7 +324,7 @@ export default function ServiceContent() {
               )}
 
               {s.technologiesNote && (
-                <p className="text-[#2f373e] text-[16px] leading-relaxed mt-6">
+                <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] leading-relaxed">
                   {s.technologiesNote}
                 </p>
               )}
@@ -301,7 +332,7 @@ export default function ServiceContent() {
           )}
 
           {/* IMAGES */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
             {images.map((img, i) => (
               <div
                 key={i}
@@ -318,35 +349,37 @@ export default function ServiceContent() {
         </div>
 
         {/* RIGHT SIDE - STICKY */}
-        <div className="md:w-[35%] relative my-10 xl:my-0">
-          <div className="sticky top-24 space-y-6 bg-[#c8dded] rounded-[20px] p-8">
-            <div className="bg-white rounded-xl overflow-hidden shadow-md">
-              <img
-                src={image3}
-                alt="doctors"
-                className="w-full h-auto object-cover"
-              />
-            </div>
+        <div className="w-full xl:w-[40%] relative my-10 xl:my-0">
+          <div className="sticky top-40 space-y-6 bg-[#c8dded] rounded-[20px] p-8">
+            {/* GRID HERE */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {doctors.map((value, index) => (
+                <Link
+                  to="/doctors-profile"
+                  key={index}
+                  className="bg-white rounded-2xl shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition"
+                >
+                  {/* Passport Image */}
+                  <div className="w-[120px] h-[120px] rounded-xl overflow-hidden mb-3">
+                    <img
+                      src={value.image}
+                      alt={value.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
-            <div className="bg-[#094ca0] rounded-[20px] p-4 sm:p-6">
-              <h3 className="text-[18px] sm:text-[20px] md:text-[21px] text-white font-semibold">
-                Have More Any Questions?
-              </h3>
+                  {/* Info */}
+                  <h3 className="font-semibold text-[15px] md:text-[17px] text-[#5187af]">
+                    {value.name}
+                  </h3>
 
-              <p className="text-[14px] sm:text-[15px] md:text-[16px] text-[#c9d5df] mt-2">
-                One morning, when Gregor Samsa woke will from grow yo troubled
-                dreams...
-              </p>
+                  <p className="text-[#4D6E76] text-[13px] mt-1">
+                    {value.dignity}
+                  </p>
 
-              <button className="group mt-5 sm:mt-8 flex items-center justify-between border border-[#f37721] text-[#f37721] px-5 sm:px-6 py-2.5 sm:py-3 rounded-full w-fit gap-3 sm:gap-4 hover:bg-[#f37721] hover:text-white transition">
-                <span className="font-medium text-[14px] sm:text-[16px] capitalize">
-                  Get Free Consultation
-                </span>
-
-                <span className="rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center bg-[#f5d1b9] text-[#f37721]">
-                  <EastIcon fontSize="small" />
-                </span>
-              </button>
+                  <p className="text-[#7b8a8f] text-[12px]">{value.degree}</p>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

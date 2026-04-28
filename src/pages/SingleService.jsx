@@ -7,6 +7,7 @@ import HomeProcess from "../components/home/HomeProcess";
 import OurProcess from "../components/Services/OurProcess";
 import AboutDoctors from "../components/About/AboutDoctors";
 
+
 const SingleService = () => {
   useEffect(() => {
       window.scrollTo({
@@ -18,10 +19,10 @@ const SingleService = () => {
     <>
       <SingleSBanner />
       <ServiceContent />
-      <AboutDoctors/>
-      <ServiceTestimonials />
+      {/* <AboutDoctors/> */}
+      {/* <ServiceTestimonials /> */}
       <OtherServices/>
-      <OurProcess/>
+      {/* <OurProcess/> */}
     </>
   );
 };

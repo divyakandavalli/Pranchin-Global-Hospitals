@@ -39,6 +39,7 @@ import SPECIALITIES from "./specialities/specialities";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import Slide from "@mui/material/Slide";
+import NotFound from "./components/NotFound";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -59,15 +60,12 @@ function App() {
   // ✅ NEW STATES
   const [errors, setErrors] = React.useState({});
   const [submitted, setSubmitted] = React.useState(false);
-
   const handleClickOpen = () => {
     setOpen(true);
-    document.body.style.overflow = "hidden";
-  };
 
+  };
   const handleClose = () => {
     setOpen(false);
-    document.body.style.overflow = "";
     setForm({
       fullName: "",
       email: "",
@@ -161,12 +159,13 @@ function App() {
         <Route path="/blog-details" element={<BlogsSingle />} />
         <Route path="/happy-patients" element={<HappyPatients />} />
         <Route path="/special-offers" element={<SpecialOfferPage />} />
-       
+
         <Route path="/patient-services" element={<PatientServices />} />
         <Route path="/patient-resources" element={<PatientResources />} />
         <Route path="/special-offers" element={<SpecialOfferPage />} />
         <Route path="/patient-services" element={<PatientServices />} />
         <Route path="/patient-resources" element={<PatientResources />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
 
       {/* Vertical Contact Button */}
@@ -185,7 +184,7 @@ function App() {
       <div className="fixed right-[-120px] bottom-5 flex flex-col gap-3 z-40">
         {/* Facebook */}
         <a
-          href="#"
+          href="https://www.facebook.com/people/Prachin-Global-Hospitals/61572763597942/"
           title="Facebook"
           className="group flex items-center bg-[#1877F2] text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
         >
@@ -199,7 +198,7 @@ function App() {
 
         {/* X (Twitter) */}
         <a
-          href="#"
+          href="https://x.com/Prachinhospital"
           title="X"
           className="group flex items-center bg-black text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
         >
@@ -213,7 +212,7 @@ function App() {
 
         {/* Instagram */}
         <a
-          href="#"
+          href="https://www.instagram.com/prachinglobalhospitals/"
           title="Instagram"
           className="group flex items-center bg-gradient-to-r from-pink-500 to-yellow-500 text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
         >
@@ -227,7 +226,7 @@ function App() {
 
         {/* YouTube */}
         <a
-          href="#"
+          href="https://www.youtube.com/@PrachinglobalHospitals"
           title="YouTube"
           className="group flex items-center bg-red-600 text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
         >
@@ -241,7 +240,7 @@ function App() {
 
         {/* WhatsApp */}
         <a
-          href="https://wa.me/919247575108" // 👉 replace with your number
+          href="https://wa.me/917036999111"
           target="_blank"
           rel="noopener noreferrer"
           title="WhatsApp"
@@ -289,11 +288,10 @@ function App() {
                   <div>
                     <label className="block mb-1 text-sm">Full Name</label>
                     <input
-                      className={`input w-full border ${
-                        submitted && errors.fullName
-                          ? "border-red-500"
-                          : "border-transparent"
-                      }`}
+                      className={`input w-full border ${submitted && errors.fullName
+                        ? "border-red-500"
+                        : "border-transparent"
+                        }`}
                       value={form.fullName}
                       onChange={(e) => {
                         setForm({ ...form, fullName: e.target.value });
@@ -309,11 +307,10 @@ function App() {
                   <div>
                     <label className="block mb-1 text-sm">Email</label>
                     <input
-                      className={`input w-full border ${
-                        submitted && errors.email
-                          ? "border-red-500"
-                          : "border-transparent"
-                      }`}
+                      className={`input w-full border ${submitted && errors.email
+                        ? "border-red-500"
+                        : "border-transparent"
+                        }`}
                       value={form.email}
                       onChange={(e) => {
                         setForm({ ...form, email: e.target.value });
@@ -329,11 +326,10 @@ function App() {
                   <div>
                     <label className="block mb-1 text-sm">Phone</label>
                     <input
-                      className={`input w-full border ${
-                        submitted && errors.phone
-                          ? "border-red-500"
-                          : "border-transparent"
-                      }`}
+                      className={`input w-full border ${submitted && errors.phone
+                        ? "border-red-500"
+                        : "border-transparent"
+                        }`}
                       value={form.phone}
                       maxLength={10}
                       onChange={(e) => {
@@ -418,11 +414,10 @@ function App() {
                     <label className="block mb-1 text-sm">Time</label>
                     <input
                       type="time"
-                      className={`input w-full border ${
-                        submitted && errors.time
-                          ? "border-red-500"
-                          : "border-transparent"
-                      }`}
+                      className={`input w-full border ${submitted && errors.time
+                        ? "border-red-500"
+                        : "border-transparent"
+                        }`}
                       value={form.time}
                       onChange={(e) => {
                         setForm({ ...form, time: e.target.value });
