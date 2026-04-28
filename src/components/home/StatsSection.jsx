@@ -11,8 +11,8 @@ export default function StatsSection() {
   ];
 
   return (
-    <div className="bg-[#094ca0] mx-4 md:mx-8 lg:mx-10 mt-10 md:mt-16 rounded-2xl">
-      <section className="py-8 md:py-12 xl:py-20">
+    <div className="bg-[#094ca0] mx-4  rounded-2xl">
+      <section className="">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center">
           {stats.map((item, index) => (
             <div
@@ -28,13 +28,13 @@ export default function StatsSection() {
               `}
             >
               {/* Number */}
-              <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-[64px] font-semibold font-manrope text-white flex justify-center items-center gap-1">
+              <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px] font-semibold font-manrope text-white flex justify-center items-center gap-1">
                 <CountUp to={item.value} duration={2} />
                 <span>+</span>
               </h2>
 
               {/* Label */}
-              <p className="mt-2 md:mt-3 text-[#f5d1b9] text-sm sm:text-base md:text-lg font-manrope">
+              <p className="mt-2 md:mt-3 text-[#f5d1b9] text-[14px] 3xl:text-[15px] font-manrope">
                 {item.label}
               </p>
             </div>

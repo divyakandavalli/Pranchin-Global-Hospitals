@@ -63,15 +63,15 @@ import DentalIcon from "../assets/icons/serviceIcon/dental-health.png";
 import anaesthesiologyIcon from "../assets/icons/serviceIcon/injection.png";
 import CriticalCareIcon from "../assets/icons/serviceIcon/treatment.png";
 import emergencyIcon from "../assets/icons/serviceIcon/first-aid-kit.png";
+
 const SPECIALITIES = [
   // ==================== CORE SPECIALITIES ====================
   {
     slug: "cardiology",
-    title: "Cardiology",
-    category: "core",
+    title: "Cardiology & CTVS Surgery",
     icon: cardiologyIcon,
     shortdesc:
-      "Our state-of-the-art heart clinics, combined with a highly experienced team of Cardiologists and well trained Nursing and Technicians, place us at the forefront of Cardiac Care.",
+      "Prachin Global Hospital’s Cardiology Department provides advanced, world-class cardiac care.",
     banner: bannerCardio,
     sections: {
       overview: `Our state-of-the-art heart clinics, combined with a highly experienced team of Cardiologists and well trained Nursing and Technicians, place us at the forefront of Cardiac Care. Every treatment plan is tailored to ensure the best clinical outcomes, guiding each patient toward a healthier heart and a better quality of life. The Department of Cardiology at Prachin Global Hospital is equipped with cutting-edge technology and advanced infrastructure to deliver world-class cardiac care.`,
@@ -133,7 +133,6 @@ const SPECIALITIES = [
   {
     slug: "neurology",
     title: "Neurology",
-    category: "core",
     icon: NeurologyIcon,
     shortdesc:
       "Prachin Global Hospital is equipped to treat conditions affecting the Brain, Spinal Cord, Nerves, and muscles with precision and care.",
@@ -233,7 +232,6 @@ const SPECIALITIES = [
   {
     slug: "neuro-surgery",
     title: "Neuro Surgery",
-    category: "core",
     icon: neuroIcon,
     shortdesc:
       "At Prachin Global Hospital, the Department of Neurosurgery stands as a center of excellence, offering advanced and comprehensive care for patients with complex neurological conditions.",
@@ -260,7 +258,6 @@ const SPECIALITIES = [
   {
     slug: "oncology",
     title: "Oncology",
-    category: "core",
     icon: oncologyIcon,
     shortdesc:
       "Over the years, Prachin Global Hospital has grown into a trusted destination for advanced cancer care, expanding its services across key locations in Hyderabad.",
@@ -302,156 +299,53 @@ const SPECIALITIES = [
       ],
     },
   },
-
   {
-    slug: "general-medicine",
-    title: "General Medicine",
-    category: "core",
-    icon: GeneralIcon,
+    slug: "brain-and-spine-surgery",
+    title: "Brain and Spine Surgery",
+    icon: oncologyIcon,
     shortdesc:
-      "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment.",
+      "Over the years, Prachin Global Hospital has grown into a trusted destination for advanced cancer care, expanding its services across key locations in Hyderabad.",
     banner: bannerCardio,
     sections: {
       overview:
-        "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment. Our General Medicine and Internal Medicine Department offers comprehensive Outpatient and Inpatient care for a wide range of medical conditions i.e. Seasonal and Viral Fever, Fatigue, Chronic Diseases or unexplained symptoms and Diabetic Treatments. Our Physicians provide precise diagnosis, timely treatment and holistic care management.",
-
-      diagnosticsTitle: "Key Services",
-      diagnostics: [
-        "Treatment for acute illnesses such as viral infections, flu, and respiratory problems",
-        "Management of chronic diseases like diabetes, hypertension, and thyroid disorders",
-        "Preventive care including health screenings and annual checkups",
-        "Lifestyle and diet counseling",
-        "Referrals and coordination with specialty departments",
-      ],
-
-      proceduresTitle: "Why Choose Us",
-      procedures: [
-        "Qualified and Experienced Physicians with a patient-centered approach",
-      ],
-      images: [Generalimage1, generalimage2],
-      extraSectionTitle: "Minimally Invasive General and Laparoscopic Surgery",
-      extraSectionContent: `Advanced General and Laparoscopic Surgery services offering expert surgical care with traditional and minimally invasive techniques, our Surgeons Team ensures Safe, Precise, Treatment focused on faster recovery with close clinical monitoring of professional and qualified doctors supervision with excellent individual nursing care.`,
-
-      screeningTitle: "Key Surgical Services",
-      screeningContent: `Laparoscopic surgeries: Gall Bladder Removal, Hernia Repair (Inguinal, Ventral, Umbilical), Appendectomy, Colectomy (Colon Removal), Spleenectomy.`,
-
-      technologiesTitle: "Open surgeries for abdominal conditions",
-      technologies: [
-        "Minor procedures: removal of lumps, cysts, abscesses",
-        "Emergency Surgical Care",
-        "Preoperative and postop",
-      ],
-    },
-  },
-
-  {
-    slug: "pulmonology",
-    title: "Pulmonology",
-    category: "core",
-    icon: pulmonologyIcon,
-    shortdesc:
-      "Our Pulmonology Department offers specialized care for a wide range of respiratory diseases, with a team of experienced Lung Specialists, we are committed to diagnosing and treating conditions that affect the lungs and breathing.",
-    banner: bannerCardio,
-    sections: {
-      overview:
-        "Our Pulmonology Department offers specialized care for a wide range of respiratory diseases, with a team of experienced Lung Specialists, we are committed to diagnosing and treating conditions that affect the lungs and breathing.",
-
-      proceduresTitle: "Comprehensive Services provide advanced treatment for",
-      procedures: [
-        "Asthma Treatment",
-        "Chronic Obstructive Pulmonary Disease (COPD)",
-        "Sleep apnea diagnosis",
-        "Bronchitis care",
-        "Pneumonia treatment",
-        "Tuberculosis management",
-        "Lung infection treatment",
-      ],
-      proceduresNote: "Smoking-related lung disease care",
-
-      images: [Pulmanologyimage1, Pulmanologyimage2],
-
-      extraSectionTitle: "Why Choose Our Pulmonologist",
-      extraSectionContent: `Our chest specialists use the latest diagnostic tools, including pulmonary function tests and high-resolution imaging, to ensure accurate diagnosis. Whether you’re facing acute symptoms or chronic respiratory issues, our team delivers personalized care and long-term support.`,
-    },
-  },
-
-  {
-    slug: "nephrology",
-    title: "Nephrology",
-    category: "core",
-    icon: nephrologyIcon,
-    shortdesc:
-      "Our Nephrology Department is one of the Best, offering specialized and compassionate kidney care for patients of all ages.",
-    banner: bannerCardio,
-    sections: {
-      overview: `Our Nephrology Department is one of the Best, offering specialized and compassionate kidney care for patients of all ages. Under the guidance of top Nephrologists and supported by advanced medical infrastructure, our hospital delivers world-class diagnosis and treatment for a wide range of kidney disorders.`,
+        "Over the years, Prachin Global Hospital has grown into a trusted destination for advanced cancer care, expanding its services across key locations in Hyderabad. With dedicated and well-equipped cancer centers, the hospital is committed to delivering world-class oncology services that focus not only on treatment but also on prevention, early diagnosis, rehabilitation, and long-term survivorship.",
 
       moreoverview:
-        "As a leading Kidney Specialist Hospital our multidisciplinary Nephrology team focuses on accurate diagnosis, preventive care, advanced dialysis, and transplant preparation — ensuring the best outcomes for every patient.",
-
-      diagnosticsTitle: "Advanced Nephrology Technology & Expertise",
-      diagnosticsDescription:
-        "We combine clinical expertise with cutting-edge technology to deliver seamless renal care. Our nephrology units are equipped with next-generation dialysis systems, renal imaging, and critical-care facilities for continuous kidney monitoring.",
-      images: [Nephrologyimage1, Nephrologyimage2],
-      diagnostics: [
-        "Hemodiafiltration (HDF): Enhances toxin removal and improves dialysis efficiency.",
-        "Continuous Renal Replacement Therapy (CRRT): For critically ill patients requiring constant filtration support",
-        "Continuous Ambulatory Peritoneal Dialysis (CAPD): Portable, home-based dialysis option for long-term patients",
-        "Renal Biopsy & Catheter Procedures: Including AV fistula fashioning and tunneled catheter (Permcath) insertions, performed with precision and safety",
-        "Comprehensive Nephrology Services",
-        "Our nephrology department provides a full spectrum of kidney care services, from preventive screening to end-stage renal disease management.",
-        "Management of Chronic Kidney Disease (CKD) and Acute Kidney Failure",
-        "Treatment of Diabetic & Hypertensive Kidney Diseases",
-        "Electrolyte and Acid–Base Imbalance management",
-        "Autoimmune & Glomerular Disorders",
-        "Nephrolithiasis (Kidney Stones) and Urinary Tract Infections",
-        "Kidney Disease in Pregnancy",
-        "Nephrotic Syndrome & Glomerulonephritis",
-        "Hemodialysis & Peritoneal Dialysis",
-        "Kidney Transplant Evaluation & Post-Transplant Care",
-        "Every treatment plan is customized based on patient health, risk factors, and lifestyle — ensuring long-term renal stability and improved quality of life.",
-      ],
-    },
-  },
-
-  // ==================== SURGICAL SPECIALITIES ====================
-  {
-    slug: "spine-surgery",
-    title: "Spine Surgery",
-    category: "Surgical",
-    icon: spineIcon,
-    shortdesc:
-      "Prachin Global Hospital is recognized as one of the best spine hospitals in Hyderabad, offering comprehensive and evidence-based treatment for spinal disorders and injuries.",
-    banner: bannerCardio,
-    sections: {
-      overview: `Prachin Global Hospital is recognized as one of the best spine hospitals in Hyderabad, offering comprehensive and evidence-based treatment for spinal disorders and injuries. Our expert team of spine surgeons and orthopedic spine specialists are highly experienced in advanced minimally invasive techniques, laser spine surgery, and motion-preserving procedures to treat patients of all age groups.`,
-
-      proceduresTitle:
-        "We provide specialized treatment for a wide range of spinal conditions, including:",
+        "Our team of highly experienced cancer specialists—including Medical Oncologists, Surgical Oncologists—provides comprehensive and personalised cancer care. We firmly believe that treating cancer goes beyond medical intervention alone. Understanding the emotional, psychological, and social challenges faced by cancer patients and their families is central to our approach. Hence, we adopt a holistic care model that supports patients emotionally and mentally throughout their treatment journey. This integrated, multidisciplinary philosophy strengthens our commitment to excellence and positions Prachin Global Hospital among the leading cancer hospitals in Hyderabad.",
+      proceduresTitle: "Specialised Oncology Services",
+      proceduresDescription: `Prachin Global Hospital is home to a distinguished panel of oncologists specialising in a wide range of cancer disciplines:`,
       procedures: [
-        "Herniated Disc (Slipped Disc)",
-        "Degenerative Disc Disease (DDD)",
-        "Cervical, Lumbar & Thoracic Spondylosis",
-        "Spinal Stenosis & Sciatica",
-        "Myelopathy (Cervical or Thoracic)",
-        "Vertebral & Spinal Fractures",
-        "Scoliosis, Kyphosis & Lordosis",
-        "Ankylosing Spondylitis",
-        "Spinal Infections & Spinal Osteomyelitis",
-        "Tuberculosis of the Spine (Pott’s Disease)",
-        "Spinal Cord Tumors & Metastatic Spine Cancer",
+        "Head and Neck Oncology – Expert diagnosis and precision treatment for cancers affecting the oral cavity, throat, larynx, and surrounding regions",
+        "Thoracic Oncology – Advanced care for lung and chest-related cancers using cutting-edge therapeutic technologies",
+        "Orthopaedic Oncology – Comprehensive management of bone and soft tissue tumours with both surgical and advanced non-surgical techniques",
+        "Gynaecological Oncology – Personalised and compassionate treatment for cancers of the female reproductive system",
+        "Nephrological & Urological Oncology – Specialised care for kidney, bladder, prostate, and other urological cancers to ensure complete patient-centered treatment",
       ],
-      images: [Spineimage1, Spineimage2],
-      diagnosticsDescription: `The Department of Spine Surgery at Prachin Global Hospital is equipped with state-of-the-art diagnostic and surgical facilities, including high-resolution digital X-rays, CT scans, MRI, EMG, and nerve conduction studies. We also offer advanced robotic and endoscopic spine surgery techniques to ensure precision, faster recovery, and minimal post-operative discomfort.`,
 
-      technologiesNote: `Our leading spine surgeons specialize in procedures such as spinal fusion, laminectomy, and discectomy, delivering patient-centric care focused on pain relief, spinal stability, mobility restoration, and improved quality of life. With a multidisciplinary approach and advanced rehabilitation services, Prachin Global Hospital ensures optimal recovery and long-term spine health for every patient.`,
+      proceduresNote:
+        "Each specialty works in close collaboration to ensure accurate diagnosis, timely intervention, and optimal clinical outcomes.",
+
+      images: [Oncologyimage1, Oncologyimage2],
+
+      diagnosticsTitle: "Prachin Global Institute of Medical Oncology",
+      diagnosticsDescription: `The Department of Medical Oncology at Prachin Global Hospital is fully equipped with modern daycare chemotherapy wards, oncology-trained nursing staff, and an experienced medical team. Cancer treatment planning is carried out through a multidisciplinary tumor board, involving medical oncologists, surgical oncologists, radiation oncologists, pathologists, and radiologists. This collaborative decision-making process ensures evidence-based, consensus-driven treatment plans that enhance treatment success.`,
+
+      diagnosticssubtitle:
+        "With rapid advancements in oncology, including targeted therapy and immunotherapy, Prachin Global Hospital stays at the forefront of innovation. Our facilities include:",
+      diagnostics: [
+        "Outpatient oncology services",
+        "Daycare and inpatient chemotherapy units",
+        "A specialised paediatric oncology ward",
+        "One of the largest in-house bone marrow transplantation units",
+        "Advanced chemotherapy delivery using chemoports",
+        "AI-assisted diagnosis, analysis, and personalised treatment planning",
+        "Access to some of the most advanced PET-CT imaging systems for early and accurate cancer detection",
+      ],
     },
   },
-
   {
     slug: "gastroenterology",
     title: "Gastroenterology",
-    category: "Surgical",
     banner: bannerCardio,
     icon: gastroenterologyIcon,
     shortdesc:
@@ -497,7 +391,6 @@ Rest assured that at our Gastroenterology Department, you will receive personali
   {
     slug: "surgical-gastroenterology",
     title: "Surgical Gastroenterology",
-    category: "Surgical",
     icon: surgicalgastroenterologyIcon,
     shortdesc:
       "The Department of Surgical Gastroenterology at Prachin Global Hospital is dedicated to providing advanced surgical care for disorders of the digestive system.",
@@ -521,11 +414,9 @@ We are highly experienced in managing both cancerous and non-cancerous condition
       technologiesNote: `With modern operation theatres, advanced diagnostic facilities, and comprehensive critical care support, Prachin Global Hospital is committed to delivering safe, effective, and world-class surgical treatment for digestive diseases. Our goal is to improve both the quality of life and clinical outcomes for every patient we serve.`,
     },
   },
-
   {
-    slug: "orthopedics",
-    title: "Orthopedics",
-    category: "Surgical",
+    slug: "orthopedics-joint-replacements",
+    title: "Orthopedics - Joint Replacments",
     icon: orthopedicsIcon,
     shortdesc:
       "Don’t let musculoskeletal concerns limit your life. Schedule an appointment with our Orthopedics specialists today and take the first step toward improved mobility and a pain-free future.",
@@ -551,11 +442,9 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
       images: [Orthopedicsimage1, Orthopedicsimage2],
     },
   },
-
   {
-    slug: "arthroscopy-arthroplasty",
-    title: "Arthroscopy – Arthroplasty",
-    category: "Surgical",
+    slug: "arthroscopy-arthroplasty-pediatric-orthopedics",
+    title: "Arthroscopy| Arthroplasty | Pediatric Orthopedics",
     icon: arthroscopyIcon,
     shortdesc:
       "The Department of Arthroscopy & Arthroplasty at Prachin Global Hospital offers advanced, specialized care for sports injuries, joint disorders, and degenerative conditions affecting bones, ligaments, cartilage, and muscles.",
@@ -605,11 +494,9 @@ These procedures ensure faster recovery, minimal pain, reduced hospital stay, an
       technologiesNote: `With world-class infrastructure, modern operation theatres, and internationally aligned treatment protocols, Prachin Global Hospital is committed to delivering excellence in Arthroscopy, Arthroplasty, and Sports Medicine—ensuring the best outcomes with compassionate care.`,
     },
   },
-
   {
     slug: "urology",
     title: "Urology",
-    category: "Surgical",
     icon: urologyIcon,
     shortdesc:
       "Our Urology department is recognized as the top Urology Hospital offering comprehensive solutions in Urology & Andrology. Our skilled Urologists provide top-quality care, leveraging state-of-the-art technology for optimal outcomes.",
@@ -665,9 +552,37 @@ With a strong focus on clinical excellence, innovation, and compassionate care, 
   },
 
   {
+    slug: "pulmonology",
+    title: "Pulmonology",
+    icon: pulmonologyIcon,
+    shortdesc:
+      "Our Pulmonology Department offers specialized care for a wide range of respiratory diseases, with a team of experienced Lung Specialists, we are committed to diagnosing and treating conditions that affect the lungs and breathing.",
+    banner: bannerCardio,
+    sections: {
+      overview:
+        "Our Pulmonology Department offers specialized care for a wide range of respiratory diseases, with a team of experienced Lung Specialists, we are committed to diagnosing and treating conditions that affect the lungs and breathing.",
+
+      proceduresTitle: "Comprehensive Services provide advanced treatment for",
+      procedures: [
+        "Asthma Treatment",
+        "Chronic Obstructive Pulmonary Disease (COPD)",
+        "Sleep apnea diagnosis",
+        "Bronchitis care",
+        "Pneumonia treatment",
+        "Tuberculosis management",
+        "Lung infection treatment",
+      ],
+      proceduresNote: "Smoking-related lung disease care",
+
+      images: [Pulmanologyimage1, Pulmanologyimage2],
+
+      extraSectionTitle: "Why Choose Our Pulmonologist",
+      extraSectionContent: `Our chest specialists use the latest diagnostic tools, including pulmonary function tests and high-resolution imaging, to ensure accurate diagnosis. Whether you’re facing acute symptoms or chronic respiratory issues, our team delivers personalized care and long-term support.`,
+    },
+  },
+  {
     slug: "vascular-surgery",
     title: "Vascular Surgery",
-    category: "Surgical",
     icon: vascularIcon,
     shortdesc:
       "Prachin Global Hospitals recognized as the best vascular & endovascular surgery hospital in Telangana, out top vascular surgeons specializing in the treatment of diseases affecting arteries, veins, and the lymphatic system. ",
@@ -691,12 +606,46 @@ We provide advanced vascular care under one roof, focusing on peripheral artery 
 It is a super specialty requiring advanced training beyond general surgery, ensuring every patient receives the most appropriate, evidence-based vascular care.`,
     },
   },
+  {
+    slug: "nephrology",
+    title: "Nephrology",
+    icon: nephrologyIcon,
+    shortdesc:
+      "Our Nephrology Department is one of the Best, offering specialized and compassionate kidney care for patients of all ages.",
+    banner: bannerCardio,
+    sections: {
+      overview: `Our Nephrology Department is one of the Best, offering specialized and compassionate kidney care for patients of all ages. Under the guidance of top Nephrologists and supported by advanced medical infrastructure, our hospital delivers world-class diagnosis and treatment for a wide range of kidney disorders.`,
 
-  // ==================== SUPPORT SPECIALITIES ====================
+      moreoverview:
+        "As a leading Kidney Specialist Hospital our multidisciplinary Nephrology team focuses on accurate diagnosis, preventive care, advanced dialysis, and transplant preparation — ensuring the best outcomes for every patient.",
+
+      diagnosticsTitle: "Advanced Nephrology Technology & Expertise",
+      diagnosticsDescription:
+        "We combine clinical expertise with cutting-edge technology to deliver seamless renal care. Our nephrology units are equipped with next-generation dialysis systems, renal imaging, and critical-care facilities for continuous kidney monitoring.",
+      images: [Nephrologyimage1, Nephrologyimage2],
+      diagnostics: [
+        "Hemodiafiltration (HDF): Enhances toxin removal and improves dialysis efficiency.",
+        "Continuous Renal Replacement Therapy (CRRT): For critically ill patients requiring constant filtration support",
+        "Continuous Ambulatory Peritoneal Dialysis (CAPD): Portable, home-based dialysis option for long-term patients",
+        "Renal Biopsy & Catheter Procedures: Including AV fistula fashioning and tunneled catheter (Permcath) insertions, performed with precision and safety",
+        "Comprehensive Nephrology Services",
+        "Our nephrology department provides a full spectrum of kidney care services, from preventive screening to end-stage renal disease management.",
+        "Management of Chronic Kidney Disease (CKD) and Acute Kidney Failure",
+        "Treatment of Diabetic & Hypertensive Kidney Diseases",
+        "Electrolyte and Acid–Base Imbalance management",
+        "Autoimmune & Glomerular Disorders",
+        "Nephrolithiasis (Kidney Stones) and Urinary Tract Infections",
+        "Kidney Disease in Pregnancy",
+        "Nephrotic Syndrome & Glomerulonephritis",
+        "Hemodialysis & Peritoneal Dialysis",
+        "Kidney Transplant Evaluation & Post-Transplant Care",
+        "Every treatment plan is customized based on patient health, risk factors, and lifestyle — ensuring long-term renal stability and improved quality of life.",
+      ],
+    },
+  },
   {
     slug: "rheumatology",
     title: "Rheumatology",
-    category: "Support",
     icon: RheumatologyIcon,
     banner: bannerCardio,
     shortdesc:
@@ -766,11 +715,126 @@ We are committed to providing holistic care that includes patient education, die
 With years of experience and a strong commitment to excellence, Prachin Global Hospital stands as a trusted center for advanced rheumatology care, delivering compassionate service and effective treatment for all types of joint and autoimmune disorders.`,
     },
   },
+  {
+    slug: "ent",
+    title: "ENT",
+    icon: GeneralIcon,
+    shortdesc:
+      "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment.",
+    banner: bannerCardio,
+    sections: {
+      overview:
+        "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment. Our General Medicine and Internal Medicine Department offers comprehensive Outpatient and Inpatient care for a wide range of medical conditions i.e. Seasonal and Viral Fever, Fatigue, Chronic Diseases or unexplained symptoms and Diabetic Treatments. Our Physicians provide precise diagnosis, timely treatment and holistic care management.",
 
+      diagnosticsTitle: "Key Services",
+      diagnostics: [
+        "Treatment for acute illnesses such as viral infections, flu, and respiratory problems",
+        "Management of chronic diseases like diabetes, hypertension, and thyroid disorders",
+        "Preventive care including health screenings and annual checkups",
+        "Lifestyle and diet counseling",
+        "Referrals and coordination with specialty departments",
+      ],
+
+      proceduresTitle: "Why Choose Us",
+      procedures: [
+        "Qualified and Experienced Physicians with a patient-centered approach",
+      ],
+      images: [Generalimage1, generalimage2],
+      extraSectionTitle: "Minimally Invasive General and Laparoscopic Surgery",
+      extraSectionContent: `Advanced General and Laparoscopic Surgery services offering expert surgical care with traditional and minimally invasive techniques, our Surgeons Team ensures Safe, Precise, Treatment focused on faster recovery with close clinical monitoring of professional and qualified doctors supervision with excellent individual nursing care.`,
+
+      screeningTitle: "Key Surgical Services",
+      screeningContent: `Laparoscopic surgeries: Gall Bladder Removal, Hernia Repair (Inguinal, Ventral, Umbilical), Appendectomy, Colectomy (Colon Removal), Spleenectomy.`,
+
+      technologiesTitle: "Open surgeries for abdominal conditions",
+      technologies: [
+        "Minor procedures: removal of lumps, cysts, abscesses",
+        "Emergency Surgical Care",
+        "Preoperative and postop",
+      ],
+    },
+  },
+  {
+    slug: "general-medicine",
+    title: "General Medicine- Diabetology",
+    icon: GeneralIcon,
+    shortdesc:
+      "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment.",
+    banner: bannerCardio,
+    sections: {
+      overview:
+        "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment. Our General Medicine and Internal Medicine Department offers comprehensive Outpatient and Inpatient care for a wide range of medical conditions i.e. Seasonal and Viral Fever, Fatigue, Chronic Diseases or unexplained symptoms and Diabetic Treatments. Our Physicians provide precise diagnosis, timely treatment and holistic care management.",
+
+      diagnosticsTitle: "Key Services",
+      diagnostics: [
+        "Treatment for acute illnesses such as viral infections, flu, and respiratory problems",
+        "Management of chronic diseases like diabetes, hypertension, and thyroid disorders",
+        "Preventive care including health screenings and annual checkups",
+        "Lifestyle and diet counseling",
+        "Referrals and coordination with specialty departments",
+      ],
+
+      proceduresTitle: "Why Choose Us",
+      procedures: [
+        "Qualified and Experienced Physicians with a patient-centered approach",
+      ],
+      images: [Generalimage1, generalimage2],
+      extraSectionTitle: "Minimally Invasive General and Laparoscopic Surgery",
+      extraSectionContent: `Advanced General and Laparoscopic Surgery services offering expert surgical care with traditional and minimally invasive techniques, our Surgeons Team ensures Safe, Precise, Treatment focused on faster recovery with close clinical monitoring of professional and qualified doctors supervision with excellent individual nursing care.`,
+
+      screeningTitle: "Key Surgical Services",
+      screeningContent: `Laparoscopic surgeries: Gall Bladder Removal, Hernia Repair (Inguinal, Ventral, Umbilical), Appendectomy, Colectomy (Colon Removal), Spleenectomy.`,
+
+      technologiesTitle: "Open surgeries for abdominal conditions",
+      technologies: [
+        "Minor procedures: removal of lumps, cysts, abscesses",
+        "Emergency Surgical Care",
+        "Preoperative and postop",
+      ],
+    },
+  },
+  {
+    slug: "general-laparoscopy-surgery",
+    title: "General & Laparoscopy Surgery",
+    icon: GeneralIcon,
+    shortdesc:
+      "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment.",
+    banner: bannerCardio,
+    sections: {
+      overview:
+        "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment. Our General Medicine and Internal Medicine Department offers comprehensive Outpatient and Inpatient care for a wide range of medical conditions i.e. Seasonal and Viral Fever, Fatigue, Chronic Diseases or unexplained symptoms and Diabetic Treatments. Our Physicians provide precise diagnosis, timely treatment and holistic care management.",
+
+      diagnosticsTitle: "Key Services",
+      diagnostics: [
+        "Treatment for acute illnesses such as viral infections, flu, and respiratory problems",
+        "Management of chronic diseases like diabetes, hypertension, and thyroid disorders",
+        "Preventive care including health screenings and annual checkups",
+        "Lifestyle and diet counseling",
+        "Referrals and coordination with specialty departments",
+      ],
+
+      proceduresTitle: "Why Choose Us",
+      procedures: [
+        "Qualified and Experienced Physicians with a patient-centered approach",
+      ],
+      images: [Generalimage1, generalimage2],
+      extraSectionTitle: "Minimally Invasive General and Laparoscopic Surgery",
+      extraSectionContent: `Advanced General and Laparoscopic Surgery services offering expert surgical care with traditional and minimally invasive techniques, our Surgeons Team ensures Safe, Precise, Treatment focused on faster recovery with close clinical monitoring of professional and qualified doctors supervision with excellent individual nursing care.`,
+
+      screeningTitle: "Key Surgical Services",
+      screeningContent: `Laparoscopic surgeries: Gall Bladder Removal, Hernia Repair (Inguinal, Ventral, Umbilical), Appendectomy, Colectomy (Colon Removal), Spleenectomy.`,
+
+      technologiesTitle: "Open surgeries for abdominal conditions",
+      technologies: [
+        "Minor procedures: removal of lumps, cysts, abscesses",
+        "Emergency Surgical Care",
+        "Preoperative and postop",
+      ],
+    },
+  },
   {
     slug: "obstetrics-gynecology",
     title: "Obstetrics & Gynecology",
-    category: "Support",
     icon: obstetricsIcon,
     shortdesc:
       "Our Obstetrics and Gynecology Department is equipped dedicated Department with advanced Technology, including Ultrasound Machines and monitoring equipment. This allows us to provide accurate diagnosis and exceptional care throughout pregnancy and beyond.",
@@ -803,11 +867,9 @@ With years of experience and a strong commitment to excellence, Prachin Global H
       technologiesNote: `With advanced infrastructure, experienced specialists, and a patient-centric approach, Prachin Global Hospital strives to make every pregnancy and women’s health journey safe, memorable, and positive.`,
     },
   },
-
   {
     slug: "pediatrics-neonatology",
     title: "Pediatrics & Neonatology",
-    category: "Support",
     icon: pediatricsIcon,
     shortdesc:
       "Our Pediatrics and Neonatology are specialized, dedicated to the comprehensive care of infants, children, and adolescents, addressing their unique physiological, developmental and healthcare needs from birth through adolescence.",
@@ -837,11 +899,9 @@ With years of experience and a strong commitment to excellence, Prachin Global H
       technologiesNote: `With state-of-the-art facilities and a highly skilled multidisciplinary team, we are committed to nurturing the well-being of every child.`,
     },
   },
-
   {
     slug: "dental-maxillofacial",
     title: "Dental & Maxillo Facial",
-    category: "Support",
     icon: DentalIcon,
     shortdesc: "",
     banner: bannerCardio,
@@ -866,11 +926,68 @@ With years of experience and a strong commitment to excellence, Prachin Global H
         "Our multidisciplinary team—comprising oral surgeons, maxillofacial surgeons, implantologists, periodontists, orthodontists, and dental hygienists—works collaboratively to provide personalized treatment plans tailored to each patient’s needs. From treating simple tooth decay to managing complex oral and jaw conditions caused by trauma, surgery, or congenital deformities, Prachin Hospital is equipped to handle the full spectrum of dental and maxillofacial care. We also offer smile enhancement and aesthetic makeovers, helping patients regain confidence along with oral health. At Prachin Hospital, your smile is our priority—because healthy teeth lead to a healthier life",
     },
   },
+  {
+    slug: "plastic-surgery",
+    title: "Plastic Surgery ",
+    icon: spineIcon,
+    shortdesc:
+      "Prachin Global Hospital is recognized as one of the best spine hospitals in Hyderabad, offering comprehensive and evidence-based treatment for spinal disorders and injuries.",
+    banner: bannerCardio,
+    sections: {
+      overview: `Prachin Global Hospital is recognized as one of the best spine hospitals in Hyderabad, offering comprehensive and evidence-based treatment for spinal disorders and injuries. Our expert team of spine surgeons and orthopedic spine specialists are highly experienced in advanced minimally invasive techniques, laser spine surgery, and motion-preserving procedures to treat patients of all age groups.`,
 
+      proceduresTitle:
+        "We provide specialized treatment for a wide range of spinal conditions, including:",
+      procedures: [
+        "Herniated Disc (Slipped Disc)",
+        "Degenerative Disc Disease (DDD)",
+        "Cervical, Lumbar & Thoracic Spondylosis",
+        "Spinal Stenosis & Sciatica",
+        "Myelopathy (Cervical or Thoracic)",
+        "Vertebral & Spinal Fractures",
+        "Scoliosis, Kyphosis & Lordosis",
+        "Ankylosing Spondylitis",
+        "Spinal Infections & Spinal Osteomyelitis",
+        "Tuberculosis of the Spine (Pott’s Disease)",
+        "Spinal Cord Tumors & Metastatic Spine Cancer",
+      ],
+      images: [Spineimage1, Spineimage2],
+      diagnosticsDescription: `The Department of Spine Surgery at Prachin Global Hospital is equipped with state-of-the-art diagnostic and surgical facilities, including high-resolution digital X-rays, CT scans, MRI, EMG, and nerve conduction studies. We also offer advanced robotic and endoscopic spine surgery techniques to ensure precision, faster recovery, and minimal post-operative discomfort.`,
+
+      technologiesNote: `Our leading spine surgeons specialize in procedures such as spinal fusion, laminectomy, and discectomy, delivering patient-centric care focused on pain relief, spinal stability, mobility restoration, and improved quality of life. With a multidisciplinary approach and advanced rehabilitation services, Prachin Global Hospital ensures optimal recovery and long-term spine health for every patient.`,
+    },
+  },
+  {
+    slug: "endocrinology",
+    title: "Endocrinology",
+    icon: orthopedicsIcon,
+    shortdesc:
+      "Don’t let musculoskeletal concerns limit your life. Schedule an appointment with our Orthopedics specialists today and take the first step toward improved mobility and a pain-free future.",
+    banner: bannerCardio,
+    sections: {
+      overview: `Don’t let musculoskeletal concerns limit your life. Schedule an appointment with our Orthopedics specialists today and take the first step toward improved mobility and a pain-free future.
+
+Prachin Global Hospitals widely exploring as one of the Best Orthopedic Hospitals in Telangana, our Orthopedic Division, led by internationally trained Surgeons, performs complex and high-precision procedures for the full range of Bone, Joint, Ligament, Tendon, Muscle, and Spine conditions.
+
+With state-of-the-art laminar-airflow, heap filters operating theatres, advanced imaging, and a multidisciplinary team approach, we ensure uncompromised safety, precision, and rapid recovery.
+
+Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joint preservation, Sports Injury Management, Spine Surgery and comprehensive rehabilitation—delivering superior outcomes with minimal discomfort and shorter hospital stays.`,
+
+      proceduresTitle: "We specialize in:",
+      procedures: [
+        "Advanced Minimally Invasive Arthroscopic Procedures",
+        "Total or Partial Knee, Hip & Shoulder Replacement Techniques",
+        "Expertise in Ligament & Tendon Reconstruction",
+        "Dedicated Unit for Management of Sports Injuries",
+        "Latest Generation Robotic-Assisted Joint Replacements",
+        "Best Physiotherapy & Rehabilitation Support",
+      ],
+      images: [Orthopedicsimage1, Orthopedicsimage2],
+    },
+  },
   {
     slug: "anaesthesiology-pain",
     title: "Anaesthesiology & Pain Management",
-    category: "Support",
     icon: anaesthesiologyIcon,
     banner: bannerCardio,
     sections: {
@@ -904,7 +1021,7 @@ With years of experience and a strong commitment to excellence, Prachin Global H
   {
     slug: "critical-care",
     title: "Critical Care",
-    category: "Support",
+    category: "core",
     icon: CriticalCareIcon,
     banner: bannerCardio,
     sections: {
@@ -935,11 +1052,9 @@ With years of experience and a strong commitment to excellence, Prachin Global H
       technologiesNote: `At Prachin Global Hospital, critical care goes beyond technology—it is about compassion, vigilance, and commitment. Our goal is not just to save lives, but to support recovery with dignity, safety, and trust.`,
     },
   },
-
   {
     slug: "emergency-medicine",
     title: "Emergency Medicine",
-    category: "Support",
     icon: emergencyIcon,
     banner: bannerCardio,
     sections: {
@@ -955,6 +1070,59 @@ With years of experience and a strong commitment to excellence, Prachin Global H
       ],
       images: [emergencyimage1, emergencyimage2],
       technologiesNote: `At Prachin Global Hospital, our Emergency Medicine department stands out for its unmatched infrastructure, experienced team, and commitment to providing immediate, high-quality emergency and trauma care.`,
+    },
+  },
+  {
+    slug: "physio-therapy-and-rehabilitation-care",
+    title: "Physio Therapy and Rehabilitation Care",
+    category: "core",
+    icon: arthroscopyIcon,
+    shortdesc:
+      "The Department of Arthroscopy & Arthroplasty at Prachin Global Hospital offers advanced, specialized care for sports injuries, joint disorders, and degenerative conditions affecting bones, ligaments, cartilage, and muscles.",
+    banner: bannerCardio,
+    sections: {
+      overview: `The Department of Arthroscopy & Arthroplasty at Prachin Global Hospital offers advanced, specialized care for sports injuries, joint disorders, and degenerative conditions affecting bones, ligaments, cartilage, and muscles. Whether you are a professional athlete, a fitness enthusiast, or someone dealing with chronic joint pain, our expert team provides comprehensive diagnosis, treatment, and rehabilitation under one roof.
+
+Sports and activity-related injuries can occur due to improper posture, repetitive movements, sudden impact, or overuse. Old injuries may also flare up unexpectedly, affecting performance and daily life. At Prachin Global Hospital, we understand that complete recovery requires not just treatment, but precision care, guided rehabilitation, and long-term joint protection.`,
+      images: [arthroscopyimage1, arthroscopyimage2],
+      proceduresTitle: "Arthroscopy – Minimally Invasive Joint Care",
+      procedures: [
+        "Knee ligament reconstruction (ACL, PCL injuries)",
+        "Meniscus repair",
+        "Shoulder arthroscopy for rotator cuff injuries",
+        "Ankle and hip arthroscopy",
+        "Treatment of sports-related cartilage damage",
+      ],
+
+      proceduresNote: `Arthroscopy is a modern, minimally invasive surgical procedure used to diagnose and treat joint problems through small incisions using a specialized camera.
+
+These procedures ensure faster recovery, minimal pain, reduced hospital stay, and quicker return to daily activities or sports.`,
+
+      extraSectionTitle: "Arthroplasty – Advanced Joint Replacement",
+      extraSectionContent: `For patients suffering from severe arthritis, joint degeneration, or long-standing joint damage, our Arthroplasty services provide advanced joint replacement solutions, including:`,
+
+      // ✅ Converted to array for easy mapping
+      arthroplastyList: [
+        "Total Knee Replacement",
+        "Total Hip Replacement",
+        "Partial Joint Replacement",
+        "Revision Joint Replacement Surgery",
+      ],
+
+      extraSectionNote: `Using modern surgical techniques and high-quality implants, we aim to restore mobility, reduce pain, and significantly improve quality of life.`,
+
+      screeningTitle: "Comprehensive Sports Medicine & Rehabilitation",
+      screeningContentList: [
+        "Advanced diagnostic imaging",
+        "Non-surgical injury management",
+        "Regenerative therapies",
+        "Post-surgical physiotherapy",
+        "Personalized rehabilitation programs",
+      ],
+
+      screeningContent: `Every injury is unique, and every patient requires customized care. Our team focuses on helping individuals recover safely and return to peak performance as quickly as possible.`,
+
+      technologiesNote: `With world-class infrastructure, modern operation theatres, and internationally aligned treatment protocols, Prachin Global Hospital is committed to delivering excellence in Arthroscopy, Arthroplasty, and Sports Medicine—ensuring the best outcomes with compassionate care.`,
     },
   },
 ];

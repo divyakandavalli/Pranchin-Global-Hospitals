@@ -123,7 +123,7 @@ export default function BookAppointment({ className = "" }) {
   };
 
   return (
-    <div className={`max-w-[95%] mx-auto ${className}`}>
+    <div className={`max-w-[95%] mx-auto py-5 ${className}`}>
       <div className="relative rounded-[24px] overflow-hidden">
         {/* Background Image & Overlay */}
         <div
@@ -136,14 +136,14 @@ export default function BookAppointment({ className = "" }) {
         />
         <div className="absolute inset-0 bg-[linear-gradient(270deg,#61ce7000_0%,#010813_100%)] opacity-80" />
 
-        <div className="relative flex flex-col xl:flex-row gap-x-[150px] gap-y-[150px] py-[150px] px-[56px] pr-0 rounded-[24px]">
+        <div className="relative flex flex-col xl:flex-row gap-x-[50px]  pt-[50px] px-[56px] pr-0 rounded-[24px]">
           {/* Left Content */}
-          <div className="text-white w-full xl:w-[45%] flex flex-col justify-between items-start">
+          <div className="text-white w-full xl:w-[45%] flex flex-col items-start">
             <span className="bg-white/20 tracking-wider font-manrope uppercase text-[16px] px-4 py-1 rounded-full backdrop-blur-md">
               EASY ACCESS
             </span>
 
-            <h2 className="text-4xl font-manrope md:text-[64px] font-semibold leading-tight">
+            <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px] font-manrope  font-semibold leading-tight">
               Book Your Medical <br />
               Appointment <br />
               <span className="italic font-light font-instrumental text-[#f5d1b9]">
@@ -151,7 +151,7 @@ export default function BookAppointment({ className = "" }) {
               </span>
             </h2>
 
-            <p className="text-white leading-[26px] text-[18px] font-manrope mb-20 w-[75%]">
+            <p className="text-white leading-[26px] text-[12px] md:text-[14px] 3xl:text-[15px] font-manrope w-[75%] my-5">
               Schedule your healthcare visit in just a few steps. Fill out the
               form below and our team will confirm your appointment immediately.
             </p>
@@ -160,7 +160,7 @@ export default function BookAppointment({ className = "" }) {
               to="/contact"
               className="group flex items-center justify-between bg-[#094ca0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094ca0] hover:bg-transparent hover:text-[#f37721] hover:border-[#f37721] transition-all duration-300 absolute bottom-14"
             >
-              <span className="font-medium font-manrope text-[16px] capitalize">
+              <span className="font-medium font-manrope text-[12px] md:text-[14px] 3xl:text-[15px] capitalize">
                 Get Free Consultation
               </span>
               <span className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition-all duration-300 group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]">
@@ -170,9 +170,9 @@ export default function BookAppointment({ className = "" }) {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="w-full xl:w-[55%] bg-white border-white border-t-[12px] border-l-[12px] flex flex-col rounded-tl-[24px] -mb-[150px] relative">
-            <div className="p-[48px] bg-[#094ca0] rounded-[16px]">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px]">
+          <div className="w-full xl:w-[55%] bg-white border-white border-t-[12px] border-l-[12px] flex flex-col rounded-tl-[24px]  relative">
+            <div className="p-[28px] bg-[#094ca0] rounded-[16px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-[18px]">
                 <div>
                   <label className="text-[16px] font-manrope mb-[12px] text-white block">
                     Full Name

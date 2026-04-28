@@ -10,8 +10,6 @@ const DoctorsPage = () => {
     <>
       <DoctorsBanner/>
       <AllDoctors/>
-      <BookAppointment className='xl:my-20'/>
-      <DoctorsCoreValues/>
     </>
   );
 };

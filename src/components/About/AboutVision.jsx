@@ -25,7 +25,7 @@ const AboutVision = () => {
   ];
   return (
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
-      <div className="bg-[#C8DDED] rounded-[24px] xl:py-36 lg:py-28 md:py-24 py-16 md:px-10 px-5 relative  overflow-hidden">
+      <div className="bg-[#C8DDED] rounded-[24px]    py-10 md:px-10 px-5 relative  overflow-hidden">
         <div className="absolute -right-[310px] -top-[653px] max-w-full">
           <img
             src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Decorations.png"
@@ -36,15 +36,15 @@ const AboutVision = () => {
           <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
             Our Vision
           </span>
-          <h2 className="text-4xl font-manrope md:text-[64px] text-center font-semibold mt-4 leading-tight">
+          <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px] font-manrope  text-center font-semibold mt-4 leading-tight">
             Our{" "}
             <span className="italic font-light font-instrumental text-[#5187af] pb-20">
               Vision, Mission & Aim
             </span>
           </h2>
         </div>
-        <div className="xl:h-10"></div>
-        <div className="grid xl:grid-cols-3  grid-cols-1 xl:gap-12 lg:gap-20 gap-20 mx-auto mt-24 lg:mx-8">
+        <div className="xl:h-4"></div>
+        <div className="grid xl:grid-cols-3  grid-cols-1 xl:gap-12 lg:gap-20 gap-20 mx-auto mt-16 lg:mx-8">
           {paragraph.map((item, index) => (
             <div
               key={index}
@@ -56,11 +56,11 @@ const AboutVision = () => {
               </div>
 
               {/* Content */}
-              <h2 className="text-[18px] sm:text-[20px] md:text-[21px] font-manrope font-semibold mb-2 text-center">
+              <h2 className="text-[16px] md:text-[18px] font-manrope font-semibold mb-2 text-center">
                 {item.title}
               </h2>
 
-              <p className="text-center text-[#66686C] text-sm sm:text-base font-manrope">
+              <p className="text-center text-[#66686C] text-sm  font-manrope">
                 {item.desc}
               </p>
             </div>

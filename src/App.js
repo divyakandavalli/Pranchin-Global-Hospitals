@@ -3,7 +3,11 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import { Autocomplete, TextField } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
-
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import XIcon from "@mui/icons-material/X"; // ✅ Twitter → X
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp"; // ✅ NEW
 // Components
 import Header from "./components/header/Header";
 import Footer from "./components/Footer";
@@ -26,9 +30,9 @@ import BlogPages from "./pages/BlogPages";
 import BlogsSingle from "./components/Blogs/BlogsSingle";
 import HappyPatients from "./components/common/HappyPatients";
 import DoctorDetails from "./components/Doctors/DoctorDetails";
-import SpecialOfferPage from './pages/SpecialOfferPage';
-import PatientServices from './components/For_Patients/PatientServices';
-import PatientResources from './components/For_Patients/PatientResources';
+import SpecialOfferPage from "./pages/SpecialOfferPage";
+import PatientServices from "./components/For_Patients/PatientServices";
+import PatientResources from "./components/For_Patients/PatientResources";
 // Data
 import SPECIALITIES from "./specialities/specialities";
 
@@ -42,9 +46,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 function App() {
-
-
-
   const [open, setOpen] = React.useState(false);
 
   const [form, setForm] = React.useState({
@@ -87,11 +88,11 @@ function App() {
     let newErrors = {};
 
     if (!form.fullName.trim()) newErrors.fullName = "Full name is required";
-   if (!form.email.trim()) {
-  newErrors.email = "Email is required";
-} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-  newErrors.email = "Enter a valid email address";
-}
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      newErrors.email = "Enter a valid email address";
+    }
 
     if (!form.phone) newErrors.phone = "Phone number is required";
     else if (!/^\d{10}$/.test(form.phone))
@@ -145,13 +146,14 @@ function App() {
     <>
       <ScrollToTop />
       <Header />
-
+      {/* Spacer */}
+      <div className="h-[180px] lg:h-[150px] xl:h-[120px]"></div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/doctors" element={<DoctorsPage />} />
-        <Route path="/doctors-profile" element={<DoctorDetails  />} />
+        <Route path="/doctors-profile" element={<DoctorDetails />} />
         <Route path="/specialities" element={<Servicespage />} />
         <Route path="/specialities/:slug" element={<SingleService />} />
         <Route path="/contact" element={<ContactUs />} />
@@ -160,18 +162,18 @@ function App() {
         <Route path="/health-packages" element={<HealthPackagesPage />} />
         <Route path="/blog-details" element={<BlogsSingle />} />
         <Route path="/happy-patients" element={<HappyPatients />} />
-        <Route path='/special-offers' element={<SpecialOfferPage />} />
-        <Route path='/patient-services' element={<PatientServices />} />
-        <Route path='/patient-resources' element={<PatientResources />} />
-        <Route path='/special-offers' element={<SpecialOfferPage />} />
-        <Route path='/patient-services' element={<PatientServices />} />
-        <Route path='/patient-resources' element={<PatientResources />} />
+        <Route path="/special-offers" element={<SpecialOfferPage />} />
+        <Route path="/patient-services" element={<PatientServices />} />
+        <Route path="/patient-resources" element={<PatientResources />} />
+        <Route path="/special-offers" element={<SpecialOfferPage />} />
+        <Route path="/patient-services" element={<PatientServices />} />
+        <Route path="/patient-resources" element={<PatientResources />} />
       </Routes>
 
       {/* Vertical Contact Button */}
       <div
         onClick={handleClickOpen}
-        className="fixed right-[-6px] hover:right-0 top-1/2 -translate-y-1/2 z-50
+        className="fixed right-[-6px] hover:right-0 xl:top-1/3 3xl:top-1/2 -translate-y-1/2 z-50
         bg-[#c65a0a] text-white w-[50px] h-[160px]
         rounded-l-2xl shadow-xl flex items-center justify-center
         cursor-pointer transition-all duration-300"
@@ -180,7 +182,80 @@ function App() {
           Contact Us
         </span>
       </div>
+      {/* Social Media Floating Bar */}
+      <div className="fixed right-[-120px] bottom-5 flex flex-col gap-3 z-50">
+        {/* Facebook */}
+        <a
+          href="#"
+          title="Facebook"
+          className="group flex items-center bg-[#1877F2] text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
+        >
+          <div className="w-[45px] flex items-center justify-center">
+            <FacebookOutlinedIcon />
+          </div>
+          <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 text-sm">
+            Facebook
+          </span>
+        </a>
 
+        {/* X (Twitter) */}
+        <a
+          href="#"
+          title="X"
+          className="group flex items-center bg-black text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
+        >
+          <div className="w-[45px] flex items-center justify-center">
+            <XIcon />
+          </div>
+          <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 text-sm">
+            X
+          </span>
+        </a>
+
+        {/* Instagram */}
+        <a
+          href="#"
+          title="Instagram"
+          className="group flex items-center bg-gradient-to-r from-pink-500 to-yellow-500 text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
+        >
+          <div className="w-[45px] flex items-center justify-center">
+            <InstagramIcon />
+          </div>
+          <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 text-sm">
+            Instagram
+          </span>
+        </a>
+
+        {/* YouTube */}
+        <a
+          href="#"
+          title="YouTube"
+          className="group flex items-center bg-red-600 text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
+        >
+          <div className="w-[45px] flex items-center justify-center">
+            <YouTubeIcon />
+          </div>
+          <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 text-sm">
+            YouTube
+          </span>
+        </a>
+
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/919247575108" // 👉 replace with your number
+          target="_blank"
+          rel="noopener noreferrer"
+          title="WhatsApp"
+          className="group flex items-center bg-[#25D366] text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
+        >
+          <div className="w-[45px] flex items-center justify-center">
+            <WhatsAppIcon />
+          </div>
+          <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 text-sm">
+            WhatsApp
+          </span>
+        </a>
+      </div>
       {/* Contact Dialog */}
       <Dialog
         open={open}
@@ -395,7 +470,7 @@ function App() {
         </DialogContent>
       </Dialog>
 
-     <Footer />
+      <Footer />
     </>
   );
 }

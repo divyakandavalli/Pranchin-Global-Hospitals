@@ -17,6 +17,7 @@ import VerticalCarousel from "../components/home/VerticalCarousel";
 import slide3 from "../assets/images/17588.jpg";
 import slide2 from "../assets/images/3374.jpg";
 import slide1 from "../assets/images/midsection-surgeons-operating-patient-hospital.jpg";
+import BannerfinalCarousel from "../components/home/BannerfinalCarousel";
 
 export default function HomePage() {
   const slidesData = [slide1, slide2, slide3];
@@ -40,9 +41,8 @@ export default function HomePage() {
 
     >
       <Reveal>
-        <section className="h-auto">
-          {/* <BannerCarousel /> */}
-          <VerticalCarousel slides={slidesData}/>
+        <section>
+          <BannerfinalCarousel/>
         </section>
       </Reveal>
 
@@ -53,7 +53,7 @@ export default function HomePage() {
       </Reveal>
 
       <Reveal>
-        <div className="flex justify-center items-center">
+        <div className="">
           <CountingValues />
         </div>
       </Reveal>

@@ -9,7 +9,7 @@ export default function OurSevicesList() {
   const services = SPECIALITIES;
 
   return (
-    <section className="py-10 px-4 md:px-10">
+    <section className=" px-4 md:px-10">
       <div className="max-w-[95%] mx-auto">
         <div className="py-10 px-4 sm:px-6 md:px-10 relative overflow-hidden">
           
@@ -24,11 +24,11 @@ export default function OurSevicesList() {
           {/* Header */}
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
             <div>
-              <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-3 sm:px-4 py-1 rounded-full tracking-[2px] sm:tracking-[3px] text-[12px] sm:text-[14px] md:text-[16px] uppercase">
+              <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-3 sm:px-4 py-1 rounded-full tracking-[2px] sm:tracking-[3px] text-[14px]  uppercase">
                 our services
               </span>
 
-              <h2 className="text-4xl md:text-[44px] font-manrope 3xl:text-[64px] font-semibold mt-4 leading-tight">
+              <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px]  font-manrope font-semibold leading-tight text-black">
                 Comprehensive Care <br />
                 for{" "}
                 <span className="italic font-light font-instrumental text-[#5187af]">
@@ -39,18 +39,18 @@ export default function OurSevicesList() {
           </div>
 
           {/* NEW SERVICES GRID - Updated Card Design */}
-          <div className="grid xl:grid-cols-3 grid-cols-1 lg:gap-12 gap-6 mx-auto mt-12 lg:mx-8">
+          <div className="grid xl:grid-cols-4 grid-cols-1  gap-6 mx-auto mt-5 lg:mx-8">
             {services.map((item, index) => (
               <div
                 key={index}
                 onClick={() => navigate(`/specialities/${item.slug}`)}
                 className="p-8 bg-[#C8DDED] flex items-start justify-center flex-col rounded-3xl relative cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
               >
-                <h2 className="text-[21px] font-manrope font-semibold mb-1 text-[#094ca0]">
+                <h2 className=" text-[16px] md:text-[18px] font-manrope font-semibold mb-1 text-[#094ca0]">
                   {item.title}
                 </h2>
                 
-                <p className="w-10/12 text-[#66686C] font-normal text-base font-manrope leading-relaxed">
+                <p className="w-10/12 text-[#66686C] font-normal text-[14px] 3xl:text-[15px] font-manrope leading-relaxed">
                   {item.desc || item.shortdesc || 
                     "Expert care with advanced medical facilities and experienced doctors."}
                 </p>

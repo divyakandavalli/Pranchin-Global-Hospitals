@@ -78,14 +78,14 @@ export default function BookAppointmentMobile() {
   };
 
   return (
-    <div className="w-[92%] mx-auto py-10">
+    <div className="w-[92%] mx-auto pt-10">
       {/* CONTENT (UNCHANGED) */}
       <div className="mb-8">
         <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-3 py-1 rounded-full uppercase">
           Easy Access
         </span>
 
-        <h2 className="text-4xl md:text-[44px] font-manrope 3xl:text-[64px]  mt-4 font-semibold leading-tight">
+        <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px] font-manrope mt-4 font-semibold leading-tight">
           Book Your Medical <br />
           Appointment <br />
           <span className="italic font-light font-instrumental text-[#f5d1b9]">
@@ -93,7 +93,7 @@ export default function BookAppointmentMobile() {
           </span>
         </h2>
 
-        <p className="text-[#2f373e] text-[14px] md:text-[16px] 3xl:text-[18px] text-left  xl:w-auto max-w-2xl font-manrope mt-4">
+        <p className="text-[#2f373e] text-[14px] text-left  xl:w-auto max-w-2xl font-manrope mt-4">
           Schedule your healthcare visit in just a few steps. Fill out the form
           below and our team will confirm your appointment immediately.
         </p>
@@ -168,9 +168,6 @@ export default function BookAppointmentMobile() {
 
           {/* DEPARTMENT */}
           <div>
-            <label className="text-[16px] font-manrope mb-[12px] text-white block">
-              Department
-            </label>
             <Autocomplete
               options={SPECIALITIES}
               getOptionLabel={(option) => option.title}
