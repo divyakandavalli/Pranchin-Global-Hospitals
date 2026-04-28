@@ -17,23 +17,15 @@ const SingleSBanner = () => {
   const bannerImage = data.banner || defaultBanner;
 
   return (
-    <div className=" w-full xl:bg-fixed relative mx-auto py-20 xl:py-24 overflow-hidden flex items-center justify-center">
+     <div className=" w-full xl:bg-fixed relative mx-auto  overflow-hidden flex items-center justify-center">
       {/* Content */}
-      <div
-        className="top-0 absolute left-0 w-full
-      h-auto"
-      >
-        <img
-          src={bannerImage}
-          alt=""
-          className="w-full  object-cover h-[350px] md:h-auto"
-        />
+      <div className="w-full">
+        <img src={bannerImage} alt="" className="w-full  h-auto " />
       </div>
-      <div className="text-center text-white z-10 flex flex-col md:gap-6 gap-0">
-        <h1 className="md:text-8xl text-[52px] font-manrope font-semibold">
-          {data.title}
+      <div className="text-center top-0 absolute text-white z-10 flex flex-col justify-center items-center w-full h-full xl:gap-6 gap-2">
+        <h1 className="text-[22px] md:text-[42px] 3xl:text-[52px] font-manrope font-semibold">
+           {data.title}
         </h1>
-
         <div className="flex items-center justify-center text-base font-manrope">
           <Link to="/specialities">All Specialities</Link>
 
