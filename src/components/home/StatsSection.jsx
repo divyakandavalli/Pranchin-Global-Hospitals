@@ -22,7 +22,7 @@ export default function StatsSection() {
                 relative
                 border-b border-white/30
                 sm:border-b-0
-                sm:border-r border-white/30
+                sm:border-r
                 lg:border-r
                 ${index === stats.length - 1 ? "sm:border-r-0" : ""}
               `}

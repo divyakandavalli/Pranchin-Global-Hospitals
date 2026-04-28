@@ -33,7 +33,7 @@ const AboutVision = () => {
           />
         </div>
         <div className="flex justify-center flex-col items-center">
-          <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
+          <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-sm  3xl:text-[16px] uppercase">
             Our Vision
           </span>
           <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px] font-manrope  text-center font-semibold mt-4 leading-tight">

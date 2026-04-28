@@ -129,12 +129,12 @@ const ContactUsFrom = () => {
   };
 
   return (
-    <div className="xl:max-w-[90%] 3xl:max-w-[72%] w-[95%]  mx-auto md:pt-24 pt-12 xl:pt-32 md:pb-16 pb-0">
+    <div className="xl:max-w-[90%] 3xl:max-w-[72%] w-[95%]  mx-auto  pt-12  pb-0">
       <div className="grid lg:grid-cols-2 grid-cols-1 xl:gap-16 gap-8">
        <div className="flex flex-col justify-between lg:gap-0 gap-8">
           <div className=" flex flex-col items-start  gap-6">
             <div>
-              <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
+              <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-sm  3xl:text-[16px] uppercase">
                 Get Support
               </span>
             </div>
@@ -456,7 +456,7 @@ const ContactUsFrom = () => {
           </button>
         </div>
       </div>
-     <div className="flex lg:flex-row flex-col gap-6 mt-16 font-manrope">
+     <div className="flex lg:flex-row flex-col gap-6 mt-10 pb-5 font-manrope">
         <div className=" xl:w-[415px] lg:w-1/3  flex flex-col gap-6 ">
           <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start gap-3">
             <h4 className="text-[16px] md:text-[18px]  font-semibold">Let's talk</h4>

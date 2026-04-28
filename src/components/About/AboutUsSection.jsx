@@ -64,7 +64,7 @@ export default function AboutUsSection() {
 
         {/* RIGHT CONTENT */}
         <div className="flex flex-col gap-1 xl:items-start items-center xl:order-2 order-1">
-          <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px]">
+          <span className="border w-[135px] border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px] text-sm  3xl:text-[16px]">
             ABOUT US
           </span>
 
