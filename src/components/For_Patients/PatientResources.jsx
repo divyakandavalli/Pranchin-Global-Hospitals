@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import bannerimg from "../../assets/images/patient_resource.jpg";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import bg_image from "../../assets/images/about_illu.jpg";
+
 import EastIcon from "@mui/icons-material/East";
 import Insurances from "../common/Insurances";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -147,32 +147,17 @@ const PatientResources = () => {
 
   return (
     <>
-      <div
-        className="2xl:max-w-[80%] md:w-[95%] w-full xl:bg-fixed relative mx-auto xl:min-h-[500px] md:min-h-[400px] h-[350px] mt-5 overflow-hidden flex items-center justify-center md:rounded-3xl bg-center lg:bg-[bottom_center] bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: `url(${bannerimg})`,
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-[#010813]/70" />
-
-        {/* Content */}
-        <div className="text-center text-white z-10 flex flex-col md:gap-6 gap-0">
-          <h1 className="md:text-8xl text-[52px] font-manrope font-semibold">
-            Patient Resources
-          </h1>
-
-          <div className="flex items-center justify-center text-base font-manrope">
-            <a href="/">Home</a>
-            <span>
-              <KeyboardArrowRightIcon />
-            </span>
-            <a className="text-[#f37721]" href="/about">
-              Patient Resources
-            </a>
-          </div>
-        </div>
+     <div className=" w-full xl:bg-fixed relative mx-auto   overflow-hidden flex items-center justify-center">
+      {/* Content */}
+      <div className="w-full">
+        <img src={bg_image} alt="" className="w-full  h-auto " />
       </div>
+      <div className="text-center top-0 absolute text-white z-10 flex flex-col justify-center items-center w-full h-full xl:gap-6 gap-2">
+        <h1 className="xl:text-8xl lg:text-6xl md:text-4xl font-manrope font-semibold">
+          Patient Resources
+        </h1>
+      </div>
+    </div>
 
       <div className="xl:max-w-[90%] 3xl:max-w-[72%] w-[95%] font-manrope  mx-auto  pb-0">
 
