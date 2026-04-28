@@ -27,21 +27,21 @@ export default function FacilitiesSwiper() {
   ];
   return (
     <>
-      <div className="relative lg:py-16 py-8">
-        <h2 className=" sm:text-5xl  text-2xl text-center xl:leading-[74px] xl:pb-16 md:pb-12 pb-8 md:leading-[54px] leading-10 font-semibold ">
+      <div className="relative">
+        {/* <h2 className=" sm:text-5xl  text-2xl text-center xl:leading-[74px] xl:pb-16 md:pb-12 pb-8 md:leading-[54px] leading-10 font-semibold ">
           State Of Art{" "}
           <span className="text-[#f37721] font-normal italic font-instrumental">
             Diagnostics
           </span>
-        </h2>
+        </h2> */}
         <Swiper
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },
             480: { slidesPerView: 1.2, spaceBetween: 10 },
             640: { slidesPerView: 2, spaceBetween: 20 },
-            800: { slidesPerView: 2.5, spaceBetween: 20 },
-            1024: { slidesPerView: 3, spaceBetween: 25 },
-            1280: { slidesPerView: 4, spaceBetween: 30 },
+            800: { slidesPerView: 3, spaceBetween: 20 },
+            1024: { slidesPerView: 4, spaceBetween: 25 },
+            1280: { slidesPerView: 6, spaceBetween: 30 },
           }}
           modules={[Pagination, Autoplay]}
           pagination={{

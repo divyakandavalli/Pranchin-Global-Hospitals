@@ -53,7 +53,7 @@ const testimonials = [
 
 export default function ServiceTestimonials() {
   return (
-    <div className="max-w-[80%]  mx-auto ">
+    <div className="max-w-[80%]  mx-auto pt-20">
       <div className="">
         {/* Top Section */}
         <div className="flex  justify-center items-center text-center">

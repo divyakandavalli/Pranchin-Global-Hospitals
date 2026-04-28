@@ -1,77 +1,104 @@
 import React from "react";
 import about_dr_1 from "../../assets/images/portrait-handsome-young-indian-doctor-standing-with-arms-crossed-medical-clinic-smiling-camera.jpg";
 import { Link } from "react-router-dom";
+import RoundTheClock from "../For_Patients/RoundTheClock";
 const AllDoctors = () => {
- 
-
   const doctors = [
     {
       id: 1,
       name: "Dr Alina Carter",
       dignity: "Cardiologist Specialist",
+      degree: "MBBS, MD (Cardiology)",
       twitter: "",
       linkedin: "",
       instagram: "",
       image: about_dr_1,
     },
     {
-      id: 1,
+      id: 2,
       name: "Dr Alina Carter",
       dignity: "Cardiologist Specialist",
+      degree: "MBBS, MD (Cardiology)",
       twitter: "",
       linkedin: "",
       instagram: "",
       image: about_dr_1,
     },
     {
-      id: 1,
+      id: 3,
       name: "Dr Alina Carter",
       dignity: "Cardiologist Specialist",
+      degree: "MBBS, MD (Cardiology)",
       twitter: "",
       linkedin: "",
       instagram: "",
       image: about_dr_1,
     },
     {
-      id: 1,
+      id: 4,
       name: "Dr Alina Carter",
       dignity: "Cardiologist Specialist",
+      degree: "MBBS, MD (Cardiology)",
       twitter: "",
       linkedin: "",
       instagram: "",
       image: about_dr_1,
     },
     {
-      id: 1,
+      id: 5,
       name: "Dr Alina Carter",
       dignity: "Cardiologist Specialist",
+      degree: "MBBS, MD (Cardiology)",
       twitter: "",
       linkedin: "",
       instagram: "",
       image: about_dr_1,
     },
     {
-      id: 1,
+      id: 6,
       name: "Dr Alina Carter",
       dignity: "Cardiologist Specialist",
+      degree: "MBBS, MD (Cardiology)",
       twitter: "",
       linkedin: "",
       instagram: "",
       image: about_dr_1,
     },
     {
-      id: 1,
+      id: 6,
       name: "Dr Alina Carter",
       dignity: "Cardiologist Specialist",
+      degree: "MBBS, MD (Cardiology)",
       twitter: "",
       linkedin: "",
       instagram: "",
       image: about_dr_1,
     },
     {
-      id: 1,
+      id: 6,
       name: "Dr Alina Carter",
       dignity: "Cardiologist Specialist",
+      degree: "MBBS, MD (Cardiology)",
+      twitter: "",
+      linkedin: "",
+      instagram: "",
+      image: about_dr_1,
+    },
+    {
+      id: 6,
+      name: "Dr Alina Carter",
+      dignity: "Cardiologist Specialist",
+      degree: "MBBS, MD (Cardiology)",
+      twitter: "",
+      linkedin: "",
+      instagram: "",
+      image: about_dr_1,
+    },
+    {
+      id: 6,
+      name: "Dr Alina Carter",
+      dignity: "Cardiologist Specialist",
+      degree: "MBBS, MD (Cardiology)",
       twitter: "",
       linkedin: "",
       instagram: "",
@@ -79,38 +106,45 @@ const AllDoctors = () => {
     },
   ];
   return (
-    <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
-      <div className=" py-20 md:px-10 px-5 relative  overflow-hidden">
-        <div className="flex justify-center flex-col items-center">
-          <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
-            Expert Doctor
+    <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto mt-10 ">
+      <div className=" md:px-10 px-5 pb-10 relative  overflow-hidden">
+        <div className="flex xl:justify-center flex-col xl:items-center justify-start items-start">
+          <span className="border  border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px] text-[14px] text-left xl:text-center uppercase">
+            Our Clinical Experts
           </span>
-          <h2 className="text-4xl font-manrope md:text-[64px] text-center font-semibold mt-4 leading-tight">
-            Meet Professional{" "}
+          <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px] font-manrope mt-5  font-semibold  leading-tight text-black">
+            Consult Professional{" "}
             <span className="italic font-light font-instrumental text-[#5187af]">
-              Doctors & Specialists
+              Doctors & Specialists 
             </span>
           </h2>
         </div>
 
-        <div className="grid xl:grid-cols-4 md:grid-cols-2  grid-cols-1 lg:gap-12 gap-6 mx-auto mt-12 lg:mx-8">
+        <div className="grid xl:grid-cols-5 md:grid-cols-2  grid-cols-1 lg:gap-12 gap-6 mx-auto mt-5">
           {doctors.map((value, index) => (
-            <div key={index*1}
-              className=" bg-white flex min-h-[400px] items-start justify-center flex-col rounded-3xl relative"
+            <div
+              key={index * 1}
+              className=" bg-white flex min-h-[300px] items-start justify-center flex-col rounded-3xl relative"
               style={{
                 backgroundImage: `url(${value.image})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
             >
-              <Link to='/doctors-profile' className="w-[260px] flex flex-row h-full justify-center  items-end self-center z-10 relative">
+              <Link
+                to="/doctors-profile"
+                className="w-[260px] flex flex-row h-full justify-center  items-end self-center z-10 relative"
+              >
                 <div className="max-w-full bg-[#FEFEFF] pt-3 px-3 rounded-t-3xl">
                   <div className="text-center">
-                    <h3 className="text-[21px] font-manrope font-semibold mb-0.5">
+                    <h3 className="font-semibold font-manrope  text-[16px] md:text-[21px] text-[#5187af]">
                       {value.name}
                     </h3>
                     <p className=" text-[#4D6E76] font-normal text-base font-manrope">
                       {value.dignity}
+                    </p>
+                    <p className=" text-[#4D6E76] font-normal text-sm font-manrope">
+                      {value.degree}
                     </p>
                   </div>
                 </div>
@@ -125,12 +159,11 @@ const AllDoctors = () => {
                   </div>
                 </div>
               </Link>
-
-            
             </div>
           ))}
         </div>
       </div>
+      <RoundTheClock/>
     </div>
   );
 };

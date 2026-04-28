@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import blogimg from "../../assets/images/blog_topic_img.jpg";
 import ArticleIcon from "@mui/icons-material/Article";
 import { Link } from "react-router-dom";
+import { AppContext } from "../AppContext";
 const GalleryTabs = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
-  const [active, setActive] = useState(1);
+  const { activeTab, setActiveTab } = useContext(AppContext);
   const [visibleCount, setVisibleCount] = useState(12);
   const images = [];
   const videos = [
@@ -23,53 +23,7 @@ const GalleryTabs = () => {
       url: "https://www.youtube.com/embed/LSR4pyiLfZQ?si=UzhsIpU6EHRMpjBL",
     },
   ];
-  const blogs = [
-    {
-      id: 131,
-      url: "/blogs",
-      title: "Tips for Managing Stress to Improve Health",
-      date: "September 11, 2025",
-      image: blogimg,
-      desc: "Healthy habits are easier to adopt when they start small. Begin with simple actions such as",
-      topic: "Research",
-    },
-    {
-      id: 132,
-      url: "/blogs",
-      title: "Tips for Managing Stress to Improve Health",
-      date: "September 11, 2025",
-      image: blogimg,
-      desc: "Healthy habits are easier to adopt when they start small. Begin with simple actions such as",
-      topic: "Research",
-    },
-    {
-      id: 133,
-      url: "/blogs",
-      title: "Tips for Managing Stress to Improve Health",
-      date: "September 11, 2025",
-      image: blogimg,
-      desc: "Healthy habits are easier to adopt when they start small. Begin with simple actions such as",
-      topic: "Research",
-    },
-    {
-      id: 134,
-      url: "/blogs",
-      title: "Tips for Managing Stress to Improve Health",
-      date: "September 11, 2025",
-      image: blogimg,
-      desc: "Healthy habits are easier to adopt when they start small. Begin with simple actions such as",
-      topic: "Research",
-    },
-    {
-      id: 135,
-      url: "/blogs",
-      title: "Tips for Managing Stress to Improve Health",
-      date: "September 11, 2025",
-      image: blogimg,
-      desc: "Healthy habits are easier to adopt when they start small. Begin with simple actions such as",
-      topic: "Research",
-    },
-  ];
+  const blogs = [];
   const ResetVisibleCount = () => {
     setVisibleCount(12);
   };
@@ -102,16 +56,16 @@ const GalleryTabs = () => {
     setVisibleCount((prev) => prev + 12);
   };
   return (
-    <div className="2xl:max-w-[80%] md:w-[95%] w-full mx-auto  py-14">
+    <div className="2xl:max-w-[80%] md:w-[95%] w-full mx-auto  py-10">
       {/* Tabs */}
       <div className="flex flex-row flex-wrap md:gap-6 gap-4 overflow-x-auto w-full">
         <button
           onClick={() => {
-            setActive(1);
+            setActiveTab(1);
             ResetVisibleCount();
           }}
           className={`${
-            active === 1
+            activeTab === 1
               ? "bg-[#094CA0] text-white"
               : "bg-transparent text-[#F37721] border-[#F37721] hover:border-[#094CA0] hover:text-[#094CA0]"
           } md:text-lg text-base rounded-3xl md:px-6 py-0.5 px-2 md:py-1 border border-[#094CA0] transition-all duration-300`}
@@ -120,11 +74,11 @@ const GalleryTabs = () => {
         </button>
         <button
           onClick={() => {
-            setActive(2);
+            setActiveTab(2);
             ResetVisibleCount();
           }}
           className={`${
-            active === 2
+            activeTab === 2
               ? "bg-[#094CA0] text-white"
               : "bg-transparent text-[#F37721] border-[#F37721] hover:border-[#094CA0] hover:text-[#094CA0]"
           } md:text-lg text-base rounded-3xl px-2 md:px-6 md:py-1 py-0.5 border border-[#094CA0]  transition-all duration-300`}
@@ -133,11 +87,11 @@ const GalleryTabs = () => {
         </button>
         <button
           onClick={() => {
-            setActive(3);
+            setActiveTab(3);
             ResetVisibleCount();
           }}
           className={`${
-            active === 3
+            activeTab === 3
               ? "bg-[#094CA0] text-white"
               : "bg-transparent text-[#F37721] border-[#F37721] hover:border-[#094CA0] hover:text-[#094CA0]"
           } md:text-lg text-base rounded-3xl px-2 md:px-6 md:py-1 py-0.5 border border-[#094CA0]  transition-all duration-300`}
@@ -146,7 +100,7 @@ const GalleryTabs = () => {
         </button>
       </div>
       <div className=" md:mt-10 mt-5">
-        {active === 1 && (
+        {activeTab === 1 && (
           <div>
             {/* Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4">
@@ -163,7 +117,7 @@ const GalleryTabs = () => {
             </div>
 
             {visibleCount < images.length && (
-              <div className="flex justify-center items-center w-full my-16">
+              <div className="flex justify-center items-center w-full my-10">
                 <button
                   onClick={loadMore}
                   className="group mt-8 flex items-center justify-between bg-[#094CA0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"
@@ -183,7 +137,7 @@ const GalleryTabs = () => {
               </div>
             )}
             {visibleCount > images.length && (
-              <div className="flex justify-center items-center w-full my-16">
+              <div className="flex justify-center items-center w-full my-10">
                 <button
                   onClick={() => {
                     setVisibleCount(12);
@@ -207,7 +161,7 @@ const GalleryTabs = () => {
             )}
           </div>
         )}
-        {active === 2 && (
+        {activeTab === 2 && (
           <div>
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -231,7 +185,7 @@ const GalleryTabs = () => {
             </div>
 
             {visibleCount < videos.length && (
-              <div className="flex justify-center items-center w-full my-16">
+              <div className="flex justify-center items-center w-full my-10">
                 <button
                   onClick={loadMore}
                   className="group mt-8 flex items-center justify-between bg-[#094CA0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"
@@ -251,7 +205,7 @@ const GalleryTabs = () => {
               </div>
             )}
             {visibleCount > videos.length && (
-              <div className="flex justify-center items-center w-full my-16">
+              <div className="flex justify-center items-center w-full my-10">
                 <button
                   onClick={() => {
                     setVisibleCount(12);
@@ -275,7 +229,7 @@ const GalleryTabs = () => {
             )}
           </div>
         )}
-        {active === 3 && (
+        {activeTab === 3 && (
           <div>
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:mt-10 mt-5">
@@ -313,8 +267,8 @@ const GalleryTabs = () => {
               ))}
             </div>
 
-            {visibleCount < images.length && (
-              <div className="flex justify-center items-center w-full my-16">
+            {visibleCount < blogs.length && (
+              <div className="flex justify-center items-center w-full my-10">
                 <button
                   onClick={loadMore}
                   className="group mt-8 flex items-center justify-between bg-[#094CA0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"
@@ -329,29 +283,6 @@ const GalleryTabs = () => {
     group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]"
                   >
                     <ExpandMoreIcon fontSize="large" />
-                  </span>
-                </button>
-              </div>
-            )}
-            {visibleCount > images.length && (
-              <div className="flex justify-center items-center w-full my-16">
-                <button
-                  onClick={() => {
-                    setVisibleCount(12);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                  className="group mt-8 flex items-center justify-between bg-[#094CA0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"
-                >
-                  <span className="font-medium font-manrope text-[16px] capitalize">
-                    View Less
-                  </span>
-
-                  {/* Arrow Circle */}
-                  <span
-                    className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition
-    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]"
-                  >
-                    <KeyboardArrowUpIcon fontSize="large" />
                   </span>
                 </button>
               </div>
@@ -373,7 +304,7 @@ const GalleryTabs = () => {
 
           {/* Prev Button */}
           <button
-            className="absolute left-5 text-white text-4xl"
+            className="absolute left-5 z-[99] text-white text-4xl"
             onClick={prevImage}
           >
             ❮

@@ -22,7 +22,7 @@ const HealthPackages = () => {
     { id: 14, name: "EXECUTIVE HEALTH CHECK UP" },
   ];
   return (
-    <div className="xl:max-w-[90%] font-manrope 3xl:max-w-[72%]  lg:py-24 py-12 w-[95%] hidden md:grid gap-5 grid-cols-12 mx-auto">
+    <div className="xl:max-w-[90%] font-manrope 3xl:max-w-[72%]  py-10 w-[95%] hidden md:grid gap-5 grid-cols-12 mx-auto">
       <div className="xl:col-span-4 col-span-5">
         {packagesName.map((item, index) => (
           <div
@@ -36,8 +36,8 @@ const HealthPackages = () => {
             key={index}
             className={`${active === item.id ? "bg-transparent text-[#F37721] border-[#F37721]" : "bg-[#C8DDED] text-black   border-[#C8DDED]"} border flex  font-medium justify-between items-center px-6 py-2 cursor-pointer my-4 rounded-2xl transition-all duration-300`}
           >
-            <span className="font-bold">{item.name}</span>{" "}
-            <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg">
+            <span className="font-bold text-base">{item.name}</span>{" "}
+            <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center 3xl:text-[15px] text-sm">
               {active === item.id ? ( 
                 <EastIcon fontSize="small" />
               ) : (
@@ -50,39 +50,39 @@ const HealthPackages = () => {
       <div className="xl:col-span-8 col-span-7 xl:ms-10">
         {active === 1 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Senior Citizen&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Health Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>5900/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   8050/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]" fontSize="small" />{" "}
                   <span>Hematology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Complete Blood
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-3 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Complete Blood
                     Count (CBC)
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]" fontSize="small" />{" "}
                   <span>LFT (Liver Function Test)</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Bilirubin (Total, Direct, In-Direct)",
                     "Total Proteins",
@@ -95,35 +95,35 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"/>{" "}
                   <span>Blood Sugar – Profile</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Complete Blood
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Complete Blood
                     FBS (Fasting Blood Sugar)
                   </li>
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Complete Blood
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Complete Blood
                     PLBS (Post Lunch Blood Sugar)
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Kidney Assessment</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Serum Urea",
                     "Serum Creatinine",
@@ -138,19 +138,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Complete Lipid Profile</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Complete Lipid Profile",
                     "HDL, LDL, VLDL",
@@ -160,9 +160,9 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
@@ -172,41 +172,41 @@ const HealthPackages = () => {
         )}
         {active === 2 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Smart Thyroid&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Health Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>3200/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   5650/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="flex flex-col gap-2">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Blood Sugar – Fasting</span>{" "}
                 </h4>
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>T3, T4, TSH</span>{" "}
                 </h4>
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Anti TDI Antibodies</span>{" "}
                 </h4>
               </div>
               <div className="mt-3">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Complete Blood Count</span>{" "}
                 </h4>
-                <ul className="p-4">
+                <ul className="p-2">
                   {[
                     "Haemoglobin, PCV, RBC, MCV, MCH,MCHC",
                     "Total Leucocyte Count",
@@ -216,40 +216,40 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Sonology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Complete Blood
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Complete Blood
                     USG (Thyroid Gland)
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Consultations</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Pre Consultation Check-up (Height, Weight, BP, BMI)",
                     "Consultation with General Physician",
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
@@ -259,43 +259,43 @@ const HealthPackages = () => {
         )}
         {active === 3 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Kidney&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Health Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>5750/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   3800/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Hematology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" />
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" />
                     Haemogram
                   </li>
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" />
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" />
                     BUN{" "}
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Biochemistry</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Serum Creatinine",
                     "Serum Electrolytes (Na, K, Cl)",
@@ -305,40 +305,40 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Sonology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Complete Blood
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Complete Blood
                     USG (Thyroid Gland)
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Consultations</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Pre Consultation Check-up (Height, Weight, BP, BMI)",
                     "Consultation with General Physician",
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
@@ -348,33 +348,33 @@ const HealthPackages = () => {
         )}
         {active === 4 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Complete Bone&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Health Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>4000/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   8200/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <h4 className="text-xl font-bold pb-3">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold pb-3">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Bone Density Test</span>{" "}
                 </h4>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span> Clinical Pathology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Serum Amylase",
                     "Serum Lipase",
@@ -387,19 +387,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>LFT (Liver Function Test)</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Bilirubin (Total, Direct, In-Direct)",
                     "Total Proteins",
@@ -412,9 +412,9 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
@@ -424,39 +424,39 @@ const HealthPackages = () => {
         )}
         {active === 5 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Essential Heart&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Health Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>4100/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   5540/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Hematology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Complete Blood
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-3 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Complete Blood
                     Count (CBC)
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Biochemistry</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Random Blood Sugar",
                     "Creatinine – Serum",
@@ -464,31 +464,31 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Cardiology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> ECG
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> ECG
                     (Electrocardiogram)
                   </li>
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> 2D Echo
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> 2D Echo
                   </li>
                 </ul>
               </div>
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span> Cardiologist Consultant</span>{" "}
                 </h4>
               </div>
@@ -497,39 +497,39 @@ const HealthPackages = () => {
         )}
         {active === 6 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Essential Gastro&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Health Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>4300/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   7440/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Hematology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Complete Blood
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-3 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Complete Blood
                     Count (CBC)
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Biochemistry</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Serum Amylase",
                     "Serum Lipase",
@@ -542,19 +542,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>LFT (Liver Function Test)</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Bilirubin (Total, Direct, Indirect)",
                     "Total Proteins",
@@ -567,51 +567,51 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Clinical Pathology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Stool test for Routine",
                     "Stool test for Occult Blood",
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Radiology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {["USG (Ultrasound – Whole Abdomen)"].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>
                     Consultation with Gastroenterologist & Dietician
                   </span>{" "}
@@ -622,27 +622,27 @@ const HealthPackages = () => {
         )}
         {active === 7 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Comprehensive Gastro&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Health Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>7940/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   10540/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Biochemistry</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Serum Amylase",
                     "Serum Lipase",
@@ -655,19 +655,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>LFT (Liver Function Test)</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Bilirubin (Total, Direct, Indirect)",
                     "Total Proteins",
@@ -680,26 +680,26 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Sonology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {["USG (Ultrasound – Whole Abdomen)", "UGI Endoscopy"].map(
                     (item) => (
                       <li
                         key={item + Math.round(0, 9)}
-                        className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                        className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                       >
-                        <VerifiedIcon className="text-[#5187af]" /> {item}
+                        <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                       </li>
                     ),
                   )}
@@ -707,8 +707,8 @@ const HealthPackages = () => {
               </div>
 
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Consultation with a Gastroenterologist</span>{" "}
                 </h4>
               </div>
@@ -717,23 +717,23 @@ const HealthPackages = () => {
         )}
         {active === 8 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Lung Care&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Health Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>3200/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   4180/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Chest X-Ray",
                     "CBP with ESR",
@@ -743,9 +743,9 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
@@ -755,43 +755,43 @@ const HealthPackages = () => {
         )}
         {active === 9 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Master&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Health Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>9800/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   16500/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Hematology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 items-center py-1 text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Complete Blood
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-3 items-center py-1 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Complete Blood
                     Count (CBC)
                   </li>
-                  <li className="flex flex-row gap-3 items-center py-1 text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Blood Grouping
+                  <li className="flex flex-row gap-3 items-center py-1 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Blood Grouping
                     and RH Typing
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Cardiology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "2D Echo",
                     "TMT (Treadmill Test)",
@@ -799,19 +799,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Kidney Assessment</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Serum Urea",
                     "Serum Creatinine",
@@ -820,19 +820,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span> Blood Sugar – Profile</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "FBS (Fasting Blood Sugar)",
                     "PLBS (Post Lunch – Blood Sugar)",
@@ -840,19 +840,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Biochemistry</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "TSH",
                     "PSA (Male above 50 age)",
@@ -860,19 +860,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Complete Lipid Profile:</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Total Cholesterol",
                     "HDL, LDL, VLDL",
@@ -881,19 +881,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>LFT (Liver Function Test)</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Bilirubin (Total, Direct, In-Direct)",
                     "Total Proteins",
@@ -906,64 +906,64 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Sonology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {["USG (Ultrasound Whole Abdomen) Clinical"].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Pathology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {["Complete Urine Examination"].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Radiology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {["X-Ray (Chest"].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Consultation with General Physician</span>{" "}
                 </h4>
               </div>
@@ -972,27 +972,27 @@ const HealthPackages = () => {
         )}
         {active === 10 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Pregnancy&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Profile
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>6730/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   9580/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Complete Haemogram</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "CUE (Complete Urine Examination)",
                     "T3, T4 & TSH",
@@ -1000,69 +1000,69 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Renal Function Test</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Serum Creatinine
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Serum Creatinine
                     FBS (Fasting Blood Sugar)
                   </li>
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Serum Urea
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Serum Urea
                   </li>
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" />
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" />
                     Blood Grouping & Rh Typing
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Serology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {["HIV", "HBsAg", "HCV (Anti HCV)", "VDRL", "HBA1C"].map(
                     (item) => (
                       <li
                         key={item + Math.round(0, 9)}
-                        className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                        className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                       >
-                        <VerifiedIcon className="text-[#5187af]" /> {item}
+                        <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                       </li>
                     ),
                   )}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Sonology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {["Early Pregnancy Scan"].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Consultation with a Gynaecologist</span>{" "}
                 </h4>
               </div>
@@ -1071,39 +1071,39 @@ const HealthPackages = () => {
         )}
         {active === 11 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Diabetic&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>3100/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   5580/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Hematology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Complete Blood
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-3 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Complete Blood
                     Count (CBC)
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>LFT (Liver Function Test)</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Bilirubin (Total)",
                     "Direct Bilirubin",
@@ -1119,39 +1119,39 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Clinical Pathology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Complete Urine
+                <ul className="p-2 ">
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Complete Urine
                     Examination
                   </li>
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> Urine Spot
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> Urine Spot
                     Microalbumin
                   </li>
-                  <li className="flex flex-row gap-3 py-1 items-center text-lg font-medium">
-                    <VerifiedIcon className="text-[#5187af]" /> ECG
+                  <li className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium">
+                    <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> ECG
                     (Electrocardiogram)
                   </li>
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Blood Sugar – Profile</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "FBS (Fasting Blood Sugar)",
                     "PLBS (Post Lunch Blood Sugar)",
@@ -1159,19 +1159,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Complete Lipid Profile</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Total Cholesterol",
                     "HDL Ratio",
@@ -1181,16 +1181,16 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>
                     Consultation with General Physician & Diabetologist
                   </span>{" "}
@@ -1201,24 +1201,24 @@ const HealthPackages = () => {
         )}
         {active === 12 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Well Women&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>6730/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   9580/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>
                     Preferably for Ladies above 35 years OR as advised by the
                     consultant
@@ -1226,11 +1226,11 @@ const HealthPackages = () => {
                 </h4>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Lab Investigations</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Random Blood Sugar",
                     "Complete Blood Count (CBC)",
@@ -1241,19 +1241,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Radiology Investigations</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Chest X Ray",
                     "Ultrasound Pelvis",
@@ -1262,17 +1262,17 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Consultation with a Gynaecologist</span>{" "}
                 </h4>
               </div>
@@ -1281,23 +1281,23 @@ const HealthPackages = () => {
         )}
         {active === 13 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Cancer&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Screening
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>9450/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   16650/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="">
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "CBP",
                     "Upper UGI Endoscopy",
@@ -1308,16 +1308,16 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Consultation with MD Physician</span>{" "}
                 </h4>
               </div>
@@ -1326,33 +1326,33 @@ const HealthPackages = () => {
         )}
         {active === 14 && (
           <div className=" bg-[#e5f4ff] rounded-2xl my-4 py-4 xl:px-10 px-4">
-            <h2 className="lg:text-2xl text-xl text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
+            <h2 className="text-[16px] md:text-[18px] text-center font-bold  -offset-2 capitalize xl:pb-14 pb-8 pt-6">
               Executive&nbsp;{" "}
               <span className="italic font-bold tracking-widest font-instrumental text-[#5187af] pb-20">
                 Health Checkup
               </span>
             </h2>
             <div className="mb-5">
-              <h3 className="text-xl font-bold text-[#f37721]">
+              <h3 className="text-base font-bold text-[#f37721]">
                 Price (₹): <span>7900/-</span>{" "}
-                <span className="text-base italic line-through text-[#5187af]">
+                <span className="3xl:text-[15px] text-sm italic line-through text-[#5187af]">
                   14550/-
                 </span>
               </h3>
             </div>
             <div className="lg:ps-5 ps-2">
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Lab Investigation</span>{" "}
                 </h4>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Haematology</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "Hb, PCV, RBC, MCHC, MCV, MCH",
                     "Total WBC",
@@ -1363,19 +1363,19 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>BIOCHEMISTRY</span>{" "}
                 </h4>
-                <ul className="p-4 ">
+                <ul className="p-2 ">
                   {[
                     "FBS, PLBS",
                     "Creatinine",
@@ -1393,16 +1393,16 @@ const HealthPackages = () => {
                   ].map((item) => (
                     <li
                       key={item + Math.round(0, 9)}
-                      className="flex flex-row gap-3 py-1 items-center text-lg font-medium"
+                      className="flex flex-row gap-1 py-0.5 items-center 3xl:text-[15px] text-sm font-medium"
                     >
-                      <VerifiedIcon className="text-[#5187af]" /> {item}
+                      <VerifiedIcon className="text-[#5187af]"  fontSize="small" /> {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="pb-4">
-                <h4 className="text-xl font-bold">
-                  <EmergencyIcon className="text-[#f37721]" />{" "}
+                <h4 className="text-base font-bold">
+                  <EmergencyIcon className="text-[#f37721]"  fontSize="small" />{" "}
                   <span>Consultation with MD Physician and Dietician</span>{" "}
                 </h4>
               </div>

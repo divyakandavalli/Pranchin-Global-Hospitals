@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 import bannerimg from "../../assets/images/happy_patients_banner.jpg";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
 const HappyPatients = () => {
-  const [selectedIndex, setSelectedIndex] = useState(null);
   const [active, setActive] = useState(1);
   const [visibleCount, setVisibleCount] = useState(12);
-  const ResetVisibleCount = () => {
-    setVisibleCount(12);
-  };
   const videos = [
     {
       id: 110,
@@ -25,6 +19,7 @@ const HappyPatients = () => {
       url: "https://www.youtube.com/embed/LSR4pyiLfZQ?si=UzhsIpU6EHRMpjBL",
     },
   ];
+  const screenshots = [];
   const loadMore = () => {
     setVisibleCount((prev) => prev + 12);
   };
@@ -39,7 +34,6 @@ const HappyPatients = () => {
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#010813]/70" />
-
         {/* Content */}
         <div className="text-center text-white z-10 flex flex-col md:gap-6 gap-0">
           <h1 className="md:text-8xl text-[52px] font-manrope font-semibold">
@@ -126,33 +120,21 @@ const HappyPatients = () => {
                     </button>
                   </div>
                 )}
-                {visibleCount > videos.length && (
-                  <div className="flex justify-center items-center w-full my-16">
-                    <button
-                      onClick={() => {
-                        setVisibleCount(12);
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }}
-                      className="group mt-8 flex items-center justify-between bg-[#094CA0] text-white px-6 py-3 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"
-                    >
-                      <span className="font-medium font-manrope text-[16px] capitalize">
-                        View Less
-                      </span>
-
-                      {/* Arrow Circle */}
-                      <span
-                        className="bg-[#E5F4FF] text-[#094ca0] rounded-full w-9 h-9 flex items-center justify-center text-lg transition
-    group-hover:bg-[#f5d1b9] group-hover:text-[#f37721]"
-                      >
-                        <KeyboardArrowUpIcon fontSize="large" />
-                      </span>
-                    </button>
-                  </div>
-                )}
               </div>
             </div>
           )}
-          {active === 2 && <div></div>}
+          {active === 2 && (
+            <div>
+              {screenshots.length === 0 && (
+                <div>
+                  <h2 className="text-xl text-[#094ca0] font-bold font-manrope">Under Construction</h2>
+                  <p>
+                    We Should be back shortly. Thank you for your patience.
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </>
