@@ -37,6 +37,7 @@ const AboutCoreValues = () => {
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
       <div className=" rounded-[24px]  pt-5  md:px-10 relative  overflow-hidden">
         <div className="flex justify-center flex-col items-center">
+
           <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-sm  3xl:text-[16px] uppercase">
             Core Values
           </span>
