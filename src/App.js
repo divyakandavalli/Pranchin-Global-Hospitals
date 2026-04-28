@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Autocomplete, TextField } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
@@ -35,12 +35,10 @@ import PatientServices from "./components/For_Patients/PatientServices";
 import PatientResources from "./components/For_Patients/PatientResources";
 // Data
 import SPECIALITIES from "./specialities/specialities";
-
 // MUI Dialog
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import Slide from "@mui/material/Slide";
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -163,6 +161,7 @@ function App() {
         <Route path="/blog-details" element={<BlogsSingle />} />
         <Route path="/happy-patients" element={<HappyPatients />} />
         <Route path="/special-offers" element={<SpecialOfferPage />} />
+       
         <Route path="/patient-services" element={<PatientServices />} />
         <Route path="/patient-resources" element={<PatientResources />} />
         <Route path="/special-offers" element={<SpecialOfferPage />} />
@@ -173,7 +172,7 @@ function App() {
       {/* Vertical Contact Button */}
       <div
         onClick={handleClickOpen}
-        className="fixed right-[-6px] hover:right-0 xl:top-1/3 3xl:top-1/2 -translate-y-1/2 z-50
+        className="fixed right-[-6px] hover:right-0 xl:top-1/3 3xl:top-1/2 -translate-y-1/2 z-40
         bg-[#c65a0a] text-white w-[50px] h-[160px]
         rounded-l-2xl shadow-xl flex items-center justify-center
         cursor-pointer transition-all duration-300"
@@ -183,7 +182,7 @@ function App() {
         </span>
       </div>
       {/* Social Media Floating Bar */}
-      <div className="fixed right-[-120px] bottom-5 flex flex-col gap-3 z-50">
+      <div className="fixed right-[-120px] bottom-5 flex flex-col gap-3 z-40">
         {/* Facebook */}
         <a
           href="#"

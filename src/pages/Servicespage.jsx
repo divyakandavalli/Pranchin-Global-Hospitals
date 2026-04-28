@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ServiceBanner from "../components/Services/ServiceBanner";
 import OurSevicesList from "../components/Services/OurSevicesList";
 import Testimonials from "../components/home/Testimonials";
@@ -6,7 +6,14 @@ import OurProcess from "../components/Services/OurProcess";
 
 
 
+
 const Servicespage = () => {
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },[]);
   return (
     <>
 <ServiceBanner/>

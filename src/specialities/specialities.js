@@ -72,8 +72,13 @@ import Doctor1 from "../assets/images/about_dr_1.jpg";
 
 const SPECIALITIES = [
   // ==================== CORE SPECIALITIES ====================
+  // ==================== CORE SPECIALITIES ====================
   {
     slug: "cardiology",
+    title: "Cardiology & CTVS Surgery",
+    icon: cardiologyIcon,
+    shortdesc:
+      "Prachin Global Hospital’s Cardiology Department provides advanced, world-class cardiac care.",
     title: "Cardiology & CTVS Surgery",
     icon: cardiologyIcon,
     shortdesc:
@@ -106,6 +111,9 @@ const SPECIALITIES = [
       ],
       proceduresNote:
         "Advanced cardiac support using Impella and ECMO-assisted devices",
+
+      images: [cardimage1, Cardimage2],
+
 
       images: [cardimage1, Cardimage2],
 
@@ -178,6 +186,7 @@ const SPECIALITIES = [
 
       diagnosticsTitle: "Advanced Neurology & Neurosurgery Care",
       diagnosticsDescription: `At Prachin Global Hospital, we offer a comprehensive range of non-invasive, minimally invasive, and surgical treatments tailored to each patient’s condition. Our state-of-the-art infrastructure includes:`,
+      diagnosticsDescription: `At Prachin Global Hospital, we offer a comprehensive range of non-invasive, minimally invasive, and surgical treatments tailored to each patient’s condition. Our state-of-the-art infrastructure includes:`,
 
       diagnostics: [
         "HEPA-filtered modular operation theatres",
@@ -188,11 +197,14 @@ const SPECIALITIES = [
       diagnosticsDescription2:
         "Both outpatient and inpatient services are designed to ensure accurate diagnosis, effective treatment, and smooth recovery.",
 
+
       proceduresTitle: "Comprehensive Neurological Diagnostics",
       proceduresDescription: `Our Department of Neurophysiology provides advanced diagnostic testing essential for evaluating nervous system disorders. These tests help in early detection, accurate diagnosis, and effective treatment planning.`,
 
       proceduresSubTitle: "Diagnostic Tests Include:",
       procedures: [
+        "Electromyography (EMG): Detects muscle weakness, nerve damage, and muscular disorders by recording electrical activity in muscles.",
+        "Nerve Conduction Studies (NCS): Measures the speed and strength of nerve signals, helping diagnose conditions such as peripheral neuropathy, carpal tunnel syndrome, and radiculopathy.",
         "Electromyography (EMG): Detects muscle weakness, nerve damage, and muscular disorders by recording electrical activity in muscles.",
         "Nerve Conduction Studies (NCS): Measures the speed and strength of nerve signals, helping diagnose conditions such as peripheral neuropathy, carpal tunnel syndrome, and radiculopathy.",
         "Electroencephalogram (EEG)",
@@ -1414,6 +1426,28 @@ Our specialists provide personalized prenatal and postnatal care, ensuring a saf
       extraSectionContent: `Our Neonatal units focus heavily on supporting families during the often-emotional, long-term stay in the NICU. Our both specialties ensure that children, from the moment of birth, receive the medical care and developmental support needed for a healthy life.`,
 
       technologiesNote: `With state-of-the-art facilities and a highly skilled multidisciplinary team, we are committed to nurturing the well-being of every child.`,
+      overview: `Our Pediatrics and Neonatology are specialized, dedicated to the comprehensive care of infants, children, and adolescents, addressing their unique physiological, developmental and healthcare needs from birth through adolescence. While Pediatrics covers the general health and treatment of diseases for children up to 18 years old, Neonatology is a subspecialty focused on the medical care of newborns, especially those who are premature, have low birth weight, or have serious illnesses requiring intensive care.`,
+
+      diagnosticsTitle: "Key Aspects of Pediatric Care",
+      diagnostics: [
+        "Preventive Care: Routine check-ups, growth monitoring, and immunization.",
+        "Acute/Chronic Illness Management: Treating common illnesses (fever, cough, infections) and managing chronic conditions (asthma, diabetes, epilepsy).",
+        "Developmental Monitoring: Ensuring children meet developmental milestones.",
+        "Subspecialty Care: Pediatric departments often include specialized areas like cardiology, neurology, and orthopedics for complex conditions.",
+      ],
+
+      proceduresTitle: "Key Aspects of Neonatology",
+      proceduresDescription: `Our Neonatologists work in Neonatal Intensive Care Units (NICUs) and provide advanced, specialized care for infants in their first 28 days of life, although care may extend for premature infants.`,
+
+      procedures: [
+        "Expertise in High-Risk New born Care, Managing infants born prematurely (before 37 weeks), with low birth weight, or with birth defects.",
+        "Specialized Treatments: Using advanced equipment for life-saving interventions, such as ventilators, incubators for temperature regulation, and phototherapy for jaundice.",
+      ],
+      images: [pediatricsimage1, pediatricsimage2],
+      extraSectionTitle: "Family-Centered Care",
+      extraSectionContent: `Our Neonatal units focus heavily on supporting families during the often-emotional, long-term stay in the NICU. Our both specialties ensure that children, from the moment of birth, receive the medical care and developmental support needed for a healthy life.`,
+
+      technologiesNote: `With state-of-the-art facilities and a highly skilled multidisciplinary team, we are committed to nurturing the well-being of every child.`,
     },
   },
   {
@@ -1508,7 +1542,33 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
     title: "Anaesthesiology & Pain Management",
     icon: anaesthesiologyIcon,
     banner: bannerCardio,
+    icon: anaesthesiologyIcon,
+    banner: bannerCardio,
     sections: {
+      overview: `The Department of Anaesthesiology & Pain Management at Prachin Global Hospital plays a vital role in ensuring safe, comfortable, and pain-free surgical and medical care. Our highly skilled anaesthesiologists are dedicated to providing round-the-clock support for all types of surgeries, from minor procedures to complex and high-risk operations.`,
+
+      moreoverview: `At Prachin Global Hospital, we offer comprehensive anaesthesia services including general anaesthesia, regional anaesthesia, spinal and epidural anaesthesia, monitored anaesthesia care (MAC), and sedation for diagnostic and minimally invasive procedures. Every patient undergoes a thorough pre-anaesthetic evaluation to assess medical history, existing health conditions, and potential risks, ensuring a personalized and safe anaesthesia plan.`,
+
+      diagnosticsTitle: "Our Approach to Patient Safety",
+      diagnostics: [
+        "Our team works closely with surgeons, critical care specialists, and nursing staff to maintain the highest standards of patient safety before, during, and after surgery.",
+        "Advanced monitoring systems and modern equipment help us maintain precise control over vital parameters throughout the procedure.",
+      ],
+
+      proceduresTitle: "Pain Management Services",
+      proceduresDescription: `In addition to surgical anaesthesia, the department also specializes in acute and chronic pain management. We provide effective treatment for:`,
+      images: [Anaesthesiologyimage1, Anaesthesiologyimage2],
+      procedures: [
+        "Post-operative pain",
+        "Cancer-related pain",
+        "Back and neck pain",
+        "Joint and musculoskeletal pain",
+        "Nerve-related pain conditions",
+      ],
+
+      proceduresNote: `Our pain management approach includes medications, nerve blocks, epidural injections, and other minimally invasive procedures designed to improve comfort and enhance quality of life.`,
+
+      technologiesNote: `At Prachin Global Hospital, our Department of Anaesthesiology & Pain Management is committed to delivering safe anaesthesia care and comprehensive pain relief, ensuring every patient experiences comfort, safety, and faster recovery.`,
       overview: `The Department of Anaesthesiology & Pain Management at Prachin Global Hospital plays a vital role in ensuring safe, comfortable, and pain-free surgical and medical care. Our highly skilled anaesthesiologists are dedicated to providing round-the-clock support for all types of surgeries, from minor procedures to complex and high-risk operations.`,
 
       moreoverview: `At Prachin Global Hospital, we offer comprehensive anaesthesia services including general anaesthesia, regional anaesthesia, spinal and epidural anaesthesia, monitored anaesthesia care (MAC), and sedation for diagnostic and minimally invasive procedures. Every patient undergoes a thorough pre-anaesthetic evaluation to assess medical history, existing health conditions, and potential risks, ensuring a personalized and safe anaesthesia plan.`,
@@ -1536,13 +1596,42 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
     },
   },
 
+
   {
     slug: "critical-care",
     title: "Critical Care",
     category: "core",
     icon: CriticalCareIcon,
     banner: bannerCardio,
+    category: "core",
+    icon: CriticalCareIcon,
+    banner: bannerCardio,
     sections: {
+      overview: `The Critical Care Unit at Prachin Global Hospital is a state-of-the-art facility dedicated to delivering exceptional emergency and critical care services. Designed to meet international standards, our ICU provides timely, precise, and compassionate care to patients facing life-threatening conditions. In case of any medical emergency, our expert team is always ready to respond swiftly and effectively.`,
+
+      moreoverview: `As a leading emergency hospital in Hyderabad, Prachin Global Hospital offers round-the-clock emergency services, available 24 hours a day, 7 days a week. Our emergency care is powered by the seamless integration of advanced research, clinical excellence, and patient-centric care.`,
+
+      diagnosticsTitle: "Advanced Critical Care Infrastructure",
+      diagnostics: [
+        "A highly skilled multidisciplinary team—including paramedics, critical care nurses, emergency physicians, trauma specialists, surgeons, and doctors from multiple specialties—works together to manage a wide spectrum of medical emergencies.",
+        "Our Critical Care Unit is equipped with cutting-edge medical technology to manage all types of critical and emergency conditions with precision and expertise.",
+        "The ICU features advanced, fully monitored beds designed to continuously track vital physiological parameters of critically ill patients.",
+        "With quick access to diagnostics, imaging, laboratory services, and specialist consultations, we ensure prompt decision-making and timely intervention when every second matters.",
+      ],
+
+      proceduresTitle: "Conditions We Manage",
+      proceduresDescription: `Our round-the-clock critical care services have successfully treated a wide range of complex medical conditions, including:`,
+      images: [CriticalCareimage1, CriticalCareimage2],
+      procedures: [
+        "Post-operative and post-surgical critical care",
+        "Severe infections and sepsis",
+        "Cardiac and respiratory emergencies",
+        "Neurological emergencies",
+        "Trauma and accident-related injuries",
+        "Multi-organ dysfunction and other life-threatening illnesses",
+      ],
+
+      technologiesNote: `At Prachin Global Hospital, critical care goes beyond technology—it is about compassion, vigilance, and commitment. Our goal is not just to save lives, but to support recovery with dignity, safety, and trust.`,
       overview: `The Critical Care Unit at Prachin Global Hospital is a state-of-the-art facility dedicated to delivering exceptional emergency and critical care services. Designed to meet international standards, our ICU provides timely, precise, and compassionate care to patients facing life-threatening conditions. In case of any medical emergency, our expert team is always ready to respond swiftly and effectively.`,
 
       moreoverview: `As a leading emergency hospital in Hyderabad, Prachin Global Hospital offers round-the-clock emergency services, available 24 hours a day, 7 days a week. Our emergency care is powered by the seamless integration of advanced research, clinical excellence, and patient-centric care.`,

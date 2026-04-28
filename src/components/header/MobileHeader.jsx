@@ -1,5 +1,5 @@
 // components/Header/MobileHeader.jsx
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/Prachin Final Logo Website Size-02.png";
 import CloseIcon from "@mui/icons-material/Close";
@@ -9,14 +9,16 @@ import AmbulanceIcon from "../../assets/icons/Ambulance Icon.png";
 import CallIcon from "../../assets/icons/Contact Page Icons-02.png";
 import LandlineIcon from "../../assets/icons/Landline Icon.png";
 import EmergencyIcon from "../../assets/icons/Emergancy Services Icon.png";
+import { AppContext } from "../AppContext";
+import { HashLink } from "react-router-hash-link";
 export default function MobileHeader({ open, setOpen }) {
+  const { setActiveTab } = useContext(AppContext);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [doctorOpen, setDoctorOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [showPackages, setShowPackages] = useState(false);
   const [careerOpen, setCareerOpen] = useState(false);
-
   const closeMenu = () => {
     setOpen(false);
     setAboutOpen(false);
@@ -37,24 +39,24 @@ export default function MobileHeader({ open, setOpen }) {
           <div className="space-y-2 md:hidden">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 pr-3">
-                <img src={AmbulanceIcon} />
+                <img src={AmbulanceIcon} alt="" />
                 <Link to="">+91 92475 75108</Link>
               </div>
               <div className="h-5 w-px bg-[#365e8f]" />
               <div className="flex items-center gap-2 pl-3">
-                <img src={CallIcon} />
+                <img src={CallIcon} alt="" />
                 <Link to="">+91 70369 99111</Link>
               </div>
             </div>
 
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 pr-3">
-                <img src={LandlineIcon} />
+                <img src={LandlineIcon} alt="" />
                 <Link to="">08455 - 671111/99</Link>
               </div>
               <div className="h-5 w-px bg-[#365e8f]" />
               <div className="flex items-center gap-2 pl-3">
-                <img src={EmergencyIcon} />
+                <img src={EmergencyIcon} alt="" />
                 <Link to="">24/7 Emergency</Link>
               </div>
             </div>
@@ -63,28 +65,28 @@ export default function MobileHeader({ open, setOpen }) {
           {/* ✅ TABLET (md and above) */}
           <div className="hidden md:flex items-center justify-center gap-4 py-2">
             <div className="flex items-center gap-2">
-              <img src={AmbulanceIcon} />
+              <img src={AmbulanceIcon} alt="" />
               <Link to="">+91 92475 75108</Link>
             </div>
 
             <div className="h-5 w-px bg-[#365e8f]" />
 
             <div className="flex items-center gap-2">
-              <img src={CallIcon} />
+              <img src={CallIcon} alt="" />
               <Link to="">+91 70369 99111</Link>
             </div>
 
             <div className="h-5 w-px bg-[#365e8f]" />
 
             <div className="flex items-center gap-2">
-              <img src={LandlineIcon} />
+              <img src={LandlineIcon} alt="" />
               <Link to="">08455 - 671111/99</Link>
             </div>
 
             <div className="h-5 w-px bg-[#365e8f]" />
 
             <div className="flex items-center gap-2">
-              <img src={EmergencyIcon} />
+              <img src={EmergencyIcon} alt="" />
               <Link to="">24/7 Emergency</Link>
             </div>
           </div>
@@ -141,9 +143,12 @@ export default function MobileHeader({ open, setOpen }) {
             </button>
             {aboutOpen && (
               <div className="ml-4 flex flex-col gap-2 text-gray-600">
-                <Link to="/about/leadership-team" onClick={closeMenu}>
-                  Leadership Team
+                <Link smooth to="/about" onClick={closeMenu}>
+                  About
                 </Link>
+                <HashLink smooth to="/about#our-chairman" onClick={closeMenu}>
+                  Leadership Team
+                </HashLink>
               </div>
             )}
           </div>
@@ -195,21 +200,43 @@ export default function MobileHeader({ open, setOpen }) {
           {/* GALLERY */}
           <div>
             <button
-              onClick={() => setGalleryOpen(!galleryOpen)}
+              onClick={() => {
+                setGalleryOpen(!galleryOpen);
+              }}
               className="w-full flex justify-between py-2"
             >
               Gallery <span>{galleryOpen ? "−" : "+"}</span>
             </button>
             {galleryOpen && (
               <div className="ml-4 flex flex-col gap-2 text-gray-600">
-                <Link to="/gallery/photos" onClick={closeMenu}>
+                <Link
+                  to="/gallery"
+                  onClick={() => {
+                    closeMenu();
+                    setActiveTab(1);
+                  }}
+                >
                   Photos
                 </Link>
-                <Link to="/gallery/videos" onClick={closeMenu}>
+                <Link
+                  to="/gallery"
+                  onClick={() => {
+                    closeMenu();
+                    setActiveTab(2);
+                  }}
+                >
                   Videos
                 </Link>
-                <Link to="/gallery/news">News Articles</Link>
-                <Link to="/gallery/patients">Happy Patients</Link>
+                <Link
+                  to="/gallery"
+                  onClick={() => {
+                    closeMenu();
+                    setActiveTab(3);
+                  }}
+                >
+                  News Articles
+                </Link>
+                <Link to="/happy-patients">Happy Patients</Link>
               </div>
             )}
           </div>
@@ -242,7 +269,13 @@ export default function MobileHeader({ open, setOpen }) {
             </button>
             {careerOpen && (
               <div className="ml-4 flex flex-col gap-2 text-gray-600">
-                <Link to="/careers/vacancies" onClick={closeMenu}>
+                <Link
+                  to="/careers"
+                  onClick={() => {
+                    setActiveTab(1);
+                    closeMenu();
+                  }}
+                >
                   Vacancy Positions
                 </Link>
                 <Link to="/careers/internships">Internship Opportunities</Link>

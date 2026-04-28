@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/Prachin Final Logo Website Size-02.png";
 
@@ -8,6 +8,8 @@ import CallIcon from "../../assets/icons/Contact Page Icons-02.png";
 import LandlineIcon from "../../assets/icons/Landline Icon.png";
 import EmergencyIcon from "../../assets/icons/Emergancy Services Icon.png";
 import MobileHeader from "./MobileHeader";
+import { AppContext } from "../AppContext";
+import { HashLink } from "react-router-hash-link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -18,7 +20,7 @@ export default function Header() {
   const [doctorOpen, setDoctorOpen] = useState(false);
   const [careerOpen, setCareerOpen] = useState(false);
   const [hovered, setHovered] = useState(null);
-
+  const { setActiveTab } = useContext(AppContext);
   // Split specialities into 3 balanced columns (no headings)
   const totalItems = SPECIALITIES.length;
   const colSize = Math.ceil(totalItems / 3);
@@ -96,9 +98,13 @@ export default function Header() {
                 <div
                   className={`absolute left-1/2 -translate-x-1/2 top-full mt-4 bg-white shadow-xl rounded-xl p-3 w-48 flex flex-col gap-2 items-center transition-all duration-300 z-[9999] ${aboutOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}
                 >
-                  <Link className="w-full text-left  py-1 rounded-md hover:text-[#ed721d] px-2 hover:bg-[#feebdf] transition">
+                  <HashLink
+                    smooth
+                    to="/about#our-chairman"
+                    className="w-full text-left  py-1 rounded-md hover:text-[#ed721d] px-2 hover:bg-[#feebdf] transition"
+                  >
                     Leadership Team
-                  </Link>
+                  </HashLink>
                 </div>
               </div>
 
@@ -214,6 +220,7 @@ export default function Header() {
               >
                 <Link
                   to="/gallery"
+                  onClick={() => setActiveTab(1)}
                   className="flex items-center gap-1 hover:text-[#ed721d]"
                 >
                   Gallery
@@ -230,25 +237,28 @@ export default function Header() {
                   className={`absolute left-1/2 -translate-x-1/2 top-full mt-4 bg-white shadow-xl rounded-xl p-3 w-52 flex flex-col gap-2 items-center transition-all duration-300 z-[9999] ${galleryOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}
                 >
                   <Link
-                    to="/gallery/photos"
+                    to="/gallery"
+                    onClick={() => setActiveTab(1)}
                     className="w-full text-left rounded-md hover:text-[#ed721d] px-2 hover:bg-[#feebdf] py-1"
                   >
                     Photos
                   </Link>
                   <Link
-                    to="/gallery/videos"
+                    to="/gallery"
+                    onClick={() => setActiveTab(2)}
                     className="w-full text-left rounded-md hover:text-[#ed721d] px-2 hover:bg-[#feebdf] py-1"
                   >
                     Videos
                   </Link>
                   <Link
-                    to="/gallery/news"
+                    to="/gallery"
+                    onClick={() => setActiveTab(3)}
                     className="w-full text-left rounded-md hover:text-[#ed721d] px-2 hover:bg-[#feebdf] py-1"
                   >
                     News Articles
                   </Link>
                   <Link
-                    to="/gallery/patients"
+                    to="/happy-patients"
                     className="w-full text-left rounded-md hover:text-[#ed721d] px-2 hover:bg-[#feebdf] py-1"
                   >
                     Happy Patients
@@ -299,6 +309,7 @@ export default function Header() {
               >
                 <Link
                   to="/careers"
+                  onClick={() => setActiveTab(1)}
                   className="flex items-center gap-1 hover:text-[#ed721d]"
                 >
                   Careers
@@ -315,13 +326,15 @@ export default function Header() {
                   className={`absolute left-1/2 -translate-x-1/2 top-full mt-4 bg-white shadow-xl rounded-xl p-3 w-60 flex flex-col gap-2 items-center transition-all duration-300 z-[9999] ${careerOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}
                 >
                   <Link
-                    to="/careers/vacancies"
+                    to="/careers"
+                    onClick={() => setActiveTab(1)}
                     className="w-full text-left py-1 rounded-md hover:text-[#ed721d] px-2 hover:bg-[#feebdf] transition"
                   >
                     Vacancy Positions
                   </Link>
                   <Link
-                    to="/careers/internships"
+                    to="/careers"
+                    onClick={() => setActiveTab(2)}
                     className="w-full text-left py-1 rounded-md hover:text-[#ed721d] px-2 hover:bg-[#feebdf] transition"
                   >
                     Internship Opportunities

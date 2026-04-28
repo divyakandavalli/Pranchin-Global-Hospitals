@@ -16,8 +16,19 @@ const DoctorsBanner = () => {
           className="w-full  object-cover h-[350px] md:h-auto"
         />
       </div>
+      <div
+        className="top-0 absolute left-0 w-full
+      h-auto"
+      >
+        <img
+          src={bannerimg}
+          alt=""
+          className="w-full  object-cover h-[350px] md:h-auto"
+        />
+      </div>
       <div className="text-center text-white z-10 flex flex-col md:gap-6 gap-0">
         <h1 className="md:text-8xl text-[52px] font-manrope font-semibold">
+          Doctors
           Doctors
         </h1>
       </div>

@@ -78,8 +78,8 @@ CHANNEL`,
     },
   ];
   return (
-    <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
-      <div className=" rounded-[24px] py-10 md:px-10 relative  overflow-hidden">
+    <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto pt-10">
+      <div className=" rounded-[24px] pb-10 md:px-10 relative  overflow-hidden">
         <div className="flex justify-center flex-col items-center">
           <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
             Our Unique Features
@@ -92,7 +92,7 @@ CHANNEL`,
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-8 gap-4 mt-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-6 gap-4 mt-10">
           {feature.map((item, index) => (
             <div
               key={index}
@@ -100,7 +100,7 @@ CHANNEL`,
             >
               <img src={item.image} alt="" className="w-12 h-12" />
 
-              <p className="text-base font-manrope text-[#5187af] font-semibold">
+              <p className="text-[14px] 3xl:text-[15px] font-manrope text-[#5187af] font-semibold">
                 {item.title}
               </p>
             </div>

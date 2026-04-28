@@ -9,17 +9,17 @@ const AboutCoreValues = () => {
   const services = [
     {
       title: " Patient-First",
-      desc: " Committed to providing patient-centric care with safety, dignity, and well-being at the centre of every clinical and administrative decision.",
+      desc: "Committed to providing Patient Centric care with Safety, Dignity and Well-being at the Centre of every Clinical and Administrative Decision.",
       img: about_icon_1,
     },
     {
       title: "Professionalism",
-      desc: "Committed to ethical practice, accountability, transparency, and mutual respect across all levels of care.",
+      desc: "Committed toward Ethical practice, Accountability, Transparency and mutual respect across all levels.",
       img: about_icon_2,
     },
     {
       title: " Precision",
-      desc: "Committed to accuracy and excellence in diagnosis, treatment, clinical outcomes, and documentation through evidence-based practices.",
+      desc: "Committed to precision and accuracy in diagnosis, treatment, clinical outcomes, and documentation through rigorous evidence-based practices.",
       img: about_icon_3,
     },
     {
@@ -29,13 +29,13 @@ const AboutCoreValues = () => {
     },
     {
       title: "Preparedness",
-      desc: "Committed to maintaining readiness for all emergencies, disasters, trauma, and critical care situations through skilled professionals, advanced equipment, and robust clinical protocols.Top of Form.",
+      desc: "Committed to maintaining readiness for round the clock readiness for Emergencies and Trauma, Disasters and Critical Care situations through skilled professionals, advanced equipment following standard clinical protocols.",
       img: about_icon_5,
     },
   ];
   return (
     <div className="xl:max-w-[95%] 3xl:max-w-[85%] w-[95%] mx-auto">
-      <div className=" rounded-[24px]  py-10 md:px-10 relative  overflow-hidden">
+      <div className=" rounded-[24px]  pt-5  md:px-10 relative  overflow-hidden">
         <div className="flex justify-center flex-col items-center">
           <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-4 py-1 rounded-full tracking-[3px]  text-[16px] uppercase">
             Core Values
@@ -56,7 +56,7 @@ const AboutCoreValues = () => {
               <h2 className="text-[16px] md:text-[18px] font-manrope font-semibold mb-1">
                 {item.title}
               </h2>
-              <p className=" w-10/12 text-[#66686C] font-normal text-sm font-manrope">
+              <p className=" w-10/12 text-[#66686C] font-normal text-sm 3xl:text-[15px] font-manrope">
                 {item.desc}
               </p>
               <div className="w-20 absolute flex  rounded-tl-3xl pt-[10px] font-manrope bg-[#ffffff] bottom-0 right-0   justify-end items-end">
@@ -88,7 +88,7 @@ const AboutCoreValues = () => {
               <h2 className="text-[16px] md:text-[18px] font-manrope font-semibold mb-1">
                 {item.title}
               </h2>
-              <p className=" w-10/12 text-[#66686C] font-normal text-sm font-manrope">
+              <p className=" w-10/12 text-[#66686C] font-normal text-sm 3xl:text-[15px] font-manrope">
                 {item.desc}
               </p>
               <div className="w-20 absolute flex  rounded-tl-3xl pt-[10px] font-manrope bg-[#ffffff] bottom-0 right-0   justify-end items-end">

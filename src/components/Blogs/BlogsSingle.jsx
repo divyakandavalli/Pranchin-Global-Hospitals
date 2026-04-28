@@ -35,7 +35,7 @@ const BlogsSingle = () => {
             className="md:rounded-3xl rounded-xl w-full md:aspect-[21/9]"
           />
         </div>
-        <div className="flex flex-col gap-3 font-manrope md:text-lg text-base py-4">
+        <div className="flex flex-col gap-3 font-manrope text-[14px] 3xl:text-[15px] py-4">
           <p>
             has partnered with L&T Metro Rail (Hyderabad) Limited for the
             semi-naming rights of the KPHB Colony Metro Station. The station

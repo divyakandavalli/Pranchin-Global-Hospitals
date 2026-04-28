@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import footer_banner from "../assets/images/footer_banner.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import logo from "../assets/images/Prachin Final Logo Website Size-02.png";
@@ -13,10 +13,13 @@ import img3 from "../assets/images/gallery_photos/image (3).jpg";
 import img4 from "../assets/images/gallery_photos/image (4).jpg";
 import img5 from "../assets/images/gallery_photos/image (5).jpg";
 import img6 from "../assets/images/gallery_photos/image (6).jpg";
+import nabh from "../assets/images/nabh.jpg";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { Link } from "react-router-dom";
 import footer_24 from "../assets/images/footer_24.png";
+import { AppContext } from "./AppContext";
 const Footer = () => {
+  const { setActiveTab } = useContext(AppContext);
   const social = [
     {
       id: 1,
@@ -92,7 +95,7 @@ const Footer = () => {
       <div className="3xl:max-w-[72%] font-manrope bg-[#010813]  pt-10 mx-auto px-4  flex xl:flex-row flex-col  md:gap-20 gap-10  md:w-[95%]">
         <div className="xl:w-[28%] flex flex-col xl:items-start items-center gap-4">
           <img src={logo} className="xl:w-52 w-60 brightness-100" alt="" />
-          <p className="text-[15px]  text-white xl:w-auto md:w-2/3 text-left">
+          <p className="3xl:text-[15px] text-sm text-white xl:w-auto md:w-2/3 text-left">
             Dedicated to providing expert healthcare with advanced tech
             treatments to ensure your well-being and a healthier future.
           </p>
@@ -111,7 +114,7 @@ const Footer = () => {
           </div>
           <div className="mt-2">
             <h2 className="text-[#C3C6CE]  tracking-widest font-medium text-left">
-              OUR GALLERY
+              Our Gallery
             </h2>
 
             <div className="mt-4">
@@ -171,24 +174,27 @@ const Footer = () => {
           </div>
         </div>
         <div className="xl:w-[70%] ">
-          <div className=" flex lg:flex-row flex-col justify-between xl:gap-8 lg:gap-4 gap-8 font-manrope">
+          <div className=" flex md:flex-row flex-col justify-between xl:gap-8 md:gap-4 gap-8 font-manrope">
             <div className="flex flex-col gap-2 text-base">
               <h3 className="text-[#C3C6CE]  tracking-widest font-medium">
-                COMPANY
+                Links
               </h3>
-              <ul className="flex flex-col  text-white">
+              <ul className="flex flex-col 3xl:text-[15px] text-sm  text-white">
                 <Link to="/about">About US</Link>
                 <Link to="/careers">Careers</Link>
                 <Link to="/doctors">Our Doctors</Link>
-                <Link to="/gallery">Gallery</Link>
+                <Link to="/blogs">Blogs</Link>
+                <Link to="/gallery" onClick={() => setActiveTab(1)}>
+                  Gallery
+                </Link>
                 <Link to="/happy-patients">Happy Patients</Link>
               </ul>
             </div>
             <div className="flex flex-col gap-2 text-base">
               <h3 className="text-[#C3C6CE]  tracking-widest font-medium">
-                SERVICES
+                Services
               </h3>
-              <ul className="flex flex-col  text-white">
+              <ul className="flex flex-col 3xl:text-[15px] text-sm  text-white">
                 <li>General Consultation</li>
                 <li>Specialized Treatment</li>
                 <li>Emergency Care</li>
@@ -199,15 +205,15 @@ const Footer = () => {
               <h3 className="text-[#C3C6CE]  tracking-widest font-medium">
                 For Patients
               </h3>
-              <ul className="flex flex-col  text-white">
+              <ul className="flex flex-col 3xl:text-[15px] text-sm  text-white">
                 <Link to="/patient-resources">Patients Resources</Link>
                 <Link to="/patient-services">Patients Services</Link>
                 <Link to="/contact">Book an Appointment </Link>
               </ul>
             </div>
             <div className="flex flex-col  gap-4 text-base">
-             
-              <div className="flex justify-center mt-4 items-center">
+              <div className="flex justify-start flex-row sm:flex-nowrap flex-wrap gap-2 mt-4 items-center">
+                <img src={nabh} alt="24/7 open" className="sm:w-20 w-16" />
                 <img src={footer_24} alt="24/7 open" />
               </div>
             </div>
@@ -225,7 +231,7 @@ const Footer = () => {
                 placeholder="Your Name"
                 className="bg-white text-base w-full outline-none text-black py-3 rounded-full px-6"
               />
-              <button className="group  flex items-center justify-between bg-[#094CA0]  text-white px-6 py-2 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300">
+              <button className="group 3xl:text-[15px] text-sm  flex items-center justify-between bg-[#094CA0]  text-white px-6 py-2 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300">
                 <span className="font-medium font-manrope text-[16px] capitalize">
                   Subscribe
                 </span>
@@ -242,9 +248,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="3xl:max-w-[72%] lg:mt-5 py-3 text-white font-manrope border-t lg:flex-nowrap lg:gap-0 gap-5 flex-wrap border-[#2E2E2E] mx-auto w-[95%]  flex md:flex-row flex-col justify-between md:items-center">
+      <div className="3xl:max-w-[72%] lg:mt-5 py-3 text-white font-manrope border-t 3xl:text-[15px] text-sm lg:flex-nowrap lg:gap-0 gap-5 flex-wrap border-[#2E2E2E] mx-auto w-[95%]  flex md:flex-row flex-col justify-between md:items-center">
         <p>© 2026 Prachin Hospital. All rights reserved.</p>
-        <div className="flex flex-row flex-wrap  gap-4">
+        <div className="flex flex-row flex-wrap 3xl:text-[15px] text-sm  gap-4">
           <a href="/">Terms & Conditions</a>
           <a href="/">Privacy Policy</a>
         </div>
@@ -252,7 +258,7 @@ const Footer = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="group  flex items-center justify-between bg-[#094CA0]  text-white px-3 py-2 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300"
         >
-          <span className="font-medium font-manrope text-[16px] capitalize">
+          <span className="font-medium font-manrope 3xl:text-[15px] text-sm capitalize">
             Back to Top
           </span>
 

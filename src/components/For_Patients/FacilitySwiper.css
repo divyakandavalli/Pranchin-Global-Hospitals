@@ -12,11 +12,6 @@
   align-items: center;
 }
 
-.swiper-slide img {
-  display: block;
-  height: 100%;
-  object-fit: cover;
-}
 .custom-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;

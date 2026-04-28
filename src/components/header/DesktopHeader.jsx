@@ -1,5 +1,5 @@
 // components/Header/DesktopHeader.jsx
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/Prachin Final Logo Website Size-01.png";
 import AmbulanceIcon from "../../assets/icons/ambulance.png";
@@ -8,6 +8,8 @@ import LandlineIcon from "../../assets/icons/Landline.png";
 import EmergencyIcon from "../../assets/icons/emergency-services.png";
 
 import SPECIALITIES from "../../specialities/specialities";
+import { AppContext } from "../AppContext";
+import { HashLink } from "react-router-hash-link";
 
 export default function DesktopHeader() {
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -17,7 +19,7 @@ export default function DesktopHeader() {
   const [showPackages, setShowPackages] = useState(false);
   const [careerOpen, setCareerOpen] = useState(false);
   const [hovered, setHovered] = useState(null);
-
+  const { setActiveTab } = useContext(AppContext);
   const core = SPECIALITIES.filter((item) => item.category === "core");
   const Surgical = SPECIALITIES.filter((item) => item.category === "Surgical");
   const Support = SPECIALITIES.filter((item) => item.category === "Support");
@@ -27,11 +29,7 @@ export default function DesktopHeader() {
       {/* LOGO */}
       <div className="flex items-center">
         <Link to="/">
-          <img
-            src={logo}
-            alt="logo"
-            className="h-[60px] md:h-auto w-auto"
-          />
+          <img src={logo} alt="logo" className="h-[60px] md:h-auto w-auto" />
         </Link>
       </div>
 
@@ -80,12 +78,21 @@ export default function DesktopHeader() {
             onMouseEnter={() => setAboutOpen(true)}
             onMouseLeave={() => setAboutOpen(false)}
           >
-            <Link to="/about" className="flex items-center gap-1 hover:text-[#ed721d]">
+            <Link
+              to="/about"
+              className="flex items-center gap-1 hover:text-[#ed721d]"
+            >
               About
               <DropdownArrow />
             </Link>
             <Dropdown isOpen={aboutOpen}>
-              <Link to="/about/leadership-team" className="dropdown-link">Leadership Team</Link>
+              <HashLink
+                smooth
+                to="/about#our-chairman"
+                className="dropdown-link"
+              >
+                Leadership Team
+              </HashLink>
             </Dropdown>
           </div>
 
@@ -95,13 +102,20 @@ export default function DesktopHeader() {
             onMouseEnter={() => setDoctorOpen(true)}
             onMouseLeave={() => setDoctorOpen(false)}
           >
-            <Link to="/doctors" className="flex items-center gap-1 hover:text-[#ed721d]">
+            <Link
+              to="/doctors"
+              className="flex items-center gap-1 hover:text-[#ed721d]"
+            >
               Doctors
               <DropdownArrow />
             </Link>
             <Dropdown isOpen={doctorOpen}>
-              <Link to="/doctors/emergency" className="dropdown-link">Emergency Team</Link>
-              <Link to="/doctors/critical-care" className="dropdown-link">Critical Care</Link>
+              <Link to="/doctors/emergency" className="dropdown-link">
+                Emergency Team
+              </Link>
+              <Link to="/doctors/critical-care" className="dropdown-link">
+                Critical Care
+              </Link>
             </Dropdown>
           </div>
 
@@ -111,11 +125,19 @@ export default function DesktopHeader() {
             onMouseEnter={() => setMegaOpen(true)}
             onMouseLeave={() => setMegaOpen(false)}
           >
-            <Link to="/specialities" className="flex items-center gap-1 hover:text-[#ed721d]">
+            <Link
+              to="/specialities"
+              className="flex items-center gap-1 hover:text-[#ed721d]"
+            >
               Specialities
               <DropdownArrow />
             </Link>
-            <MegaMenu isOpen={megaOpen} core={core} Surgical={Surgical} Support={Support} />
+            <MegaMenu
+              isOpen={megaOpen}
+              core={core}
+              Surgical={Surgical}
+              Support={Support}
+            />
           </div>
 
           {/* Gallery */}
@@ -124,15 +146,39 @@ export default function DesktopHeader() {
             onMouseEnter={() => setGalleryOpen(true)}
             onMouseLeave={() => setGalleryOpen(false)}
           >
-            <Link to="/gallery" className="flex items-center gap-1 hover:text-[#ed721d]">
+            <Link
+              to="/gallery"
+              onClick={() => setActiveTab(1)}
+              className="flex items-center gap-1 hover:text-[#ed721d]"
+            >
               Gallery
               <DropdownArrow />
             </Link>
             <Dropdown isOpen={galleryOpen} width="w-52">
-              <Link to="/gallery/photos" className="dropdown-link">Photos</Link>
-              <Link to="/gallery/videos" className="dropdown-link">Videos</Link>
-              <Link to="/gallery/news" className="dropdown-link">News Articles</Link>
-              <Link to="/gallery/patients" className="dropdown-link">Happy Patients</Link>
+              <Link
+                to="/gallery"
+                onClick={() => setActiveTab(1)}
+                className="dropdown-link"
+              >
+                Photos
+              </Link>
+              <Link
+                to="/gallery"
+                onClick={() => setActiveTab(2)}
+                className="dropdown-link"
+              >
+                Videos
+              </Link>
+              <Link
+                to="/gallery"
+                onClick={() => setActiveTab(3)}
+                className="dropdown-link"
+              >
+                News Articles
+              </Link>
+              <Link to="/happy-patients" className="dropdown-link">
+                Happy Patients
+              </Link>
             </Dropdown>
           </div>
 
@@ -147,8 +193,12 @@ export default function DesktopHeader() {
               <DropdownArrow />
             </p>
             <Dropdown isOpen={showPackages}>
-              <Link to="/health-packages" className="dropdown-link">Health Packages</Link>
-              <Link to="/special-offers" className="dropdown-link">Special Offers</Link>
+              <Link to="/health-packages" className="dropdown-link">
+                Health Packages
+              </Link>
+              <Link to="/special-offers" className="dropdown-link">
+                Special Offers
+              </Link>
             </Dropdown>
           </div>
 
@@ -158,13 +208,29 @@ export default function DesktopHeader() {
             onMouseEnter={() => setCareerOpen(true)}
             onMouseLeave={() => setCareerOpen(false)}
           >
-            <Link to="/careers" className="flex items-center gap-1 hover:text-[#ed721d]">
+            <Link
+              to="/careers"
+              onClick={() => setActiveTab(1)}
+              className="flex items-center gap-1 hover:text-[#ed721d]"
+            >
               Careers
               <DropdownArrow />
             </Link>
             <Dropdown isOpen={careerOpen} width="w-60">
-              <Link to="/careers/vacancies" className="dropdown-link">Vacancy Positions</Link>
-              <Link to="/careers/internships" className="dropdown-link">Internship Opportunities</Link>
+              <Link
+                to="/careers"
+                onClick={() => setActiveTab(1)}
+                className="dropdown-link"
+              >
+                Vacancy Positions
+              </Link>
+              <Link
+                to="/careers"
+                onClick={() => setActiveTab(2)}
+                className="dropdown-link"
+              >
+                Internship Opportunities
+              </Link>
             </Dropdown>
           </div>
 
@@ -209,14 +275,21 @@ export default function DesktopHeader() {
 /* Reusable Components */
 const DropdownArrow = () => (
   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
-    <path d="m19 9-7 7-7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <path
+      d="m19 9-7 7-7-7"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
   </svg>
 );
 
 const Dropdown = ({ isOpen, children, width = "w-48" }) => (
   <div
     className={`absolute left-1/2 -translate-x-1/2 top-full mt-4 bg-white shadow-xl rounded-xl p-3 ${width} flex flex-col gap-2 transition-all duration-300 z-[9999] ${
-      isOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+      isOpen
+        ? "opacity-100 visible translate-y-0"
+        : "opacity-0 invisible -translate-y-2"
     }`}
   >
     {children}
@@ -226,15 +299,22 @@ const Dropdown = ({ isOpen, children, width = "w-48" }) => (
 const MegaMenu = ({ isOpen, core, Surgical, Support }) => (
   <div
     className={`absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[900px] bg-white shadow-xl rounded-xl py-6 px-8 grid grid-cols-3 gap-8 transition-all duration-300 z-[9999] ${
-      isOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+      isOpen
+        ? "opacity-100 visible translate-y-0"
+        : "opacity-0 invisible -translate-y-2"
     }`}
   >
     <div>
-      <h4 className="font-semibold text-gray-800 mb-3 px-2">Core Specialities</h4>
+      <h4 className="font-semibold text-gray-800 mb-3 px-2">
+        Core Specialities
+      </h4>
       <ul className="space-y-1 text-gray-600">
         {core.map((item) => (
           <li key={item.slug}>
-            <Link to={`/specialities/${item.slug}`} className="block w-full px-2 py-1 rounded-md hover:text-[#ed721d] transition">
+            <Link
+              to={`/specialities/${item.slug}`}
+              className="block w-full px-2 py-1 rounded-md hover:text-[#ed721d] transition"
+            >
               {item.title}
             </Link>
           </li>
@@ -242,11 +322,16 @@ const MegaMenu = ({ isOpen, core, Surgical, Support }) => (
       </ul>
     </div>
     <div>
-      <h4 className="font-semibold text-gray-800 mb-3 px-2">Surgical Specialities</h4>
+      <h4 className="font-semibold text-gray-800 mb-3 px-2">
+        Surgical Specialities
+      </h4>
       <ul className="space-y-1 text-gray-600">
         {Surgical.map((item) => (
           <li key={item.slug}>
-            <Link to={`/specialities/${item.slug}`} className="block w-full px-2 py-1 rounded-md hover:text-[#ed721d] transition">
+            <Link
+              to={`/specialities/${item.slug}`}
+              className="block w-full px-2 py-1 rounded-md hover:text-[#ed721d] transition"
+            >
               {item.title}
             </Link>
           </li>
@@ -254,11 +339,16 @@ const MegaMenu = ({ isOpen, core, Surgical, Support }) => (
       </ul>
     </div>
     <div>
-      <h4 className="font-semibold text-gray-800 mb-3 px-2">Support & Others</h4>
+      <h4 className="font-semibold text-gray-800 mb-3 px-2">
+        Support & Others
+      </h4>
       <ul className="space-y-1 text-gray-600">
         {Support.map((item) => (
           <li key={item.slug}>
-            <Link to={`/specialities/${item.slug}`} className="block w-full px-2 py-1 rounded-md hover:text-[#ed721d] transition">
+            <Link
+              to={`/specialities/${item.slug}`}
+              className="block w-full px-2 py-1 rounded-md hover:text-[#ed721d] transition"
+            >
               {item.title}
             </Link>
           </li>

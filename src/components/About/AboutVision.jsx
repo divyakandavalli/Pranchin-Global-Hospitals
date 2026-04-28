@@ -8,19 +8,19 @@ const AboutVision = () => {
       id: 1,
       img: our_vision,
       title: "Our Vision",
-      desc: "To operate a top-quality, integrated healthcare provider using the best clinical practices and the latest technology, while always prioritising patient care for a healthier society.",
+      desc: "To operate a top-quality, integrated healthcare provider using the best clinical practices and the advanced technology, while always prioritising patient care for a healthier society.",
     },
     {
       id: 2,
       img: our_mission,
       title: "Our Mission",
-      desc: "To deliver high-quality, ethical, and compassionate healthcare through integrated clinical services, advanced medical technology, and evidence-based best practices. We are committed to patient safety, clinical excellence, and continuous innovation, supported by skilled professionals, to improve health outcomes and contribute to a healthier society.",
+      desc: "To deliver high-quality, ethical and compassionate healthcare through integrated clinical services, advanced medical technology along with evidence based best practices.  We are committed to patient safety, clinical excellence, continuous innovation, supported by skilled professionals, to improve health outcomes and contribute to a healthier society. ",
     },
     {
       id: 3,
       img: our_aim,
       title: "Our Aim",
-      desc: "Prachin Global Hospitals aims to be a world-class healthcare provider by integrating cutting-edge technology with compassionate care. We focus on patient delight, integrity, and teamwork, with a core mission to deliver excellent and empathetic healthcare while upholding values such as patient-first approach, professionalism, precision, privacy, preparedness, and continuous improvement across all services.",
+      desc: "Prachin Global Hospitals aims to be a world-class healthcare provider by integrating cutting-edge technology with compassionate care.  We focus on patient delight, integrity and teamwork with a core mission to deliver excellent and empathetic healthcare while upholding values such as patient-first approach, professionalism, precision, privacy, preparedness and continuous improvement across all services.",
     },
   ];
   return (
@@ -51,8 +51,8 @@ const AboutVision = () => {
               className="relative flex flex-col items-center bg-[#E5F4FF] rounded-3xl md:pt-20 pt-12 pb-8 px-6"
             >
               {/* Image Circle */}
-              <div className="absolute -top-12 sm:-top-14 md:-top-16 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-[#C8DDED] border-8 border-[#E5F4FF] rounded-full flex items-center justify-center">
-                <img src={item.img} alt="" className="w-12 sm:w-16 md:w-20" />
+              <div className="absolute -top-12 sm:-top-14 md:-top-16 w-24 h-24 sm:w-28 sm:h-28 md:w-28 md:h-28 bg-[#C8DDED] border-8 border-[#E5F4FF] rounded-full flex items-center justify-center">
+                <img src={item.img} alt="" className="w-12 sm:w-14 " />
               </div>
 
               {/* Content */}
@@ -60,7 +60,7 @@ const AboutVision = () => {
                 {item.title}
               </h2>
 
-              <p className="text-center text-[#66686C] text-sm  font-manrope">
+              <p className="text-justify text-[#66686C] text-sm 3xl:text-[15px] font-manrope">
                 {item.desc}
               </p>
             </div>

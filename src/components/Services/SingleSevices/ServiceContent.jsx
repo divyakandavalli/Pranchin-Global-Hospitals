@@ -8,8 +8,10 @@ import fallback1 from "../../../assets/images/Services/shot-operating-room-assis
 import fallback2 from "../../../assets/images/Services/doctor-checking-patient.jpg";
 import image3 from "../../../assets/images/Services/4811589_49643 0-01.jpg";
 
+
 export default function ServiceContent() {
   const { slug } = useParams();
+;
 
   const data = SPECIALITIES.find((item) => item.slug === slug);
 
