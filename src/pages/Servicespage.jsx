@@ -11,8 +11,8 @@ const Servicespage = () => {
     <>
 <ServiceBanner/>
 <OurSevicesList/>
-<Testimonials/>
-<OurProcess/>
+{/* <Testimonials/>
+<OurProcess/> */}
     </>
   );
 };

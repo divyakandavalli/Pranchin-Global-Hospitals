@@ -12,10 +12,10 @@ const SingleService = () => {
     <>
       <SingleSBanner />
       <ServiceContent />
-      <AboutDoctors/>
-      <ServiceTestimonials />
+      {/* <AboutDoctors/> */}
+      {/* <ServiceTestimonials /> */}
       <OtherServices/>
-      <OurProcess/>
+      {/* <OurProcess/> */}
     </>
   );
 };

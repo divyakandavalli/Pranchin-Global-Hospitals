@@ -1,65 +1,64 @@
 import React from 'react'
-import emergency_24_7 from "../../assets/images/facilities/emergencey_27_7-01.png";
-import HealthCheckup from '../../assets/icons/2-08.png'
-import Emergency from '../../assets/icons/2-07.png'
-import Endoscopy from '../../assets/icons/2-05.png'
-import Laminar from '../../assets/icons/2-04.png'
-import Cathlab from '../../assets/icons/2-09.png'
-import Gyneac from '../../assets/icons/1-11.png'
-import bedded from '../../assets/icons/2-02.png'
-import Dialysis from '../../assets/icons/2-06.png'
-import Pharmacy from '../../assets/icons/2-10.png'
-import Central from '../../assets/icons/2-10.png'
-import Radiology from '../../assets/icons/2-03.png'
+import EmergencyIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-01.png'
+import SpecialisedIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-02.png'
+import RadiologyIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-03.png'
+import LaboratoryIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-04.png'
+import PharmacyIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-05.png'
+import MotherIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-06.png'
+import CathlabIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-07.png'
+import PackagesIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-08.png'
+import LaminarIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-09.png'
+import DialysisIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-10.png'
+import AmbulanceIcon from '../../assets/icons/Round-the-clock/Round The Clock Services Icons-11.png'
 import Marquee from "react-fast-marquee";
 export default function RoundTheClock() {
   const facilities = [
     {
       title: "24/7 Emergency Services",
-      icon: HealthCheckup,
+      icon: EmergencyIcon,
     }, // [1]
     {
       title: "24/7 Specialised Critical Care",
-      icon: Emergency,
+      icon: SpecialisedIcon,
     }, // [2]
     {
-      title: "24/7 Rodiology",
-      icon: Endoscopy,
+      title: "24/7 Radiology",
+      icon: RadiologyIcon,
     }, // [3]
     {
       title:
         "24/7 Advanced Laboratory",
-      icon: Laminar,
+      icon: LaboratoryIcon,
     }, // [4]
     {
       title: "24/7 Pharmacy",
-     icon: Cathlab,
+     icon: PharmacyIcon,
     }, // [5]
     {
       title:
         "24/7 Mother and Child Care Unit - Level III",
-      icon: Gyneac,
+      icon: MotherIcon,
     }, // [6]
     {
       title:
         "Cath Lab with DSA ",
-      icon: emergency_24_7,
+      icon: CathlabIcon,
     }, // [7]
     {
       title: "Preventive Health Check-up Packages",
-      icon: bedded,
+      icon: PackagesIcon,
     }, // [8]
     {
       title: "World Class OTs featuring Laminar Airflow, HEPA Filters, High end Microscopes",
-      icon: Dialysis,
+      icon: LaminarIcon,
     }, // [9]
     {
       title: "Dialysis Unit ",
-      icon: Pharmacy,
+      icon: DialysisIcon,
     }, // [10]
     {
       title: "24/7 Ambulance with ventilator",
-      icon: Central,
+      icon: AmbulanceIcon,
     }, // [11]
   ];
   return (

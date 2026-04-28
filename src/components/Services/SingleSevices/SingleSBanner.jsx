@@ -17,24 +17,23 @@ const SingleSBanner = () => {
   const bannerImage = data.banner || defaultBanner;
 
   return (
-    <div
-      className="2xl:max-w-[80%] md:w-[95%] w-full xl:bg-fixed relative mx-auto xl:min-h-[500px] md:min-h-[400px] h-[350px] mt-5 overflow-hidden flex items-center justify-center md:rounded-3xl bg-center lg:bg-[top_center] bg-cover bg-no-repeat"
-      style={{
-        backgroundImage: `url(${bannerImage})`,
-      }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-[#010813]/70" />
-
+    <div className=" w-full xl:bg-fixed relative mx-auto py-20 xl:py-24 overflow-hidden flex items-center justify-center">
       {/* Content */}
+      <div
+        className="top-0 absolute left-0 w-full
+      h-auto"
+      >
+        <img
+          src={bannerImage}
+          alt=""
+          className="w-full  object-cover h-[350px] md:h-auto"
+        />
+      </div>
       <div className="text-center text-white z-10 flex flex-col md:gap-6 gap-0">
-
-        {/* TITLE */}
         <h1 className="md:text-8xl text-[52px] font-manrope font-semibold">
           {data.title}
         </h1>
 
-        {/* BREADCRUMB */}
         <div className="flex items-center justify-center text-base font-manrope">
           <Link to="/specialities">All Specialities</Link>
 
@@ -42,9 +41,7 @@ const SingleSBanner = () => {
             <KeyboardArrowRightIcon />
           </span>
 
-          <span className="text-[#f37721]">
-            {data.title}
-          </span>
+          <span className="text-[#f37721]">{data.title}</span>
         </div>
       </div>
     </div>
