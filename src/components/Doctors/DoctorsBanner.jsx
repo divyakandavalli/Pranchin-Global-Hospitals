@@ -1,34 +1,16 @@
 import React from "react";
-import bannerimg from "../../assets/images/bg_banner.png";
+import bannerimg from "../../assets/images/DoctorBanner.jpg";
 import { Link } from "react-router-dom";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 const DoctorsBanner = () => {
   return (
-  <div className=" w-full xl:bg-fixed relative mx-auto py-20 xl:py-24 overflow-hidden flex items-center justify-center">
+ <div className=" w-full xl:bg-fixed relative mx-auto  overflow-hidden flex items-center justify-center">
       {/* Content */}
-      <div
-        className="top-0 absolute left-0 w-full
-      h-auto"
-      >
-        <img
-          src={bannerimg}
-          alt=""
-          className="w-full  object-cover h-[350px] md:h-auto"
-        />
+      <div className="w-full">
+        <img src={bannerimg} alt="" className="w-full  h-auto " />
       </div>
-      <div
-        className="top-0 absolute left-0 w-full
-      h-auto"
-      >
-        <img
-          src={bannerimg}
-          alt=""
-          className="w-full  object-cover h-[350px] md:h-auto"
-        />
-      </div>
-      <div className="text-center text-white z-10 flex flex-col md:gap-6 gap-0">
-        <h1 className="md:text-8xl text-[52px] font-manrope font-semibold">
-          Doctors
+      <div className="text-center top-0 absolute text-white z-10 flex flex-col justify-center items-center w-full h-full xl:gap-6 gap-2">
+        <h1 className="xl:text-8xl lg:text-6xl md:text-4xl font-manrope font-semibold">
           Doctors
         </h1>
       </div>

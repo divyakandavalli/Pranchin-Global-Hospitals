@@ -41,7 +41,12 @@ import CriticalCareimage2 from "../assets/images/Services/2148962526.jpg";
 import emergencyimage1 from "../assets/images/Services/198737.jpg";
 import emergencyimage2 from "../assets/images/Services/2151997621.jpg";
 
-import bannerCardio from "../assets/images/bg_banner.png";
+import bannerCardio from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-01.jpg";
+import bannerNeurology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-02.jpg";
+import bannerneuroSurgery from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-03.jpg";
+import bannerOncology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-04.jpg";
+import bannerGastroenterology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-05.jpg";
+
 import cardiologyIcon from "../assets/icons/serviceIcon/heartbeat (1).png";
 import NeurologyIcon from "../assets/icons/serviceIcon/brain.png";
 import neuroIcon from "../assets/icons/serviceIcon/surgery.png";
@@ -71,14 +76,8 @@ import EndocrinologyIcon from "../assets/icons/serviceIcon/thyroid.png";
 import Doctor1 from "../assets/images/about_dr_1.jpg";
 
 const SPECIALITIES = [
-  // ==================== CORE SPECIALITIES ====================
-  // ==================== CORE SPECIALITIES ====================
   {
     slug: "cardiology",
-    title: "Cardiology & CTVS Surgery",
-    icon: cardiologyIcon,
-    shortdesc:
-      "Prachin Global Hospital’s Cardiology Department provides advanced, world-class cardiac care.",
     title: "Cardiology & CTVS Surgery",
     icon: cardiologyIcon,
     shortdesc:
@@ -113,10 +112,6 @@ const SPECIALITIES = [
         "Advanced cardiac support using Impella and ECMO-assisted devices",
 
       images: [cardimage1, Cardimage2],
-
-
-      images: [cardimage1, Cardimage2],
-
       extraSectionTitle: "Advanced Diagnostic & Preventive Cardiac Care",
       extraSectionContent: `At Prachin Global Hospital, our expert cardiologists diagnose and treat heart and vascular diseases using the latest technologies and evidence-based practices. Our interventional cardiology team focuses on both treatment and prevention, ensuring comprehensive care for every cardiovascular concern.`,
 
@@ -180,14 +175,12 @@ const SPECIALITIES = [
     icon: NeurologyIcon,
     shortdesc:
       "Neurophysiology Department provides advanced diagnostics for nervous system disorders.",
-    banner: bannerCardio,
+    banner: bannerNeurology,
     sections: {
       overview: `Prachin Global Hospital is equipped to treat conditions affecting the Brain, Spinal Cord, Nerves, and muscles with precision and care. Our team of highly experienced Neuro Physicians and Neurosurgeons brings together international standards, vast clinical experience and patient-first ethics to deliver world-class neurological care.`,
 
       diagnosticsTitle: "Advanced Neurology & Neurosurgery Care",
       diagnosticsDescription: `At Prachin Global Hospital, we offer a comprehensive range of non-invasive, minimally invasive, and surgical treatments tailored to each patient’s condition. Our state-of-the-art infrastructure includes:`,
-      diagnosticsDescription: `At Prachin Global Hospital, we offer a comprehensive range of non-invasive, minimally invasive, and surgical treatments tailored to each patient’s condition. Our state-of-the-art infrastructure includes:`,
-
       diagnostics: [
         "HEPA-filtered modular operation theatres",
         "Advanced Neuro ICUs with 24/7 monitoring",
@@ -196,7 +189,6 @@ const SPECIALITIES = [
       ],
       diagnosticsDescription2:
         "Both outpatient and inpatient services are designed to ensure accurate diagnosis, effective treatment, and smooth recovery.",
-
 
       proceduresTitle: "Comprehensive Neurological Diagnostics",
       proceduresDescription: `Our Department of Neurophysiology provides advanced diagnostic testing essential for evaluating nervous system disorders. These tests help in early detection, accurate diagnosis, and effective treatment planning.`,
@@ -314,7 +306,7 @@ const SPECIALITIES = [
     icon: neuroIcon,
     shortdesc:
       "At Prachin Global Hospital, the Department of Neurosurgery stands as a center of excellence.",
-    banner: bannerCardio,
+    banner: bannerneuroSurgery,
     sections: {
       overview: `At Prachin Global Hospital, the Department of Neurosurgery stands as a center of excellence, offering advanced and comprehensive care for patients with complex neurological conditions. Our department is led by highly experienced and dedicated Neurosurgeons who provide round-the-clock services, ensuring timely and expert treatment for patients from across the region.`,
 
@@ -370,7 +362,7 @@ const SPECIALITIES = [
     icon: oncologyIcon,
     shortdesc:
       "Prachin Global Hospital’s Medical Oncology Department offers modern chemotherapy care.",
-    banner: bannerCardio,
+    banner: bannerOncology,
     sections: {
       overview:
         "Over the years, Prachin Global Hospital has grown into a trusted destination for advanced cancer care, expanding its services across key locations in Hyderabad. With dedicated and well-equipped cancer centers, the hospital is committed to delivering world-class oncology services that focus not only on treatment but also on prevention, early diagnosis, rehabilitation, and long-term survivorship.",
@@ -503,7 +495,7 @@ const SPECIALITIES = [
   {
     slug: "gastroenterology",
     title: "Gastroenterology",
-    banner: bannerCardio,
+    banner: bannerGastroenterology,
     icon: gastroenterologyIcon,
     shortdesc:
       "Prachin Global Hospital’s Gastroenterology Department provides advanced, comprehensive digestive care.",
@@ -1365,7 +1357,7 @@ Our specialists provide personalized prenatal and postnatal care, ensuring a saf
       ],
       images: [gynecologyimage1, gynecologyimage2],
     },
-     doctors: [
+    doctors: [
       {
         id: 1,
         name: "Dr. Arjun Reddy",
@@ -1415,40 +1407,47 @@ Our specialists provide personalized prenatal and postnatal care, ensuring a saf
       ],
 
       proceduresTitle: "Key Aspects of Neonatology",
-      proceduresDescription: `Our Neonatologists work in Neonatal Intensive Care Units (NICUs) and provide advanced, specialized care for infants in their first 28 days of life, although care may extend for premature infants.`,
+      proceduresDescription: ``,
 
       procedures: [
+        "Our Neonatologists work in Neonatal Intensive Care Units (NICUs) and provide advanced, specialized care for infants in their first 28 days of life, although care may extend for premature infants.",
         "Expertise in High-Risk New born Care, Managing infants born prematurely (before 37 weeks), with low birth weight, or with birth defects.",
         "Specialized Treatments: Using advanced equipment for life-saving interventions, such as ventilators, incubators for temperature regulation, and phototherapy for jaundice.",
       ],
       images: [pediatricsimage1, pediatricsimage2],
       extraSectionTitle: "Family-Centered Care",
       extraSectionContent: `Our Neonatal units focus heavily on supporting families during the often-emotional, long-term stay in the NICU. Our both specialties ensure that children, from the moment of birth, receive the medical care and developmental support needed for a healthy life.`,
-
-      technologiesNote: `With state-of-the-art facilities and a highly skilled multidisciplinary team, we are committed to nurturing the well-being of every child.`,
-      overview: `Our Pediatrics and Neonatology are specialized, dedicated to the comprehensive care of infants, children, and adolescents, addressing their unique physiological, developmental and healthcare needs from birth through adolescence. While Pediatrics covers the general health and treatment of diseases for children up to 18 years old, Neonatology is a subspecialty focused on the medical care of newborns, especially those who are premature, have low birth weight, or have serious illnesses requiring intensive care.`,
-
-      diagnosticsTitle: "Key Aspects of Pediatric Care",
-      diagnostics: [
-        "Preventive Care: Routine check-ups, growth monitoring, and immunization.",
-        "Acute/Chronic Illness Management: Treating common illnesses (fever, cough, infections) and managing chronic conditions (asthma, diabetes, epilepsy).",
-        "Developmental Monitoring: Ensuring children meet developmental milestones.",
-        "Subspecialty Care: Pediatric departments often include specialized areas like cardiology, neurology, and orthopedics for complex conditions.",
-      ],
-
-      proceduresTitle: "Key Aspects of Neonatology",
-      proceduresDescription: `Our Neonatologists work in Neonatal Intensive Care Units (NICUs) and provide advanced, specialized care for infants in their first 28 days of life, although care may extend for premature infants.`,
-
-      procedures: [
-        "Expertise in High-Risk New born Care, Managing infants born prematurely (before 37 weeks), with low birth weight, or with birth defects.",
-        "Specialized Treatments: Using advanced equipment for life-saving interventions, such as ventilators, incubators for temperature regulation, and phototherapy for jaundice.",
-      ],
-      images: [pediatricsimage1, pediatricsimage2],
-      extraSectionTitle: "Family-Centered Care",
-      extraSectionContent: `Our Neonatal units focus heavily on supporting families during the often-emotional, long-term stay in the NICU. Our both specialties ensure that children, from the moment of birth, receive the medical care and developmental support needed for a healthy life.`,
-
-      technologiesNote: `With state-of-the-art facilities and a highly skilled multidisciplinary team, we are committed to nurturing the well-being of every child.`,
     },
+    doctors: [
+      {
+        id: 1,
+        name: "Dr. Arjun Reddy",
+        dignity: "Senior Cardiologist",
+        degree: "MD, DM (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 2,
+        name: "Dr. Meera Sharma",
+        dignity: "CTVS Specialist",
+        degree: "MS, MCh (Cardiothoracic Surgery)",
+        image: Doctor1,
+      },
+      {
+        id: 3,
+        name: "Dr. Kiran Kumar",
+        dignity: "Interventional Cardiologist",
+        degree: "MD, DNB (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 4,
+        name: "Dr. Sneha Patel",
+        dignity: "Cardiac Electrophysiologist",
+        degree: "MD, Fellowship in EP",
+        image: Doctor1,
+      },
+    ],
   },
   {
     slug: "dental-maxillofacial",
@@ -1477,6 +1476,36 @@ Our specialists provide personalized prenatal and postnatal care, ensuring a saf
       technologiesNote:
         "Our multidisciplinary team—comprising oral surgeons, maxillofacial surgeons, implantologists, periodontists, orthodontists, and dental hygienists—works collaboratively to provide personalized treatment plans tailored to each patient’s needs. From treating simple tooth decay to managing complex oral and jaw conditions caused by trauma, surgery, or congenital deformities, Prachin Hospital is equipped to handle the full spectrum of dental and maxillofacial care. We also offer smile enhancement and aesthetic makeovers, helping patients regain confidence along with oral health. At Prachin Hospital, your smile is our priority—because healthy teeth lead to a healthier life",
     },
+    doctors: [
+      {
+        id: 1,
+        name: "Dr. Arjun Reddy",
+        dignity: "Senior Cardiologist",
+        degree: "MD, DM (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 2,
+        name: "Dr. Meera Sharma",
+        dignity: "CTVS Specialist",
+        degree: "MS, MCh (Cardiothoracic Surgery)",
+        image: Doctor1,
+      },
+      {
+        id: 3,
+        name: "Dr. Kiran Kumar",
+        dignity: "Interventional Cardiologist",
+        degree: "MD, DNB (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 4,
+        name: "Dr. Sneha Patel",
+        dignity: "Cardiac Electrophysiologist",
+        degree: "MD, Fellowship in EP",
+        image: Doctor1,
+      },
+    ],
   },
   {
     slug: "plastic-surgery",
@@ -1508,6 +1537,36 @@ Our specialists provide personalized prenatal and postnatal care, ensuring a saf
 
       technologiesNote: `Our leading spine surgeons specialize in procedures such as spinal fusion, laminectomy, and discectomy, delivering patient-centric care focused on pain relief, spinal stability, mobility restoration, and improved quality of life. With a multidisciplinary approach and advanced rehabilitation services, Prachin Global Hospital ensures optimal recovery and long-term spine health for every patient.`,
     },
+    doctors: [
+      {
+        id: 1,
+        name: "Dr. Arjun Reddy",
+        dignity: "Senior Cardiologist",
+        degree: "MD, DM (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 2,
+        name: "Dr. Meera Sharma",
+        dignity: "CTVS Specialist",
+        degree: "MS, MCh (Cardiothoracic Surgery)",
+        image: Doctor1,
+      },
+      {
+        id: 3,
+        name: "Dr. Kiran Kumar",
+        dignity: "Interventional Cardiologist",
+        degree: "MD, DNB (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 4,
+        name: "Dr. Sneha Patel",
+        dignity: "Cardiac Electrophysiologist",
+        degree: "MD, Fellowship in EP",
+        image: Doctor1,
+      },
+    ],
   },
   {
     slug: "endocrinology",
@@ -1536,49 +1595,47 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
       ],
       images: [Orthopedicsimage1, Orthopedicsimage2],
     },
+    doctors: [
+      {
+        id: 1,
+        name: "Dr. Arjun Reddy",
+        dignity: "Senior Cardiologist",
+        degree: "MD, DM (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 2,
+        name: "Dr. Meera Sharma",
+        dignity: "CTVS Specialist",
+        degree: "MS, MCh (Cardiothoracic Surgery)",
+        image: Doctor1,
+      },
+      {
+        id: 3,
+        name: "Dr. Kiran Kumar",
+        dignity: "Interventional Cardiologist",
+        degree: "MD, DNB (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 4,
+        name: "Dr. Sneha Patel",
+        dignity: "Cardiac Electrophysiologist",
+        degree: "MD, Fellowship in EP",
+        image: Doctor1,
+      },
+    ],
   },
   {
     slug: "anaesthesiology-pain",
     title: "Anaesthesiology & Pain Management",
     icon: anaesthesiologyIcon,
     banner: bannerCardio,
-    icon: anaesthesiologyIcon,
-    banner: bannerCardio,
     sections: {
       overview: `The Department of Anaesthesiology & Pain Management at Prachin Global Hospital plays a vital role in ensuring safe, comfortable, and pain-free surgical and medical care. Our highly skilled anaesthesiologists are dedicated to providing round-the-clock support for all types of surgeries, from minor procedures to complex and high-risk operations.`,
 
-      moreoverview: `At Prachin Global Hospital, we offer comprehensive anaesthesia services including general anaesthesia, regional anaesthesia, spinal and epidural anaesthesia, monitored anaesthesia care (MAC), and sedation for diagnostic and minimally invasive procedures. Every patient undergoes a thorough pre-anaesthetic evaluation to assess medical history, existing health conditions, and potential risks, ensuring a personalized and safe anaesthesia plan.`,
-
-      diagnosticsTitle: "Our Approach to Patient Safety",
-      diagnostics: [
-        "Our team works closely with surgeons, critical care specialists, and nursing staff to maintain the highest standards of patient safety before, during, and after surgery.",
-        "Advanced monitoring systems and modern equipment help us maintain precise control over vital parameters throughout the procedure.",
-      ],
-
-      proceduresTitle: "Pain Management Services",
-      proceduresDescription: `In addition to surgical anaesthesia, the department also specializes in acute and chronic pain management. We provide effective treatment for:`,
-      images: [Anaesthesiologyimage1, Anaesthesiologyimage2],
-      procedures: [
-        "Post-operative pain",
-        "Cancer-related pain",
-        "Back and neck pain",
-        "Joint and musculoskeletal pain",
-        "Nerve-related pain conditions",
-      ],
-
-      proceduresNote: `Our pain management approach includes medications, nerve blocks, epidural injections, and other minimally invasive procedures designed to improve comfort and enhance quality of life.`,
-
-      technologiesNote: `At Prachin Global Hospital, our Department of Anaesthesiology & Pain Management is committed to delivering safe anaesthesia care and comprehensive pain relief, ensuring every patient experiences comfort, safety, and faster recovery.`,
-      overview: `The Department of Anaesthesiology & Pain Management at Prachin Global Hospital plays a vital role in ensuring safe, comfortable, and pain-free surgical and medical care. Our highly skilled anaesthesiologists are dedicated to providing round-the-clock support for all types of surgeries, from minor procedures to complex and high-risk operations.`,
-
-      moreoverview: `At Prachin Global Hospital, we offer comprehensive anaesthesia services including general anaesthesia, regional anaesthesia, spinal and epidural anaesthesia, monitored anaesthesia care (MAC), and sedation for diagnostic and minimally invasive procedures. Every patient undergoes a thorough pre-anaesthetic evaluation to assess medical history, existing health conditions, and potential risks, ensuring a personalized and safe anaesthesia plan.`,
-
-      diagnosticsTitle: "Our Approach to Patient Safety",
-      diagnostics: [
-        "Our team works closely with surgeons, critical care specialists, and nursing staff to maintain the highest standards of patient safety before, during, and after surgery.",
-        "Advanced monitoring systems and modern equipment help us maintain precise control over vital parameters throughout the procedure.",
-      ],
-
+      moreoverview: `At Prachin Global Hospital, we offer comprehensive anaesthesia services including general anaesthesia, regional anaesthesia, spinal and epidural anaesthesia, monitored anaesthesia care (MAC), and sedation for diagnostic and minimally invasive procedures. Every patient undergoes a thorough pre-anaesthetic evaluation to assess medical history, existing health conditions, and potential risks, ensuring a personalized and safe anaesthesia plan.
+      Our team works closely with surgeons, critical care specialists, and nursing staff to maintain the highest standards of patient safety before, during, and after surgery. Advanced monitoring systems and modern equipment help us maintain precise control over vital parameters throughout the procedure.`,
       proceduresTitle: "Pain Management Services",
       proceduresDescription: `In addition to surgical anaesthesia, the department also specializes in acute and chronic pain management. We provide effective treatment for:`,
       images: [Anaesthesiologyimage1, Anaesthesiologyimage2],
@@ -1594,8 +1651,37 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
 
       technologiesNote: `At Prachin Global Hospital, our Department of Anaesthesiology & Pain Management is committed to delivering safe anaesthesia care and comprehensive pain relief, ensuring every patient experiences comfort, safety, and faster recovery.`,
     },
+    doctors: [
+      {
+        id: 1,
+        name: "Dr. Arjun Reddy",
+        dignity: "Senior Cardiologist",
+        degree: "MD, DM (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 2,
+        name: "Dr. Meera Sharma",
+        dignity: "CTVS Specialist",
+        degree: "MS, MCh (Cardiothoracic Surgery)",
+        image: Doctor1,
+      },
+      {
+        id: 3,
+        name: "Dr. Kiran Kumar",
+        dignity: "Interventional Cardiologist",
+        degree: "MD, DNB (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 4,
+        name: "Dr. Sneha Patel",
+        dignity: "Cardiac Electrophysiologist",
+        degree: "MD, Fellowship in EP",
+        image: Doctor1,
+      },
+    ],
   },
-
 
   {
     slug: "critical-care",
@@ -1603,9 +1689,6 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
     category: "core",
     icon: CriticalCareIcon,
     banner: bannerCardio,
-    category: "core",
-    icon: CriticalCareIcon,
-    banner: bannerCardio,
     sections: {
       overview: `The Critical Care Unit at Prachin Global Hospital is a state-of-the-art facility dedicated to delivering exceptional emergency and critical care services. Designed to meet international standards, our ICU provides timely, precise, and compassionate care to patients facing life-threatening conditions. In case of any medical emergency, our expert team is always ready to respond swiftly and effectively.`,
 
@@ -1619,32 +1702,7 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
         "With quick access to diagnostics, imaging, laboratory services, and specialist consultations, we ensure prompt decision-making and timely intervention when every second matters.",
       ],
 
-      proceduresTitle: "Conditions We Manage",
-      proceduresDescription: `Our round-the-clock critical care services have successfully treated a wide range of complex medical conditions, including:`,
-      images: [CriticalCareimage1, CriticalCareimage2],
-      procedures: [
-        "Post-operative and post-surgical critical care",
-        "Severe infections and sepsis",
-        "Cardiac and respiratory emergencies",
-        "Neurological emergencies",
-        "Trauma and accident-related injuries",
-        "Multi-organ dysfunction and other life-threatening illnesses",
-      ],
-
-      technologiesNote: `At Prachin Global Hospital, critical care goes beyond technology—it is about compassion, vigilance, and commitment. Our goal is not just to save lives, but to support recovery with dignity, safety, and trust.`,
-      overview: `The Critical Care Unit at Prachin Global Hospital is a state-of-the-art facility dedicated to delivering exceptional emergency and critical care services. Designed to meet international standards, our ICU provides timely, precise, and compassionate care to patients facing life-threatening conditions. In case of any medical emergency, our expert team is always ready to respond swiftly and effectively.`,
-
-      moreoverview: `As a leading emergency hospital in Hyderabad, Prachin Global Hospital offers round-the-clock emergency services, available 24 hours a day, 7 days a week. Our emergency care is powered by the seamless integration of advanced research, clinical excellence, and patient-centric care.`,
-
-      diagnosticsTitle: "Advanced Critical Care Infrastructure",
-      diagnostics: [
-        "A highly skilled multidisciplinary team—including paramedics, critical care nurses, emergency physicians, trauma specialists, surgeons, and doctors from multiple specialties—works together to manage a wide spectrum of medical emergencies.",
-        "Our Critical Care Unit is equipped with cutting-edge medical technology to manage all types of critical and emergency conditions with precision and expertise.",
-        "The ICU features advanced, fully monitored beds designed to continuously track vital physiological parameters of critically ill patients.",
-        "With quick access to diagnostics, imaging, laboratory services, and specialist consultations, we ensure prompt decision-making and timely intervention when every second matters.",
-      ],
-
-      proceduresTitle: "Conditions We Manage",
+      proceduresTitle: "Expertise That Works Around the Clock",
       proceduresDescription: `Our round-the-clock critical care services have successfully treated a wide range of complex medical conditions, including:`,
       images: [CriticalCareimage1, CriticalCareimage2],
       procedures: [
@@ -1658,6 +1716,36 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
 
       technologiesNote: `At Prachin Global Hospital, critical care goes beyond technology—it is about compassion, vigilance, and commitment. Our goal is not just to save lives, but to support recovery with dignity, safety, and trust.`,
     },
+    doctors: [
+      {
+        id: 1,
+        name: "Dr. Arjun Reddy",
+        dignity: "Senior Cardiologist",
+        degree: "MD, DM (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 2,
+        name: "Dr. Meera Sharma",
+        dignity: "CTVS Specialist",
+        degree: "MS, MCh (Cardiothoracic Surgery)",
+        image: Doctor1,
+      },
+      {
+        id: 3,
+        name: "Dr. Kiran Kumar",
+        dignity: "Interventional Cardiologist",
+        degree: "MD, DNB (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 4,
+        name: "Dr. Sneha Patel",
+        dignity: "Cardiac Electrophysiologist",
+        degree: "MD, Fellowship in EP",
+        image: Doctor1,
+      },
+    ],
   },
   {
     slug: "emergency-medicine",
@@ -1666,18 +1754,45 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
     banner: bannerCardio,
     sections: {
       overview: `Trauma / Emergency Care at Prachin Global Hospitals is an exclusive center that offers immediate treatment in any emergency with the highest level of care, round-the-clock. All our Emergency Medicine specialists, trauma surgeons and support staffs are highly trained to deal with cases from minor injuries to advanced trauma care for patients in need of prompt care. Our trauma care specialists address the patient at the best time possible with the right care.`,
-
-      moreoverview: `Our Emergency Team offers day-and-night service with 24/7 access to modern operation theatres, imaging & diagnostic tools and fully stocked 24-hour pharmacies for immediate and accurate diagnosis of the patient’s condition.`,
-
       diagnosticsTitle: "Expert Accident and Emergency Care",
+      diagnosticsDescription:
+        "Our Emergency Team offers day-and-night service with 24/7 access to modern operation theatres, imaging & diagnostic tools and fully stocked 24-hour pharmacies for immediate and accurate diagnosis of the patient’s condition. An important distinguishing characteristic of Prachin Global Hospitals trauma and emergency services is the experience and expertise of the many subspecialty services that are available 24 hours a day, seven days a week to any ill or injured patient in need",
       diagnostics: [
-        "An important distinguishing characteristic of Prachin Global Hospitals trauma and emergency services is the experience and expertise of the many subspecialty services that are available 24 hours a day, seven days a week to any ill or injured patient in need",
         "Largest emergency facility in the States of Telangana and Andhra Pradesh with highest number of ICU beds",
         "Only hospital to have Central Laboratory",
       ],
       images: [emergencyimage1, emergencyimage2],
-      technologiesNote: `At Prachin Global Hospital, our Emergency Medicine department stands out for its unmatched infrastructure, experienced team, and commitment to providing immediate, high-quality emergency and trauma care.`,
     },
+    doctors: [
+      {
+        id: 1,
+        name: "Dr. Arjun Reddy",
+        dignity: "Senior Cardiologist",
+        degree: "MD, DM (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 2,
+        name: "Dr. Meera Sharma",
+        dignity: "CTVS Specialist",
+        degree: "MS, MCh (Cardiothoracic Surgery)",
+        image: Doctor1,
+      },
+      {
+        id: 3,
+        name: "Dr. Kiran Kumar",
+        dignity: "Interventional Cardiologist",
+        degree: "MD, DNB (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 4,
+        name: "Dr. Sneha Patel",
+        dignity: "Cardiac Electrophysiologist",
+        degree: "MD, Fellowship in EP",
+        image: Doctor1,
+      },
+    ],
   },
   {
     slug: "physio-therapy-and-rehabilitation-care",
@@ -1731,6 +1846,36 @@ These procedures ensure faster recovery, minimal pain, reduced hospital stay, an
 
       technologiesNote: `With world-class infrastructure, modern operation theatres, and internationally aligned treatment protocols, Prachin Global Hospital is committed to delivering excellence in Arthroscopy, Arthroplasty, and Sports Medicine—ensuring the best outcomes with compassionate care.`,
     },
+     doctors: [
+      {
+        id: 1,
+        name: "Dr. Arjun Reddy",
+        dignity: "Senior Cardiologist",
+        degree: "MD, DM (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 2,
+        name: "Dr. Meera Sharma",
+        dignity: "CTVS Specialist",
+        degree: "MS, MCh (Cardiothoracic Surgery)",
+        image: Doctor1,
+      },
+      {
+        id: 3,
+        name: "Dr. Kiran Kumar",
+        dignity: "Interventional Cardiologist",
+        degree: "MD, DNB (Cardiology)",
+        image: Doctor1,
+      },
+      {
+        id: 4,
+        name: "Dr. Sneha Patel",
+        dignity: "Cardiac Electrophysiologist",
+        degree: "MD, Fellowship in EP",
+        image: Doctor1,
+      },
+    ],
   },
 ];
 

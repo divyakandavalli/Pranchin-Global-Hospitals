@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }
 
 // ================== CONFIGURATION ==================
-$sendTo   = 'honey.kandavalli@gmail.com';           // Change this to your email
+$sendTo   = 'info@prachinglobalhospitals.com';           // Change this to your email
 $subject  = 'New Appointment Request - Prachin Global Hospitals';
 
 // Success and Error Messages
