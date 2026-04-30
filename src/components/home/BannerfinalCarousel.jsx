@@ -34,7 +34,7 @@ export default function BannerfinalCarousel() {
         {/* Slide 1 */}
         <SwiperSlide>
           <div className="relative w-full h-full">
-            <div className="block xl:hidden">
+            <div className="block lg:hidden">
               <img
                 src={Mobilebanner1}
                 alt="banner1"
@@ -42,7 +42,7 @@ export default function BannerfinalCarousel() {
               />
             </div>
 
-            <div className="hidden xl:block">
+            <div className="hidden lg:block">
               <img
                 src={Desktopbanner1}
                 alt="banner1"
@@ -85,7 +85,7 @@ export default function BannerfinalCarousel() {
 
         {/* Slide 2 */}
         <SwiperSlide>
-           <div className="block xl:hidden">
+           <div className="block lg:hidden">
               <img
                 src={Mobilebanner2}
                 alt="banner1"
@@ -93,7 +93,7 @@ export default function BannerfinalCarousel() {
               />
             </div>
 
-            <div className="hidden xl:block">
+            <div className="hidden lg:block">
               <img
                 src={Desktopbanner2}
                 alt="banner1"

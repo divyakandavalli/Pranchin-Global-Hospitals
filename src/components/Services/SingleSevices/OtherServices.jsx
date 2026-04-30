@@ -2,7 +2,7 @@ import React from "react";
 import SPECIALITIES from "../../../specialities/specialities";
 import { Link, useNavigate } from "react-router-dom";
 import EastIcon from "@mui/icons-material/East";
-
+import shape from '../../../assets/images/shape.png'
 export default function OtherServices() {
   const navigate = useNavigate();
 
@@ -15,10 +15,7 @@ export default function OtherServices() {
         <div className="bg-[#c8dded] rounded-[24px] py-10 px-4 sm:px-6 md:px-10 relative overflow-hidden">
           {/* Decoration */}
           <div className="hidden md:block absolute -right-[310px] -top-[653px] pointer-events-none">
-            <img
-              src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Decorations.png"
-              alt=""
-            />
+            <img src={shape} alt="" />
           </div>
 
           {/* Header */}

@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import BannerCarousel from "../components/home/BannerCarousel";
+import React, { useEffect } from "react";
 import AboutSection from "../components/home/AboutSection";
 import HomeProcess from "../components/home/HomeProcess";
 import BookAppointment from "../components/home/BookAppointment";
@@ -10,39 +9,20 @@ import Reveal from "../components/common/Reveal";
 import BookAppointmentMobile from "../components/home/BookAppointmentMobile";
 import HomeServicesTwo from "../components/home/HomeServicesTwo";
 import CountingValues from "../components/home/CountingValues";
-import Footer from "../components/Footer";
-import Header from "../components/header/Header";
-import VerticalCarousel from "../components/home/VerticalCarousel";
-
-import slide3 from "../assets/images/17588.jpg";
-import slide2 from "../assets/images/3374.jpg";
-import slide1 from "../assets/images/midsection-surgeons-operating-patient-hospital.jpg";
 import BannerfinalCarousel from "../components/home/BannerfinalCarousel";
 
 export default function HomePage() {
-  const slidesData = [slide1, slide2, slide3];
-
-  const containerRef = useRef(null);
-  const [is3xl, setIs2xl] = useState(false);
-
-  // Detect 3xl screen
   useEffect(() => {
-    const checkScreen = () => {
-      setIs2xl(window.innerWidth >= 1536);
-    };
-
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
-    return () => window.removeEventListener("resize", checkScreen);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
-
   return (
-    <div
-
-    >
+    <div>
       <Reveal>
         <section>
-          <BannerfinalCarousel/>
+          <BannerfinalCarousel />
         </section>
       </Reveal>
 

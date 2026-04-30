@@ -1,5 +1,5 @@
 import React from "react";
-import about_dr_1 from "../../assets/images/portrait-handsome-young-indian-doctor-standing-with-arms-crossed-medical-clinic-smiling-camera.jpg";
+import about_dr_1 from "../../assets/images/Doctor.jpg";
 import { Link } from "react-router-dom";
 import RoundTheClock from "../For_Patients/RoundTheClock";
 const AllDoctors = () => {
@@ -137,13 +137,13 @@ const AllDoctors = () => {
               >
                 <div className="max-w-full bg-[#FEFEFF] pt-3 px-3 rounded-t-3xl">
                   <div className="text-center">
-                    <h3 className="font-semibold font-manrope  text-[16px] md:text-[21px] text-[#5187af]">
+                    <h3 className="font-semibold font-manrope  text-[16px] md:text-[18px] text-[#5187af]">
                       {value.name}
                     </h3>
-                    <p className=" text-[#4D6E76] font-normal text-base font-manrope">
+                    <p className=" text-[#4D6E76] font-normal text-[14px] 3xl:text-[15px] font-manrope">
                       {value.dignity}
                     </p>
-                    <p className=" text-[#4D6E76] font-normal text-sm font-manrope">
+                    <p className=" text-[#4D6E76] font-normal text-[14px] 3xl:text-[15px] font-manrope">
                       {value.degree}
                     </p>
                   </div>

@@ -7,7 +7,7 @@ import { HashLink } from "react-router-hash-link";
 export default function AboutUsSection() {
 
   return (
-    <section className=" 3xl:max-w-[80%] 2xl:max-w-[85%] w-[95%] xl:w-[92%] mx-auto py-5">
+    <section className=" 3xl:max-w-[80%] 2xl:max-w-[85%] w-[95%] xl:w-[92%] mx-auto py-10">
       <div className=" grid xl:grid-cols-2 grid-cols-1 3xl:gap-20 md:gap-10 gap-10 items-center">
         {/* LEFT IMAGE */}
         <div className="relative xl:order-1 order-2">

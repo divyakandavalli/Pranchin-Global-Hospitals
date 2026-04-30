@@ -1,7 +1,7 @@
 import React from "react";
 import SPECIALITIES from "../../specialities/specialities";
 import { useNavigate } from "react-router-dom";
-
+import shape from '../../assets/images/shape.png'
 export default function OurSevicesList() {
   const navigate = useNavigate();
 
@@ -12,23 +12,19 @@ export default function OurSevicesList() {
     <section className=" px-4 md:px-10">
       <div className="max-w-[95%] mx-auto">
         <div className="py-10 px-4 sm:px-6 md:px-10 relative overflow-hidden">
-          
           {/* Decoration */}
           <div className="hidden md:block absolute -right-[310px] -top-[653px] pointer-events-none">
-            <img
-              src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Decorations.png"
-              alt=""
-            />
+            <img src={shape} alt="" />
           </div>
 
           {/* Header */}
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
             <div>
-              <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-3 sm:px-4 py-1 rounded-full tracking-[2px] sm:tracking-[3px] text-[14px]  uppercase">
+              <span className="border border-[#094ca0] text-[#094ca0] font-manrope font-medium px-3 sm:px-4 py-1 rounded-full tracking-[2px] sm:tracking-[3px] text-[12px] md:text-[14px]    uppercase">
                 our services
               </span>
 
-              <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px]  font-manrope font-semibold leading-tight text-black">
+              <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px]  font-manrope font-semibold leading-tight text-black my-2">
                 Comprehensive Care <br />
                 for{" "}
                 <span className="italic font-light font-instrumental text-[#5187af]">
@@ -49,27 +45,28 @@ export default function OurSevicesList() {
                 <h2 className=" text-[16px] md:text-[18px] font-manrope font-semibold mb-1 text-[#094ca0]">
                   {item.title}
                 </h2>
-                
+
                 <p className="w-10/12 text-[#66686C] font-normal text-[14px] 3xl:text-[15px] font-manrope leading-relaxed">
-                  {item.desc || item.shortdesc || 
+                  {item.desc ||
+                    item.shortdesc ||
                     "Expert care with advanced medical facilities and experienced doctors."}
                 </p>
 
                 {/* Decorative Image Container */}
                 <div className="w-20 absolute flex rounded-tl-3xl pt-[10px] font-manrope bg-[#ffffff] bottom-0 right-0 justify-end items-end">
-                  <img 
-                    src={item.img || item.icon} 
-                    className="w-16 h-16 object-contain" 
-                    alt={item.title} 
+                  <img
+                    src={item.img || item.icon}
+                    className="w-16 h-16 object-contain"
+                    alt={item.title}
                   />
-                  
+
                   {/* Decorative shadow elements */}
                   <div className="absolute -left-8 bottom-0 w-8 flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#FFFFFF]">
                     <div className="w-8">
                       <div className="h-8"></div>
                     </div>
                   </div>
-                  
+
                   <div className="absolute -top-[33px] right-0 w-[33px] flex rounded-[0px_0px_16px_0] shadow-[8px_8px_0px_0px_#FFFFFF]">
                     <div className="w-8">
                       <div className="h-8"></div>

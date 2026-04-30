@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import HappyFace from "../../assets/images/happy.jpg";
+import profileIcon from '../../assets/images/person.png'
 import "swiper/css";
 import { Link } from "react-router-dom";
 const testimonials = [
@@ -172,7 +173,7 @@ export default function Testimonials() {
 
                   <div className="flex items-center gap-4  font-manrope">
                     <img
-                      src={`https://i.pravatar.cc/150?img=${index + 32}`}
+                      src={profileIcon}
                       alt={item.name}
                       className="w-12 h-12 rounded-full object-cover"
                     />

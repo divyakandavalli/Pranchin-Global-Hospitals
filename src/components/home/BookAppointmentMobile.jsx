@@ -6,6 +6,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Autocomplete, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
 import dayjs from "dayjs";
+import { toast } from "react-toastify";
 import SPECIALITIES from "../../specialities/specialities";
 export default function BookAppointmentMobile() {
   const [formData, setFormData] = useState({
@@ -58,9 +59,7 @@ export default function BookAppointmentMobile() {
       date: formData.date ? dayjs(formData.date).format("YYYY-MM-DD") : "",
     };
 
-    console.log("Form Submitted Data:", payload);
-
-    alert("Form Submitted Successfully ✅");
+   toast.success("Form Submitted Successfully");
 
     // reset
     setFormData({

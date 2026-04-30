@@ -5,10 +5,10 @@ import logo from "../../assets/images/Prachin Final Logo Website Size-02.png";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import SPECIALITIES from "../../specialities/specialities";
-import AmbulanceIcon from "../../assets/icons/Ambulance Icon.png";
-import CallIcon from "../../assets/icons/Contact Page Icons-02.png";
-import LandlineIcon from "../../assets/icons/Landline Icon.png";
-import EmergencyIcon from "../../assets/icons/Emergancy Services Icon.png";
+import AmbulanceIcon from "../../assets/icons/Contact Page Icons-04.png";
+import CallIcon from "../../assets/icons//Contact Page Icons-02.png";
+import LandlineIcon from "../../assets/icons/Contact Page Icons-01.png";
+import EmergencyIcon from "../../assets/icons/Contact Page Icons-03.png";
 import { AppContext } from "../AppContext";
 import { HashLink } from "react-router-hash-link";
 export default function MobileHeader({ open, setOpen }) {
@@ -45,7 +45,7 @@ export default function MobileHeader({ open, setOpen }) {
               <div className="h-5 w-px bg-[#365e8f]" />
               <div className="flex items-center gap-2 pl-3">
                 <img src={CallIcon} alt="" />
-                <a href="+917036999111">+91 70369 99111</a>
+                <a href="tel:+917036999111">+91 70369 99111</a>
               </div>
             </div>
 
@@ -66,28 +66,28 @@ export default function MobileHeader({ open, setOpen }) {
           <div className="hidden md:flex items-center justify-center gap-4 py-2">
             <div className="flex items-center gap-2">
               <img src={AmbulanceIcon} alt="" />
-              <Link to="">+91 92475 75108</Link>
+              <a href="tel:+919247575108">+91 92475 75108</a>
             </div>
 
             <div className="h-5 w-px bg-[#365e8f]" />
 
             <div className="flex items-center gap-2">
               <img src={CallIcon} alt="" />
-              <Link to="">+91 70369 99111</Link>
+              <a href="tel:+917036999111">+91 70369 99111</a>
             </div>
 
             <div className="h-5 w-px bg-[#365e8f]" />
 
             <div className="flex items-center gap-2">
               <img src={LandlineIcon} alt="" />
-              <Link to="">08455 - 671111/99</Link>
+              <Link>08455 - 671111/99</Link>
             </div>
 
             <div className="h-5 w-px bg-[#365e8f]" />
 
             <div className="flex items-center gap-2">
               <img src={EmergencyIcon} alt="" />
-              <Link to="">24/7 Emergency</Link>
+              <Link>24/7 Emergency</Link>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function MobileHeader({ open, setOpen }) {
         {/* ✅ NAV 2: LOGO + TOGGLER */}
         <div className="flex items-center justify-between px-4 py-3">
           <Link to="/">
-            <img src={logo} alt="logo" className="" />
+            <img src={logo} alt="logo" className="w-[80%]" />
           </Link>
 
           <button onClick={() => setOpen(true)} className="text-[#ed721d]">
@@ -163,6 +163,9 @@ export default function MobileHeader({ open, setOpen }) {
             </button>
             {doctorOpen && (
               <div className="ml-4 flex flex-col gap-2 text-gray-600">
+                <Link to="/doctors" onClick={closeMenu}>
+                  All Doctors
+                </Link>
                 <Link to="/doctors/emergency" onClick={closeMenu}>
                   Emergency Team
                 </Link>
@@ -183,6 +186,14 @@ export default function MobileHeader({ open, setOpen }) {
             </button>
             {megaOpen && (
               <div className="ml-4 mt-2 flex flex-col gap-2 text-gray-600">
+                <Link
+                  to="/specialities"
+                  onClick={closeMenu}
+                  className="py-1 font-medium "
+                >
+                  All Specialities
+                </Link>
+
                 {SPECIALITIES.map((item) => (
                   <Link
                     key={item.slug}
@@ -299,7 +310,7 @@ export default function MobileHeader({ open, setOpen }) {
           </Link>
 
           <Link
-            to="/quick-contact"
+            to="tel:+919247575108"
             onClick={closeMenu}
             className="w-full text-center py-3 rounded-xl border border-[#ed721d] text-[#ed721d]"
           >

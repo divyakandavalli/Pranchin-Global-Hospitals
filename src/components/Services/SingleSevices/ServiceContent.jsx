@@ -6,13 +6,9 @@ import EastIcon from "@mui/icons-material/East";
 import { Link } from "react-router-dom";
 import fallback1 from "../../../assets/images/Services/shot-operating-room-assistant-hands-out-instruments-surgeons-operation-surgeons-perform-operation-professional-medical-doctors-performing-surgery.jpg";
 import fallback2 from "../../../assets/images/Services/doctor-checking-patient.jpg";
-import image3 from "../../../assets/images/Services/4811589_49643 0-01.jpg";
-
 
 export default function ServiceContent() {
   const { slug } = useParams();
-;
-
   const data = SPECIALITIES.find((item) => item.slug === slug);
 
   if (!data) return <div className="text-center py-20">Service Not Found</div>;
@@ -156,7 +152,7 @@ export default function ServiceContent() {
           {s.Majorconditions && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 font-manrope">
               {s.Majorconditions.map((item, i) => (
-                <div key={i} className="bg-[#f5f7fa] p-6 rounded-2xl">
+                <div key={i} className="bg-[#c8dded] p-6 rounded-2xl">
                   <h4 className=" text-[16px] md:text-[18px] font-bold mb-2">
                     {item.title}
                   </h4>
@@ -278,9 +274,10 @@ export default function ServiceContent() {
               {s.packages && s.packages.length > 0 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
                   {s.packages.map((pkg, i) => (
-                    <div
+                    <Link
                       key={i}
-                      className="flex justify-between items-center bg-[#c8dded] p-6 rounded-2xl"
+                      to="/health-packages"
+                      className="flex justify-between items-center bg-[#c8dded] p-6 rounded-2xl hover:shadow-md transition cursor-pointer"
                     >
                       <div>
                         <h4 className="text-[16px] md:text-[18px] font-bold">
@@ -290,10 +287,11 @@ export default function ServiceContent() {
                           {pkg.description}
                         </p>
                       </div>
+
                       <div className="bg-white rounded-xl w-12 h-12 flex items-center justify-center">
                         <EastIcon className="text-[#094ca0]" />
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               )}

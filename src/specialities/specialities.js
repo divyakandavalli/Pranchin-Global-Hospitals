@@ -1,3 +1,4 @@
+/*-- Inside specialities Images---*/
 import cardimage1 from "../assets/images/Services/331.jpg";
 import Cardimage2 from "../assets/images/Services/doctor-checking-patient.jpg";
 import Neuroimage1 from "../assets/images/Services/2659.jpg";
@@ -41,12 +42,35 @@ import CriticalCareimage2 from "../assets/images/Services/2148962526.jpg";
 import emergencyimage1 from "../assets/images/Services/198737.jpg";
 import emergencyimage2 from "../assets/images/Services/2151997621.jpg";
 
+/*-- DesktopBanners---*/
 import bannerCardio from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-01.jpg";
 import bannerNeurology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-02.jpg";
 import bannerneuroSurgery from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-03.jpg";
 import bannerOncology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-04.jpg";
 import bannerGastroenterology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-05.jpg";
+import bannerBrain from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-06.jpg";
+import bannersurgicalgastroenterology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-07.jpg";
+import bannerOrthopedics from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-08.jpg";
+import bannerArthroscopy from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-09.jpg";
+import bannerUrology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-10.jpg";
+import bannerPulmonology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-11.jpg";
+import bannerVascular from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-12.jpg";
+import bannerNephrology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-13.jpg";
+import bannerRheumatology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-14.jpg";
+import bannerENT from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-15.jpg";
+import bannerGeneral from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-16.jpg";
+import bannerLaparoscopy from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-17.jpg";
+import bannerObstetrics from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-18.jpg";
+import bannerPediatrics from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-19.jpg";
+import bannerDental from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-20.jpg";
+import bannerPlastic from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-21.jpg";
+import bannerEndocrinology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-22.jpg";
+import bannerAnaesthesiology from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-23.jpg";
+import bannerCritical from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-24.jpg";
+import bannerEmergency from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-25.jpg";
+import bannerPhysio from "../assets/images/Services/Service-desktop-Banners/All Specialities Page  headers-26.jpg";
 
+/*-- Icons---*/
 import cardiologyIcon from "../assets/icons/serviceIcon/heartbeat (1).png";
 import NeurologyIcon from "../assets/icons/serviceIcon/brain.png";
 import neuroIcon from "../assets/icons/serviceIcon/surgery.png";
@@ -73,7 +97,8 @@ import emergencyIcon from "../assets/icons/serviceIcon/first-aid-kit.png";
 import PlasticSurgeryIcon from "../assets/icons/serviceIcon/face-marking.png";
 import EndocrinologyIcon from "../assets/icons/serviceIcon/thyroid.png";
 
-import Doctor1 from "../assets/images/about_dr_1.jpg";
+/*-- Speciality wise Doctors---*/
+import Doctor1 from "../assets/images/Doctor.jpg";
 
 const SPECIALITIES = [
   {
@@ -436,7 +461,7 @@ const SPECIALITIES = [
     icon: spineIcon,
     shortdesc:
       "Prachin Global Hospital’s Spine Surgery Department offers advanced diagnostic and surgical care.",
-    banner: bannerCardio,
+    banner: bannerBrain,
     sections: {
       overview:
         "Prachin Global Hospital is recognized as one of the best spine hospitals in Hyderabad, offering comprehensive and evidence-based treatment for spinal disorders and injuries. Our expert team of spine surgeons and orthopedic spine specialists are highly experienced in advanced minimally invasive techniques, laser spine surgery, and motion-preserving procedures to treat patients of all age groups.",
@@ -572,7 +597,7 @@ Rest assured that at our Gastroenterology Department, you will receive personali
     icon: surgicalgastroenterologyIcon,
     shortdesc:
       "Prachin Global Hospital’s Surgical Gastroenterology Department offers advanced digestive surgery.",
-    banner: bannerCardio,
+    banner: bannersurgicalgastroenterology,
     sections: {
       overview: `The Department of Surgical Gastroenterology at Prachin Global Hospital is dedicated to providing advanced surgical care for disorders of the digestive system. Our expert team of surgical gastroenterologists specializes in minimally invasive and laparoscopic procedures to treat a wide range of conditions affecting the esophagus, stomach, intestines, liver, pancreas, gallbladder, and colorectal region.
 
@@ -628,7 +653,7 @@ We are highly experienced in managing both cancerous and non-cancerous condition
     icon: orthopedicsIcon,
     shortdesc:
       "Prachin Global Hospital’s Orthopaedics & Joint Replacement Department offers advanced care.",
-    banner: bannerCardio,
+    banner: bannerOrthopedics,
     sections: {
       overview: `Don’t let musculoskeletal concerns limit your life. Schedule an appointment with our Orthopedics specialists today and take the first step toward improved mobility and a pain-free future.
 
@@ -686,7 +711,7 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
     icon: arthroscopyIcon,
     shortdesc:
       "Prachin Global Hospital’s Arthroscopy & Arthroplasty Department offers advanced joint care.",
-    banner: bannerCardio,
+    banner: bannerArthroscopy,
     sections: {
       overview: `The Department of Arthroscopy & Arthroplasty at Prachin Global Hospital offers advanced, specialized care for sports injuries, joint disorders, and degenerative conditions affecting bones, ligaments, cartilage, and muscles. Whether you are a professional athlete, a fitness enthusiast, or someone dealing with chronic joint pain, our expert team provides comprehensive diagnosis, treatment, and rehabilitation under one roof.`,
       moreoverview: `Sports and activity-related injuries can occur due to improper posture, repetitive movements, sudden impact, or overuse. Old injuries may also flare up unexpectedly, affecting performance and daily life. At Prachin Global Hospital, we understand that complete recovery requires not just treatment, but precision care, guided rehabilitation, and long-term joint protection.`,
@@ -767,7 +792,7 @@ These procedures ensure faster recovery, minimal pain, reduced hospital stay, an
     icon: urologyIcon,
     shortdesc:
       "The Department of Urology at Prachin Global Hospital is dedicated to the comprehensive diagnosis",
-    banner: bannerCardio,
+    banner: bannerUrology,
     sections: {
       overview: `Our Urology department is recognized as the top Urology Hospital offering comprehensive solutions in Urology & Andrology. Our skilled Urologists provide top-quality care, leveraging state-of-the-art technology for optimal outcomes.`,
       moreoverview: `We specialize in a wide range of services, including Stone Disease treatments (Laser Technology, ESWL, PCNL, URSL, CLP, PCCL), BPH treatment (minimally invasive techniques), Reconstructive Procedures (Ureter Re-implantation, Hypospadias Repair, Orchiopexy), Female Urology solutions (VVF repair, stress incontinence surgery, tubal recanalization), Stricture Urethra treatments (Optical Urethrotomy, Urethroplasty), Andrology services (male infertility evaluation, management, epididymal aspiration, testicular biopsy) and Erectile Dysfunction Management (Rigiscan assessment, vacuum therapy)
@@ -845,7 +870,7 @@ As a leading Urology Hospital we are dedicated to delivering exceptional results
     icon: pulmonologyIcon,
     shortdesc:
       "Department of Pulmonary and Lung Sciences is home to a highly skilled team of experienced pulmonologists",
-    banner: bannerCardio,
+    banner: bannerPulmonology,
     sections: {
       overview:
         "Our Pulmonology Department offers specialized care for a wide range of respiratory diseases, with a team of experienced Lung Specialists, we are committed to diagnosing and treating conditions that affect the lungs and breathing.",
@@ -904,7 +929,7 @@ As a leading Urology Hospital we are dedicated to delivering exceptional results
     icon: vascularIcon,
     shortdesc:
       "Vascular diseases affect arteries, veins, and lymphatic vessels, impacting circulation.",
-    banner: bannerCardio,
+    banner: bannerVascular,
     sections: {
       overview: `Prachin Global Hospitals recognized as the best vascular & endovascular surgery hospital in Telangana, out top vascular surgeons specializing in the treatment of diseases affecting arteries, veins, and the lymphatic system. Our multidisciplinary team delivers world-class care for vascular conditions, from varicose veins to life-threatening arterial blockages and limb-salvage emergencies.`,
       moreoverview: `We provide advanced vascular care under one roof, focusing on peripheral artery disease, diabetic foot complications, varicose veins, deep vein thrombosis, lymphedema, carotid artery stenosis, and aortic aneurysms. Our experts offer round-the-clock emergency vascular services and personalized care from diagnosis through complete recovery.`,
@@ -958,7 +983,7 @@ It is a super specialty requiring advanced training beyond general surgery, ensu
     icon: nephrologyIcon,
     shortdesc:
       "Our Nephrology Department offers specialized, compassionate kidney care.",
-    banner: bannerCardio,
+    banner: bannerNephrology,
     sections: {
       overview: `Our Nephrology Department is one of the Best, offering specialized and compassionate kidney care for patients of all ages. Under the guidance of top Nephrologists and supported by advanced medical infrastructure, our hospital delivers world-class diagnosis and treatment for a wide range of kidney disorders.`,
 
@@ -1023,7 +1048,7 @@ It is a super specialty requiring advanced training beyond general surgery, ensu
     slug: "rheumatology",
     title: "Rheumatology",
     icon: RheumatologyIcon,
-    banner: bannerCardio,
+    banner: bannerRheumatology,
     shortdesc:
       "Rheumatic diseases are conditions that affect the joints, tendons, ligaments, bones, and muscles.",
     sections: {
@@ -1123,7 +1148,7 @@ With years of experience and a strong commitment to excellence, Prachin Global H
     icon: ENTIcon,
     shortdesc:
       "ENT Department provides advanced care for ear, nose, and throat conditions.",
-    banner: bannerCardio,
+    banner: bannerENT,
     sections: {
       overview:
         "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment. Our General Medicine and Internal Medicine Department offers comprehensive Outpatient and Inpatient care for a wide range of medical conditions i.e. Seasonal and Viral Fever, Fatigue, Chronic Diseases or unexplained symptoms and Diabetic Treatments. Our Physicians provide precise diagnosis, timely treatment and holistic care management.",
@@ -1192,7 +1217,7 @@ With years of experience and a strong commitment to excellence, Prachin Global H
     icon: GeneralIcon,
     shortdesc:
       "General Medicine provides accurate diagnosis and effective treatment for all ages.",
-    banner: bannerCardio,
+    banner: bannerGeneral,
     sections: {
       overview:
         "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment. Our General Medicine and Internal Medicine Department offers comprehensive Outpatient and Inpatient care for a wide range of medical conditions i.e. Seasonal and Viral Fever, Fatigue, Chronic Diseases or unexplained symptoms and Diabetic Treatments. Our Physicians provide precise diagnosis, timely treatment and holistic care management.",
@@ -1261,7 +1286,7 @@ With years of experience and a strong commitment to excellence, Prachin Global H
     icon: LaparoscopyIcon,
     shortdesc:
       "General & Laparoscopy Surgery offers advanced, minimally invasive surgical care.",
-    banner: bannerCardio,
+    banner: bannerLaparoscopy,
     sections: {
       overview:
         "Expert General Medicine Care for all age groups is your first step to accurate diagnosis and effective treatment. Our General Medicine and Internal Medicine Department offers comprehensive Outpatient and Inpatient care for a wide range of medical conditions i.e. Seasonal and Viral Fever, Fatigue, Chronic Diseases or unexplained symptoms and Diabetic Treatments. Our Physicians provide precise diagnosis, timely treatment and holistic care management.",
@@ -1330,7 +1355,7 @@ With years of experience and a strong commitment to excellence, Prachin Global H
     icon: obstetricsIcon,
     shortdesc:
       "Obstetrics & Gynecology Department provides advanced care for women’s health and pregnancy.",
-    banner: bannerCardio,
+    banner: bannerObstetrics,
     sections: {
       overview: `Our Obstetrics and Gynecology Department is equipped dedicated Department with advanced Technology, including Ultrasound Machines and monitoring equipment. This allows us to provide accurate diagnosis and exceptional care throughout pregnancy and beyond. Our team of expert Obstetricians and Gynecologists committed to women’s health and well-being with a wealth of knowledge and a compassionate approach providing comprehensive care that addresses a wide range of women’s health concerns.`,
 
@@ -1394,7 +1419,7 @@ Our specialists provide personalized prenatal and postnatal care, ensuring a saf
     icon: pediatricsIcon,
     shortdesc:
       "Pediatrics & Neonatology provides comprehensive care for infants, children, and adolescents.",
-    banner: bannerCardio,
+    banner: bannerPediatrics,
     sections: {
       overview: `Our Pediatrics and Neonatology are specialized, dedicated to the comprehensive care of infants, children, and adolescents, addressing their unique physiological, developmental and healthcare needs from birth through adolescence. While Pediatrics covers the general health and treatment of diseases for children up to 18 years old, Neonatology is a subspecialty focused on the medical care of newborns, especially those who are premature, have low birth weight, or have serious illnesses requiring intensive care.`,
 
@@ -1455,7 +1480,7 @@ Our specialists provide personalized prenatal and postnatal care, ensuring a saf
     icon: DentalIcon,
     shortdesc:
       "Dentistry Department offers expert care by experienced dental specialists.",
-    banner: bannerCardio,
+    banner: bannerDental,
     sections: {
       overview:
         "Dentistry is a specialized branch of medicine focused on the diagnosis, prevention, and treatment of diseases affecting the teeth, gums, and oral cavity. At Prachin Hospital, we are committed to helping you achieve a healthy smile that is both aesthetically pleasing and functionally strong.",
@@ -1513,7 +1538,7 @@ Our specialists provide personalized prenatal and postnatal care, ensuring a saf
     icon: PlasticSurgeryIcon,
     shortdesc:
       "Plastic Surgery provides advanced reconstructive and cosmetic care.",
-    banner: bannerCardio,
+    banner: bannerPlastic,
     sections: {
       overview: `Prachin Global Hospital is recognized as one of the best spine hospitals in Hyderabad, offering comprehensive and evidence-based treatment for spinal disorders and injuries. Our expert team of spine surgeons and orthopedic spine specialists are highly experienced in advanced minimally invasive techniques, laser spine surgery, and motion-preserving procedures to treat patients of all age groups.`,
 
@@ -1574,7 +1599,7 @@ Our specialists provide personalized prenatal and postnatal care, ensuring a saf
     icon: EndocrinologyIcon,
     shortdesc:
       "Endocrinology provides advanced care for hormone-related disorders.",
-    banner: bannerCardio,
+    banner: bannerEndocrinology,
     sections: {
       overview: `Don’t let musculoskeletal concerns limit your life. Schedule an appointment with our Orthopedics specialists today and take the first step toward improved mobility and a pain-free future.
 
@@ -1630,7 +1655,7 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
     slug: "anaesthesiology-pain",
     title: "Anaesthesiology & Pain Management",
     icon: anaesthesiologyIcon,
-    banner: bannerCardio,
+    banner: bannerAnaesthesiology,
     sections: {
       overview: `The Department of Anaesthesiology & Pain Management at Prachin Global Hospital plays a vital role in ensuring safe, comfortable, and pain-free surgical and medical care. Our highly skilled anaesthesiologists are dedicated to providing round-the-clock support for all types of surgeries, from minor procedures to complex and high-risk operations.`,
 
@@ -1688,7 +1713,7 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
     title: "Critical Care",
     category: "core",
     icon: CriticalCareIcon,
-    banner: bannerCardio,
+    banner: bannerCritical,
     sections: {
       overview: `The Critical Care Unit at Prachin Global Hospital is a state-of-the-art facility dedicated to delivering exceptional emergency and critical care services. Designed to meet international standards, our ICU provides timely, precise, and compassionate care to patients facing life-threatening conditions. In case of any medical emergency, our expert team is always ready to respond swiftly and effectively.`,
 
@@ -1751,7 +1776,7 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
     slug: "emergency-medicine",
     title: "Emergency Medicine",
     icon: emergencyIcon,
-    banner: bannerCardio,
+    banner: bannerEmergency,
     sections: {
       overview: `Trauma / Emergency Care at Prachin Global Hospitals is an exclusive center that offers immediate treatment in any emergency with the highest level of care, round-the-clock. All our Emergency Medicine specialists, trauma surgeons and support staffs are highly trained to deal with cases from minor injuries to advanced trauma care for patients in need of prompt care. Our trauma care specialists address the patient at the best time possible with the right care.`,
       diagnosticsTitle: "Expert Accident and Emergency Care",
@@ -1801,7 +1826,7 @@ Our programs include robotic Knee and Hip Replacement, Advanced Arthroscopy, Joi
     icon: arthroscopyIcon,
     shortdesc:
       "Physiotherapy & Rehabilitation provides advanced recovery and mobility care.",
-    banner: bannerCardio,
+    banner: bannerPhysio,
     sections: {
       overview: `The Department of Arthroscopy & Arthroplasty at Prachin Global Hospital offers advanced, specialized care for sports injuries, joint disorders, and degenerative conditions affecting bones, ligaments, cartilage, and muscles. Whether you are a professional athlete, a fitness enthusiast, or someone dealing with chronic joint pain, our expert team provides comprehensive diagnosis, treatment, and rehabilitation under one roof.
 
@@ -1846,7 +1871,7 @@ These procedures ensure faster recovery, minimal pain, reduced hospital stay, an
 
       technologiesNote: `With world-class infrastructure, modern operation theatres, and internationally aligned treatment protocols, Prachin Global Hospital is committed to delivering excellence in Arthroscopy, Arthroplasty, and Sports Medicine—ensuring the best outcomes with compassionate care.`,
     },
-     doctors: [
+    doctors: [
       {
         id: 1,
         name: "Dr. Arjun Reddy",

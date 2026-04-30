@@ -1,24 +1,31 @@
-import React from "react";
+import React,{useEffect} from "react";
 import DoctorsBanner from "../Doctors/DoctorsBanner";
-import doctorImg from "../../assets/images/female-doctor-stands-corridor-with-her-arms-crossed.jpg";
+import doctorImg from "../../assets/images/Doctor.jpg";
 import BookAppointment from "../home/BookAppointment";
 import BookAppointmentMobile from "../home/BookAppointmentMobile";
 import AboutDoctors from "../About/AboutDoctors";
 import EastIcon from "@mui/icons-material/East";
+import { Link } from "react-router-dom";
 export default function DoctorDetails() {
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, []);
   return (
     <div className="font-manrope">
       <DoctorsBanner />
 
       {/* MAIN SECTION */}
-      <div className="w-[95%] max-w-[1400px] mx-auto py-16 flex flex-col md:flex-row md:justify-between">
+      <div className="w-[95%] max-w-[1400px] mx-auto py-16 flex gap-10">
         {/* LEFT (NO STICKY) */}
         <div className="w-full md:w-[35%] h-fit">
           <div className="bg-[#dbe7f3] rounded-[20px] p-6 shadow-sm">
             <img
               src={doctorImg}
               alt="doctor"
-              className="rounded-[16px] w-full h-auto object-cover"
+              className="rounded-[16px] w-auto h-auto mx-auto"
             />
 
             {/* NAME */}
@@ -74,29 +81,25 @@ export default function DoctorDetails() {
             </div>
 
             {/* BUTTON */}
-            <button className="mt-5 flex items-center gap-3 bg-[#094ca0] text-white px-5 py-2.5 rounded-full">
+            <Link to='/contact' className="mt-5 flex items-center gap-3 bg-[#094ca0] text-white px-5 py-2.5 rounded-full">
               <span className="text-[14px] font-manrope">
                 Get Free Consultation
               </span>
               <span className="bg-white text-[#094ca0] rounded-full w-8 h-8 flex items-center justify-center">
                 <EastIcon fontSize="small" />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
-
-        {/* GAP */}
-        <div className="hidden md:block w-[5%]" />
-
         {/* RIGHT */}
-        <div className="w-full md:w-[55%] mt-10 md:mt-0 space-y-12">
+        <div className="w-full md:w-[55%] mt-10 md:mt-0 space-y-5">
           {/* ABOUT */}
           <div>
-            <h2 className="text-[32px] font-semibold mb-4 text-[#000]">
+            <h2 className="text-[22px] xl:text-[32px] font-semibold mb-4 text-[#000]">
               About Doctor
             </h2>
 
-            <p className="text-gray-600 leading-7 text-[15px]">
+            <p className="text-gray-600 leading-7 text-[14px] 3xl:text-[15px] text-justify">
               Dr. Katikareddy V is a highly experienced Senior Surgical
               Oncologist with over two decades of expertise in cancer treatment
               and surgical care. She specializes in complex oncological
@@ -104,7 +107,7 @@ export default function DoctorDetails() {
               precision, and commitment to excellence.
             </p>
 
-            <p className="text-gray-600 leading-7 text-[15px] mt-4">
+            <p className="text-gray-600 leading-7 text-[14px] 3xl:text-[15px] text-justify mt-2">
               Her clinical interests include gastrointestinal oncology,
               minimally invasive cancer surgeries, and advanced tumor management
               techniques. She has been associated with reputed institutions and
@@ -114,11 +117,11 @@ export default function DoctorDetails() {
 
           {/* PROFESSIONAL DETAILS */}
           <div>
-            <h2 className="text-[32px] font-semibold mb-4 text-[#0b2c4d]">
+            <h2 className="text-[22px] xl:text-[32px] font-semibold mb-4 text-[#0b2c4d]">
               Professional Details
             </h2>
 
-            <div className="space-y-4 text-[15px]">
+            <div className="space-y-4 text-[14px] 3xl:text-[15px]">
               <div className="flex justify-between border-b pb-2">
                 <span className="text-gray-500">Specialization</span>
                 <span className="font-medium">Surgical Oncology</span>
@@ -140,11 +143,11 @@ export default function DoctorDetails() {
 
           {/* EDUCATION */}
           <div>
-            <h2 className="text-[32px] font-semibold mb-4 text-[#0b2c4d]">
+            <h2 className="text-[22px] xl:text-[32px] font-semibold mb-4 text-[#0b2c4d]">
               Education & Training
             </h2>
 
-            <ul className="list-disc pl-5 text-gray-600 space-y-2 text-[15px]">
+            <ul className="list-disc pl-5 text-gray-600 space-y-2 text-[14px] 3xl:text-[15px] ">
               <li>MBBS – Recognized Medical Institution</li>
               <li>MS (General Surgery)</li>
               <li>DNB – Surgical Oncology</li>

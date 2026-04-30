@@ -1,5 +1,5 @@
 import React from "react";
-import about_dr_1 from "../../assets/images/portrait-handsome-young-indian-doctor-standing-with-arms-crossed-medical-clinic-smiling-camera.jpg";
+import about_dr_1 from "../../assets/images/Doctor.jpg";
 import { Link } from "react-router-dom";
 import EastIcon from "@mui/icons-material/East";
 const AboutDoctors = () => {
@@ -80,7 +80,7 @@ const AboutDoctors = () => {
           </h2>
         </div>
 
-        <div className="grid xl:grid-cols-6 md:grid-cols-2  grid-cols-1 lg:gap-12 gap-6 mx-auto mt-5">
+        <div className="grid xl:grid-cols-6 md:grid-cols-2  grid-cols-1  gap-6 mx-auto mt-5">
           {doctors.map((value, index) => (
             <div
               key={index * 1}
@@ -97,18 +97,18 @@ const AboutDoctors = () => {
               >
                 <div className="max-w-full bg-[#FEFEFF] pt-3 px-3 rounded-t-3xl">
                   <div className="text-center">
-                    <h3 className="font-semibold font-manrope  text-[16px] md:text-[21px] text-[#5187af]">
+                    <h3 className="font-semibold font-manrope  text-[16px] 3xl:text-[18px] text-[#5187af]">
                       {value.name}
                     </h3>
-                    <p className=" text-[#4D6E76] font-normal text-base font-manrope">
+                    <p className=" text-[#4D6E76] font-normal text-[12px] 3xl:text-[15px] font-manrope">
                       {value.dignity}
                     </p>
-                    <p className=" text-[#4D6E76] font-normal text-sm font-manrope">
+                    <p className=" text-[#4D6E76] font-normal text-[12px] 3xl:text-[15px] font-manrope">
                       {value.degree}
                     </p>
                   </div>
                 </div>
-                <div className="absolute bottom-0 left-[4px] w-[32px] h-[32px] flex flex-col rounded-br-[16px] shadow-[8px_4px_0px_0px_#FEFEFF] p-0 max-w-full">
+                {/* <div className="absolute bottom-0 left-[4px] w-[32px] h-[32px] flex flex-col rounded-br-[16px] shadow-[8px_4px_0px_0px_#FEFEFF] p-0 max-w-full">
                   <div className=" w-[32px] h-full self-start shrink-0">
                     <div className="h-[32px]"></div>
                   </div>
@@ -117,7 +117,7 @@ const AboutDoctors = () => {
                   <div className=" w-[32px] h-full self-start shrink-0">
                     <div className="h-[32px]"></div>
                   </div>
-                </div>
+                </div> */}
               </Link>
             </div>
           ))}

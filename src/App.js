@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Autocomplete, TextField } from "@mui/material";
@@ -8,6 +8,7 @@ import XIcon from "@mui/icons-material/X"; // ✅ Twitter → X
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp"; // ✅ NEW
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 // Components
 import Header from "./components/header/Header";
 import Footer from "./components/Footer";
@@ -16,6 +17,10 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
+import Lenis from "@studio-freight/lenis";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 // Pages
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -62,7 +67,6 @@ function App() {
   const [submitted, setSubmitted] = React.useState(false);
   const handleClickOpen = () => {
     setOpen(true);
-
   };
   const handleClose = () => {
     setOpen(false);
@@ -113,9 +117,6 @@ function App() {
       ...form,
       date: form.date ? dayjs(form.date).format("YYYY-MM-DD") : "",
     };
-
-    console.log("Form Submitted Data:", payload);
-
     try {
       const response = await fetch("/contact-form.php", {
         method: "POST",
@@ -126,18 +127,30 @@ function App() {
       const result = await response.json();
 
       if (result.type === "success") {
-        alert(result.message);
+        toast.success(result.message);
         handleClose();
       } else {
-        alert(result.message);
+        toast.error(result.message);
       }
     } catch (error) {
-      alert("Network error. Please try again.");
+      toast.error("Network error. Please try again.");
     }
   };
 
   const services = SPECIALITIES;
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2, // smoothness level
+      smooth: true,
+    });
 
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <>
       <ScrollToTop />
@@ -167,12 +180,12 @@ function App() {
         <Route path="/patient-resources" element={<PatientResources />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
-
+      <ToastContainer position="top-right" autoClose={3000} />
       {/* Vertical Contact Button */}
       <div
         onClick={handleClickOpen}
-        className="fixed right-[-6px] hover:right-0 xl:top-1/3 3xl:top-1/2 -translate-y-1/2 z-40
-        bg-[#c65a0a] text-white w-[50px] h-[160px]
+        className="fixed right-[-6px] hover:right-0 xl:top-1/3 3xl:top-1/3 -translate-y-1/2 z-40
+        bg-[#f37721] text-white w-[50px] h-[120px]
         rounded-l-2xl shadow-xl flex items-center justify-center
         cursor-pointer transition-all duration-300"
       >
@@ -193,6 +206,20 @@ function App() {
           </div>
           <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 text-sm">
             Facebook
+          </span>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/prachin-global-hospitals"
+          title="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center bg-[#0A66C2] text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
+        >
+          <div className="w-[45px] flex items-center justify-center">
+            <LinkedInIcon />
+          </div>
+          <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 text-sm">
+            LinkedIn
           </span>
         </a>
 
@@ -288,10 +315,11 @@ function App() {
                   <div>
                     <label className="block mb-1 text-sm">Full Name</label>
                     <input
-                      className={`input w-full border ${submitted && errors.fullName
-                        ? "border-red-500"
-                        : "border-transparent"
-                        }`}
+                      className={`input w-full border ${
+                        submitted && errors.fullName
+                          ? "border-red-500"
+                          : "border-transparent"
+                      }`}
                       value={form.fullName}
                       onChange={(e) => {
                         setForm({ ...form, fullName: e.target.value });
@@ -307,10 +335,11 @@ function App() {
                   <div>
                     <label className="block mb-1 text-sm">Email</label>
                     <input
-                      className={`input w-full border ${submitted && errors.email
-                        ? "border-red-500"
-                        : "border-transparent"
-                        }`}
+                      className={`input w-full border ${
+                        submitted && errors.email
+                          ? "border-red-500"
+                          : "border-transparent"
+                      }`}
                       value={form.email}
                       onChange={(e) => {
                         setForm({ ...form, email: e.target.value });
@@ -326,10 +355,11 @@ function App() {
                   <div>
                     <label className="block mb-1 text-sm">Phone</label>
                     <input
-                      className={`input w-full border ${submitted && errors.phone
-                        ? "border-red-500"
-                        : "border-transparent"
-                        }`}
+                      className={`input w-full border ${
+                        submitted && errors.phone
+                          ? "border-red-500"
+                          : "border-transparent"
+                      }`}
                       value={form.phone}
                       maxLength={10}
                       onChange={(e) => {
@@ -414,10 +444,11 @@ function App() {
                     <label className="block mb-1 text-sm">Time</label>
                     <input
                       type="time"
-                      className={`input w-full border ${submitted && errors.time
-                        ? "border-red-500"
-                        : "border-transparent"
-                        }`}
+                      className={`input w-full border ${
+                        submitted && errors.time
+                          ? "border-red-500"
+                          : "border-transparent"
+                      }`}
                       value={form.time}
                       onChange={(e) => {
                         setForm({ ...form, time: e.target.value });

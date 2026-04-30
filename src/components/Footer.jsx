@@ -6,6 +6,7 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Marquee from "react-fast-marquee";
 import img1 from "../assets/images/gallery_photos/image (1).jpg";
 import img2 from "../assets/images/gallery_photos/image (2).jpg";
@@ -44,6 +45,12 @@ const Footer = () => {
       name: "Youtube",
       icon: YouTubeIcon,
       link: "https://www.youtube.com/@PrachinglobalHospitals",
+    },
+    {
+      id: 5,
+      name: "LinkedIn",
+      icon: LinkedInIcon,
+      link: "https://www.linkedin.com/company/prachin-global-hospitals",
     },
   ];
   return (
@@ -176,39 +183,39 @@ const Footer = () => {
         <div className="xl:w-[70%] ">
           <div className=" flex md:flex-row flex-col justify-between xl:gap-8 md:gap-4 gap-8 font-manrope">
             <div className="flex flex-col gap-2 text-base">
-              <h3 className="text-[#C3C6CE]  tracking-widest font-medium">
+              <h3 className="text-[#f37721]  tracking-widest font-medium">
                 Links
               </h3>
-              <ul className="flex flex-col 3xl:text-[15px] text-sm  text-white">
-                <Link to="/about">About US</Link>
-                <Link to="/careers">Careers</Link>
-                <Link to="/doctors">Our Doctors</Link>
-                <Link to="/blogs">Blogs</Link>
-                <Link to="/gallery" onClick={() => setActiveTab(1)}>
+              <ul className="flex flex-col 3xl:text-[15px] text-sm  text-white ">
+                <Link to="/about" className="hover:text-[#f37721]">About US</Link>
+                <Link to="/careers" className="hover:text-[#f37721]">Careers</Link>
+                <Link to="/doctors" className="hover:text-[#f37721]">Our Doctors</Link>
+                <Link to="/blogs" className="hover:text-[#f37721]">Blogs</Link>
+                <Link to="/gallery" onClick={() => setActiveTab(1)} className="hover:text-[#f37721]">
                   Gallery
                 </Link>
-                <Link to="/happy-patients">Happy Patients</Link>
+                <Link to="/happy-patients" className="hover:text-[#f37721]">Happy Patients</Link>
               </ul>
             </div>
             <div className="flex flex-col gap-2 text-base">
-              <h3 className="text-[#C3C6CE]  tracking-widest font-medium">
+              <h3 className="text-[#f37721]  tracking-widest font-medium">
                 Services
               </h3>
               <ul className="flex flex-col 3xl:text-[15px] text-sm  text-white">
-                <li>General Consultation</li>
-                <li>Specialized Treatment</li>
-                <li>Emergency Care</li>
-                <li>Medical Checkup</li>
+                <Link to='/specialities/general-medicine' className="hover:text-[#f37721]">General Consultation</Link>
+                <Link to='/specialities' className="hover:text-[#f37721]">Specialized Treatment</Link>
+                <Link to='/specialities/critical-care' className="hover:text-[#f37721]">Critical Care</Link>
+                <Link to='/specialities/emergency-medicine' className="hover:text-[#f37721]">Emergency medicine</Link>
               </ul>
             </div>
             <div className="flex flex-col gap-2 text-base">
-              <h3 className="text-[#C3C6CE]  tracking-widest font-medium">
+              <h3 className="text-[#f37721]  tracking-widest font-medium">
                 For Patients
               </h3>
               <ul className="flex flex-col 3xl:text-[15px] text-sm  text-white">
-                <Link to="/patient-resources">Patients Resources</Link>
-                <Link to="/patient-services">Patients Services</Link>
-                <Link to="/contact">Book an Appointment </Link>
+                <Link to="/patient-resources" className="hover:text-[#f37721]">Patients Resources</Link>
+                <Link to="/patient-services" className="hover:text-[#f37721]">Patients Services</Link>
+                <Link to="/contact" className="hover:text-[#f37721]">Contact Us </Link>
               </ul>
             </div>
             <div className="flex flex-col  gap-4 text-base">
@@ -221,7 +228,7 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-4 justify-start mt-4">
             <h3 className=" text-[22px] md:text-[34px] 3xl:text-[42px] font-manrope font-medium text-white">
               Supporting Your{" "}
-              <span className="font-instrumental italic font-light tracking-wide text-[#DDEADB]">
+              <span className="font-instrumental italic font-light tracking-wide text-[#f5d1b9]">
                 <span>Wellness Journey</span>
               </span>
             </h3>
@@ -229,7 +236,7 @@ const Footer = () => {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="bg-white text-base w-full outline-none text-black py-3 rounded-full px-6"
+                className="bg-white text-base w-[60%] outline-none text-black py-3 rounded-full px-6"
               />
               <button className="group 3xl:text-[15px] text-sm  flex items-center justify-between bg-[#094CA0]  text-white px-6 py-2 rounded-full w-fit gap-4 border border-[#094CA0] hover:bg-transparent hover:text-[#F37721] hover:border-[#F37721] transition-all duration-300">
                 <span className="font-medium font-manrope text-[16px] capitalize">
@@ -249,7 +256,7 @@ const Footer = () => {
       </div>
 
       <div className="3xl:max-w-[72%] lg:mt-5 py-3 text-white font-manrope border-t 3xl:text-[15px] text-sm lg:flex-nowrap lg:gap-0 gap-5 flex-wrap border-[#2E2E2E] mx-auto w-[95%]  flex md:flex-row flex-col justify-between md:items-center">
-        <p>© 2026 Prachin Hospital. All rights reserved.</p>
+        <p>© 2026 Prachin Global Hospitals. All rights reserved.</p>
         <div className="flex flex-row flex-wrap 3xl:text-[15px] text-sm  gap-4">
           <a href="/">Terms & Conditions</a>
           <a href="/">Privacy Policy</a>

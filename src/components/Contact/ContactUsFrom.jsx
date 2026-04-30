@@ -15,6 +15,7 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationPinIcon from "@mui/icons-material/LocationPin";
 import SPECIALITIES from "../../specialities/specialities";
+import { Link } from "react-router-dom";
 const ContactUsFrom = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -72,14 +73,6 @@ const ContactUsFrom = () => {
       [name]: "",
     }));
   };
-  // const handleDepartmentChange = (event, newValue) => {
-  //   setFormData((prev) => ({ ...prev, department: newValue }));
-
-  //   setErrors((prev) => ({
-  //     ...prev,
-  //     department: "",
-  //   }));
-  // };
   // Updated handleSubmit
   const handleSubmit = async () => {
     setSubmitted(true);
@@ -137,14 +130,14 @@ const ContactUsFrom = () => {
                 Get Support
               </span>
             </div>
-            <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px] leading-slug font-semibold ">
+            <h2 className="text-[22px] md:text-[34px] 3xl:text-[42px] font-manrope leading-slug font-semibold ">
               We’re Here To Help
               <br />
               <span className="text-[#f37721] font-normal italic font-instrumental">
                 You Anytime Support
               </span>
             </h2>
-            <p className="text-base font-normal   text-[#66686C]">
+            <p className="text-base font-normal font-manrope   text-[#66686C]">
               Reach out to our friendly team for appointments, inquiries, or
               support. We are committed to responding quickly and guiding you to
               care.
@@ -205,7 +198,7 @@ const ContactUsFrom = () => {
             </Marquee>
           </div>
         </div>
-        <div className="p-[48px] bg-[#094ca0] rounded-[16px]">
+        <div className="p-[48px] bg-[#094ca0] rounded-[16px] font-manrope">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
             <div>
               <label className="text-sm font-manrope mb-2 text-white block">
@@ -460,18 +453,58 @@ const ContactUsFrom = () => {
       </div>
       <div className="flex lg:flex-row flex-col gap-6 mt-10 pb-5 font-manrope">
         <div className=" xl:w-[415px] lg:w-1/3  flex flex-col gap-6 ">
-          <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start gap-3">
+          <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start font-manrope gap-3">
             <h4 className="text-[16px] md:text-[18px]  font-semibold">
               Let's talk
             </h4>
             <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C]">
               <span>
-                Phone : <a href="tel:+917036999111">+91 70369 99111</a>{" "}
+                Phone : <Link to="tel:+917036999111">+91 70369 99111</Link>{" "}
               </span>
               <br />
               <span>
                 24/7 Emergency :{" "}
-                <a href="tel:+919247575108">+919247575108</a>{" "}
+                <Link to="tel:+919247575108">+919247575108</Link>{" "}
+              </span>
+            </p>
+            <div className="w-[72px]  absolute flex  rounded-tl-xl  font-manrope bg-[#ffffff] pl-2 pb-2 top-0 right-0 rounded-bl-xl  justify-center items-center">
+              <div className=" flex-col gap-2 z-10 pb-2 w-16 h-16 bg-[#C8DDED] rounded-xl flex justify-center items-center">
+                <LocalPhoneIcon
+                  fontSize="40px"
+                  className="text-4xl  text-[#094ca0]"
+                />
+              </div>{" "}
+              <div className="absolute -left-8 top-0 w-8  rounded-[0px_12px_0px_0px] shadow-[8px_-4px_0px_0px_#fff]">
+                <div className="w-8">
+                  <div className="w-8">
+                    <div className="h-8"></div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-8 right-0 w-8  rounded-[0px_12px_0px_0px] shadow-[8px_-4px_0px_0px_#fff]">
+                <div className="w-8">
+                  <div className="w-8">
+                    <div className="h-8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start gap-3">
+            <h4 className="text-[16px] md:text-[18px]  font-semibold">
+              Email support
+            </h4>
+            <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C]">
+              <span>
+                <a href="mailto:info@prachinglobalhospitals.com">
+                  info@prachinglobalhospitals.com
+                </a>
+              </span>
+              <br />
+              <span>
+                <a href="mailto:careers@prachinhospitals.com">
+                  careers@prachinhospitals.com
+                </a>
               </span>
             </p>
             <div className="w-[72px]  absolute flex  rounded-tl-xl  font-manrope bg-[#ffffff] pl-2 pb-2 top-0 right-0 rounded-bl-xl  justify-center items-center">
@@ -499,43 +532,13 @@ const ContactUsFrom = () => {
           </div>
           <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start gap-3">
             <h4 className="text-[16px] md:text-[18px]  font-semibold">
-              Email support
-            </h4>
-            <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C]">
-              <span>support@prachinhospital.com</span>
-              <br />
-              <span>hello@prachinhospital.com</span>
-            </p>
-            <div className="w-[72px]  absolute flex  rounded-tl-xl  font-manrope bg-[#ffffff] pl-2 pb-2 top-0 right-0 rounded-bl-xl  justify-center items-center">
-              <div className=" flex-col gap-2 z-10 pb-2 w-16 h-16 bg-[#C8DDED] rounded-xl flex justify-center items-center">
-                <LocalPhoneIcon
-                  fontSize="40px"
-                  className="text-4xl  text-[#094ca0]"
-                />
-              </div>{" "}
-              <div className="absolute -left-8 top-0 w-8  rounded-[0px_12px_0px_0px] shadow-[8px_-4px_0px_0px_#fff]">
-                <div className="w-8">
-                  <div className="w-8">
-                    <div className="h-8"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -bottom-8 right-0 w-8  rounded-[0px_12px_0px_0px] shadow-[8px_-4px_0px_0px_#fff]">
-                <div className="w-8">
-                  <div className="w-8">
-                    <div className="h-8"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start gap-3">
-            <h4 className="text-[16px] md:text-[18px]  font-semibold">
               Hospital address
             </h4>
             <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C]">
-              Survey No 52/AA, Indresham Road, Patancheru, Hyderabad, Telangana
-              - 502319
+             <Link to='https://maps.app.goo.gl/65KTotQgpPuCPFjC9' target="_blank">
+              <b>Prachin Global Hospitals</b> <br /> Indresham Rd, Patancheru Industrial Area,
+              Patancheruvu, Telangana 502319
+             </Link>
             </p>
             <div className="w-[72px]  absolute flex  rounded-tl-xl  font-manrope bg-[#ffffff] pl-2 pb-2 top-0 right-0 rounded-bl-xl  justify-center items-center">
               <div className=" flex-col gap-2 z-10 pb-2 w-16 h-16 bg-[#C8DDED] rounded-xl flex justify-center items-center">

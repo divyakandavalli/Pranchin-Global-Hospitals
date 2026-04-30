@@ -6,8 +6,8 @@ export default function StatsSection() {
   const stats = [
     { value: 25, label: "Happy Patients" },
     { value: 100, label: "Patients Treated" },
-    { value: 50, label: "Expert Doctors" },
-    { value: 200, label: "Successful Surgeries" },
+    { value: 40, label: "Expert Doctors" },
+    { value: 30, label: "Successful Surgeries" },
   ];
 
   return (

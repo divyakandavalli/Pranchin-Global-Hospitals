@@ -6,7 +6,7 @@ import Neurology from "../../assets/images/empty-examination-office-room-having-
 import Oncology from "../../assets/images/freepik_0001.jpeg";
 import Pulmonology from "../../assets/images/lungs_image.png";
 import { Link } from "react-router-dom";
-
+import shape from '../../assets/images/shape.png'
 const services = [
   {
     title: "Cardiology",
@@ -41,7 +41,7 @@ export default function HomeServices() {
         {/* Decoration */}
         <div className="hidden md:block absolute -right-[310px] -top-[653px] pointer-events-none">
           <img
-            src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Decorations.png"
+            src={shape}
             alt=""
           />
         </div>

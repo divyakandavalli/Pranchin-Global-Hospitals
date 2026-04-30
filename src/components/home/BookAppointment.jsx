@@ -6,7 +6,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Autocomplete, TextField } from "@mui/material"; // ← Added
 import BackgroundDoctor from "../../assets/images/aboutpage-02.jpg";
 import { Link } from "react-router-dom";
-
+import { toast } from "react-toastify";
 import SPECIALITIES from "../../specialities/specialities";
 
 export default function BookAppointment({ className = "" }) {
@@ -28,11 +28,11 @@ export default function BookAppointment({ className = "" }) {
       newErrors.fullName = "Full name is required";
     }
 
-   if (!formData.email.trim()) {
-  newErrors.email = "Email is required";
-} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-  newErrors.email = "Enter a valid email address";
-}
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Enter a valid email address";
+    }
 
     if (!formData.phone) {
       newErrors.phone = "Phone number is required";
@@ -99,8 +99,7 @@ export default function BookAppointment({ className = "" }) {
       const result = await response.json();
 
       if (result.type === "success") {
-        console.log("✅ Success Response:", result);
-        alert(result.message);
+        toast.success(result.message);
 
         // ✅ RESET FORM (instead of handleClose)
         setFormData({
@@ -113,12 +112,10 @@ export default function BookAppointment({ className = "" }) {
           message: "",
         });
       } else {
-        console.error("❌ Error Response:", result);
-        alert(result.message);
+        toast.error(result.message);
       }
     } catch (error) {
-      console.error("Network Error:", error);
-      alert("Network error. Please try again.");
+     toast.error("Network error. Please try again.");
     }
   };
 
@@ -172,7 +169,7 @@ export default function BookAppointment({ className = "" }) {
           {/* RIGHT FORM */}
           <div className="w-full xl:w-[55%] bg-white border-white border-t-[12px] border-l-[12px] flex flex-col rounded-tl-[24px]  relative">
             <div className="p-[28px] bg-[#094ca0] rounded-[16px]">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-[18px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-[6px]">
                 <div>
                   <label className="text-[16px] font-manrope mb-[12px] text-white block">
                     Full Name
@@ -283,7 +280,6 @@ export default function BookAppointment({ className = "" }) {
                         placeholder="Select Department"
                         // ✅ ERROR STATE
                         error={submitted && !!errors.department}
-                  
                         sx={{
                           backgroundColor: "#fff",
                           borderRadius: "8px",
@@ -393,8 +389,8 @@ export default function BookAppointment({ className = "" }) {
               </div>
 
               {/* Message */}
-              <div className="mt-[32px]">
-                <label className="text-[16px] font-manrope mb-[12px] text-white block">
+              <div className="mt-2">
+                <label className="text-[16px] font-manrope mb-[8px] text-white block">
                   Message
                 </label>
                 <textarea

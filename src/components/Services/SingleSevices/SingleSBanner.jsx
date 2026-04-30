@@ -22,7 +22,7 @@ const SingleSBanner = () => {
       <div className="w-full">
         <img src={bannerImage} alt="" className="w-full  h-auto " />
       </div>
-      <div className="text-center top-0 absolute text-white z-10 flex flex-col justify-center items-center w-full h-full xl:gap-6 gap-2">
+      {/* <div className="text-center top-0 absolute text-white z-10 flex flex-col justify-center items-center w-full h-full xl:gap-6 gap-2">
         <h1 className="text-[22px] md:text-[42px] 3xl:text-[52px] font-manrope font-semibold">
            {data.title}
         </h1>
@@ -35,7 +35,7 @@ const SingleSBanner = () => {
 
           <span className="text-[#f37721]">{data.title}</span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
