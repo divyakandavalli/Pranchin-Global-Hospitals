@@ -1,4 +1,4 @@
-import special_offer from "../../assets/images/special_offers.jpg";
+import special_offer from "../../assets/images/Home page headers-02.jpg";
 export default function SpecialOffer() {
   return (
     <div className=" font-manrope xl:max-w-[60%]  w-[95%] mx-auto pb-10">

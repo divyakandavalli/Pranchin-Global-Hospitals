@@ -1,18 +1,22 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import DoctorsBanner from "../Doctors/DoctorsBanner";
 import doctorImg from "../../assets/images/Doctor.jpg";
 import BookAppointment from "../home/BookAppointment";
 import BookAppointmentMobile from "../home/BookAppointmentMobile";
 import AboutDoctors from "../About/AboutDoctors";
 import EastIcon from "@mui/icons-material/East";
-import { Link } from "react-router-dom";
+import { doctors } from "../../doctorsData/Doctors";
+import { Link, useParams } from "react-router-dom";
 export default function DoctorDetails() {
-    useEffect(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }, []);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+const { id } = useParams();
+
+const doctor = doctors.find((doc) => doc.id === Number(id));
   return (
     <div className="font-manrope">
       <DoctorsBanner />
@@ -23,27 +27,22 @@ export default function DoctorDetails() {
         <div className="w-full md:w-[35%] h-fit">
           <div className="bg-[#dbe7f3] rounded-[20px] p-6 shadow-sm">
             <img
-              src={doctorImg}
-              alt="doctor"
+              src={doctor.image}
+              alt={doctor.name}
               className="rounded-[16px] w-auto h-auto mx-auto"
             />
 
-            {/* NAME */}
             <h2 className="text-[24px] font-semibold mt-4 text-[#000]">
-              Dr. Katikareddy V
+              {doctor.name}
             </h2>
 
-            {/* ROLE */}
-            <p className="text-[16px] font-medium text-[#000] mt-1">
-              Senior Surgical Oncologist
+            <p className="text-[13px] font-medium text-[#000] mt-1">
+              {doctor.dignity}
             </p>
 
-            {/* QUALIFICATION */}
             <p className="text-sm text-[#4D6E76] mt-3 leading-6">
-              MBBS, MS (Gen), DNB – Surgical Oncology, NIMS PDCC – Surgical
-              Gastroenterology, SVIMS, FIAGES, EFIAGES, FMAS, FAIS
+              {doctor.degree}
             </p>
-
             {/* DETAILS */}
             <div className="mt-5 space-y-3 text-[14px] text-[#000] font-manropoe">
               <p className="flex items-start gap-2">
@@ -81,7 +80,10 @@ export default function DoctorDetails() {
             </div>
 
             {/* BUTTON */}
-            <Link to='/contact' className="mt-5 flex items-center gap-3 bg-[#094ca0] text-white px-5 py-2.5 rounded-full">
+            <Link
+              to="/contact"
+              className="mt-5 flex items-center gap-3 bg-[#094ca0] text-white px-5 py-2.5 rounded-full"
+            >
               <span className="text-[14px] font-manrope">
                 Get Free Consultation
               </span>

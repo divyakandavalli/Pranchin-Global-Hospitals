@@ -51,7 +51,7 @@ export default function BannerfinalCarousel() {
             </div>
 
             {/* Overlay Text */}
-            <div className="absolute inset-0 flex items-start xl:items-center pt-20 xl:pt-0">
+            {/* <div className="absolute inset-0 flex items-start xl:items-center pt-20 xl:pt-0">
               <div className="w-full xl:max-w-[1200px] 3xl:max-w-[1440px] mx-auto px-6 md:px-5">
                 <div className="w-full xl:max-w-[850px] text-center xl:text-left">
                   <h2
@@ -79,7 +79,7 @@ export default function BannerfinalCarousel() {
                   </h2>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </SwiperSlide>
 

@@ -1,16 +1,16 @@
 import React from "react";
-import homeBanner from "../../assets/images/chairman_b-01.jpg";
+import homeBanner from "../../assets/images/Founder Image copy.jpg";
 export default function OurChairman() {
   return (
     <section
       id="our-chairman"
       className=" 3xl:max-w-[80%] w-[95%] bg-[#c8dded] mx-auto md:px-10 px-5 rounded-3xl py-10 "
     >
-      <div className=" grid xl:grid-cols-2 grid-cols-1 xl:gap-10  gap-4 items-center ">
+      <div className=" flex xl:flex-row flex-col  xl:gap-10  gap-4 items-center ">
         {/* LEFT IMAGE */}
         <div className="relative ">
           <div className=" object-cover overflow-hidden ">
-            <img src={homeBanner} alt="" className=" rounded-3xl " />
+            <img src={homeBanner} alt="" className=" rounded-3xl w-full h-auto" />
           </div>
         </div>
 

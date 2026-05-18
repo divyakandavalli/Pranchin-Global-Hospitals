@@ -1,14 +1,14 @@
-// ApplicationForm.jsx
 import React, { useState, useRef } from "react";
 import EastIcon from "@mui/icons-material/East";
 
-const ApplicationForm = ({ defaultPosition = "" }) => {
+const ApplicationForm = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
+    name: "",
+    surname: "",
     phone: "",
-    position: defaultPosition,
-    message: "",
+    email: "",
+    qualification: "",
+    position: "",
   });
 
   const [file, setFile] = useState(null);
@@ -17,41 +17,68 @@ const ApplicationForm = ({ defaultPosition = "" }) => {
   const [errors, setErrors] = useState({});
 
   const fileInputRef = useRef(null);
+
   // Handle Input Change
   const handleChange = (e) => {
     const { name, value } = e.target;
 
     if (name === "phone") {
-      // Allow only numbers and limit to 10 digits
       const cleanedValue = value.replace(/\D/g, "").slice(0, 10);
-      setFormData({ ...formData, [name]: cleanedValue });
+
+      setFormData({
+        ...formData,
+        [name]: cleanedValue,
+      });
     } else {
-      setFormData({ ...formData, [name]: value });
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
     }
 
-    // Clear error when user starts typing
+    // Clear errors while typing
     if (errors[name]) {
-      setErrors({ ...errors, [name]: "" });
+      setErrors({
+        ...errors,
+        [name]: "",
+      });
     }
   };
 
   // Handle File Change
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
+
     setFile(selectedFile);
 
     if (selectedFile) {
-      setErrors({ ...errors, file: "" });
+      setErrors({
+        ...errors,
+        file: "",
+      });
     }
   };
 
-  // Validation Function
+  // Validation
   const validate = () => {
     let newErrors = {};
     let isValid = true;
 
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = "Full Name is required";
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+      isValid = false;
+    }
+
+    if (!formData.surname.trim()) {
+      newErrors.surname = "Surname is required";
+      isValid = false;
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Contact number is required";
+      isValid = false;
+    } else if (formData.phone.length !== 10) {
+      newErrors.phone = "Phone number must be exactly 10 digits";
       isValid = false;
     }
 
@@ -59,16 +86,12 @@ const ApplicationForm = ({ defaultPosition = "" }) => {
       newErrors.email = "Email is required";
       isValid = false;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";
+      newErrors.email = "Please enter a valid email";
       isValid = false;
     }
 
-    // Strict 10-digit phone validation
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
-      isValid = false;
-    } else if (formData.phone.length !== 10) {
-      newErrors.phone = "Phone number must be exactly 10 digits";
+    if (!formData.qualification.trim()) {
+      newErrors.qualification = "Qualification is required";
       isValid = false;
     }
 
@@ -78,7 +101,7 @@ const ApplicationForm = ({ defaultPosition = "" }) => {
     }
 
     if (!file) {
-      newErrors.file = "Resume/CV is required";
+      newErrors.file = "CV is required";
       isValid = false;
     } else if (file.size > 5 * 1024 * 1024) {
       newErrors.file = "File size must be less than 5MB";
@@ -86,24 +109,31 @@ const ApplicationForm = ({ defaultPosition = "" }) => {
     }
 
     setErrors(newErrors);
+
     return isValid;
   };
 
-  // Handle Form Submit
+  // Submit Form
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validate()) return;
 
     setLoading(true);
-    setStatus({ type: "", message: "" });
+
+    setStatus({
+      type: "",
+      message: "",
+    });
 
     const submitData = new FormData();
-    submitData.append("fullName", formData.fullName.trim());
-    submitData.append("email", formData.email.trim());
+
+    submitData.append("name", formData.name.trim());
+    submitData.append("surname", formData.surname.trim());
     submitData.append("phone", formData.phone.trim());
+    submitData.append("email", formData.email.trim());
+    submitData.append("qualification", formData.qualification.trim());
     submitData.append("position", formData.position.trim());
-    submitData.append("message", formData.message.trim());
     submitData.append("resume", file);
 
     try {
@@ -121,17 +151,17 @@ const ApplicationForm = ({ defaultPosition = "" }) => {
         });
 
         setFormData({
-          fullName: "",
-          email: "",
+          name: "",
+          surname: "",
           phone: "",
-          position: defaultPosition,
-          message: "",
+          email: "",
+          qualification: "",
+          position: "",
         });
 
         setFile(null);
         setErrors({});
 
-        // ✅ Reset file input UI
         if (fileInputRef.current) {
           fileInputRef.current.value = "";
         }
@@ -143,6 +173,7 @@ const ApplicationForm = ({ defaultPosition = "" }) => {
       }
     } catch (error) {
       console.error("Network Error:", error);
+
       setStatus({
         type: "error",
         message: "Network error. Please check your connection and try again.",
@@ -155,111 +186,169 @@ const ApplicationForm = ({ defaultPosition = "" }) => {
   return (
     <div className="flex flex-col bg-[#094ca0] xl:p-12 md:p-8 p-6 rounded-3xl">
       <form onSubmit={handleSubmit}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 max-w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3 max-w-full">
+          {/* Name */}
           <div>
             <label className="text-sm font-manrope mb-[12px] text-white block">
-              Full Name
+              Name
             </label>
+
             <input
               type="text"
-              name="fullName"
-              value={formData.fullName}
+              name="name"
+              value={formData.name}
               onChange={handleChange}
-              placeholder="e.g. Peter Johnson"
-              className={`w-full p-3 text-sm rounded-lg bg-white outline-none ${errors.fullName ? "border border-red-500" : ""}`}
+              placeholder="Enter your name"
+              className={`w-full p-3 text-sm rounded-lg bg-white outline-none ${
+                errors.name ? "border border-red-500" : ""
+              }`}
             />
-            {errors.fullName && (
-              <p className="text-red-400 text-xs mt-1">{errors.fullName}</p>
+
+            {errors.name && (
+              <p className="text-red-400 text-xs mt-1">{errors.name}</p>
             )}
           </div>
 
+          {/* Surname */}
           <div>
-            <label className="text-[14px] font-manrope mb-[12px] text-white block">
-              Your Email
+            <label className="text-sm font-manrope mb-[12px] text-white block">
+              Surname
             </label>
+
             <input
-              type="email"
-              name="email"
-              value={formData.email}
+              type="text"
+              name="surname"
+              value={formData.surname}
               onChange={handleChange}
-              placeholder="e.g. hello@healix.com"
-              className={`w-full p-3 text-sm rounded-lg bg-white outline-none ${errors.email ? "border border-red-500" : ""}`}
+              placeholder="Enter your surname"
+              className={`w-full p-3 text-sm rounded-lg bg-white outline-none ${
+                errors.surname ? "border border-red-500" : ""
+              }`}
             />
-            {errors.email && (
-              <p className="text-red-400 text-xs mt-1">{errors.email}</p>
+
+            {errors.surname && (
+              <p className="text-red-400 text-xs mt-1">{errors.surname}</p>
             )}
           </div>
 
+          {/* Contact Number */}
           <div>
-            <label className="text-[14px] font-manrope mb-[12px] text-white block">
-              Phone
+            <label className="text-sm font-manrope mb-[12px] text-white block">
+              Contact Number
             </label>
+
             <input
               type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="e.g. 9876543210"
+              placeholder="Enter contact number"
               maxLength={10}
-              className={`w-full text-sm p-3 rounded-lg bg-white outline-none ${errors.phone ? "border border-red-500" : ""}`}
+              className={`w-full p-3 text-sm rounded-lg bg-white outline-none ${
+                errors.phone ? "border border-red-500" : ""
+              }`}
             />
+
             {errors.phone && (
               <p className="text-red-400 text-xs mt-1">{errors.phone}</p>
             )}
           </div>
 
+          {/* Email */}
           <div>
-            <label className="text-[14px] font-manrope mb-[12px] text-white block">
-              Position
+            <label className="text-sm font-manrope mb-[12px] text-white block">
+              Email
             </label>
+
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Enter your email"
+              className={`w-full p-3 text-sm rounded-lg bg-white outline-none ${
+                errors.email ? "border border-red-500" : ""
+              }`}
+            />
+
+            {errors.email && (
+              <p className="text-red-400 text-xs mt-1">{errors.email}</p>
+            )}
+          </div>
+
+          {/* Qualification */}
+          <div>
+            <label className="text-sm font-manrope mb-[12px] text-white block">
+              Qualification
+            </label>
+
+            <input
+              type="text"
+              name="qualification"
+              value={formData.qualification}
+              onChange={handleChange}
+              placeholder="Enter qualification"
+              className={`w-full p-3 text-sm rounded-lg bg-white outline-none ${
+                errors.qualification ? "border border-red-500" : ""
+              }`}
+            />
+            {errors.qualification && (
+              <p className="text-red-400 text-xs mt-1">
+                {errors.qualification}
+              </p>
+            )}
+          </div>
+
+          {/* Position Looking For */}
+          <div>
+            <label className="text-sm font-manrope mb-[12px] text-white block">
+              Position Looking For
+            </label>
+
             <input
               type="text"
               name="position"
               value={formData.position}
               onChange={handleChange}
-              placeholder="Doctor/Nurse/Compounder"
-              className={`w-full text-sm p-3 rounded-lg bg-white outline-none ${errors.position ? "border border-red-500" : ""}`}
+              placeholder="Enter position"
+              className={`w-full p-3 text-sm rounded-lg bg-white outline-none ${
+                errors.position ? "border border-red-500" : ""
+              }`}
             />
+
             {errors.position && (
               <p className="text-red-400 text-xs mt-1">{errors.position}</p>
             )}
           </div>
         </div>
 
-        <div className="mt-3 font-manrope">
-          <label className="text-[14px] font-manrope mb-[12px] text-white block">
-            Resume/CV
+        {/* Attach CV */}
+        <div className="mt-4 font-manrope">
+          <label className="text-sm font-manrope mb-[12px] text-white block">
+            Attach Your CV
           </label>
+
           <input
             type="file"
             ref={fileInputRef}
             onChange={handleFileChange}
-            accept=".pdf,.jpg,.jpeg,.png"
-            className={`w-full text-sm p-3 rounded-lg bg-white outline-none ${errors.file ? "border border-red-500" : ""}`}
+            accept=".pdf,.doc,.docx"
+            className={`w-full text-sm p-3 rounded-lg bg-white outline-none ${
+              errors.file ? "border border-red-500" : ""
+            }`}
           />
+
           {errors.file && (
             <p className="text-red-400 text-xs mt-1">{errors.file}</p>
           )}
         </div>
 
-        <div className="mt-3 font-manrope">
-          <label className="text-[14px] font-manrope mb-[12px] text-white block">
-            Message
-          </label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            rows="5"
-            placeholder="write your message here..."
-            className="w-full text-sm p-3 rounded-lg bg-white outline-none"
-          />
-        </div>
-
         {/* Status Message */}
         {status.message && (
           <p
-            className={`mt-4 text-sm font-medium ${status.type === "success" ? "text-green-400" : "text-red-400"}`}
+            className={`mt-4 text-sm font-medium ${
+              status.type === "success" ? "text-green-400" : "text-red-400"
+            }`}
           >
             {status.message}
           </p>
@@ -272,8 +361,9 @@ const ApplicationForm = ({ defaultPosition = "" }) => {
           className="flex items-center justify-between bg-[#f37721] border border-[#f37721] hover:bg-transparent hover:border-white duration-300 transition-all text-white px-6 py-2 rounded-full w-fit gap-4 mt-8 disabled:opacity-70"
         >
           <span className="font-medium font-manrope text-[14px] capitalize">
-            {loading ? "Submitting..." : "Submit Details"}
+            {loading ? "Submitting..." : "Apply"}
           </span>
+
           <span className="bg-[#f5d1b9] text-[#f37721] rounded-full w-9 h-9 flex items-center justify-center text-lg">
             <EastIcon fontSize="small" />
           </span>

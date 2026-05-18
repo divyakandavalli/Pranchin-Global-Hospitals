@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import bg_image from "../../assets/images/about_illu.jpg";
+import bg_image from "../../assets/images/For Patient  Page Header-02.jpg";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import RoundTheClock from "./RoundTheClock";
 import OurFeatures from "../About/OurFeatures";
@@ -20,11 +20,11 @@ const PatientServices = () => {
       <div className="w-full">
         <img src={bg_image} alt="" className="w-full  h-auto " />
       </div>
-      <div className="text-center top-0 absolute text-white z-10 flex flex-col justify-center items-center w-full h-full xl:gap-6 gap-2">
+      {/* <div className="text-center top-0 absolute text-white z-10 flex flex-col justify-center items-center w-full h-full xl:gap-6 gap-2">
         <h1 className="xl:text-8xl lg:text-6xl md:text-4xl font-manrope font-semibold">
           Patients Services
         </h1>
-      </div>
+      </div> */}
     </div>
       <div className="xl:max-w-[90%] 3xl:max-w-[72%] w-[95%] grid lg:grid-cols-2 gap-10 font-manrope  mx-auto py-10">
         {/* Hero Section */}

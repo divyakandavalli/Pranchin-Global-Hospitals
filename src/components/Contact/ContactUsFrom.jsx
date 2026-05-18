@@ -5,12 +5,12 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Autocomplete, TextField } from "@mui/material";
 import Marquee from "react-fast-marquee";
-import img1 from "../../assets/images/gallery_photos/image (1).jpg";
-import img2 from "../../assets/images/gallery_photos/image (2).jpg";
-import img3 from "../../assets/images/gallery_photos/image (3).jpg";
-import img4 from "../../assets/images/gallery_photos/image (4).jpg";
-import img5 from "../../assets/images/gallery_photos/image (5).jpg";
-import img6 from "../../assets/images/gallery_photos/image (6).jpg";
+import img1 from "../../assets/images/Gallery/Hospital-Photos/image-1.jpg";
+import img2 from "../../assets/images/Gallery/Hospital-Photos/image-2.jpg";
+import img3 from "../../assets/images/Gallery/Hospital-Photos/image-3.jpg";
+import img4 from "../../assets/images/Gallery/Hospital-Photos/image-4.jpg";
+import img5 from "../../assets/images/Gallery/Hospital-Photos/image-5.jpg";
+import img6 from "../../assets/images/Gallery/Hospital-Photos/image-6.jpg";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationPinIcon from "@mui/icons-material/LocationPin";
@@ -451,20 +451,52 @@ const ContactUsFrom = () => {
           </button>
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col gap-6 mt-10 pb-5 font-manrope">
+      <div className="flex lg:flex-row flex-col gap-6 mt-10 pb-5 font-manrope font-medium">
         <div className=" xl:w-[415px] lg:w-1/3  flex flex-col gap-6 ">
           <div className="bg-[#F4F5F9] relative p-6 rounded-xl flex flex-col justify-center items-start font-manrope gap-3">
-            <h4 className="text-[16px] md:text-[18px]  font-semibold">
+            <h4 className="text-[16px] md:text-[18px]   font-semibold">
               Let's talk
             </h4>
             <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C]">
               <span>
-                Phone : <Link to="tel:+917036999111">+91 70369 99111</Link>{" "}
+                <b>24/7 Emergency</b> :{" "}
+                <a
+                  href="tel:+919247575108"
+                  className="hover:text-[#094ca0] duration-300"
+                >
+                  +91 92475 75108
+                </a>
               </span>
+
               <br />
+
               <span>
-                24/7 Emergency :{" "}
-                <Link to="tel:+919247575108">+919247575108</Link>{" "}
+                <b>Phone</b> :{" "}
+                <a
+                  href="tel:+917036999111"
+                  className="hover:text-[#094ca0] duration-300"
+                >
+                  +91 70369 99111
+                </a>
+              </span>
+
+              <br />
+
+              <span>
+                <b>Landline</b> :{" "}
+                <a
+                  href="tel:+918455671111"
+                  className="hover:text-[#094ca0] duration-300"
+                >
+                  08455 - 671111
+                </a>{" "}
+                /{" "}
+                <a
+                  href="tel:+918455671199"
+                  className="hover:text-[#094ca0] duration-300"
+                >
+                  08455 - 671199
+                </a>
               </span>
             </p>
             <div className="w-[72px]  absolute flex  rounded-tl-xl  font-manrope bg-[#ffffff] pl-2 pb-2 top-0 right-0 rounded-bl-xl  justify-center items-center">
@@ -494,16 +526,35 @@ const ContactUsFrom = () => {
             <h4 className="text-[16px] md:text-[18px]  font-semibold">
               Email support
             </h4>
-            <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C]">
+            <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C] ">
               <span>
-                <a href="mailto:info@prachinglobalhospitals.com">
+                <a
+                  href="mailto:info@prachinglobalhospitals.com"
+                  className="hover:text-[#094ca0] duration-300"
+                >
                   info@prachinglobalhospitals.com
                 </a>
               </span>
+
               <br />
+
               <span>
-                <a href="mailto:careers@prachinhospitals.com">
-                  careers@prachinhospitals.com
+                <a
+                  href="mailto:careers@prachinglobalhospitals.com"
+                  className="hover:text-[#094ca0] duration-300"
+                >
+                  careers@prachinglobalhospitals.com
+                </a>
+              </span>
+
+              <br />
+
+              <span>
+                <a
+                  href="mailto:hr@prachinglobalhospitals.com"
+                  className="hover:text-[#094ca0] duration-300"
+                >
+                  hr@prachinglobalhospitals.com
                 </a>
               </span>
             </p>
@@ -534,11 +585,15 @@ const ContactUsFrom = () => {
             <h4 className="text-[16px] md:text-[18px]  font-semibold">
               Hospital address
             </h4>
-            <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C]">
-             <Link to='https://maps.app.goo.gl/65KTotQgpPuCPFjC9' target="_blank">
-              <b>Prachin Global Hospitals</b> <br /> Indresham Rd, Patancheru Industrial Area,
-              Patancheruvu, Telangana 502319
-             </Link>
+            <p className="text-[12px] md:text-[14px] 3xl:text-[15px] text-[#66686C] hover:text-[#094ca0]">
+              <Link
+                to="https://maps.app.goo.gl/65KTotQgpPuCPFjC9"
+                target="_blank"
+              >
+                <b className="text-[13px] md:text-[15px] 3xl:text-[16px]">Prachin Global Hospitals</b> <br /> Survey No 52/AA,
+                Indresham Rd, <br /> Patancheru Industrial Area, <br />{" "}
+                Patancheruvu, Hyderabad, <br /> Telangana 502319
+              </Link>
             </p>
             <div className="w-[72px]  absolute flex  rounded-tl-xl  font-manrope bg-[#ffffff] pl-2 pb-2 top-0 right-0 rounded-bl-xl  justify-center items-center">
               <div className=" flex-col gap-2 z-10 pb-2 w-16 h-16 bg-[#C8DDED] rounded-xl flex justify-center items-center">

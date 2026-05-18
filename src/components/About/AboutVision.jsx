@@ -2,6 +2,7 @@ import React from "react";
 import our_vision from "../../assets/icons/our_vision.png";
 import our_mission from "../../assets/icons/our_mission.png";
 import our_aim from "../../assets/icons/our_aim.png";
+import Shape from '../../assets/images/shape.png'
 const AboutVision = () => {
   const paragraph = [
     {
@@ -28,7 +29,7 @@ const AboutVision = () => {
       <div className="bg-[#C8DDED] rounded-[24px]    py-10 md:px-10 px-5 relative  overflow-hidden">
         <div className="absolute -right-[310px] -top-[653px] max-w-full">
           <img
-            src="https://kit.slabdsgn.com/healix/wp-content/uploads/sites/11/2025/09/Decorations.png"
+            src={Shape}
             alt=""
           />
         </div>

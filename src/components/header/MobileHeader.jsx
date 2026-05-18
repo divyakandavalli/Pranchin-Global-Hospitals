@@ -52,12 +52,12 @@ export default function MobileHeader({ open, setOpen }) {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 pr-3">
                 <img src={LandlineIcon} alt="" />
-                <Link to="">08455-671111/99</Link>
+                <a href="tel:08455-671111/99">08455-671111/99</a>
               </div>
               <div className="h-5 w-px bg-[#365e8f]" />
               <div className="flex items-center gap-2 pl-3">
                 <img src={EmergencyIcon} alt="" />
-                <Link to="">24/7 Emergency</Link>
+                <a href="tel:+917036999111">24/7 Emergency</a>
               </div>
             </div>
           </div>
@@ -80,14 +80,14 @@ export default function MobileHeader({ open, setOpen }) {
 
             <div className="flex items-center gap-2">
               <img src={LandlineIcon} alt="" />
-              <Link>08455 - 671111/99</Link>
+              <a href="tel:08455-671111/99">08455-671111/99</a>
             </div>
 
             <div className="h-5 w-px bg-[#365e8f]" />
 
             <div className="flex items-center gap-2">
               <img src={EmergencyIcon} alt="" />
-              <Link>24/7 Emergency</Link>
+              <a href="tel:+917036999111">24/7 Emergency</a>
             </div>
           </div>
         </div>

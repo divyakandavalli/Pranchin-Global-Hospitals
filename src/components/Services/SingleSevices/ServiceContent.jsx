@@ -43,6 +43,11 @@ export default function ServiceContent() {
           {/* DIAGNOSTICS SECTION */}
           {(s.diagnostics || s.diagnosticsDescription) && (
             <div className="font-manrope">
+              {s.diagnosticsMainTitle && (
+                <h2 className="text-[18px] md:text-[20px] font-bold ">
+                  {s.diagnosticsMainTitle}
+                </h2>
+              )}
               {s.diagnosticsTitle && (
                 <h3 className="text-[16px] md:text-[18px] font-bold ">
                   {s.diagnosticsTitle}
@@ -94,7 +99,7 @@ export default function ServiceContent() {
                 </p>
               )}
               {s.proceduresSubTitle && (
-                <p className=" text-[#2f373e] text-[16px] md:text-[18px] font-bold mb-2">
+                <p className=" text-[#2f373e] text-[16px] md:text-[18px] font-bold mt-2">
                   {s.proceduresSubTitle}
                 </p>
               )}
@@ -251,7 +256,9 @@ export default function ServiceContent() {
               <h3 className="text-[16px] md:text-[18px] font-bold mb-2">
                 {s.screeningTitle}
               </h3>
-
+              <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] leading-relaxed">
+                {s.screeningSubTitle}
+              </p>
               {/* Sports Medicine List */}
               {s.screeningContentList && (
                 <div className="grid grid-cols-1 md:grid-cols-2 text-[14px] 3xl:text-[15px]">
@@ -328,6 +335,40 @@ export default function ServiceContent() {
               )}
             </div>
           )}
+          {/* WHY CHOOSE US */}
+          {s.whychoosetitle && s.whychoosepoints && (
+            <div className="font-manrope">
+              <h3 className="text-[16px] md:text-[18px] font-bold my-2">
+                {s.whychoosetitle}
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 text-[14px] 3xl:text-[15px]">
+                {s.whychoosepoints.map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-2 text-[14px] 3xl:text-[15px]"
+                  >
+                    <DoneIcon
+                      fontSize="small"
+                      className="text-[#094ca0] mt-1 flex-shrink-0"
+                    />
+
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          <div>
+            <h3 className="text-[16px] md:text-[18px] font-bold mb-2">
+              {s.QuotationTitle}
+            </h3>
+            {s.Quotationcontent && (
+              <p className="text-[#2f373e] text-[14px] 3xl:text-[15px] leading-relaxed">
+                {s.Quotationcontent}
+              </p>
+            )}
+          </div>
 
           {/* IMAGES */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
@@ -347,40 +388,40 @@ export default function ServiceContent() {
         </div>
 
         {/* RIGHT SIDE - STICKY */}
-        <div className="w-full xl:w-[40%] relative my-10 xl:my-0">
-          <div className="sticky top-40 space-y-6 bg-[#c8dded] rounded-[20px] p-8">
-            {/* GRID HERE */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {doctors.map((value, index) => (
-                <Link
-                  to="/doctors-profile"
-                  key={index}
-                  className="bg-white rounded-2xl shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition"
-                >
-                  {/* Passport Image */}
-                  <div className="w-[120px] h-[120px] rounded-xl overflow-hidden mb-3">
-                    <img
-                      src={value.image}
-                      alt={value.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+        {doctors?.length > 0 && (
+          <div className="w-full xl:w-[40%] relative my-10 xl:my-0">
+            <div className="sticky top-40 space-y-6 bg-[#c8dded] rounded-[20px] p-8">
+              {/* GRID HERE */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {doctors.map((value, index) => (
+                  <Link
+                    to={`/doctors-profile/${value.id}`}
+                    key={index}
+                    className="bg-white rounded-2xl shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition"
+                  >
+                    {/* Passport Image */}
+                    <div className="w-[120px] h-[120px] rounded-xl overflow-hidden mb-3">
+                      <img
+                        src={value.image}
+                        alt={value.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
 
-                  {/* Info */}
-                  <h3 className="font-semibold text-[15px] md:text-[17px] text-[#5187af]">
-                    {value.name}
-                  </h3>
+                    {/* Info */}
+                    <h3 className="font-semibold text-[15px] md:text-[17px] text-[#5187af]">
+                      {value.name}
+                    </h3>
 
-                  <p className="text-[#4D6E76] text-[13px] mt-1">
-                    {value.dignity}
-                  </p>
-
-                  <p className="text-[#7b8a8f] text-[12px]">{value.degree}</p>
-                </Link>
-              ))}
+                    <p className="text-[#4D6E76] text-[13px] mt-1">
+                      {value.dignity}
+                    </p>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

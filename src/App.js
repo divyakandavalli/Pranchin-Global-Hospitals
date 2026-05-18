@@ -162,7 +162,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/doctors" element={<DoctorsPage />} />
-        <Route path="/doctors-profile" element={<DoctorDetails />} />
+       <Route path="/doctors-profile/:id" element={<DoctorDetails />} />
         <Route path="/specialities" element={<Servicespage />} />
         <Route path="/specialities/:slug" element={<SingleService />} />
         <Route path="/contact" element={<ContactUs />} />
@@ -199,6 +199,8 @@ function App() {
         <a
           href="https://www.facebook.com/people/Prachin-Global-Hospitals/61572763597942/"
           title="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group flex items-center bg-[#1877F2] text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
         >
           <div className="w-[45px] flex items-center justify-center">
@@ -227,6 +229,8 @@ function App() {
         <a
           href="https://x.com/Prachinhospital"
           title="X"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group flex items-center bg-black text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
         >
           <div className="w-[45px] flex items-center justify-center">
@@ -241,6 +245,8 @@ function App() {
         <a
           href="https://www.instagram.com/prachinglobalhospitals/"
           title="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group flex items-center bg-gradient-to-r from-pink-500 to-yellow-500 text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
         >
           <div className="w-[45px] flex items-center justify-center">
@@ -255,6 +261,8 @@ function App() {
         <a
           href="https://www.youtube.com/@PrachinglobalHospitals"
           title="YouTube"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group flex items-center bg-red-600 text-white w-[160px] h-[45px] rounded-l-full shadow-lg transition-all duration-300 hover:translate-x-[-120px]"
         >
           <div className="w-[45px] flex items-center justify-center">

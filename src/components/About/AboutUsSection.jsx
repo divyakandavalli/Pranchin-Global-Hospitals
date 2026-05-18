@@ -11,8 +11,8 @@ export default function AboutUsSection() {
       <div className=" grid xl:grid-cols-2 grid-cols-1 3xl:gap-20 md:gap-10 gap-10 items-center">
         {/* LEFT IMAGE */}
         <div className="relative xl:order-1 order-2">
-          <div className="md:block hidden object-cover overflow-hidden">
-            <img src={banner} alt="" className=" rounded-xl " />
+          <div className="md:flex  hidden object-cover overflow-hidden  justify-center ">
+            <img src={banner} alt="" className=" rounded-xl xl:w-auto w-full h-auto" />
           </div>
           <div className="md:hidden block object-cover overflow-hidden">
             <img src={banner} alt="" className=" rounded-xl " />

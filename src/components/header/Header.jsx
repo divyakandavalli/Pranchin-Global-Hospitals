@@ -61,12 +61,12 @@ export default function Header() {
               <span className="h-5 w-px bg-[#365e8f] hidden 2xl:flex"></span>
               <div className="flex justify-center items-center gap-1 2xl:gap-3 text-gray-700 hover:text-[#ed721d]">
                 <img src={LandlineIcon} alt="" />
-                <Link to="">08455 - 671111/99</Link>
+                <a href="tel:08455 - 671111/99">08455 - 671111/99</a>
               </div>
               <span className="h-5 w-px bg-[#365e8f] hidden 2xl:flex"></span>
               <div className="flex justify-center items-center gap-1 2xl:gap-3 text-gray-700 hover:text-[#ed721d]">
                 <img src={EmergencyIcon} alt="" />
-                <Link to="">24/7 Emergency</Link>
+                <a href="tel:+917036999111">24/7 Emergency</a>
               </div>
             </div>
             <div className="w-full h-px bg-[#c5daf3] "></div>

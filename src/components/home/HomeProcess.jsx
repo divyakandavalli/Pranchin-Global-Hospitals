@@ -20,7 +20,20 @@ export default function HomeProcess() {
       desc: "Receive personalized treatment with continuous care and monitoring to support your recovery.",
     },
   ];
-  const videos = [1, 2, 3, 4, 5, 6];
+const videos = [
+  "https://www.youtube.com/embed/ror-TG8oZVs",
+  "https://www.youtube.com/embed/HBYTwWuk9Ig",
+  "https://www.youtube.com/embed/Zvg-lZn78ZI",
+
+  "https://www.youtube.com/embed/vtF3BpBZoSw",
+  "https://www.youtube.com/embed/vhfOUz5rs5U",
+  "https://www.youtube.com/embed/GACA8K8U3gY",
+  "https://www.youtube.com/embed/HzuzvCtT2_E",
+  "https://www.youtube.com/embed/BahKPURL3wA",
+  "https://www.youtube.com/embed/wNqoUz_7I9Q",
+  "https://www.youtube.com/embed/rBAD-u7ZlIc",
+  "https://www.youtube.com/embed/8XNmfP6LEX0",
+];
   return (
     <div className="w-full xl:max-w-[95%] 3xl:max-w-[85%] mx-auto px-6 md:px-10 xl:px-20 py-10 ">
       {/* Heading */}
@@ -69,22 +82,23 @@ export default function HomeProcess() {
         </div>
       </div>
       <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-[90%] mx-auto">
-        {videos.map((_, index) => (
-          <div
-            key={index}
-            className="w-full aspect-video rounded-xl overflow-hidden shadow-md"
-          >
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/XHOmBV4js_E?rel=0&modestbranding=1"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </div>
-        ))}
+        {videos.slice(0, 6).map((video, index) => (
+              <div
+                key={index}
+                className="rounded-3xl overflow-hidden shadow-md bg-white hover:shadow-xl transition duration-300"
+              >
+                <div className="relative w-full aspect-video">
+                  <iframe
+                    src={video}
+                    title={`video-${index}`}
+                    className="absolute top-0 left-0 w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            ))}
       </div>
     </div>
   );

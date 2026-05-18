@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import AboutSection from "../components/home/AboutSection";
 import HomeProcess from "../components/home/HomeProcess";
 import BookAppointment from "../components/home/BookAppointment";
@@ -12,12 +12,9 @@ import CountingValues from "../components/home/CountingValues";
 import BannerfinalCarousel from "../components/home/BannerfinalCarousel";
 
 export default function HomePage() {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
+useLayoutEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   return (
     <div>
       <Reveal>

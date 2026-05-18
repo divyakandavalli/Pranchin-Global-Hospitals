@@ -6,14 +6,14 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Marquee from "react-fast-marquee";
-import img1 from "../assets/images/gallery_photos/image (1).jpg";
-import img2 from "../assets/images/gallery_photos/image (2).jpg";
-import img3 from "../assets/images/gallery_photos/image (3).jpg";
-import img4 from "../assets/images/gallery_photos/image (4).jpg";
-import img5 from "../assets/images/gallery_photos/image (5).jpg";
-import img6 from "../assets/images/gallery_photos/image (6).jpg";
+import img1 from "../assets/images/Gallery/Hospital-Photos/image-1.jpg";
+import img2 from "../assets/images/Gallery/Hospital-Photos/image-2.jpg";
+import img3 from "../assets/images/Gallery/Hospital-Photos/image-3.jpg";
+import img4 from "../assets/images/Gallery/Hospital-Photos/image-4.jpg";
+import img5 from "../assets/images/Gallery/Hospital-Photos/image-5.jpg";
+import img6 from "../assets/images/Gallery/Hospital-Photos/image-6.jpg";
 import nabh from "../assets/images/nabh.jpg";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { Link } from "react-router-dom";
@@ -85,7 +85,11 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex xl:w-[32%] justify-end items-end z-10">
-            <Link to="/contact" className=" flex items-center justify-between bg-[#f37721] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2  transition">
+            <Link
+              to="/contact"
+              onClick={() => window.scrollTo(0, 0)}
+              className="flex items-center justify-between bg-[#f37721] cursor-pointer text-white py-2 pe-2 ps-4 rounded-full w-fit gap-2 transition"
+            >
               <span className="font-medium font-manrope text-[16px] capitalize">
                 Book Appointment Now
               </span>
@@ -187,14 +191,28 @@ const Footer = () => {
                 Links
               </h3>
               <ul className="flex flex-col 3xl:text-[15px] text-sm  text-white ">
-                <Link to="/about" className="hover:text-[#f37721]">About US</Link>
-                <Link to="/careers" className="hover:text-[#f37721]">Careers</Link>
-                <Link to="/doctors" className="hover:text-[#f37721]">Our Doctors</Link>
-                <Link to="/blogs" className="hover:text-[#f37721]">Blogs</Link>
-                <Link to="/gallery" onClick={() => setActiveTab(1)} className="hover:text-[#f37721]">
+                <Link to="/about" className="hover:text-[#f37721]">
+                  About US
+                </Link>
+                <Link to="/careers" className="hover:text-[#f37721]">
+                  Careers
+                </Link>
+                <Link to="/doctors" className="hover:text-[#f37721]">
+                  Our Doctors
+                </Link>
+                <Link to="/blogs" className="hover:text-[#f37721]">
+                  Blogs
+                </Link>
+                <Link
+                  to="/gallery"
+                  onClick={() => setActiveTab(1)}
+                  className="hover:text-[#f37721]"
+                >
                   Gallery
                 </Link>
-                <Link to="/happy-patients" className="hover:text-[#f37721]">Happy Patients</Link>
+                <Link to="/happy-patients" className="hover:text-[#f37721]">
+                  Happy Patients
+                </Link>
               </ul>
             </div>
             <div className="flex flex-col gap-2 text-base">
@@ -202,10 +220,27 @@ const Footer = () => {
                 Services
               </h3>
               <ul className="flex flex-col 3xl:text-[15px] text-sm  text-white">
-                <Link to='/specialities/general-medicine' className="hover:text-[#f37721]">General Consultation</Link>
-                <Link to='/specialities' className="hover:text-[#f37721]">Specialized Treatment</Link>
-                <Link to='/specialities/critical-care' className="hover:text-[#f37721]">Critical Care</Link>
-                <Link to='/specialities/emergency-medicine' className="hover:text-[#f37721]">Emergency medicine</Link>
+                <Link
+                  to="/specialities/general-medicine"
+                  className="hover:text-[#f37721]"
+                >
+                  General Consultation
+                </Link>
+                <Link to="/specialities" className="hover:text-[#f37721]">
+                  Specialized Treatment
+                </Link>
+                <Link
+                  to="/specialities/critical-care"
+                  className="hover:text-[#f37721]"
+                >
+                  Critical Care
+                </Link>
+                <Link
+                  to="/specialities/emergency-medicine"
+                  className="hover:text-[#f37721]"
+                >
+                  Emergency medicine
+                </Link>
               </ul>
             </div>
             <div className="flex flex-col gap-2 text-base">
@@ -213,9 +248,15 @@ const Footer = () => {
                 For Patients
               </h3>
               <ul className="flex flex-col 3xl:text-[15px] text-sm  text-white">
-                <Link to="/patient-resources" className="hover:text-[#f37721]">Patients Resources</Link>
-                <Link to="/patient-services" className="hover:text-[#f37721]">Patients Services</Link>
-                <Link to="/contact" className="hover:text-[#f37721]">Contact Us </Link>
+                <Link to="/patient-resources" className="hover:text-[#f37721]">
+                  Patients Resources
+                </Link>
+                <Link to="/patient-services" className="hover:text-[#f37721]">
+                  Patients Services
+                </Link>
+                <Link to="/contact" className="hover:text-[#f37721]">
+                  Contact Us{" "}
+                </Link>
               </ul>
             </div>
             <div className="flex flex-col  gap-4 text-base">

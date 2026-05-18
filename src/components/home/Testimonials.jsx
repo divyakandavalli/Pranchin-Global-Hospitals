@@ -10,46 +10,46 @@ import "swiper/css";
 import { Link } from "react-router-dom";
 const testimonials = [
   {
-    name: "David Smith",
+    name: "Nikhil Step up",
     role: "Patient",
     rating: 5,
-    text: "I was impressed with the modern facilities and friendly staff. They made me feel safe and confident throughout my treatment process.",
+    text: "Excellent...this hospital can help for poor people too..",
   },
   {
-    name: "Laura Chen",
+    name: "Hemalatha Tadi",
     role: "Patient",
     rating: 5,
-    text: "The consultation was very detailed, and the doctor patiently answered all my questions. I felt truly cared for and respected as a patient.",
+    text: "I recommend this hospital and happy with staff friendliness explanation of the health issues and treatments",
   },
   {
-    name: "Robert Williams",
+    name: "Ankita Maji",
     role: "Patient",
     rating: 5,
-    text: "From booking to treatment, everything was smooth and professional. The team genuinely prioritizes patient comfort and quality healthcare services.",
+    text: "Hospital is good,staff is very polite recommend to visit once",
   },
   {
-    name: "Laura Chen",
+    name: "Binod Binod dulakaxoria",
     role: "Patient",
     rating: 5,
-    text: "The consultation was very detailed, and the doctor patiently answered all my questions. I felt truly cared for and respected as a patient.",
+    text: "Visited this newly opened hospital had a great experience. The doctors are attentive and staff was very supportive throughout.",
   },
   {
-    name: "Robert Williams",
+    name: "Venkateswarlu Kotikalapudi",
     role: "Patient",
     rating: 5,
-    text: "From booking to treatment, everything was smooth and professional. The team genuinely prioritizes patient comfort and quality healthcare services.",
+    text: "Very good and friendly behavior of staff. People near by loction like us can visit to get best hospitality services",
   },
   {
-    name: "Laura Chen",
+    name: "Neha Patha",
     role: "Patient",
     rating: 5,
-    text: "The consultation was very detailed, and the doctor patiently answered all my questions. I felt truly cared for and respected as a patient.",
+    text: "This newly opened hospital has good infrastructure and efficient services. The doctors are approachable, and the staff maintains a friendly and professional environment",
   },
   {
-    name: "Robert Williams",
+    name: "Swarupa",
     role: "Patient",
     rating: 5,
-    text: "From booking to treatment, everything was smooth and professional. The team genuinely prioritizes patient comfort and quality healthcare services.",
+    text: "Recently visited the hospital . Happy with the care provided and staff was polite",
   },
 ];
 
@@ -107,15 +107,12 @@ export default function Testimonials() {
               </div>
 
               <p className="text-gray-600 leading-relaxed text-[14px] 3xl:text-[15px]">
-                The doctors were caring and professional. The staff made me feel
-                comfortable, and the doctors explained everything in detail
-                treatment plan was clear, and I felt supported every step of
-                highly recommended!
+               Very good experience at this new hospital. The facilities are excellent, the management is organized, and the medical staff is caring and responsive. Wishing them great success ahead.
               </p>
 
               <div className="mt-2">
                 <h4 className="font-semibold text-[16px] md:text-[21px] text-[#5187af]">
-                  Heller Keano
+                  Sai Adithya
                 </h4>
                 <span className="text-[14px] md:text-[16px] text-[#64748b]">
                   Patient Parent
